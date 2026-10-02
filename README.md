@@ -2,7 +2,10 @@
 > La web pública arranca con una **foto real del motor** (`frontend/public/snapshot.json`,
 > regenerada por GitHub Actions cada 6h con `backend/scripts/make-snapshot.js`) y sigue
 > simulando en vivo en el navegador. Sin backend conectado muestra "DATOS DEL MOTOR REAL +
-> SIMULACIÓN EN VIVO". Con `VITE_API_URL` apuntando a un backend, usa datos 100% en vivo.
+> SIMULACIÓN EN VIVO". Si abres la URL **en tu PC con el backend corriendo**, la web
+> detecta sola `http://localhost:8765` y muestra datos 100% en vivo sin configurar nada
+> (los navegadores permiten a páginas https llamar a localhost). Con `VITE_API_URL`
+> apuntando a un backend público, en vivo desde cualquier dispositivo.
 
 Replica del fondo de las capturas (`C:\Users\chonr\Desktop\trading`): fondo cripto con 156+ agentes IA en oficina virtual.
 

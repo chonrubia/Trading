@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import IsoOffice from "./IsoOffice";
-import { apiFetch, wsEndpoint } from "./api";
+import { apiFetch, wsEndpoint, resolveApiBase } from "./api";
 import { initDemo, tickDemo } from "./demo";
 
 type Agent = any; type Dept = any; type Msg = any;
@@ -96,10 +96,9 @@ export default function App() {
     };
     (async () => {
       try {
-        const ctl = new AbortController(); const to = setTimeout(() => ctl.abort(), 6000);
-        await apiFetch("/api/health", { signal: ctl.signal }).then(r => { if (!r.ok) throw new Error("down"); return r.json(); });
-        clearTimeout(to);
+        const found = await resolveApiBase();
         if (stop) return;
+        if (found === null) { startDemo(); return; }
         apiFetch("/api/agents?limit=200").then(r => r.json()).then(setAgents).catch(() => {});
         apiFetch("/api/departments").then(r => r.json()).then(setDepts).catch(() => {});
         apiFetch("/api/channels/c-general/messages").then(r => r.json()).then(setMsgs).catch(() => {});

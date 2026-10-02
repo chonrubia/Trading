@@ -1,5 +1,68 @@
 [
  {
+  "id": "mem-54",
+  "ts": "2026-10-02T20:18:33.069Z",
+  "author": "Laboratorio",
+  "dept": "lab",
+  "pair": "AVAX",
+  "text": "Minera DONCHIAN AVAX 4h p46 supera incubación (paper 88.7€) y recibe 25€ de capital.",
+  "kind": "incubacion"
+ },
+ {
+  "id": "mem-53",
+  "ts": "2026-10-02T20:18:05.041Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.2€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-52",
+  "ts": "2026-10-02T20:17:53.025Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.11€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-51",
+  "ts": "2026-10-02T20:17:43.022Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.08€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-50",
+  "ts": "2026-10-02T20:16:56.963Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC TP +0.7% (0.82€) con Setup_9301 · Scalp ADA. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-49",
+  "ts": "2026-10-02T20:16:48.962Z",
+  "author": "Iker Costa · T21",
+  "dept": "trading",
+  "pair": "XRP",
+  "text": "SHORT XRP TP +0.7% (0.93€) con Setup_8902 · Donchian XRP. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-48",
+  "ts": "2026-10-02T20:16:44.955Z",
+  "author": "Vera Soler · T17",
+  "dept": "trading",
+  "pair": "DOGE",
+  "text": "SHORT DOGE TP +0.7% (1.16€) con Setup_9007 · EMA DOGE. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
   "id": "mem-47",
   "ts": "2026-10-02T18:23:17.223Z",
   "author": "Deriv · Vega",

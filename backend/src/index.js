@@ -112,7 +112,7 @@ app.get("/api/portfolio", (_, res) => res.json({
   caida: drawdown, exposicion_bruta: risk.fundExposure(state.operations, equity),
   posiciones: state.operations.filter(o => o.status === "abierta").length,
   costes_pagados: Math.round(state.operations.filter(o => o.status === "cerrada").reduce((s, o) => s + (o.fees || 0), 0) * 100) / 100,
-  freno_riesgos: dayPnl <= risk.FUND_LIMITS.max_day_loss,
+  freno_riesgos: false, // sin freno por pérdidas (decisión del gestor)
   objetivo: target.DAILY_TARGET, progreso: Math.round(dayPnl / target.DAILY_TARGET * 1000) / 10 + "%",
   mode: "PAPEL realista · sin dinero demo",
   kill: risk.isKilled(),
@@ -630,23 +630,8 @@ setInterval(() => {
   dayPnl = Math.round((equity - dayStartEquity) * 100) / 100; // día real: desde las 00:00 UTC
   peakEquity = Math.max(peakEquity, equity);
   drawdown = Math.round(((peakEquity - equity) / peakEquity) * 10000) / 100;
-  if (dayPnl <= risk.FUND_LIMITS.max_day_loss && !riskHalted) {
-    riskHalted = true;
-    store.audit({ ev: "risk.halt", dayPnl: Math.round(dayPnl * 100) / 100 });
-    const m = { id: `m-${msgN++}`, channel_id: "c-general", from_agent_id: state.agents[1].id, text: `Riesgos frena la operativa: día en ${Math.round(dayPnl)}€ bajo el límite ${risk.FUND_LIMITS.max_day_loss}€. Solo se gestionan abiertas hasta mañana.`, kind: "alerta", created_at: new Date().toISOString() };
-    state.messages.push(m); broadcast({ type: "chat", msg: { ...m, from: state.agents[1].name } });
-  }
-  // auto-suspender peor trader si hunde el día (2x el límite diario)
-  if (dayPnl <= risk.FUND_LIMITS.max_day_loss * 2) {
-    const worst = [...state.agents].filter(a => a.role === "Trader").sort((a, b) => a.pnl - b.pnl)[0];
-    if (worst && !risk.suspended.has(worst.id)) {
-      risk.suspended.add(worst.id);
-      const m = { id: `m-${msgN++}`, channel_id: "c-general", from_agent_id: state.agents[1].id, text: `Riesgos suspende a ${worst.name} por drawdown (${Math.round(worst.pnl)}€).`, kind: "alerta", created_at: new Date().toISOString() };
-      state.messages.push(m); broadcast({ type: "chat", msg: { ...m, from: state.agents[1].name } });
-    }
-  }
 
-  broadcast({ type: "tick", tick: lastTick, equity, dayPnl, drawdown, exposure: risk.fundExposure(state.operations, equity), kill: risk.isKilled(), halt: dayPnl <= risk.FUND_LIMITS.max_day_loss, committee: committee.active, agents: state.agents.map(a => ({ id: a.id, status: a.status, pnl: a.pnl, x: a.x, y: a.y })) });
+  broadcast({ type: "tick", tick: lastTick, equity, dayPnl, drawdown, exposure: risk.fundExposure(state.operations, equity), kill: risk.isKilled(), halt: false, committee: committee.active, agents: state.agents.map(a => ({ id: a.id, status: a.status, pnl: a.pnl, x: a.x, y: a.y })) });
   if (tickN % 30 === 0) {
     state.snapshots.push({ ts: new Date().toISOString(), equity, dayPnl, drawdown, exposure: risk.fundExposure(state.operations, equity) });
     if (state.snapshots.length > 20000) state.snapshots.splice(0, state.snapshots.length - 20000);

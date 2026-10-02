@@ -2,8 +2,8 @@
 // Ninguna orden se ejecuta sin pasar por aquí. Modo paper por defecto + kill-switch.
 
 const FUND_LIMITS = {
-  max_day_loss: -15,      // -3% de 500€
-  max_drawdown: 10,         // %
+  max_day_loss: null,       // SIN LÍMITE por decisión del gestor (opera sin descansar)
+  max_drawdown: null,       // SIN LÍMITE por decisión del gestor
   max_exposure_gross: 150,  // %
   max_leverage: 5,
   max_pair_concentration: 30, // % exposición por pair
@@ -20,10 +20,9 @@ function fundExposure(openOps, equity) {
 
 function checkOperation(agent, prop, ctx) {
   // ctx: { equity, dayPnl, drawdown, openOps, prices }
+  // NOTA: sin stops por pérdidas (decisión del gestor): ni día ni drawdown bloquean.
   if (killSwitch) return { approved: false, blocked: true, reason: "KILL-SWITCH activo: trading detenido por humano" };
   if (suspended.has(agent.id)) return { approved: false, blocked: true, reason: `Trader ${agent.name} suspendido por Riesgos` };
-  if (ctx.dayPnl <= FUND_LIMITS.max_day_loss) return { approved: false, blocked: true, reason: `Pérdida diaria del fondo ${ctx.dayPnl}€ supera límite ${FUND_LIMITS.max_day_loss}€` };
-  if (ctx.drawdown >= FUND_LIMITS.max_drawdown) return { approved: false, blocked: true, reason: `Drawdown ${ctx.drawdown}% >= máximo ${FUND_LIMITS.max_drawdown}%` };
 
   let leverage = prop.leverage || agent.leverage || 1;
   let size = prop.size || 0.01;

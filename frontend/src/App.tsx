@@ -343,7 +343,7 @@ export default function App() {
           {(desks.venues || []).slice(0, 9).map((v: any) => <div key={v.pair}><div className="row"><span>{v.pair} · A {v.a} / B {v.b}</span><span>{v.spread}%</span></div><div className="bar"><i style={{ width: `${Math.min(100, Number(v.spread) * 120)}%` }} /></div></div>)}
         </div></>}
         {tab === "Riesgo" && (<><div className="phead"><h3>RIESGOS · LÍMITES DEL FONDO</h3></div><div className="pbody">
-          <div className="row"><span>Pérdida día máx</span><span className={pcl(riskInfo.dayPnl)}>{eur(riskInfo.limits?.max_day_loss)} (ahora {eur(riskInfo.dayPnl)})</span></div>
+          <div className="row"><span>Pérdida día máx</span><span>Sin límite (ahora <b className={pcl(riskInfo.dayPnl)}>{eur(riskInfo.dayPnl)}</b>)</span></div>
           <div className="row"><span>Drawdown máx</span><span>{riskInfo.limits?.max_drawdown}% (ahora {riskInfo.drawdown}%)</span></div>
           <div className="row"><span>Exposición máx</span><span>{riskInfo.limits?.max_exposure_gross}% (ahora {riskInfo.exposure}%)</span></div>
           <div className="row"><span>Abiertas / Bloqueadas</span><span>{riskInfo.open} / {riskInfo.blocked}</span></div>

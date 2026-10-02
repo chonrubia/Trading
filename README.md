@@ -18,7 +18,10 @@ Replica del fondo de las capturas (`C:\Users\chonr\Desktop\trading`): fondo crip
 - Paneles Ops y Riesgo + proponer trade desde perfil + ticker mercado.
 - Verificado: `health fase:2`, risk/exposure/open, committee start→end con summary, propose OK, `tsc:0 build:0`.
 
-## Fase 7.4 (actual: costes dinero-real + anti-frenesí)
+## Fase 7.5 (actual: día real + freno visible)
+- El "día" ahora es de verdad: `dayStartEquity` a las 00:00 UTC, `resultado_hoy = equity - inicio del día`, historial diario correcto y reanudación automática cada mañana. Antes el límite diario era en realidad un stop histórico que dejaba al fondo parado para siempre.
+- Al tocar -15€ Riesgos anuncia el freno en sala, la píldora pasa a "RIESGOS · EN PAUSA HASTA MAÑANA" y solo se gestionan abiertas. Verificado en vivo: el fondo se había quedado con 1 posición por este freno.
+## Fase 7.4 (costes dinero-real + anti-frenesí)
 - Costes Binance VIP0: spot taker 0.10%/lado, futuros 0.05%/lado + slippage 0.03% + medio spread por par (BTC/ETH 0.01% … NEAR 0.05%). Arbitraje paga 4 patas (~0.6%) y solo abre si el spread las cubre: como en real, casi no opera.
 - Sin deriva ficticia: cada euro del PnL viene de operaciones cerradas.
 - Anti-burst: máx 6 aperturas spot por tick; el historial conserva las últimas 250 cerradas (las bloqueadas ya no expulsan la muestra que enseña a los setups).

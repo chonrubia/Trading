@@ -113,7 +113,7 @@ export default function App() {
       const d = JSON.parse(ev.data);
       if (d.type === "chat") setMsgs(m => [...m.slice(-120), d.msg]);
       if (d.type === "tick") {
-        setPortfolio((p: any) => ({ ...p, patrimonio: d.equity, resultado_hoy: d.dayPnl, exposicion_bruta: d.exposure, caida: d.drawdown, posiciones: undefined, costes_pagados: p.costes_pagados, objetivo: p.objetivo }));
+        setPortfolio((p: any) => ({ ...p, patrimonio: d.equity, resultado_hoy: d.dayPnl, exposicion_bruta: d.exposure, caida: d.drawdown, posiciones: undefined, costes_pagados: p.costes_pagados, objetivo: p.objetivo, freno_riesgos: d.halt }));
         setMarket(d.tick); setCommittee(!!d.committee);
         setAgents((prev: any[]) => { const m = new Map<string, any>(d.agents.map((a: any) => [a.id, a])); return prev.map((a: any) => m.has(a.id) ? { ...a, ...(m.get(a.id) as object) } : a); });
         if (d.kill !== undefined) setRiskInfo((r: any) => ({ ...r, kill: d.kill, exposure: d.exposure }));
@@ -187,8 +187,8 @@ export default function App() {
 
   const prices = market?.prices || {};
   const tape = Object.entries(prices).slice(0, 12);
-  const mode = riskInfo.kill ? "kill" : committee ? "comite" : "paper";
-  const modeTxt = demoMode ? "MODO DEMO · SIMULADO" : riskInfo.kill ? "⛔ DETENIDO" : committee ? "COMITÉ EN SALA" : "PAPEL · TIEMPO REAL";
+  const mode = riskInfo.kill ? "kill" : (committee || portfolio.freno_riesgos) ? "comite" : "paper";
+  const modeTxt = demoMode ? "MODO DEMO · SIMULADO" : riskInfo.kill ? "⛔ DETENIDO" : portfolio.freno_riesgos ? "RIESGOS · EN PAUSA HASTA MAÑANA" : committee ? "COMITÉ EN SALA" : "PAPEL · TIEMPO REAL";
   const tgt = Number(portfolio.objetivo || 50), day = Number(portfolio.resultado_hoy || 0);
   const tgtPct = Math.max(0, Math.min(100, (day / tgt) * 100));
 

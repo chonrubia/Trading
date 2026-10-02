@@ -1,15 +1,11 @@
 name: engine-nube
 # El motor vive en la nube sin depender del PC:
-# cada 2h arranca con el estado de la rama engine-state, opera 100 ticks
-# (~3 min), guarda estado + live.json y vuelve a dormir.
-# La web lee live.json en vivo (sin rebuilds). Cuota: ~12 carreras/día x 5 min.
+# cada 2h arranca con el estado de la rama engine-state, opera 60 ticks
+# y publica estado + live.json. ~4 min facturados/carrera -> ~1500 min/mes.
 on:
   schedule:
     - cron: "0 */2 * * *"
   workflow_dispatch: {}
-  push:
-    branches: [main]
-    paths: ["backend/**"]
 permissions:
   contents: write
 concurrency:
@@ -18,26 +14,26 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
-      - name: Restaurar estado del motor
-        run: |
-          git fetch origin engine-state 2>/dev/null && git checkout origin/engine-state -- backend/data && echo "estado retomado" || echo "fondo fresco en la nube"
-          mkdir -p backend/data
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - run: cd backend && npm install --no-audit --no-fund
-      - name: Operar 100 ticks
+          cache: "npm"
+          cache-dependency-path: backend/package-lock.json
+      - run: cd backend && npm ci --no-audit --no-fund
+      - name: Retomar estado + operar 60 ticks
         run: |
           rm -rf statebr
-          if git clone --branch engine-state "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" statebr 2>/dev/null; then echo "rama engine-state OK"; else mkdir -p statebr/data && cd statebr && git init -q && git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" && cd ..; fi
-          SNAP_OUT="$PWD/statebr/live.json" node backend/scripts/make-snapshot.js 100
+          mkdir -p backend/data
+          if git clone --branch engine-state "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" statebr 2>/dev/null; then cp statebr/data/*.json backend/data/ 2>/dev/null || true; echo retomado; else mkdir -p statebr/data; fi
+          SNAP_OUT="$PWD/statebr/live.json" node backend/scripts/make-snapshot.js 60
       - name: Publicar estado
         run: |
           mkdir -p statebr/data && cp backend/data/*.json statebr/data/ 2>/dev/null || true
           cd statebr
+          [ -d .git ] || { git init -q; git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"; }
           git config user.name "chonrubia-bot"
           git config user.email "chonrubia-bot@users.noreply.github.com"
           git add -A

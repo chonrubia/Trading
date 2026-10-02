@@ -25,3 +25,6 @@ export const liveAgeMin = (live: any) => {
   if (!live?.generated_at) return null;
   return Math.max(0, Math.round((Date.now() - Date.parse(live.generated_at)) / 60000));
 };
+// Próximo latido del motor (cron cada 2h en punto UTC).
+export const nextBeatUTC = () => new Date(Math.ceil(Date.now() / 7200000) * 7200000);
+export const hhmmUTC = (d: Date) => String(d.getUTCHours()).padStart(2, "0") + ":" + String(d.getUTCMinutes()).padStart(2, "0");

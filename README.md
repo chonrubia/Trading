@@ -1,7 +1,7 @@
 # AI Trading Floor — ver en vivo en https://trading-three-hazel.vercel.app/
 > **Motor 100% en la nube (sin PC):** GitHub Actions ejecuta el fondo cada 2h
-> (`.github/workflows/engine.yml`, 100 ticks por racha) y publica estado + `live.json`
-> en la rama `engine-state`. La web lo lee en vivo (solo lectura, se actualiza solo).
+> (`.github/workflows/engine.yml`, 60 ticks por racha, ~4 min facturados = ~1500/2000
+> min mensuales, con margen). Publica estado + `live.json` en la rama `engine-state`. La web lo lee en vivo (solo lectura, se actualiza solo).
 > Hibernación probada: el mercado persiste (`market.json`) y cada racha retoma
 > donde quedó. Sin backend local ni snapshot: simulación local en el navegador.
 > Si abres la URL **en tu PC con el backend corriendo**, la web

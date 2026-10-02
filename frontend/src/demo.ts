@@ -114,3 +114,22 @@ export function tickDemo(s: any) {
     .map((a: any, i: number) => ({ rank: i + 1, id: a.id, name: a.name, setup: a.strategy, pair: a.pair, pnl: a.pnl, hoy: a.pnl, win_rate: a.win_rate }));
   return { ...s, agents, market, portfolio, ranking, newMsgs };
 }
+
+// Deriva visual para modo nube: SOLO lo efímero se mueve (precios, estados,
+// micro-variación de patrimonio acotada ±4€, chat marcado [simulado]).
+// Ranking, ops, riesgo, informe, memoria y escuela quedan congelados en el latido real.
+export function cloudDrift(s: any) {
+  const prices = { ...s.prices };
+  for (const k of Object.keys(prices)) prices[k] = Math.max(0.0001, (prices as any)[k] * (1 + (Math.random() - 0.5) * 0.003));
+  const agents = s.agents.map((a: any) => (Math.random() > 0.94 ? { ...a, status: pick(STATUS) } : a));
+  const drift = Math.max(-4, Math.min(4, (s.drift || 0) + (Math.random() - 0.5) * 0.5));
+  const market = { prices, funding: s.funding, fear_greed: s.fear_greed, risk_mode: s.risk_mode };
+  const portfolio = {
+    patrimonio: Math.round((s.equity + drift) * 100) / 100, resultado_hoy: Math.round((s.dayPnl + drift) * 100) / 100,
+    exposicion_bruta: 62, caida: 0.8, posiciones: 11, objetivo: 50, costes_pagados: 3.2,
+  };
+  const simMsg = Math.random() > 0.93
+    ? [{ id: "sim-" + (s.msgN++), from: pick(agents).name, kind: "idea", text: "[simulado] " + pick(CHAT).replace("{P}", pick(PAIRS)), created_at: new Date().toISOString() }]
+    : [];
+  return { ...s, agents, market, portfolio, drift, simMsg };
+}

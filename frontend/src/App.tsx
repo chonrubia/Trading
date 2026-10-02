@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import IsoOffice from "./IsoOffice";
 import { apiFetch, wsEndpoint, resolveApiBase } from "./api";
-import { initDemo, tickDemo } from "./demo";
-import { fetchLive, liveAgeMin } from "./cloud";
+import { initDemo, tickDemo, cloudDrift } from "./demo";
+import { fetchLive, liveAgeMin, nextBeatUTC, hhmmUTC } from "./cloud";
 
 type Agent = any; type Dept = any; type Msg = any;
 
@@ -62,7 +62,7 @@ export default function App() {
   };
 
   useEffect(() => {
-    let stop = false; let iv: any = null; let ws: any = null;
+    let stop = false; let iv: any = null; let iv2: any = null; let iv3: any = null; let ws: any = null;
     const demoTick = () => {
       if (!demoRef.current) return;
       const d = tickDemo(demoRef.current);
@@ -113,10 +113,21 @@ export default function App() {
       applyStore(d, false);
       setSrc("cloud");
       setCloudAge(liveAgeMin(live));
+      const driftTick = () => {
+        if (stop || !demoRef.current) return;
+        const dd = cloudDrift(demoRef.current);
+        demoRef.current = dd;
+        setMarket(dd.market); setPortfolio(dd.portfolio); setAgents(dd.agents);
+        if (dd.simMsg.length) setMsgs(m => [...m, ...dd.simMsg].slice(-120));
+      };
+      const ageTick = () => {
+        if (stop || !demoRef.current?.seedMeta?.generated_at) return;
+        setCloudAge(liveAgeMin({ generated_at: demoRef.current.seedMeta.generated_at }));
+      };
       const poll = async () => {
         if (stop) return;
         const l = await fetchLive(15000);
-        if (!l || l.generated_at === demoRef.current?.seedMeta?.generated_at) { setCloudAge(liveAgeMin(demoRef.current?.seedMeta?.generated_at ? { generated_at: demoRef.current.seedMeta.generated_at } : l)); return; }
+        if (!l || l.generated_at === demoRef.current?.seedMeta?.generated_at) { ageTick(); return; }
         demoRef.current = initDemo(l);
         const nd = demoRef.current;
         (nd.seedMeta as any).freshMsgs = l.messages || [];
@@ -124,6 +135,8 @@ export default function App() {
         setCloudAge(0);
       };
       iv = setInterval(poll, 90000);
+      iv2 = setInterval(driftTick, 2000);
+      iv3 = setInterval(ageTick, 30000);
     };
     (async () => {
       try {
@@ -165,7 +178,7 @@ export default function App() {
     };
     } catch { startDemo(); }
     })();
-    return () => { stop = true; clearInterval(iv); try { ws && ws.close(); } catch {} };
+    return () => { stop = true; clearInterval(iv); clearInterval(iv2); clearInterval(iv3); try { ws && ws.close(); } catch {} };
   }, []);
 
   useEffect(() => { const el = chatRef.current; if (el) el.scrollTop = el.scrollHeight; }, [msgs]);
@@ -231,6 +244,8 @@ export default function App() {
   const modeTxt = demoMode ? (src === "cloud" ? "NUBE · EN VIVO (SOLO LECTURA)" : "MODO DEMO · SIMULADO") : riskInfo.kill ? "⛔ DETENIDO" : portfolio.freno_riesgos ? "RIESGOS · EN PAUSA HASTA MAÑANA" : committee ? "COMITÉ EN SALA" : "PAPEL · TIEMPO REAL";
   const tgt = Number(portfolio.objetivo || 50), day = Number(portfolio.resultado_hoy || 0);
   const tgtPct = Math.max(0, Math.min(100, (day / tgt) * 100));
+  const beat = nextBeatUTC();
+  const late = src === "cloud" && (cloudAge ?? 0) > 130;
 
   return (<>
     <header className="topbar">
@@ -273,7 +288,7 @@ export default function App() {
       {[...tape, ...tape].map(([k, v]: any, i: number) => <span className="tick" key={i}><span>{k}</span><b>{v}</b></span>)}
     </div></div>
 
-    {!online && <div className="offline">{src === "cloud" ? `EN VIVO DESDE LA NUBE · motor actualizado hace ${cloudAge ?? "?"} min · solo lectura` : seedDate ? `DATOS DEL MOTOR REAL (${seedDate} UTC) + SIMULACIÓN EN VIVO · sin backend conectado` : "MODO DEMO · simulación local en tu navegador (sin backend). Todo lo que ves es simulado."}</div>}
+    {!online && <div className="offline">{src === "cloud" ? (late ? `DATOS REALES · latido ${seedDate} UTC, hace ${cloudAge} min · Motor retrasado, esperando latido · Simulación visual activa · Solo lectura` : `DATOS REALES · latido ${seedDate} UTC, hace ${cloudAge ?? "?"} min · Simulación visual local · Próximo latido ~${hhmmUTC(beat)} UTC · Solo lectura`) : seedDate ? `DATOS DEL MOTOR REAL (${seedDate} UTC) + SIMULACIÓN EN VIVO · sin backend conectado` : "MODO DEMO · simulación local en tu navegador (sin backend). Todo lo que ves es simulado."}</div>}
 
     <div className="layout">
       <div className="panel">

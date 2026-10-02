@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import IsoOffice from "./IsoOffice";
+import { apiFetch, wsEndpoint } from "./api";
 
 type Agent = any; type Dept = any; type Msg = any;
 
@@ -34,31 +35,36 @@ export default function App() {
   const [desks, setDesks] = useState<any>({ venues: [], pnl: {} });
   const [report, setReport] = useState<any>(null);
   const [setups, setSetups] = useState<any[]>([]);
+  const [online, setOnline] = useState(true);
   const chatRef = useRef<HTMLDivElement>(null);
 
   const refresh = () => {
-    fetch("/api/ranking").then(r => r.json()).then(setRanking).catch(() => {});
-    fetch("/api/operations?limit=30").then(r => r.json()).then(setOps).catch(() => {});
-    fetch("/api/risk").then(r => r.json()).then(setRiskInfo).catch(() => {});
-    fetch("/api/meetings").then(r => r.json()).then(setMeetings).catch(() => {});
-    fetch("/api/market").then(r => r.json()).then(setMarket).catch(() => {});
-    fetch("/api/memory?limit=20").then(r => r.json()).then(setMemList).catch(() => {});
-    fetch("/api/school/leaderboard").then(r => r.json()).then(setSchoolTop).catch(() => {});
-    fetch("/api/audit?limit=20").then(r => r.json()).then(setAuditList).catch(() => {});
-    fetch("/api/incubator").then(r => r.json()).then(setLab).catch(() => {});
-    fetch("/api/incubator/stats").then(r => r.json()).then(setLabStats).catch(() => {});
-    fetch("/api/desks").then(r => r.json()).then(setDesks).catch(() => {});
-    fetch("/api/report").then(r => r.json()).then(setReport).catch(() => {});
-    fetch("/api/setups").then(r => r.json()).then(setSetups).catch(() => {});
+    apiFetch("/api/ranking").then(r => r.json()).then(setRanking).catch(() => {});
+    apiFetch("/api/operations?limit=30").then(r => r.json()).then(setOps).catch(() => {});
+    apiFetch("/api/risk").then(r => r.json()).then(setRiskInfo).catch(() => {});
+    apiFetch("/api/meetings").then(r => r.json()).then(setMeetings).catch(() => {});
+    apiFetch("/api/market").then(r => r.json()).then(setMarket).catch(() => {});
+    apiFetch("/api/memory?limit=20").then(r => r.json()).then(setMemList).catch(() => {});
+    apiFetch("/api/school/leaderboard").then(r => r.json()).then(setSchoolTop).catch(() => {});
+    apiFetch("/api/audit?limit=20").then(r => r.json()).then(setAuditList).catch(() => {});
+    apiFetch("/api/incubator").then(r => r.json()).then(setLab).catch(() => {});
+    apiFetch("/api/incubator/stats").then(r => r.json()).then(setLabStats).catch(() => {});
+    apiFetch("/api/desks").then(r => r.json()).then(setDesks).catch(() => {});
+    apiFetch("/api/report").then(r => r.json()).then(setReport).catch(() => {});
+    apiFetch("/api/setups").then(r => r.json()).then(setSetups).catch(() => {});
   };
 
   useEffect(() => {
-    fetch("/api/agents?limit=200").then(r => r.json()).then(setAgents).catch(() => {});
-    fetch("/api/departments").then(r => r.json()).then(setDepts).catch(() => {});
-    fetch("/api/channels/c-general/messages").then(r => r.json()).then(setMsgs).catch(() => {});
+    apiFetch("/api/agents?limit=200").then(r => r.json()).then(setAgents).catch(() => {});
+    apiFetch("/api/departments").then(r => r.json()).then(setDepts).catch(() => {});
+    apiFetch("/api/channels/c-general/messages").then(r => r.json()).then(setMsgs).catch(() => {});
+    apiFetch("/api/health").then(() => setOnline(true)).catch(() => setOnline(false));
     refresh();
     const id = setInterval(refresh, 8000);
-    const ws = new WebSocket(`ws://${location.hostname}:8765/ws/floor`);
+    const ws = new WebSocket(wsEndpoint());
+    ws.onopen = () => setOnline(true);
+    ws.onclose = () => setOnline(false);
+    ws.onerror = () => setOnline(false);
     ws.onmessage = (ev) => {
       const d = JSON.parse(ev.data);
       if (d.type === "chat") setMsgs(m => [...m.slice(-120), d.msg]);
@@ -85,22 +91,22 @@ export default function App() {
 
   const send = async () => {
     if (!text.trim()) return;
-    await fetch("/api/chat", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ channel_id: "c-general", text, to_agent_id: sel?.id || null }) });
+    await apiFetch("/api/chat", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ channel_id: "c-general", text, to_agent_id: sel?.id || null }) });
     setText("");
   };
   const pick = (id: string) => fetch(`/api/agents/${id}`).then(r => r.json()).then(setSel);
-  const startCommittee = async () => { await fetch("/api/committee/start", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ topic: "Revisión riesgos + ranking" }) }); };
-  const endCommittee = async () => { await fetch("/api/committee/end", { method: "POST" }); };
-  const toggleKill = async () => { const r = await fetch("/api/risk/kill", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ active: !riskInfo.kill }) }).then(r => r.json()); setRiskInfo((x: any) => ({ ...x, kill: r.kill })); };
+  const startCommittee = async () => { await apiFetch("/api/committee/start", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ topic: "Revisión riesgos + ranking" }) }); };
+  const endCommittee = async () => { await apiFetch("/api/committee/end", { method: "POST" }); };
+  const toggleKill = async () => { const r = await apiFetch("/api/risk/kill", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ active: !riskInfo.kill }) }).then(r => r.json()); setRiskInfo((x: any) => ({ ...x, kill: r.kill })); };
   const propose = async () => {
     if (!sel) return;
     const side = Math.random() > 0.5 ? "LONG" : "SHORT";
-    const op = await fetch("/api/operations/propose", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ agent_id: sel.id, side, size: 0.01 }) }).then(r => r.json());
+    const op = await apiFetch("/api/operations/propose", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ agent_id: sel.id, side, size: 0.01 }) }).then(r => r.json());
     setOps(o => [op, ...o].slice(0, 60)); pick(sel.id);
   };
   const suspend = async () => {
     if (!sel) return;
-    await fetch("/api/risk/suspend", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ agent_id: sel.id, active: !sel.suspended }) });
+    await apiFetch("/api/risk/suspend", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ agent_id: sel.id, active: !sel.suspended }) });
     pick(sel.id); refresh();
   };
 
@@ -151,6 +157,8 @@ export default function App() {
     <div className="ticker"><div className="ticker-track">
       {[...tape, ...tape].map(([k, v]: any, i: number) => <span className="tick" key={i}><span>{k}</span><b>{v}</b></span>)}
     </div></div>
+
+    {!online && <div className="offline">SIN CONEXIÓN CON EL FONDO · el backend está apagado o inalcanzable. Arráncalo para ver datos en vivo.</div>}
 
     <div className="layout">
       <div className="panel">
@@ -226,7 +234,7 @@ export default function App() {
         {tab === "Learn" && <><div className="phead"><h3>MEMORIA · ESCUELA · AUDITORÍA</h3></div><div className="pbody">
           <h3 className="section">Memoria compartida</h3>
           <input className="chatinput" value={memQ} onChange={e => setMemQ(e.target.value)} placeholder="Buscar memoria… BTC, riesgo…" onKeyDown={async e => { if (e.key === "Enter") setMemList(await fetch(`/api/memory?q=${encodeURIComponent(memQ)}&limit=20`).then(r => r.json())); }} />
-          <input className="chatinput" value={memText} onChange={e => setMemText(e.target.value)} placeholder="Aportar análisis a la memoria… (Enter)" onKeyDown={async e => { if (e.key === "Enter" && memText.trim()) { const en = await fetch("/api/memory", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ text: memText, pair: sel?.pair || "BTC" }) }).then(r => r.json()); setMemList(m => [en, ...m].slice(0, 40)); setMemText(""); } }} />
+          <input className="chatinput" value={memText} onChange={e => setMemText(e.target.value)} placeholder="Aportar análisis a la memoria… (Enter)" onKeyDown={async e => { if (e.key === "Enter" && memText.trim()) { const en = await apiFetch("/api/memory", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ text: memText, pair: sel?.pair || "BTC" }) }).then(r => r.json()); setMemList(m => [en, ...m].slice(0, 40)); setMemText(""); } }} />
           {memList.slice(0, 8).map(m => <div key={m.id} className="chatmsg"><div className="chatbody"><div className="chatmeta"><b>[{m.pair}] {m.author}</b><time>{hhmm(m.created_at)}</time></div><div className="chattext">{m.text}</div></div></div>)}
           <h3 className="section">Escuela · XP</h3>
           {schoolTop.map(s => <div key={s.id} className="row"><span>N{s.level} · {s.name}</span><span>{s.xp} xp</span></div>)}
@@ -240,7 +248,7 @@ export default function App() {
             <div className="cell"><label>LISTAS</label><b>{labStats.lista || 0}</b></div>
             <div className="cell"><label>ACTIVAS</label><b className="pos">{labStats.activas || 0}</b></div>
           </div>
-          <div className="btnrow"><button className="btn primary" onClick={async () => { const out = await fetch("/api/incubator/mine", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ n: 5 }) }).then(r => r.json()); setLab(l => [...out, ...l].slice(0, 60)); refresh(); }}>Minar 5 estrategias</button></div>
+          <div className="btnrow"><button className="btn primary" onClick={async () => { const out = await apiFetch("/api/incubator/mine", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ n: 5 }) }).then(r => r.json()); setLab(l => [...out, ...l].slice(0, 60)); refresh(); }}>Minar 5 estrategias</button></div>
           {lab.slice(0, 15).map(s => <div key={s.id} className="row"><span>{s.name} · {s.status}{s.live ? ` · paper ${eur(s.live.pnl)}` : ""}{s.backtest ? ` · BT ${eur(s.backtest.total)} sh${s.backtest.sharpe}` : ""}</span><span>{s.status === "lista" ? <button className="btn primary" onClick={async () => { await fetch(`/api/incubator/${s.id}/promote`, { method: "POST" }); refresh(); }}>Dar capital</button> : s.status === "activa" || s.status === "incubacion" ? <button className="btn danger" onClick={async () => { await fetch(`/api/incubator/${s.id}/retire`, { method: "POST" }); refresh(); }}>Retirar</button> : <span>{s.discard?.slice(0, 24) || (s.robustness ? `rob ${s.robustness?.score}/4` : "")}</span>}</span></div>)}
           <h3 className="section">Setups · expectancy neta (aprenden de aquí)</h3>
           {setups.slice(0, 8).map(s => <div key={s.strategy} className="row"><span>{s.strategy}</span><span className={pcl(s.avg)}>{eur(s.avg)}/op · {s.win}% · n={s.trades}</span></div>)}

@@ -2,6 +2,9 @@
 node_modules/
 # build
 frontend/dist/
+web/.next/
+web/out/
+*/lib/dist/
 # runtime paper-trading state (se regenera solo)
 backend/data/*.json
 backend/data/*.log

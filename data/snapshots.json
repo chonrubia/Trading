@@ -1,23 +1,23 @@
 [
  {
-  "ts": "2026-10-02T14:07:45.856Z",
-  "equity": 517.51,
-  "dayPnl": 17.51,
-  "drawdown": 0.02,
-  "exposure": 105.2
+  "ts": "2026-10-02T16:19:11.855Z",
+  "equity": 512.59,
+  "dayPnl": 12.59,
+  "drawdown": 0,
+  "exposure": 77.41
  },
  {
-  "ts": "2026-10-02T14:08:45.925Z",
-  "equity": 526.52,
-  "dayPnl": 26.52,
-  "drawdown": 0.71,
-  "exposure": 121.63
+  "ts": "2026-10-02T16:20:11.920Z",
+  "equity": 537.11,
+  "dayPnl": 37.11,
+  "drawdown": 0,
+  "exposure": 63.32
  },
  {
-  "ts": "2026-10-02T14:09:45.995Z",
-  "equity": 516.01,
-  "dayPnl": 16.01,
-  "drawdown": 2.69,
-  "exposure": 50.94
+  "ts": "2026-10-02T16:21:11.990Z",
+  "equity": 552.82,
+  "dayPnl": 52.82,
+  "drawdown": 0.1,
+  "exposure": 4.51
  }
 ]

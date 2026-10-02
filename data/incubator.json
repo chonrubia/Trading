@@ -1,21 +1,21 @@
 [
  {
   "id": "st-16",
-  "name": "Minera EMA ADA 1D p6",
-  "pair": "ADA",
-  "tf": "1D",
-  "style": "swing",
-  "kind": "ema",
-  "p1": 6,
+  "name": "Minera DONCHIAN BTC 4h p37",
+  "pair": "BTC",
+  "tf": "4h",
+  "style": "breakout",
+  "kind": "donchian",
+  "p1": 37,
   "status": "incubacion",
-  "created_at": "2026-10-02T14:09:58.005Z",
+  "created_at": "2026-10-02T16:21:23.990Z",
   "backtest": {
-   "trades": 38,
-   "total": 2325.6,
-   "win": 84.2,
-   "pf": 16.69,
-   "dd": 49.3,
-   "sharpe": 18.61
+   "trades": 34,
+   "total": 2223.7,
+   "win": 88.2,
+   "pf": 18.9,
+   "dd": 59.8,
+   "sharpe": 21.27
   },
   "robustness": {
    "folds": [
@@ -36,233 +36,192 @@
    "peak": 100,
    "dd": 0,
    "pos": {
-    "side": -1,
-    "entry": 0.6033
+    "side": 1,
+    "entry": 78957.2372
    }
   }
  },
  {
   "id": "st-15",
-  "name": "Minera RSI AVAX 15m p11",
+  "name": "Minera DONCHIAN AVAX 4h p46",
   "pair": "AVAX",
-  "tf": "15m",
-  "style": "mean reversion",
-  "kind": "rsi",
-  "p1": 11,
-  "status": "descartada",
-  "created_at": "2026-10-02T14:09:45.992Z",
-  "backtest": {
-   "trades": 51,
-   "total": -1916.6,
-   "win": 9.8,
-   "pf": 0.08,
-   "dd": 1932.8,
-   "sharpe": -18.06
-  },
-  "discard": "backtest bajo umbral (trades>10, total>0, sharpe>0.2)"
- },
- {
-  "id": "st-14",
-  "name": "Minera DONCHIAN SOL 4h p32",
-  "pair": "SOL",
   "tf": "4h",
   "style": "breakout",
   "kind": "donchian",
-  "p1": 32,
+  "p1": 46,
   "status": "incubacion",
-  "created_at": "2026-10-02T14:09:33.978Z",
+  "created_at": "2026-10-02T16:21:11.974Z",
   "backtest": {
-   "trades": 34,
-   "total": 1472.5,
-   "win": 85.3,
-   "pf": 20.49,
-   "dd": 37.5,
-   "sharpe": 17.98
+   "trades": 35,
+   "total": 1531.9,
+   "win": 82.9,
+   "pf": 9.27,
+   "dd": 75.5,
+   "sharpe": 14.39
   },
   "robustness": {
    "folds": [
     true,
     true,
-    true
+    false
    ],
-   "oos": true,
+   "oos": false,
    "mc": 100,
    "sens": true,
-   "score": 4,
+   "score": 3,
    "pass": true
   },
   "live": {
-   "equity": 100,
-   "pnl": 0,
-   "ticks": 16,
-   "peak": 100,
+   "equity": 112.1,
+   "pnl": 12.1,
+   "ticks": 10,
+   "peak": 112.1,
    "dd": 0,
-   "pos": null
-  }
- },
- {
-  "id": "st-13",
-  "name": "Minera EMA SOL 1D p7",
-  "pair": "SOL",
-  "tf": "1D",
-  "style": "swing",
-  "kind": "ema",
-  "p1": 7,
-  "status": "incubacion",
-  "created_at": "2026-10-02T14:09:21.960Z",
-  "backtest": {
-   "trades": 38,
-   "total": 1715.8,
-   "win": 81.6,
-   "pf": 12.19,
-   "dd": 50.7,
-   "sharpe": 16.2
-  },
-  "robustness": {
-   "folds": [
-    true,
-    true,
-    true
-   ],
-   "oos": true,
-   "mc": 100,
-   "sens": true,
-   "score": 4,
-   "pass": true
-  },
-  "live": {
-   "equity": 95.3,
-   "pnl": -4.7,
-   "ticks": 22,
-   "peak": 101.4,
-   "dd": 6.02,
    "pos": {
-    "side": -1,
-    "entry": 178.051
+    "side": 1,
+    "entry": 41.8029
    }
   }
  },
  {
+  "id": "st-14",
+  "name": "Minera RSI AVAX 5m p16",
+  "pair": "AVAX",
+  "tf": "5m",
+  "style": "scalping",
+  "kind": "rsi",
+  "p1": 16,
+  "status": "descartada",
+  "created_at": "2026-10-02T16:20:59.960Z",
+  "backtest": {
+   "trades": 47,
+   "total": -1780.1,
+   "win": 8.5,
+   "pf": 0.04,
+   "dd": 1780.1,
+   "sharpe": -22.1
+  },
+  "discard": "backtest bajo umbral (trades>10, total>0, sharpe>0.2)"
+ },
+ {
+  "id": "st-13",
+  "name": "Minera RSI AVAX 5m p14",
+  "pair": "AVAX",
+  "tf": "5m",
+  "style": "scalping",
+  "kind": "rsi",
+  "p1": 14,
+  "status": "descartada",
+  "created_at": "2026-10-02T16:20:47.948Z",
+  "backtest": {
+   "trades": 48,
+   "total": -1860.3,
+   "win": 6.3,
+   "pf": 0.04,
+   "dd": 1860.3,
+   "sharpe": -23.01
+  },
+  "discard": "backtest bajo umbral (trades>10, total>0, sharpe>0.2)"
+ },
+ {
   "id": "st-12",
-  "name": "Minera RSI BNB 15m p19",
-  "pair": "BNB",
+  "name": "Minera EMA ETH 1h p12",
+  "pair": "ETH",
+  "tf": "1h",
+  "style": "tendencia",
+  "kind": "ema",
+  "p1": 12,
+  "status": "incubacion",
+  "created_at": "2026-10-02T16:20:35.937Z",
+  "backtest": {
+   "trades": 38,
+   "total": 969.7,
+   "win": 71.1,
+   "pf": 3.49,
+   "dd": 133.8,
+   "sharpe": 8.09
+  },
+  "robustness": {
+   "folds": [
+    true,
+    true,
+    true
+   ],
+   "oos": true,
+   "mc": 100,
+   "sens": true,
+   "score": 4,
+   "pass": true
+  },
+  "live": {
+   "equity": 130.1,
+   "pnl": 30.1,
+   "ticks": 28,
+   "peak": 130.1,
+   "dd": 0,
+   "pos": {
+    "side": 1,
+    "entry": 4001.1149
+   }
+  }
+ },
+ {
+  "id": "st-11",
+  "name": "Minera RSI DOGE 15m p19",
+  "pair": "DOGE",
   "tf": "15m",
   "style": "mean reversion",
   "kind": "rsi",
   "p1": 19,
   "status": "descartada",
-  "created_at": "2026-10-02T14:09:09.948Z",
+  "created_at": "2026-10-02T16:20:23.921Z",
   "backtest": {
-   "trades": 21,
-   "total": -782.1,
-   "win": 14.3,
-   "pf": 0.08,
-   "dd": 782.1,
-   "sharpe": -16.51
+   "trades": 46,
+   "total": -1662.5,
+   "win": 17.4,
+   "pf": 0.1,
+   "dd": 1708.7,
+   "sharpe": -15.22
   },
   "discard": "backtest bajo umbral (trades>10, total>0, sharpe>0.2)"
  },
  {
-  "id": "st-11",
-  "name": "Minera DONCHIAN ETH 4h p22",
-  "pair": "ETH",
-  "tf": "4h",
-  "style": "breakout",
-  "kind": "donchian",
-  "p1": 22,
-  "status": "incubacion",
-  "created_at": "2026-10-02T14:08:57.935Z",
-  "backtest": {
-   "trades": 33,
-   "total": 1188.6,
-   "win": 84.8,
-   "pf": 9.04,
-   "dd": 98.9,
-   "sharpe": 14.76
-  },
-  "robustness": {
-   "folds": [
-    true,
-    true,
-    true
-   ],
-   "oos": true,
-   "mc": 100,
-   "sens": true,
-   "score": 4,
-   "pass": true
-  },
-  "live": {
-   "equity": 121.7,
-   "pnl": 21.7,
-   "ticks": 34,
-   "peak": 121.7,
-   "dd": 0,
-   "pos": {
-    "side": 1,
-    "entry": 3675.4895
-   }
-  }
- },
- {
   "id": "st-10",
-  "name": "Minera EMA BTC 1D p7",
-  "pair": "BTC",
-  "tf": "1D",
-  "style": "swing",
-  "kind": "ema",
-  "p1": 7,
-  "status": "incubacion",
-  "created_at": "2026-10-02T14:08:45.923Z",
+  "name": "Minera RSI LINK 5m p15",
+  "pair": "LINK",
+  "tf": "5m",
+  "style": "scalping",
+  "kind": "rsi",
+  "p1": 15,
+  "status": "descartada",
+  "created_at": "2026-10-02T16:20:11.907Z",
   "backtest": {
-   "trades": 38,
-   "total": 2275.5,
-   "win": 76.3,
-   "pf": 13.38,
-   "dd": 92.8,
-   "sharpe": 15.27
+   "trades": 46,
+   "total": -1472.2,
+   "win": 13,
+   "pf": 0.05,
+   "dd": 1519.9,
+   "sharpe": -16.48
   },
-  "robustness": {
-   "folds": [
-    true,
-    true,
-    true
-   ],
-   "oos": true,
-   "mc": 100,
-   "sens": true,
-   "score": 4,
-   "pass": true
-  },
-  "live": {
-   "equity": 88.6,
-   "pnl": -11.4,
-   "ticks": 40,
-   "peak": 100,
-   "dd": 11.4,
-   "pos": {
-    "side": -1,
-    "entry": 69926.0853
-   }
-  }
+  "discard": "backtest bajo umbral (trades>10, total>0, sharpe>0.2)"
  },
  {
   "id": "st-9",
-  "name": "Minera EMA LINK 1D p14",
+  "name": "Minera DONCHIAN LINK 4h p38",
   "pair": "LINK",
-  "tf": "1D",
-  "style": "swing",
-  "kind": "ema",
-  "p1": 14,
+  "tf": "4h",
+  "style": "breakout",
+  "kind": "donchian",
+  "p1": 38,
   "status": "incubacion",
-  "created_at": "2026-10-02T14:08:33.913Z",
+  "created_at": "2026-10-02T16:19:59.891Z",
   "backtest": {
-   "trades": 38,
-   "total": 1746.9,
-   "win": 84.2,
-   "pf": 10.95,
-   "dd": 84.6,
-   "sharpe": 15.23
+   "trades": 33,
+   "total": 1542.8,
+   "win": 93.9,
+   "pf": 21.9,
+   "dd": 70.6,
+   "sharpe": 20.03
   },
   "robustness": {
    "folds": [
@@ -277,34 +236,34 @@
    "pass": true
   },
   "live": {
-   "equity": 60.6,
-   "pnl": -39.4,
+   "equity": 151,
+   "pnl": 51,
    "ticks": 46,
-   "peak": 100,
-   "dd": 39.4,
+   "peak": 151,
+   "dd": 0,
    "pos": {
-    "side": -1,
-    "entry": 18.7562
+    "side": 1,
+    "entry": 20.5893
    }
   }
  },
  {
   "id": "st-8",
-  "name": "Minera EMA ETH 1D p16",
-  "pair": "ETH",
+  "name": "Minera EMA ADA 1D p7",
+  "pair": "ADA",
   "tf": "1D",
   "style": "swing",
   "kind": "ema",
-  "p1": 16,
-  "status": "incubacion",
-  "created_at": "2026-10-02T14:08:21.898Z",
+  "p1": 7,
+  "status": "activa",
+  "created_at": "2026-10-02T16:19:47.877Z",
   "backtest": {
    "trades": 38,
-   "total": 870.8,
-   "win": 71.1,
-   "pf": 3.22,
-   "dd": 130.8,
-   "sharpe": 7.38
+   "total": 2430.6,
+   "win": 86.8,
+   "pf": 16.96,
+   "dd": 55.4,
+   "sharpe": 18.75
   },
   "robustness": {
    "folds": [
@@ -319,74 +278,56 @@
    "pass": true
   },
   "live": {
-   "equity": 51.3,
-   "pnl": -48.7,
-   "ticks": 52,
-   "peak": 107.9,
-   "dd": 52.46,
+   "equity": 157.2,
+   "pnl": 57.2,
+   "ticks": 50,
+   "peak": 157.2,
+   "dd": 0,
    "pos": {
-    "side": -1,
-    "entry": 3664.1425
+    "side": 1,
+    "entry": 0.6613
    }
-  }
+  },
+  "agent_id": "a-180",
+  "activated_at": "2026-10-02T16:21:27.995Z"
  },
  {
   "id": "st-7",
-  "name": "Minera RSI BTC 5m p8",
-  "pair": "BTC",
+  "name": "Minera RSI ADA 5m p10",
+  "pair": "ADA",
   "tf": "5m",
   "style": "scalping",
   "kind": "rsi",
-  "p1": 8,
+  "p1": 10,
   "status": "descartada",
-  "created_at": "2026-10-02T14:08:09.883Z",
+  "created_at": "2026-10-02T16:19:35.868Z",
   "backtest": {
    "trades": 54,
-   "total": -2418.2,
+   "total": -2248.9,
    "win": 9.3,
-   "pf": 0.03,
-   "dd": 2418.2,
-   "sharpe": -21.39
+   "pf": 0.02,
+   "dd": 2279.4,
+   "sharpe": -23.63
   },
   "discard": "backtest bajo umbral (trades>10, total>0, sharpe>0.2)"
  },
  {
   "id": "st-6",
-  "name": "Minera RSI ADA 5m p18",
+  "name": "Minera DONCHIAN ADA 4h p41",
   "pair": "ADA",
-  "tf": "5m",
-  "style": "scalping",
-  "kind": "rsi",
-  "p1": 18,
-  "status": "descartada",
-  "created_at": "2026-10-02T14:07:57.868Z",
+  "tf": "4h",
+  "style": "breakout",
+  "kind": "donchian",
+  "p1": 41,
+  "status": "activa",
+  "created_at": "2026-10-02T16:19:23.852Z",
   "backtest": {
-   "trades": 49,
-   "total": -2107.3,
-   "win": 10.2,
-   "pf": 0.04,
-   "dd": 2122.6,
-   "sharpe": -24.69
-  },
-  "discard": "backtest bajo umbral (trades>10, total>0, sharpe>0.2)"
- },
- {
-  "id": "st-5",
-  "name": "Minera EMA LINK 1D p12",
-  "pair": "LINK",
-  "tf": "1D",
-  "style": "swing",
-  "kind": "ema",
-  "p1": 12,
-  "status": "incubacion",
-  "created_at": "2026-10-02T14:07:45.852Z",
-  "backtest": {
-   "trades": 37,
-   "total": 1777.5,
-   "win": 81.1,
-   "pf": 12.53,
-   "dd": 50.5,
-   "sharpe": 15.39
+   "trades": 33,
+   "total": 2194.9,
+   "win": 93.9,
+   "pf": 37.06,
+   "dd": 31.8,
+   "sharpe": 25.77
   },
   "robustness": {
    "folds": [
@@ -401,54 +342,140 @@
    "pass": true
   },
   "live": {
-   "equity": 96,
-   "pnl": -4,
-   "ticks": 61,
-   "peak": 117.5,
-   "dd": 18.3,
+   "equity": 162.6,
+   "pnl": 62.6,
+   "ticks": 50,
+   "peak": 162.6,
+   "dd": 0,
    "pos": {
-    "side": -1,
-    "entry": 18.7513
+    "side": 1,
+    "entry": 0.6558
    }
-  }
+  },
+  "agent_id": "a-177",
+  "activated_at": "2026-10-02T16:21:09.974Z"
+ },
+ {
+  "id": "st-5",
+  "name": "Minera EMA AVAX 1D p16",
+  "pair": "AVAX",
+  "tf": "1D",
+  "style": "swing",
+  "kind": "ema",
+  "p1": 16,
+  "status": "activa",
+  "created_at": "2026-10-02T16:19:11.835Z",
+  "backtest": {
+   "trades": 40,
+   "total": 1342.3,
+   "win": 65,
+   "pf": 3.47,
+   "dd": 182.2,
+   "sharpe": 7.9
+  },
+  "robustness": {
+   "folds": [
+    true,
+    true,
+    false
+   ],
+   "oos": false,
+   "mc": 100,
+   "sens": true,
+   "score": 3,
+   "pass": true
+  },
+  "live": {
+   "equity": 160.2,
+   "pnl": 60.2,
+   "ticks": 50,
+   "peak": 160.2,
+   "dd": 0,
+   "pos": {
+    "side": 1,
+    "entry": 41.0007
+   }
+  },
+  "agent_id": "a-178",
+  "activated_at": "2026-10-02T16:21:09.976Z"
  },
  {
   "id": "st-4",
-  "name": "Minera RSI DOGE 5m p9",
-  "pair": "DOGE",
-  "tf": "5m",
-  "style": "scalping",
+  "name": "Minera RSI AVAX 15m p8",
+  "pair": "AVAX",
+  "tf": "15m",
+  "style": "mean reversion",
   "kind": "rsi",
-  "p1": 9,
+  "p1": 8,
   "status": "descartada",
-  "created_at": "2026-10-02T14:07:33.840Z",
+  "created_at": "2026-10-02T16:18:59.822Z",
   "backtest": {
-   "trades": 49,
-   "total": -1880.5,
-   "win": 10.2,
-   "pf": 0.07,
-   "dd": 1904.8,
-   "sharpe": -18.03
+   "trades": 54,
+   "total": -1838.6,
+   "win": 13,
+   "pf": 0.05,
+   "dd": 1847.3,
+   "sharpe": -18.05
   },
   "discard": "backtest bajo umbral (trades>10, total>0, sharpe>0.2)"
  },
  {
   "id": "st-3",
-  "name": "Minera EMA XRP 1D p9",
-  "pair": "XRP",
-  "tf": "1D",
-  "style": "swing",
-  "kind": "ema",
-  "p1": 9,
-  "status": "incubacion",
-  "created_at": "2026-10-02T14:07:21.827Z",
+  "name": "Minera RSI LINK 15m p16",
+  "pair": "LINK",
+  "tf": "15m",
+  "style": "mean reversion",
+  "kind": "rsi",
+  "p1": 16,
+  "status": "descartada",
+  "created_at": "2026-10-02T16:18:47.810Z",
   "backtest": {
-   "trades": 39,
-   "total": 1457.3,
-   "win": 66.7,
-   "pf": 5.02,
-   "dd": 101.7,
-   "sharpe": 11.09
+   "trades": 45,
+   "total": -1528.2,
+   "win": 11.1,
+   "pf": 0.02,
+   "dd": 1532.2,
+   "sharpe": -18.97
+  },
+  "discard": "backtest bajo umbral (trades>10, total>0, sharpe>0.2)"
+ },
+ {
+  "id": "st-2",
+  "name": "Minera RSI DOGE 15m p20",
+  "pair": "DOGE",
+  "tf": "15m",
+  "style": "mean reversion",
+  "kind": "rsi",
+  "p1": 20,
+  "status": "descartada",
+  "created_at": "2026-10-02T16:18:35.805Z",
+  "backtest": {
+   "trades": 45,
+   "total": -1658.9,
+   "win": 13.3,
+   "pf": 0.08,
+   "dd": 1675.7,
+   "sharpe": -15.96
+  },
+  "discard": "backtest bajo umbral (trades>10, total>0, sharpe>0.2)"
+ },
+ {
+  "id": "st-1",
+  "name": "Minera EMA SOL 1h p15",
+  "pair": "SOL",
+  "tf": "1h",
+  "style": "tendencia",
+  "kind": "ema",
+  "p1": 15,
+  "status": "activa",
+  "created_at": "2026-10-02T16:18:23.787Z",
+  "backtest": {
+   "trades": 37,
+   "total": 1467.9,
+   "win": 75.7,
+   "pf": 6.54,
+   "dd": 120.6,
+   "sharpe": 12.07
   },
   "robustness": {
    "folds": [
@@ -463,55 +490,17 @@
    "pass": true
   },
   "live": {
-   "equity": 102.7,
-   "pnl": 2.7,
-   "ticks": 61,
-   "peak": 120.7,
-   "dd": 14.91,
+   "equity": 160.4,
+   "pnl": 60.4,
+   "ticks": 50,
+   "peak": 160.4,
+   "dd": 0,
    "pos": {
-    "side": -1,
-    "entry": 0.6485
+    "side": 1,
+    "entry": 193.868
    }
-  }
- },
- {
-  "id": "st-2",
-  "name": "Minera RSI ETH 15m p20",
-  "pair": "ETH",
-  "tf": "15m",
-  "style": "mean reversion",
-  "kind": "rsi",
-  "p1": 20,
-  "status": "descartada",
-  "created_at": "2026-10-02T14:07:09.812Z",
-  "backtest": {
-   "trades": 35,
-   "total": -1011,
-   "win": 11.4,
-   "pf": 0.06,
-   "dd": 1011,
-   "sharpe": -17.79
   },
-  "discard": "backtest bajo umbral (trades>10, total>0, sharpe>0.2)"
- },
- {
-  "id": "st-1",
-  "name": "Minera RSI ADA 15m p7",
-  "pair": "ADA",
-  "tf": "15m",
-  "style": "mean reversion",
-  "kind": "rsi",
-  "p1": 7,
-  "status": "descartada",
-  "created_at": "2026-10-02T14:06:57.797Z",
-  "backtest": {
-   "trades": 56,
-   "total": -2259.4,
-   "win": 3.6,
-   "pf": 0.01,
-   "dd": 2259.4,
-   "sharpe": -24.59
-  },
-  "discard": "backtest bajo umbral (trades>10, total>0, sharpe>0.2)"
+  "agent_id": "a-179",
+  "activated_at": "2026-10-02T16:21:11.977Z"
  }
 ]

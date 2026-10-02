@@ -1,0 +1,37 @@
+# Tareas — SPEC-001 (marcar [x] al completar con evidencia)
+
+## F0
+- [ ] T01 Caracterización `costs` (tabla dorada al céntimo)
+- [ ] T02 Caracterización `risk.checkOperation` (matriz de decisión)
+- [ ] T03 Caracterización `desks` puras (arbPnl, arbCostPct, hedgeSignal, deskPnl)
+- [ ] T04 Caracterización `incubator` pura (ema/rsi/runTrades/metrics/qualify/liveSignal)
+
+## F1
+- [ ] T10 Estructura `lib/` TS + seams rng/clock/store
+- [ ] T11 Port costs + tests F0 en verde
+- [ ] T12 Port risk-pure + tests en verde
+- [ ] T13 Port desks-pure + tests en verde
+- [ ] T14 Port incubator-pura + tests en verde
+
+## F2
+- [ ] T20 Repositorio de estado particionado (fake KV en tests)
+- [ ] T21 Routes GET (mismo shape que la UI espera)
+- [ ] T22 Routes POST con lock por slot (chat, propose, kill, suspend, comité, memoria, incubadora)
+- [ ] T23 `GET /api/floor` agregado + contrato validado
+
+## F3
+- [ ] T30 `step()` con orden del loop + idempotencia por slot
+- [ ] T31 Determinismo: 2 corridas misma seed idénticas
+- [ ] T32 Comité, incubadora, mesas y escuela sobre el estado
+- [ ] T33 Seed 500€ frescos + primer latido verificado
+
+## F4
+- [ ] T40 UI contra `/api/*` por polling (reutilizar componentes)
+- [ ] T41 Acciones remotas funcionando (H2)
+- [ ] T42 Sin backend: error explícito, jamás demo silenciosa
+- [ ] T43 Checklist dashboard Vercel (KV + cron) completado por el gestor
+
+## F5
+- [ ] T50 Semana de latidos ≥95% puntuales + cuotas bajo techo
+- [ ] T51 Informe de consistencia del fondo en la nube
+- [ ] T52 Tag `checkpoint/corte-web`, deploy reemplazado, CHANGELOG cerrado

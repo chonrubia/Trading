@@ -1,4 +1,8 @@
-# AI Trading Floor — Fase 1
+# AI Trading Floor — ver demo pública en https://trading-three-hazel.vercel.app/
+> La web pública arranca con una **foto real del motor** (`frontend/public/snapshot.json`,
+> regenerada por GitHub Actions cada 6h con `backend/scripts/make-snapshot.js`) y sigue
+> simulando en vivo en el navegador. Sin backend conectado muestra "DATOS DEL MOTOR REAL +
+> SIMULACIÓN EN VIVO". Con `VITE_API_URL` apuntando a un backend, usa datos 100% en vivo.
 
 Replica del fondo de las capturas (`C:\Users\chonr\Desktop\trading`): fondo cripto con 156+ agentes IA en oficina virtual.
 

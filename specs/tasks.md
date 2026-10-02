@@ -26,10 +26,10 @@
 - [x] T33 Seed 500€ frescos + primer tick verificado (tickN 1, equity 500, eventos chat+tick)
 
 ## F4
-- [ ] T40 UI contra `/api/*` por polling (reutilizar componentes)
-- [ ] T41 Acciones remotas funcionando (H2)
-- [ ] T42 Sin backend: error explícito, jamás demo silenciosa
-- [ ] T43 Checklist dashboard Vercel (KV + cron) completado por el gestor
+- [x] T40 UI contra `/api/*` por polling (reutilizar componentes) — `FloorApp` + `IsoOffice` migrados, página 200 en producción local
+- [x] T41 Acciones remotas funcionando (H2) — chat, propose, kill, suspend, comité, memoria, incubadora verificados en vivo
+- [x] T42 Sin backend: error explícito, jamás demo silenciosa — sin KV en Vercel falla explícito (503/500 + banner offline)
+- [ ] T43 Checklist dashboard (pendiente del gestor): proyecto Vercel con Root `web/` + store KV conectado + `CRON_SECRET` en Vercel y secrets `VERCEL_APP_URL`/`CRON_SECRET` en GitHub para `engine-web.yml`
 
 ## F5
 - [ ] T50 Semana de latidos ≥95% puntuales + cuotas bajo techo

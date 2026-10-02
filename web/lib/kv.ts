@@ -7,6 +7,8 @@ let mem: MemoryKv | null = null;
 export function getKv(): KvStore {
   const found = resolveKv(process.env as Record<string, string>);
   if (found) return new UpstashKv(found.url, found.token);
+  // Sin KV en producción: fallar explícito (jamás estado fragmentado silencioso).
+  if (process.env.VERCEL) throw new Error("KV no configurado: conecta un store en Storage");
   if (!mem) mem = new MemoryKv();
   return mem;
 }

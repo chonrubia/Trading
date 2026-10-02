@@ -1,0 +1,22 @@
+name: engine-web
+# Latido del motor serverless: 1 llamada = 1 tick (~1 min facturado).
+# 48 carreras/día x 1 min ≈ 1440/2000 min mensuales. Requiere secrets:
+# VERCEL_APP_URL (https://tu-app.vercel.app) y CRON_SECRET (el mismo que en Vercel).
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch: {}
+concurrency:
+  group: engine-web
+  cancel-in-progress: false
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - run: |
+          test -n "${{ secrets.VERCEL_APP_URL }}" || { echo "falta secret VERCEL_APP_URL"; exit 1; }
+          test -n "${{ secrets.CRON_SECRET }}" || { echo "falta secret CRON_SECRET"; exit 1; }
+          code=$(curl -s -o /tmp/tick.json -w "%{http_code}" -X POST "${{ secrets.VERCEL_APP_URL }}/api/tick" -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" -H "Content-Type: application/json" -d '{}')
+          echo "tick -> $code"; cat /tmp/tick.json | head -c 400; echo
+          test "$code" = "200"

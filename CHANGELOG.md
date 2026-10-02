@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 - F3 completado: `step()` determinista (mercado con regímenes, scoring R, tiers, cooldown, comité, incubadora, mesas, escuela, memoria), `POST /api/tick` con lock + dedup, 5/5 tests engine. Mercado persiste entre rachas.
+- F4 (código) completado: UI web total con polling + acciones remotas, ticker `engine-web.yml` cada 30 min (~1440/2000 min/mes), KV explícito sin fallback silencioso. Pendiente solo dashboard (T43).
 
 ## SDD base
 

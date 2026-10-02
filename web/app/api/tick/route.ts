@@ -8,6 +8,7 @@ import { seedRand, hashStr } from "../../../lib/rng.js";
 // Idempotente por slot: repetir el mismo slot no duplica nada.
 export async function POST(req: Request) {
   const secret = process.env.CRON_SECRET || "";
+  if (process.env.VERCEL && !secret) return json({ error: "configura CRON_SECRET" }, 503);
   if (secret) {
     const auth = req.headers.get("authorization") || "";
     if (auth !== `Bearer ${secret}`) return json({ error: "unauthorized" }, 401);

@@ -5,10 +5,9 @@
     "strict": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "outDir": "lib/dist",
-    "rootDir": "lib",
+    "outDir": "web/lib/dist",
     "declaration": false,
     "sourceMap": false
   },
-  "include": ["lib/**/*.ts"]
+  "include": ["web/lib/**/*.ts", "web/app/api/**/*.ts"]
 }

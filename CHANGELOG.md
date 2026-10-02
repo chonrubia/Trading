@@ -1,7 +1,7 @@
 # Changelog — AI Trading Floor
 
 ## [Unreleased]
-- F1 completado: `lib/` TS puro (costs, risk, desks, indicators, rng) con goldens idénticos a F0 (5/5 tests) + `tsc:0`. Sin `Math.random/Date/fs` salvo seams inyectadas.
+- F2 completado: app Next.js `web/` con 30 rutas API (mismo shape), repo KV particionado (`MemoryKv` + `UpstashKv` REST con fallback `REDIS_URL`), locks anti-doble-ejecución, seed determinista 176 agentes. 14/14 tests lib + 22/22 backend en verde. Hallazgo: Next duplica módulos por ruta en memoria (solo afecta al fallback local, no a Upstash).
 
 ## SDD base
 

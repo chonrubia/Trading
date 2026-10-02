@@ -14,10 +14,10 @@
 - [x] T14 Port incubator-pura + tests en verde (robustness determinista con seed)
 
 ## F2
-- [ ] T20 Repositorio de estado particionado (fake KV en tests)
-- [ ] T21 Routes GET (mismo shape que la UI espera)
-- [ ] T22 Routes POST con lock por slot (chat, propose, kill, suspend, comité, memoria, incubadora)
-- [ ] T23 `GET /api/floor` agregado + contrato validado
+- [x] T20 Repositorio de estado particionado (fake KV en tests) — `lib/store.ts` + `lib/state.ts`, 5 tests
+- [x] T21 Routes GET (mismo shape que la UI espera) — 20 rutas verificadas en vivo
+- [x] T22 Routes POST con lock por slot (chat, propose, kill, suspend, comité, memoria, incubadora)
+- [x] T23 `GET /api/floor` agregado + contrato validado — 4 tests de contrato en verde
 
 ## F3
 - [ ] T30 `step()` con orden del loop + idempotencia por slot

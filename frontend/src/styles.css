@@ -25,6 +25,7 @@ body{margin:0;background:radial-gradient(1200px 600px at 50% -10%,#10170e 0%,var
 .modepill.paper{color:var(--lime);border-color:#3a4d2a;background:rgba(212,255,63,.07)}
 .modepill.comite{color:var(--amber);border-color:#5a4d1f;background:rgba(255,213,79,.08)}
 .modepill.kill{color:var(--red);border-color:#5c2424;background:rgba(255,107,107,.08)}
+.modepill.cloud{color:var(--blue);border-color:#1f4d5c;background:rgba(79,195,247,.08)}
 .stats{display:flex;gap:8px;flex:1;align-items:stretch;min-width:0;flex-wrap:wrap}
 .stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:6px 12px;min-width:118px;flex:1;display:flex;flex-direction:column;justify-content:center}
 .stat label{font-size:9.5px;letter-spacing:1.6px;color:var(--faint);font-weight:700}

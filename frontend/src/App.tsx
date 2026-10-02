@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import IsoOffice from "./IsoOffice";
 import { apiFetch, wsEndpoint, resolveApiBase } from "./api";
 import { initDemo, tickDemo } from "./demo";
+import { fetchLive, liveAgeMin } from "./cloud";
 
 type Agent = any; type Dept = any; type Msg = any;
 
@@ -38,6 +39,8 @@ export default function App() {
   const [setups, setSetups] = useState<any[]>([]);
   const [online, setOnline] = useState(true);
   const [demoMode, setDemoMode] = useState(false);
+  const [src, setSrc] = useState<"live" | "cloud" | "demo">("live");
+  const [cloudAge, setCloudAge] = useState<number | null>(null);
   const [seedDate, setSeedDate] = useState<string | null>(null);
   const demoRef = useRef<any>(null);
   const chatRef = useRef<HTMLDivElement>(null);
@@ -67,38 +70,70 @@ export default function App() {
       setAgents(d.agents); setMarket(d.market); setPortfolio(d.portfolio); setRanking(d.ranking);
       if (d.newMsgs.length) setMsgs(m => [...m, ...d.newMsgs].slice(-120));
     };
-    const startDemo = async () => {
-      if (stop || demoRef.current) return;
-      let snap: any = null;
-      try {
-        const ctl2 = new AbortController(); const to2 = setTimeout(() => ctl2.abort(), 4000);
-        const r = await fetch("snapshot.json", { signal: ctl2.signal }); clearTimeout(to2);
-        if (r.ok) snap = await r.json();
-      } catch {}
-      demoRef.current = initDemo(snap);
-      const d = demoRef.current;
+    const applyStore = (d: any, mergeMsgs: boolean) => {
       const meta = d.seedMeta || {};
-      setAgents(d.agents); setDepts(d.departments); setMsgs(d.msgs); setMarket({ prices: d.prices, funding: d.funding, fear_greed: d.fear_greed, risk_mode: d.risk_mode });
+      setAgents(d.agents); setDepts(d.departments);
+      if (mergeMsgs) {
+        const fresh = (meta.freshMsgs || d.msgs || []).filter((m: any) => m && m.id);
+        if (fresh.length) setMsgs(prev => { const ids = new Set(prev.map((x: any) => x.id)); return [...prev, ...fresh.filter((m: any) => !ids.has(m.id))].slice(-120); });
+      } else setMsgs(d.msgs);
+      setMarket({ prices: d.prices, funding: d.funding, fear_greed: d.fear_greed, risk_mode: d.risk_mode });
       setPortfolio({ patrimonio: d.equity, resultado_hoy: d.dayPnl, exposicion_bruta: 62, caida: 0.8, posiciones: 11, objetivo: 50, costes_pagados: 3.2 });
       setRanking(meta.ranking || []); setOnline(false); setDemoMode(true);
-      setRiskInfo({ limits: { max_day_loss: -15, max_drawdown: 10, max_exposure_gross: 150 }, dayPnl: d.dayPnl, drawdown: 0.8, exposure: 62, open: 11, blocked: 2, suspended: [], kill: false });
+      setRiskInfo({ limits: { max_day_loss: null, max_drawdown: null, max_exposure_gross: 150 }, dayPnl: d.dayPnl, drawdown: 0.8, exposure: 62, open: 11, blocked: 2, suspended: [], kill: false });
       setDesks({ venues: [], funding: d.funding, arbOpen: [], derivadosOpen: [], hedge: null, signal: "-", pnl: meta.desks?.pnl || { spot: d.dayPnl, arbitraje: 0, derivados: 0, cobertura: 0 } });
-      setReport(meta.report ? { ...meta.report, verdict: "motor real (" + (meta.generated_at || "?").slice(0, 10) + ") + demo en vivo" } : { verdict: "demo local", net: d.dayPnl, fees_paid: 3.2, costs_drag: "—", win_rate: "51%", profit_factor: 1.1, sharpe: 0.4, days: 0, green_days: "0/0", trades: { closed: 34, open: 11, blocked: 2, block_rate: "5%" }, desk_net: { spot: d.dayPnl }, block_reasons: {} });
+      setReport(meta.report || { verdict: "demo local", net: d.dayPnl, fees_paid: 3.2, costs_drag: "—", win_rate: "51%", profit_factor: 1.1, sharpe: 0.4, days: 0, green_days: "0/0", trades: { closed: 34, open: 11, blocked: 2, block_rate: "5%" }, desk_net: { spot: d.dayPnl }, block_reasons: {} });
       setOps([{ id: "demo-op-1", desk: "spot", status: "abierta", agent_name: d.agents[5].name, side: "LONG", pair: "BTC", pnl: 1.2, risk_note: "Demo local" }]);
       setLabStats(meta.labStats || { total: 6, incubacion: 3, lista: 1, activas: 2 }); setLab([]);
       setSetups(meta.setups || [{ strategy: "Tendencia BTC 1h", avg: 1.8, win: 58, trades: 12 }, { strategy: "Breakout SOL 15m", avg: 0.9, win: 52, trades: 9 }]);
       setSchoolTop(meta.school || d.agents.slice(0, 8).map((a: any, i: number) => ({ id: a.id, name: a.name, level: 2, xp: 120 - i * 9 })));
       if (!meta.memory) setMemList([{ id: "dm-mem", pair: "BTC", author: "Dirección CIO", text: "Demo local: la memoria compartida funciona igual que en el fondo real.", created_at: new Date().toISOString() }]);
       else setMemList(meta.memory);
-      setAuditList([{ ev: meta.generated_at ? "seed motor " + meta.generated_at.slice(0, 16) : "demo.boot", ts: new Date().toISOString() }]); setMeetings(meta.meetings || []);
+      setAuditList([{ ev: meta.generated_at ? "motor nube " + meta.generated_at.slice(0, 16) : "demo.boot", ts: new Date().toISOString() }]); setMeetings(meta.meetings || []);
       if (meta.generated_at) setSeedDate(meta.generated_at.slice(0, 16).replace("T", " "));
+    };
+    const startDemo = async () => {
+      if (stop || demoRef.current) return;
+      let snap: any = null;
+      try {
+        const ctl2 = new AbortController(); const to2 = setTimeout(() => ctl2.abort(), 4000);
+        const live = await fetchLive();
+        if (live) snap = live;
+        else { const r = await fetch("snapshot.json", { signal: ctl2.signal }); clearTimeout(to2); if (r.ok) snap = await r.json(); }
+      } catch {}
+      demoRef.current = initDemo(snap);
+      applyStore(demoRef.current, false);
+      setSrc("demo");
       iv = setInterval(demoTick, 2000);
+    };
+    const startCloud = async (live: any) => {
+      if (stop) return;
+      demoRef.current = initDemo(live);
+      const d = demoRef.current;
+      applyStore(d, false);
+      setSrc("cloud");
+      setCloudAge(liveAgeMin(live));
+      const poll = async () => {
+        if (stop) return;
+        const l = await fetchLive(15000);
+        if (!l || l.generated_at === demoRef.current?.seedMeta?.generated_at) { setCloudAge(liveAgeMin(demoRef.current?.seedMeta?.generated_at ? { generated_at: demoRef.current.seedMeta.generated_at } : l)); return; }
+        demoRef.current = initDemo(l);
+        const nd = demoRef.current;
+        (nd.seedMeta as any).freshMsgs = l.messages || [];
+        applyStore(nd, true);
+        setCloudAge(0);
+      };
+      iv = setInterval(poll, 90000);
     };
     (async () => {
       try {
         const found = await resolveApiBase();
         if (stop) return;
-        if (found === null) { startDemo(); return; }
+        if (found === null) {
+          const live = await fetchLive();
+          if (live && !stop) { startCloud(live); return; }
+          startDemo(); return;
+        }
         apiFetch("/api/agents?limit=200").then(r => r.json()).then(setAgents).catch(() => {});
         apiFetch("/api/departments").then(r => r.json()).then(setDepts).catch(() => {});
         apiFetch("/api/channels/c-general/messages").then(r => r.json()).then(setMsgs).catch(() => {});
@@ -137,6 +172,7 @@ export default function App() {
 
   const send = async () => {
     if (!text.trim()) return;
+    if (ro) { demoSay("Sala", "alerta", "Solo lectura: el motor en la nube no recibe mensajes."); setText(""); return; }
     if (demoMode) {
       const t = text; setText("");
       demoSay("Tú", "humano", t);
@@ -155,19 +191,22 @@ export default function App() {
   };
   const demoSay = (from: string, kind: string, text: string) => setMsgs(m => [...m.slice(-120), { id: "dm-" + Date.now() + Math.random(), from, kind, text, created_at: new Date().toISOString() }]);
   const startCommittee = async () => {
+    if (ro) return;
     if (demoMode) { setCommittee(true); demoSay("Dirección CIO", "alerta", "Comité demo convocado: toda la oficina a la sala."); return; }
     await apiFetch("/api/committee/start", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ topic: "Revisión riesgos + ranking" }) });
   };
   const endCommittee = async () => {
+    if (ro) return;
     if (demoMode) { setCommittee(false); demoSay("Dirección CIO", "alerta", "Comité demo cerrado: mantener operativa con prudencia."); return; }
     await apiFetch("/api/committee/end", { method: "POST" });
   };
   const toggleKill = async () => {
+    if (ro) return;
     if (demoMode) { const k = !riskInfo.kill; setRiskInfo((x: any) => ({ ...x, kill: k })); demoSay("Riesgo · Sato", "alerta", k ? "Kill-switch demo ACTIVADO." : "Kill-switch demo liberado."); return; }
     const r = await apiFetch("/api/risk/kill", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ active: !riskInfo.kill }) }).then(r => r.json()); setRiskInfo((x: any) => ({ ...x, kill: r.kill }));
   };
   const propose = async () => {
-    if (!sel) return;
+    if (!sel || ro) return;
     if (demoMode) {
       const side = Math.random() > 0.5 ? "LONG" : "SHORT";
       setOps(o => [{ id: "dm-op-" + Date.now(), desk: "spot", status: "abierta", agent_name: sel.name, side, pair: sel.pair, pnl: 0, risk_note: "Demo local (sin Riesgos)" }, ...o].slice(0, 60));
@@ -179,16 +218,17 @@ export default function App() {
     setOps(o => [op, ...o].slice(0, 60)); pick(sel.id);
   };
   const suspend = async () => {
-    if (!sel) return;
+    if (!sel || ro) return;
     if (demoMode) { setSel({ ...sel, suspended: !sel.suspended }); demoSay("Riesgo · Sato", "alerta", `Demo: ${sel.name} ${sel.suspended ? "reactivado" : "suspendido"} (simulado).`); return; }
     await apiFetch("/api/risk/suspend", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ agent_id: sel.id, active: !sel.suspended }) });
     pick(sel.id); refresh();
   };
 
   const prices = market?.prices || {};
+  const ro = src === "cloud"; // nube: solo lectura (el motor vive en GitHub Actions)
   const tape = Object.entries(prices).slice(0, 12);
-  const mode = riskInfo.kill ? "kill" : (committee || portfolio.freno_riesgos) ? "comite" : "paper";
-  const modeTxt = demoMode ? "MODO DEMO · SIMULADO" : riskInfo.kill ? "⛔ DETENIDO" : portfolio.freno_riesgos ? "RIESGOS · EN PAUSA HASTA MAÑANA" : committee ? "COMITÉ EN SALA" : "PAPEL · TIEMPO REAL";
+  const mode = riskInfo.kill ? "kill" : src === "cloud" ? "cloud" : (committee || portfolio.freno_riesgos) ? "comite" : "paper";
+  const modeTxt = demoMode ? (src === "cloud" ? "NUBE · EN VIVO (SOLO LECTURA)" : "MODO DEMO · SIMULADO") : riskInfo.kill ? "⛔ DETENIDO" : portfolio.freno_riesgos ? "RIESGOS · EN PAUSA HASTA MAÑANA" : committee ? "COMITÉ EN SALA" : "PAPEL · TIEMPO REAL";
   const tgt = Number(portfolio.objetivo || 50), day = Number(portfolio.resultado_hoy || 0);
   const tgtPct = Math.max(0, Math.min(100, (day / tgt) * 100));
 
@@ -215,9 +255,9 @@ export default function App() {
       </div>
       <div className="topactions">
         {!committee
-          ? <button className="btn primary" onClick={startCommittee}>Convocar comité</button>
-          : <button className="btn warn" onClick={endCommittee}>Cerrar comité</button>}
-        <button className="btn danger" onClick={toggleKill}>{riskInfo.kill ? "Reanudar" : "Kill switch"}</button>
+          ? <button className="btn primary" disabled={ro} title={ro ? "Solo lectura en la nube" : ""} onClick={startCommittee}>Convocar comité</button>
+          : <button className="btn warn" disabled={ro} onClick={endCommittee}>Cerrar comité</button>}
+        <button className="btn danger" disabled={ro} onClick={toggleKill}>{riskInfo.kill ? "Reanudar" : "Kill switch"}</button>
       </div>
     </header>
 
@@ -233,7 +273,7 @@ export default function App() {
       {[...tape, ...tape].map(([k, v]: any, i: number) => <span className="tick" key={i}><span>{k}</span><b>{v}</b></span>)}
     </div></div>
 
-    {!online && <div className="offline">{seedDate ? `DATOS DEL MOTOR REAL (${seedDate} UTC) + SIMULACIÓN EN VIVO · sin backend conectado` : "MODO DEMO · simulación local en tu navegador (sin backend). Todo lo que ves es simulado."}</div>}
+    {!online && <div className="offline">{src === "cloud" ? `EN VIVO DESDE LA NUBE · motor actualizado hace ${cloudAge ?? "?"} min · solo lectura` : seedDate ? `DATOS DEL MOTOR REAL (${seedDate} UTC) + SIMULACIÓN EN VIVO · sin backend conectado` : "MODO DEMO · simulación local en tu navegador (sin backend). Todo lo que ves es simulado."}</div>}
 
     <div className="layout">
       <div className="panel">
@@ -249,7 +289,7 @@ export default function App() {
             </div>
           ))}
         </div>
-        <div className="pfoot"><input className="chatinput" value={text} onChange={e => setText(e.target.value)} placeholder={sel ? `Hablar con ${sel.name}…` : "Escribir en la sala…"} onKeyDown={e => e.key === "Enter" && send()} /></div>
+        <div className="pfoot"><input className="chatinput" disabled={ro} value={text} onChange={e => setText(e.target.value)} placeholder={ro ? "Solo lectura en la nube…" : sel ? `Hablar con ${sel.name}…` : "Escribir en la sala…"} onKeyDown={e => e.key === "Enter" && send()} /></div>
       </div>
 
       <div className="panel floor">
@@ -285,7 +325,7 @@ export default function App() {
             </div>
             <div className="row"><span>Escuela</span><span>Riesgo N{sel.level_risk} · TA N{sel.level_ta} · {sel.studying}</span></div>
             <div className="quote">{sel.last_reason}</div>
-            <div className="btnrow"><button className="btn primary" onClick={propose}>Proponer trade</button><button className="btn danger" onClick={suspend}>{sel.suspended ? "Reactivar" : "Suspender"}</button></div>
+            <div className="btnrow"><button className="btn primary" disabled={ro} onClick={propose}>Proponer trade</button><button className="btn danger" disabled={ro} onClick={suspend}>{sel.suspended ? "Reactivar" : "Suspender"}</button></div>
             {(sel.school || []).slice(0, 4).map((l: any, i: number) => <div key={i} className="row"><span>🎓 {l.subject} +{l.xp}xp N{l.level}</span><span>{l.note?.slice(0, 34)}</span></div>)}
             {(sel.ops || []).slice(-5).reverse().map((o: any) => <div key={o.id} className="row"><span><span className={`chip ${o.status}`}>{o.status}</span> {o.side} {o.pair}</span><span className={pcl(o.pnl)}>{eur(o.pnl)}</span></div>)}
           </div>

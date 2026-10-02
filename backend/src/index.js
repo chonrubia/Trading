@@ -21,6 +21,7 @@ app.use(cors());
 app.use(express.json());
 
 const state = buildState();
+market.load(); // retoma precios/régimen si viene de una racha en la nube
 state.operations = store.load("operations", []);
 state.meetings = store.load("meetings", []);
 const savedMsgs = store.load("messages", []);
@@ -65,6 +66,7 @@ function persist() {
   store.save("extra_agents", state.agents.filter(a => a.incubated));
   store.save("snapshots", state.snapshots.slice(-20000));
   store.save("day_start", dayStartEquity);
+  try { market.save(); } catch {}
 }
 // endurecimiento: no morir ante un tick raro; dejar rastro
 process.on("uncaughtException", e => { lastError = String(e && e.stack || e); try { require("fs").appendFileSync(require("path").join(__dirname, "..", "data", "run.log"), `${new Date().toISOString()} UNCAUGHT ${lastError}\n`); } catch {} persist(); });

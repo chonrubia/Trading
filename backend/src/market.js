@@ -56,4 +56,24 @@ function snapshot() {
   return { ts: new Date().toISOString(), prices: { ...prices }, funding: 0.01, fear_greed: 50, risk_mode: "RISK-ON", regime: "trend", trend: {} };
 }
 
-module.exports = { tick, snapshot };
+// Persistencia para la nube (el motor hiberna entre rachas y retoma aquí).
+function save() {
+  try {
+    require("fs").writeFileSync(
+      require("path").join(__dirname, "..", "data", "market.json"),
+      JSON.stringify({ prices, hist, regime, regimeLeft, trendDir })
+    );
+  } catch {}
+}
+function load() {
+  try {
+    const s = JSON.parse(require("fs").readFileSync(require("path").join(__dirname, "..", "data", "market.json"), "utf8"));
+    Object.assign(prices, s.prices || {});
+    Object.assign(hist, s.hist || {});
+    if (s.regime) regime = s.regime;
+    if (s.regimeLeft) regimeLeft = s.regimeLeft;
+    if (s.trendDir) trendDir = s.trendDir;
+  } catch {}
+}
+
+module.exports = { tick, snapshot, save, load };

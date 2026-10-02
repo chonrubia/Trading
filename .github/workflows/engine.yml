@@ -1,0 +1,44 @@
+name: engine-nube
+# El motor vive en la nube sin depender del PC:
+# cada 2h arranca con el estado de la rama engine-state, opera 100 ticks
+# (~3 min), guarda estado + live.json y vuelve a dormir.
+# La web lee live.json en vivo (sin rebuilds). Cuota: ~12 carreras/día x 5 min.
+on:
+  schedule:
+    - cron: "0 */2 * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths: ["backend/**"]
+permissions:
+  contents: write
+concurrency:
+  group: engine-nube
+  cancel-in-progress: false # nunca dos motores a la vez (evita doble gasto)
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restaurar estado del motor
+        run: |
+          git fetch origin engine-state 2>/dev/null && git checkout origin/engine-state -- backend/data && echo "estado retomado" || echo "fondo fresco en la nube"
+          mkdir -p backend/data
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: cd backend && npm install --no-audit --no-fund
+      - name: Operar 100 ticks
+        run: |
+          rm -rf statebr
+          if git clone --branch engine-state "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" statebr 2>/dev/null; then echo "rama engine-state OK"; else mkdir -p statebr/data && cd statebr && git init -q && git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" && cd ..; fi
+          SNAP_OUT="$PWD/statebr/live.json" node backend/scripts/make-snapshot.js 100
+      - name: Publicar estado
+        run: |
+          mkdir -p statebr/data && cp backend/data/*.json statebr/data/ 2>/dev/null || true
+          cd statebr
+          git config user.name "chonrubia-bot"
+          git config user.email "chonrubia-bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && echo "sin cambios" || (git commit -m "engine $(date -u +%F-%H%M)" && git push origin HEAD:engine-state)

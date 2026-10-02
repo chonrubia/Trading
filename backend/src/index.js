@@ -15,7 +15,7 @@ const target = require("./target");
 const priceBuffers = {}; // pair -> últimos cierres live para incubación
 let venuesCache = {};
 
-const PORT = 8765;
+const PORT = Number(process.env.PORT) || 8765;
 const app = express();
 app.use(cors());
 app.use(express.json());

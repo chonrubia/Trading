@@ -1,5 +1,86 @@
 [
  {
+  "id": "mem-47",
+  "ts": "2026-10-02T18:23:17.223Z",
+  "author": "Deriv · Vega",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC TP +0.7% (1.16€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-46",
+  "ts": "2026-10-02T18:22:55.196Z",
+  "author": "Laboratorio",
+  "dept": "lab",
+  "pair": "LINK",
+  "text": "Minera DONCHIAN LINK 4h p38 supera incubación (paper 121.3€) y recibe 25€ de capital.",
+  "kind": "incubacion"
+ },
+ {
+  "id": "mem-45",
+  "ts": "2026-10-02T18:22:33.200Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.42€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-44",
+  "ts": "2026-10-02T18:22:25.172Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.13€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-43",
+  "ts": "2026-10-02T18:22:19.166Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.37€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-42",
+  "ts": "2026-10-02T18:22:09.144Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.2€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-41",
+  "ts": "2026-10-02T18:22:01.160Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.36€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-40",
+  "ts": "2026-10-02T18:21:49.124Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.26€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-39",
+  "ts": "2026-10-02T18:21:47.120Z",
+  "author": "Deriv · Vega",
+  "dept": "trading",
+  "pair": "ETH",
+  "text": "LONG ETH TP +0.7% (0.86€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
   "id": "mem-38",
   "ts": "2026-10-02T16:21:28.058Z",
   "author": "Laboratorio",

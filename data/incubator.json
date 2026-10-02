@@ -1,5 +1,306 @@
 [
  {
+  "id": "st-26",
+  "name": "Minera EMA XRP 1h p13",
+  "pair": "XRP",
+  "tf": "1h",
+  "style": "tendencia",
+  "kind": "ema",
+  "p1": 13,
+  "status": "incubacion",
+  "created_at": "2026-10-02T18:23:29.228Z",
+  "backtest": {
+   "trades": 37,
+   "total": 1352.9,
+   "win": 67.6,
+   "pf": 4.04,
+   "dd": 145.2,
+   "sharpe": 9.83
+  },
+  "robustness": {
+   "folds": [
+    true,
+    true,
+    true
+   ],
+   "oos": true,
+   "mc": 100,
+   "sens": true,
+   "score": 4,
+   "pass": true
+  },
+  "live": {
+   "equity": 100,
+   "pnl": 0,
+   "ticks": 0,
+   "peak": 100,
+   "dd": 0,
+   "pos": null
+  }
+ },
+ {
+  "id": "st-25",
+  "name": "Minera DONCHIAN LINK 4h p46",
+  "pair": "LINK",
+  "tf": "4h",
+  "style": "breakout",
+  "kind": "donchian",
+  "p1": 46,
+  "status": "incubacion",
+  "created_at": "2026-10-02T18:23:17.216Z",
+  "backtest": {
+   "trades": 32,
+   "total": 1526.6,
+   "win": 93.8,
+   "pf": 21.68,
+   "dd": 70.6,
+   "sharpe": 20.86
+  },
+  "robustness": {
+   "folds": [
+    true,
+    true,
+    true
+   ],
+   "oos": true,
+   "mc": 100,
+   "sens": true,
+   "score": 4,
+   "pass": true
+  },
+  "live": {
+   "equity": 100,
+   "pnl": 0,
+   "ticks": 6,
+   "peak": 100,
+   "dd": 0,
+   "pos": null
+  }
+ },
+ {
+  "id": "st-24",
+  "name": "Minera RSI XRP 5m p11",
+  "pair": "XRP",
+  "tf": "5m",
+  "style": "scalping",
+  "kind": "rsi",
+  "p1": 11,
+  "status": "descartada",
+  "created_at": "2026-10-02T18:23:05.200Z",
+  "backtest": {
+   "trades": 51,
+   "total": -1660.3,
+   "win": 13.7,
+   "pf": 0.09,
+   "dd": 1687.5,
+   "sharpe": -15.88
+  },
+  "discard": "backtest bajo umbral (trades>10, total>0, sharpe>0.2)"
+ },
+ {
+  "id": "st-23",
+  "name": "Minera EMA DOGE 1h p8",
+  "pair": "DOGE",
+  "tf": "1h",
+  "style": "tendencia",
+  "kind": "ema",
+  "p1": 8,
+  "status": "incubacion",
+  "created_at": "2026-10-02T18:22:53.193Z",
+  "backtest": {
+   "trades": 40,
+   "total": 1820.9,
+   "win": 65,
+   "pf": 6.68,
+   "dd": 133.1,
+   "sharpe": 11.25
+  },
+  "robustness": {
+   "folds": [
+    true,
+    true,
+    true
+   ],
+   "oos": true,
+   "mc": 100,
+   "sens": true,
+   "score": 4,
+   "pass": true
+  },
+  "live": {
+   "equity": 80.7,
+   "pnl": -19.3,
+   "ticks": 18,
+   "peak": 109.7,
+   "dd": 26.44,
+   "pos": {
+    "side": -1,
+    "entry": 0.1929
+   }
+  }
+ },
+ {
+  "id": "st-22",
+  "name": "Minera RSI DOGE 5m p15",
+  "pair": "DOGE",
+  "tf": "5m",
+  "style": "scalping",
+  "kind": "rsi",
+  "p1": 15,
+  "status": "descartada",
+  "created_at": "2026-10-02T18:22:41.180Z",
+  "backtest": {
+   "trades": 46,
+   "total": -1844,
+   "win": 6.5,
+   "pf": 0.05,
+   "dd": 1858.9,
+   "sharpe": -18.61
+  },
+  "discard": "backtest bajo umbral (trades>10, total>0, sharpe>0.2)"
+ },
+ {
+  "id": "st-21",
+  "name": "Minera RSI ETH 15m p20",
+  "pair": "ETH",
+  "tf": "15m",
+  "style": "mean reversion",
+  "kind": "rsi",
+  "p1": 20,
+  "status": "descartada",
+  "created_at": "2026-10-02T18:22:29.167Z",
+  "backtest": {
+   "trades": 35,
+   "total": -1011,
+   "win": 11.4,
+   "pf": 0.06,
+   "dd": 1011,
+   "sharpe": -17.79
+  },
+  "discard": "backtest bajo umbral (trades>10, total>0, sharpe>0.2)"
+ },
+ {
+  "id": "st-20",
+  "name": "Minera DONCHIAN ETH 4h p47",
+  "pair": "ETH",
+  "tf": "4h",
+  "style": "breakout",
+  "kind": "donchian",
+  "p1": 47,
+  "status": "incubacion",
+  "created_at": "2026-10-02T18:22:17.151Z",
+  "backtest": {
+   "trades": 31,
+   "total": 951.8,
+   "win": 80.6,
+   "pf": 5.14,
+   "dd": 160,
+   "sharpe": 10.41
+  },
+  "robustness": {
+   "folds": [
+    true,
+    true,
+    true
+   ],
+   "oos": false,
+   "mc": 100,
+   "sens": true,
+   "score": 3,
+   "pass": true
+  },
+  "live": {
+   "equity": 99.9,
+   "pnl": -0.1,
+   "ticks": 21,
+   "peak": 107.4,
+   "dd": 6.98,
+   "pos": null
+  }
+ },
+ {
+  "id": "st-19",
+  "name": "Minera RSI AVAX 5m p19",
+  "pair": "AVAX",
+  "tf": "5m",
+  "style": "scalping",
+  "kind": "rsi",
+  "p1": 19,
+  "status": "descartada",
+  "created_at": "2026-10-02T18:22:05.134Z",
+  "backtest": {
+   "trades": 44,
+   "total": -1812,
+   "win": 4.5,
+   "pf": 0.02,
+   "dd": 1834.9,
+   "sharpe": -25.3
+  },
+  "discard": "backtest bajo umbral (trades>10, total>0, sharpe>0.2)"
+ },
+ {
+  "id": "st-18",
+  "name": "Minera EMA BNB 1D p12",
+  "pair": "BNB",
+  "tf": "1D",
+  "style": "swing",
+  "kind": "ema",
+  "p1": 12,
+  "status": "incubacion",
+  "created_at": "2026-10-02T18:21:53.122Z",
+  "backtest": {
+   "trades": 43,
+   "total": 832.9,
+   "win": 58.1,
+   "pf": 3.02,
+   "dd": 123.2,
+   "sharpe": 6.26
+  },
+  "robustness": {
+   "folds": [
+    true,
+    true,
+    true
+   ],
+   "oos": true,
+   "mc": 100,
+   "sens": true,
+   "score": 4,
+   "pass": true
+  },
+  "live": {
+   "equity": 87.2,
+   "pnl": -12.8,
+   "ticks": 21,
+   "peak": 103.6,
+   "dd": 15.83,
+   "pos": {
+    "side": 1,
+    "entry": 713.3635
+   }
+  }
+ },
+ {
+  "id": "st-17",
+  "name": "Minera RSI DOGE 15m p9",
+  "pair": "DOGE",
+  "tf": "15m",
+  "style": "mean reversion",
+  "kind": "rsi",
+  "p1": 9,
+  "status": "descartada",
+  "created_at": "2026-10-02T18:21:41.108Z",
+  "backtest": {
+   "trades": 49,
+   "total": -1880.5,
+   "win": 10.2,
+   "pf": 0.07,
+   "dd": 1904.8,
+   "sharpe": -18.03
+  },
+  "discard": "backtest bajo umbral (trades>10, total>0, sharpe>0.2)"
+ },
+ {
   "id": "st-16",
   "name": "Minera DONCHIAN BTC 4h p37",
   "pair": "BTC",
@@ -30,15 +331,12 @@
    "pass": true
   },
   "live": {
-   "equity": 100,
-   "pnl": 0,
-   "ticks": 4,
-   "peak": 100,
-   "dd": 0,
-   "pos": {
-    "side": 1,
-    "entry": 78957.2372
-   }
+   "equity": 168.5,
+   "pnl": 68.5,
+   "ticks": 25,
+   "peak": 181,
+   "dd": 6.91,
+   "pos": null
   }
  },
  {
@@ -72,15 +370,12 @@
    "pass": true
   },
   "live": {
-   "equity": 112.1,
-   "pnl": 12.1,
-   "ticks": 10,
-   "peak": 112.1,
+   "equity": 180.7,
+   "pnl": 80.7,
+   "ticks": 31,
+   "peak": 180.7,
    "dd": 0,
-   "pos": {
-    "side": 1,
-    "entry": 41.8029
-   }
+   "pos": null
   }
  },
  {
@@ -154,14 +449,14 @@
    "pass": true
   },
   "live": {
-   "equity": 130.1,
-   "pnl": 30.1,
-   "ticks": 28,
-   "peak": 130.1,
-   "dd": 0,
+   "equity": 176.8,
+   "pnl": 76.8,
+   "ticks": 49,
+   "peak": 206.2,
+   "dd": 14.26,
    "pos": {
     "side": 1,
-    "entry": 4001.1149
+    "entry": 4196.5128
    }
   }
  },
@@ -213,7 +508,7 @@
   "style": "breakout",
   "kind": "donchian",
   "p1": 38,
-  "status": "incubacion",
+  "status": "activa",
   "created_at": "2026-10-02T16:19:59.891Z",
   "backtest": {
    "trades": 33,
@@ -236,16 +531,18 @@
    "pass": true
   },
   "live": {
-   "equity": 151,
-   "pnl": 51,
-   "ticks": 46,
-   "peak": 151,
+   "equity": 221.3,
+   "pnl": 121.3,
+   "ticks": 50,
+   "peak": 221.3,
    "dd": 0,
    "pos": {
     "side": 1,
-    "entry": 20.5893
+    "entry": 22.0588
    }
-  }
+  },
+  "agent_id": "a-181",
+  "activated_at": "2026-10-02T18:22:55.195Z"
  },
  {
   "id": "st-8",

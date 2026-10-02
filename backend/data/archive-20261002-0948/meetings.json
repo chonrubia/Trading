@@ -1,0 +1,98 @@
+[
+ {
+  "id": "meet-1790885898990",
+  "topic": "Revisión riesgos + ranking",
+  "ended_at": "2026-10-01T20:18:18.990Z",
+  "patrimonio": 103427,
+  "dayPnl": 3428.48,
+  "exposure": 13.09,
+  "top3": [
+   {
+    "name": "Pablo Molina · T156",
+    "setup": "Setup_9007 · EMA DOGE",
+    "pnl": 221.67
+   },
+   {
+    "name": "Hugo Herrera · T49",
+    "setup": "Setup_9007 · EMA DOGE",
+    "pnl": 221.27
+   },
+   {
+    "name": "Vera Soler · T17",
+    "setup": "Setup_9007 · EMA DOGE",
+    "pnl": 219.99
+   }
+  ],
+  "decisions": [
+   "Capital protegido: exposición 13.09% dentro de límite",
+   "Refuerzo a Pablo Molina · T156 (Setup_9007 · EMA DOGE) por liderar ranking",
+   "Comité breve: mantener operativa con prudencia"
+  ],
+  "messages": 7,
+  "auto": false
+ },
+ {
+  "id": "meet-1790885560211",
+  "topic": "Revisión riesgos + ranking",
+  "ended_at": "2026-10-01T20:12:40.210Z",
+  "patrimonio": 103695,
+  "dayPnl": 3696.41,
+  "exposure": 12.25,
+  "top3": [
+   {
+    "name": "Vera Soler · T17",
+    "setup": "Setup_9007 · EMA DOGE",
+    "pnl": 219.37
+   },
+   {
+    "name": "Álex Serrano · T74",
+    "setup": "Setup_9250 · SMA 7-25 LONG",
+    "pnl": 218.23
+   },
+   {
+    "name": "Pablo Molina · T156",
+    "setup": "Setup_9007 · EMA DOGE",
+    "pnl": 218.21
+   }
+  ],
+  "decisions": [
+   "Capital protegido: exposición 12.25% dentro de límite",
+   "Refuerzo a Vera Soler · T17 (Setup_9007 · EMA DOGE) por liderar ranking",
+   "Consenso macro RISK-ON: mantener operativa"
+  ],
+  "messages": 10,
+  "auto": true
+ },
+ {
+  "id": "meet-1790885461746",
+  "topic": "Revisión riesgos + ranking",
+  "ended_at": "2026-10-01T20:11:01.745Z",
+  "patrimonio": 103660,
+  "dayPnl": 3661.38,
+  "exposure": 16.67,
+  "top3": [
+   {
+    "name": "Álex Serrano · T74",
+    "setup": "Setup_9250 · SMA 7-25 LONG",
+    "pnl": 221.98
+   },
+   {
+    "name": "Vera Soler · T17",
+    "setup": "Setup_9007 · EMA DOGE",
+    "pnl": 218.1
+   },
+   {
+    "name": "Álex Serrano · T44",
+    "setup": "Setup_9381 · MeanRev ETH",
+    "pnl": 218.03
+   }
+  ],
+  "decisions": [
+   "Capital protegido: exposición 16.67% dentro de límite",
+   "Refuerzo a Álex Serrano · T74 (Setup_9250 · SMA 7-25 LONG) por liderar ranking",
+   "Consenso macro RISK-ON: mantener operativa"
+  ],
+  "messages": 10,
+  "auto": true
+ }
+]

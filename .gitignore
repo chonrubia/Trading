@@ -1,0 +1,12 @@
+# deps
+node_modules/
+# build
+frontend/dist/
+# runtime paper-trading state (se regenera solo)
+backend/data/*.json
+backend/data/*.log
+# logs sueltos
+*.log
+# sistema
+.DS_Store
+Thumbs.db

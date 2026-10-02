@@ -326,7 +326,7 @@ export default function App() {
           <div className="btnrow"><button className="btn primary" onClick={async () => { const out = await apiFetch("/api/incubator/mine", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ n: 5 }) }).then(r => r.json()); setLab(l => [...out, ...l].slice(0, 60)); refresh(); }}>Minar 5 estrategias</button></div>
           {lab.slice(0, 15).map(s => <div key={s.id} className="row"><span>{s.name} · {s.status}{s.live ? ` · paper ${eur(s.live.pnl)}` : ""}{s.backtest ? ` · BT ${eur(s.backtest.total)} sh${s.backtest.sharpe}` : ""}</span><span>{s.status === "lista" ? <button className="btn primary" onClick={async () => { await fetch(`/api/incubator/${s.id}/promote`, { method: "POST" }); refresh(); }}>Dar capital</button> : s.status === "activa" || s.status === "incubacion" ? <button className="btn danger" onClick={async () => { await fetch(`/api/incubator/${s.id}/retire`, { method: "POST" }); refresh(); }}>Retirar</button> : <span>{s.discard?.slice(0, 24) || (s.robustness ? `rob ${s.robustness?.score}/4` : "")}</span>}</span></div>)}
           <h3 className="section">Setups · expectancy neta (aprenden de aquí)</h3>
-          {setups.slice(0, 8).map(s => <div key={s.strategy} className="row"><span>{s.strategy}</span><span className={pcl(s.avg)}>{eur(s.avg)}/op · {s.win}% · n={s.trades}</span></div>)}
+          {setups.slice(0, 8).map(s => <div key={s.strategy} className="row"><span>{s.strategy}</span><span className={pcl(s.avgR)}>{s.avgR}R · {s.win}% · n={s.trades}</span></div>)}
         </div></>}
         {tab === "Mesas" && <><div className="phead"><h3>MESAS · ARB / DERIVADOS / COBERTURA</h3></div><div className="pbody">
           <div className="statgrid">

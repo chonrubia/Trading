@@ -76,6 +76,7 @@ const committee = { active: false, topic: "", started_at: null, ticks: 0, backup
 let today = target.dayKey();
 const tradesToday = {}; // agent_id -> n (tope diario anti-frenesí)
 const lastPnl = {};     // agent_id -> último resultado (anti-tilt)
+const lastLossTick = {}; // agent_id -> tick de la última pérdida (cooldown)
 let targetAnnounced = false; // aviso de objetivo batido (una vez al día)
 let riskHalted = false;     // aviso de freno de Riesgos (una vez al día)
 
@@ -201,7 +202,7 @@ app.post("/api/operations/propose", (req, res) => {
     id: `op-${opN++}`, agent_id: agent.id, agent_name: agent.name, strategy: agent.strategy, ...prop,
     size: verdict.size || prop.size, leverage: verdict.leverage || prop.leverage,
     status: verdict.approved ? "abierta" : "bloqueada", pnl: 0, life: 0,
-    maxLife: 3 + Math.floor(Math.random() * 6), risk_note: verdict.reason,
+    maxLife: 40 + Math.floor(Math.random() * 40), risk_note: verdict.reason,
     estCosts: costs.estOpen(verdict.size || prop.size, px, prop.pair, "spot"),
     opened_at: new Date().toISOString(),
   };
@@ -480,6 +481,8 @@ setInterval(() => {
     target.setupStats(state.operations.filter(o => o.status === "cerrada")).forEach(s => statsByStrategy[s.strategy] = s);
     const relaxed = dayPnl >= target.DAILY_TARGET;
     let openedThisTick = 0; // presupuesto anti-burst: máx 6 aperturas spot por tick
+    const closedAll = state.operations.filter(o => o.status === "cerrada");
+    const agStats = target.agentStats(closedAll);
     if (relaxed && !targetAnnounced) {
       targetAnnounced = true;
       store.audit({ ev: "target.hit", dayPnl: Math.round(dayPnl * 100) / 100 });
@@ -493,17 +496,31 @@ setInterval(() => {
       if (Math.random() > 0.9 || risk.isKilled()) return;
       if ((tradesToday[a.id] || 0) >= target.MAX_TRADES_AGENT_DAY) return;
       const st = statsByStrategy[a.strategy];
-      const q = target.score(a, st ? st.avg : 0, st ? st.trades : 0, lastTick, lastPnl[a.id] ?? null);
+      const ag = agStats[a.id];
+      const q = target.score(a, st, lastTick, lastPnl[a.id] ?? null, ag ? (ag.wins / ag.trades * 100) : 100, ag ? ag.trades : 0);
       if (q < (relaxed ? target.RELAXED.quality : 0.55)) return; // sin señal de calidad no se opera
+      if (tickN - (lastLossTick[a.id] || -9999) < 10) return; // cooldown real tras pérdida
       if (openedThisTick >= 6) return;
+      // dirección por momentum del par + sesgo de funding (nada de moneda al aire)
+      const mom = (lastTick.trend && lastTick.trend[a.pair]) || 0;
+      const trendStyle = a.style === "tendencia" || a.style === "breakout";
+      let side = null;
+      if (trendStyle) {
+        if (Math.abs(mom) < 0.2) return;
+        side = mom > 0 ? "LONG" : "SHORT";
+      } else {
+        if (Math.abs(mom) < 0.5) return; // reversión: solo extremos
+        side = mom > 0 ? "SHORT" : "LONG";
+      }
+      if (side === "LONG" && lastTick.funding > 0.03 && Math.random() > 0.3) return;
       {
-        const side = Math.random() > 0.5 ? "LONG" : "SHORT";
         const entry = lastTick.prices[a.pair] || 100;
-        const notional = relaxed ? target.RELAXED.sizeMin + Math.random() * (target.RELAXED.sizeMax - target.RELAXED.sizeMin) : 15 + Math.random() * 35;
-        const lev = relaxed ? Math.min(a.leverage, target.RELAXED.maxLev) : a.leverage;
+        const tier = relaxed ? 14 : target.sizeFor(q, st ? st.trades : 0);
+        const notional = relaxed ? target.RELAXED.sizeMin + Math.random() * (target.RELAXED.sizeMax - target.RELAXED.sizeMin) : tier;
+        const lev = relaxed ? Math.min(a.leverage, target.RELAXED.maxLev) : Math.min(a.leverage, 1 + (a.level_risk || 1), 5);
         const prop = { pair: a.pair, side, entry, size: Math.round(notional / entry * 10000) / 10000, leverage: lev };
         const v = risk.checkOperation(a, prop, ctxRisk());
-        const op = { id: `op-${opN++}`, agent_id: a.id, agent_name: a.name, strategy: a.strategy, ...prop, size: v.size || prop.size, leverage: v.leverage || prop.leverage, status: v.approved ? "abierta" : "bloqueada", pnl: 0, life: 0, maxLife: 3 + Math.floor(Math.random() * 6), risk_note: v.reason, quality: q, opened_at: new Date().toISOString() };
+        const op = { id: `op-${opN++}`, agent_id: a.id, agent_name: a.name, strategy: a.strategy, ...prop, size: v.size || prop.size, leverage: v.leverage || prop.leverage, status: v.approved ? "abierta" : "bloqueada", pnl: 0, life: 0, maxLife: 40 + Math.floor(Math.random() * 40), risk_note: v.reason, quality: q, opened_at: new Date().toISOString() };
         state.operations.push(op);
         if (v.approved) { tradesToday[a.id] = (tradesToday[a.id] || 0) + 1; openedThisTick++; broadcast({ type: "operation", op }); }
         else if (Math.random() > 0.7) {
@@ -589,17 +606,18 @@ setInterval(() => {
       if (o.desk === "derivados") o.fundingAcc = Math.round(((o.fundingAcc || 0) + o.size * o.entry * lastTick.funding / 100 * (o.side === "LONG" ? 1 : -1)) * 100) / 100;
       o.pnl = Math.round((chg * dir * o.size * o.entry * o.leverage - (o.fundingAcc || 0)) * 100) / 100;
       o.life++;
-      const tp = chg * dir > 0.02, sl = chg * dir < -0.01, timeout = o.life >= o.maxLife;
+      const tp = chg * dir > 0.007, sl = chg * dir < -0.0035, timeout = o.life >= o.maxLife;
       if (tp || sl || timeout) {
         o.status = "cerrada"; o.exit = px; o.closed_at = new Date().toISOString();
-        o.close_reason = tp ? "TP +2%" : sl ? "SL -1%" : "timeout";
+        o.close_reason = tp ? "TP +0.7%" : sl ? "SL -0.35%" : "timeout";
         const stl = costs.settle(o.pnl, o.size, o.entry, px, costs.costPerSide(o.pair, o.desk));
         o.pnl = stl.net; o.fees = stl.costs;
         const ag = state.agents.find(a => a.id === o.agent_id);
         if (ag) {
           ag.pnl = Math.round((ag.pnl + o.pnl) * 100) / 100; ag.trades_count++; lastPnl[ag.id] = o.pnl;
+          if (o.pnl < 0) lastLossTick[ag.id] = tickN;
           school.xpForClose(o).forEach(g => school.award(ag.id, g.s, g.x, `${o.side} ${o.pair} ${o.close_reason} PnL ${o.pnl}€`));
-          if (Math.abs(o.pnl) > 25) memory.add({ author: ag.name, dept: "trading", pair: o.pair, text: `${o.side} ${o.pair} ${o.close_reason} (${o.pnl}€) con ${ag.strategy}. ${o.close_reason.startsWith("SL") ? "Lección: respetar stop y size." : "Funciona: dejar correr con trailing."}`, kind: o.pnl > 0 ? "leccion-ganada" : "leccion-perdida" });
+          if (Math.abs(o.pnl) > 0.8) memory.add({ author: ag.name, dept: "trading", pair: o.pair, text: `${o.side} ${o.pair} ${o.close_reason} (${o.pnl}€) con ${ag.strategy}. ${o.close_reason.startsWith("SL") ? "Lección: respetar stop y size." : "Funciona: dejar correr con trailing."}`, kind: o.pnl > 0 ? "leccion-ganada" : "leccion-perdida" });
           const ups = school.forAgent(ag.id, 3).reduce((s, l) => s + l.xp, 0);
           if (ups >= 100 && ag.level_risk < 5) { ag.level_risk++; ag.level_ta = Math.min(5, ag.level_ta + 0); }
           ag.last_reason = `${o.side} ${o.pair} cerrada en ${px} (${o.close_reason}) PnL ${o.pnl}€ · ${o.risk_note}`;

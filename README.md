@@ -18,7 +18,12 @@ Replica del fondo de las capturas (`C:\Users\chonr\Desktop\trading`): fondo crip
 - Paneles Ops y Riesgo + proponer trade desde perfil + ticker mercado.
 - Verificado: `health fase:2`, risk/exposure/open, committee start→end con summary, propose OK, `tsc:0 build:0`.
 
-## Fase 7.6 (actual: sin stops por pérdidas)
+## Fase 8 (actual: aprendizaje que muerde — consejo aplicado)
+- Mercado con regímenes (tendencia con autocorrelación / rango con reversión) + momentum por par. La entrada deja de ser moneda al aire: tendencia sigue momentum, reversión lo desvanece en extremos, funding alto veta LONGs.
+- TP +0.7% / SL -0.35% alcanzables (antes TP +2% imposible: 95% moría por timeout) y holds 40-80 ticks.
+- Expectancy en R-múltiplos con muestra mínima n≥15; perdedores probados vetados; sizing por tiers (12/25/35€); apalancamiento topado por nivel de escuela (el XP por fin cambia el trading); memoria vota ±0.15; cooldown real de 10 ticks tras pérdida.
+- Verificado: score 0.86 con edge probado, 0.05 vetado; tiers y riskUnit correctos; tsc+build OK.
+## Fase 7.6 (sin stops por pérdidas)
 - Eliminados a petición del gestor: freno diario, stop por drawdown y suspensión automática. Verificado: con día en -120€ y DD 45% la operativa se aprueba (solo recorte a 10€ por agente en drawdown).
 - Siguen vigentes: kill switch, tope de exposición 150%, concentración 30%, apalancamiento máx 5x.
 - AVISO: sin suelo, una mala racha puede llevar el fondo a cero sin que nada lo pare salvo el kill manual.

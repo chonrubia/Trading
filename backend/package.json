@@ -4,7 +4,8 @@
   "type": "commonjs",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "test": "node --test test/costs.test.js test/risk.test.js test/desks.test.js test/incubator.test.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

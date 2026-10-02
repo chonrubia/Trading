@@ -1,10 +1,10 @@
 # Tareas — SPEC-001 (marcar [x] al completar con evidencia)
 
 ## F0
-- [ ] T01 Caracterización `costs` (tabla dorada al céntimo)
-- [ ] T02 Caracterización `risk.checkOperation` (matriz de decisión)
-- [ ] T03 Caracterización `desks` puras (arbPnl, arbCostPct, hedgeSignal, deskPnl)
-- [ ] T04 Caracterización `incubator` pura (ema/rsi/runTrades/metrics/qualify/liveSignal)
+- [x] T01 Caracterización `costs` (tabla dorada al céntimo) — 3 tests verdes
+- [x] T02 Caracterización `risk.checkOperation` (matriz de decisión) — 8 tests verdes
+- [x] T03 Caracterización `desks` puras (arbPnl, arbCostPct, hedgeSignal, deskPnl) — 5 tests verdes
+- [x] T04 Caracterización `incubator` pura (ema/rsi/runTrades/metrics/qualify/liveSignal) — 6 tests verdes
 
 ## F1
 - [ ] T10 Estructura `lib/` TS + seams rng/clock/store

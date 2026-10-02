@@ -1,7 +1,9 @@
 # Changelog — AI Trading Floor
 
 ## [Unreleased]
-- Base SDD: `specs/` (constitution, spec-001, plan, tasks), `PROMPT.md`, skills vendorizadas, `docs/mcp.md`.
+- F0 completado: 22 tests de caracterización en verde (`backend/test/`, `npm test`).
+
+## SDD base
 
 ## 2026-10-02 — Motor en la nube + web viva
 - Rama `engine-state` cada 2h (100→60 ticks, ~1500/2000 min/mes), web solo-lectura con edad y cuenta atrás, deriva visual honesta.

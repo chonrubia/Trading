@@ -165,3 +165,5 @@ function stats() {
   return { ...c, total: strategies.length, activas: c.activa || 0, incubacion: c.incubacion || 0, lista: c.lista || 0 };
 }
 module.exports = { mineOne, qualify, updateLive, list, stats, persist, get: (id) => strategies.find(s => s.id === id) };
+// Exportadas para tests de caracterización (F0) y port a lib/ (F1). Sin efectos.
+module.exports._pure = { seedRand, genHistory, ema, rsi, runTrades, metrics, liveSignal };

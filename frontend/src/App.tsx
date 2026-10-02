@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import IsoOffice from "./IsoOffice";
 import { apiFetch, wsEndpoint } from "./api";
+import { initDemo, tickDemo } from "./demo";
 
 type Agent = any; type Dept = any; type Msg = any;
 
@@ -36,6 +37,8 @@ export default function App() {
   const [report, setReport] = useState<any>(null);
   const [setups, setSetups] = useState<any[]>([]);
   const [online, setOnline] = useState(true);
+  const [demoMode, setDemoMode] = useState(false);
+  const demoRef = useRef<any>(null);
   const chatRef = useRef<HTMLDivElement>(null);
 
   const refresh = () => {
@@ -55,17 +58,49 @@ export default function App() {
   };
 
   useEffect(() => {
-    apiFetch("/api/agents?limit=200").then(r => r.json()).then(setAgents).catch(() => {});
-    apiFetch("/api/departments").then(r => r.json()).then(setDepts).catch(() => {});
-    apiFetch("/api/channels/c-general/messages").then(r => r.json()).then(setMsgs).catch(() => {});
-    apiFetch("/api/health").then(() => setOnline(true)).catch(() => setOnline(false));
-    refresh();
-    const id = setInterval(refresh, 8000);
-    const ws = new WebSocket(wsEndpoint());
+    let stop = false; let iv: any = null; let ws: any = null;
+    const demoTick = () => {
+      if (!demoRef.current) return;
+      const d = tickDemo(demoRef.current);
+      demoRef.current = d;
+      setAgents(d.agents); setMarket(d.market); setPortfolio(d.portfolio); setRanking(d.ranking);
+      if (d.newMsgs.length) setMsgs(m => [...m, ...d.newMsgs].slice(-120));
+    };
+    const startDemo = () => {
+      if (stop || demoRef.current) return;
+      demoRef.current = initDemo();
+      const d = demoRef.current;
+      setAgents(d.agents); setDepts(d.departments); setMsgs(d.msgs); setMarket({ prices: d.prices, funding: d.funding, fear_greed: d.fear_greed, risk_mode: d.risk_mode });
+      setPortfolio({ patrimonio: d.equity, resultado_hoy: d.dayPnl, exposicion_bruta: 62, caida: 0.8, posiciones: 11, objetivo: 50, costes_pagados: 3.2 });
+      setRanking([]); setOnline(false); setDemoMode(true);
+      setRiskInfo({ limits: { max_day_loss: -15, max_drawdown: 10, max_exposure_gross: 150 }, dayPnl: d.dayPnl, drawdown: 0.8, exposure: 62, open: 11, blocked: 2, suspended: [], kill: false });
+      setDesks({ venues: [], funding: d.funding, arbOpen: [], derivadosOpen: [], hedge: null, signal: "-", pnl: { spot: d.dayPnl, arbitraje: 0, derivados: 0, cobertura: 0 } });
+      setReport({ verdict: "demo local", net: d.dayPnl, fees_paid: 3.2, costs_drag: "—", win_rate: "51%", profit_factor: 1.1, sharpe: 0.4, days: 0, green_days: "0/0", trades: { closed: 34, open: 11, blocked: 2, block_rate: "5%" }, desk_net: { spot: d.dayPnl }, block_reasons: {} });
+      setOps([{ id: "demo-op-1", desk: "spot", status: "abierta", agent_name: d.agents[5].name, side: "LONG", pair: "BTC", pnl: 1.2, risk_note: "Demo local" }]);
+      setLabStats({ total: 6, incubacion: 3, lista: 1, activas: 2 }); setLab([]);
+      setSetups([{ strategy: "Tendencia BTC 1h", avg: 1.8, win: 58, trades: 12 }, { strategy: "Breakout SOL 15m", avg: 0.9, win: 52, trades: 9 }]);
+      setSchoolTop(d.agents.slice(0, 8).map((a: any, i: number) => ({ id: a.id, name: a.name, level: 2, xp: 120 - i * 9 })));
+      setMemList([{ id: "dm-mem", pair: "BTC", author: "Dirección CIO", text: "Demo local: la memoria compartida funciona igual que en el fondo real.", created_at: new Date().toISOString() }]);
+      setAuditList([{ ev: "demo.boot", ts: new Date().toISOString() }]); setMeetings([]);
+      iv = setInterval(demoTick, 2000);
+    };
+    (async () => {
+      try {
+        const ctl = new AbortController(); const to = setTimeout(() => ctl.abort(), 6000);
+        await apiFetch("/api/health", { signal: ctl.signal }).then(r => { if (!r.ok) throw new Error("down"); return r.json(); });
+        clearTimeout(to);
+        if (stop) return;
+        apiFetch("/api/agents?limit=200").then(r => r.json()).then(setAgents).catch(() => {});
+        apiFetch("/api/departments").then(r => r.json()).then(setDepts).catch(() => {});
+        apiFetch("/api/channels/c-general/messages").then(r => r.json()).then(setMsgs).catch(() => {});
+        setOnline(true);
+        refresh();
+        iv = setInterval(refresh, 8000);
+        ws = new WebSocket(wsEndpoint());
     ws.onopen = () => setOnline(true);
     ws.onclose = () => setOnline(false);
     ws.onerror = () => setOnline(false);
-    ws.onmessage = (ev) => {
+    ws.onmessage = (ev: any) => {
       const d = JSON.parse(ev.data);
       if (d.type === "chat") setMsgs(m => [...m.slice(-120), d.msg]);
       if (d.type === "tick") {
@@ -84,28 +119,59 @@ export default function App() {
       if (d.type === "memory") setMemList(m => [d.entry, ...m].slice(0, 40));
       if (d.type === "incubator") refresh();
     };
-    return () => { clearInterval(id); ws.close(); };
+    } catch { startDemo(); }
+    })();
+    return () => { stop = true; clearInterval(iv); try { ws && ws.close(); } catch {} };
   }, []);
 
   useEffect(() => { const el = chatRef.current; if (el) el.scrollTop = el.scrollHeight; }, [msgs]);
 
   const send = async () => {
     if (!text.trim()) return;
+    if (demoMode) {
+      const t = text; setText("");
+      demoSay("Tú", "humano", t);
+      setTimeout(() => {
+        const a = demoRef.current?.agents[Math.floor(Math.random() * demoRef.current.agents.length)];
+        if (a) demoSay(a.name, "respuesta", `Recibido (demo). Lo miro con ${a.strategy} en ${a.pair}.`);
+      }, 800);
+      return;
+    }
     await apiFetch("/api/chat", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ channel_id: "c-general", text, to_agent_id: sel?.id || null }) });
     setText("");
   };
-  const pick = (id: string) => fetch(`/api/agents/${id}`).then(r => r.json()).then(setSel);
-  const startCommittee = async () => { await apiFetch("/api/committee/start", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ topic: "Revisión riesgos + ranking" }) }); };
-  const endCommittee = async () => { await apiFetch("/api/committee/end", { method: "POST" }); };
-  const toggleKill = async () => { const r = await apiFetch("/api/risk/kill", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ active: !riskInfo.kill }) }).then(r => r.json()); setRiskInfo((x: any) => ({ ...x, kill: r.kill })); };
+  const pick = (id: string) => {
+    if (demoMode) { const a = (demoRef.current?.agents || []).find((x: any) => x.id === id); if (a) setSel({ ...a, school: [], ops: [] }); return; }
+    apiFetch(`/api/agents/${id}`).then(r => r.json()).then(setSel);
+  };
+  const demoSay = (from: string, kind: string, text: string) => setMsgs(m => [...m.slice(-120), { id: "dm-" + Date.now() + Math.random(), from, kind, text, created_at: new Date().toISOString() }]);
+  const startCommittee = async () => {
+    if (demoMode) { setCommittee(true); demoSay("Dirección CIO", "alerta", "Comité demo convocado: toda la oficina a la sala."); return; }
+    await apiFetch("/api/committee/start", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ topic: "Revisión riesgos + ranking" }) });
+  };
+  const endCommittee = async () => {
+    if (demoMode) { setCommittee(false); demoSay("Dirección CIO", "alerta", "Comité demo cerrado: mantener operativa con prudencia."); return; }
+    await apiFetch("/api/committee/end", { method: "POST" });
+  };
+  const toggleKill = async () => {
+    if (demoMode) { const k = !riskInfo.kill; setRiskInfo((x: any) => ({ ...x, kill: k })); demoSay("Riesgo · Sato", "alerta", k ? "Kill-switch demo ACTIVADO." : "Kill-switch demo liberado."); return; }
+    const r = await apiFetch("/api/risk/kill", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ active: !riskInfo.kill }) }).then(r => r.json()); setRiskInfo((x: any) => ({ ...x, kill: r.kill }));
+  };
   const propose = async () => {
     if (!sel) return;
+    if (demoMode) {
+      const side = Math.random() > 0.5 ? "LONG" : "SHORT";
+      setOps(o => [{ id: "dm-op-" + Date.now(), desk: "spot", status: "abierta", agent_name: sel.name, side, pair: sel.pair, pnl: 0, risk_note: "Demo local (sin Riesgos)" }, ...o].slice(0, 60));
+      demoSay(sel.name, "idea", `Demo: propongo ${side} en ${sel.pair} (simulado).`);
+      return;
+    }
     const side = Math.random() > 0.5 ? "LONG" : "SHORT";
     const op = await apiFetch("/api/operations/propose", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ agent_id: sel.id, side, size: 0.01 }) }).then(r => r.json());
     setOps(o => [op, ...o].slice(0, 60)); pick(sel.id);
   };
   const suspend = async () => {
     if (!sel) return;
+    if (demoMode) { setSel({ ...sel, suspended: !sel.suspended }); demoSay("Riesgo · Sato", "alerta", `Demo: ${sel.name} ${sel.suspended ? "reactivado" : "suspendido"} (simulado).`); return; }
     await apiFetch("/api/risk/suspend", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ agent_id: sel.id, active: !sel.suspended }) });
     pick(sel.id); refresh();
   };
@@ -113,7 +179,7 @@ export default function App() {
   const prices = market?.prices || {};
   const tape = Object.entries(prices).slice(0, 12);
   const mode = riskInfo.kill ? "kill" : committee ? "comite" : "paper";
-  const modeTxt = riskInfo.kill ? "⛔ DETENIDO" : committee ? "COMITÉ EN SALA" : "PAPEL · TIEMPO REAL";
+  const modeTxt = demoMode ? "MODO DEMO · SIMULADO" : riskInfo.kill ? "⛔ DETENIDO" : committee ? "COMITÉ EN SALA" : "PAPEL · TIEMPO REAL";
   const tgt = Number(portfolio.objetivo || 50), day = Number(portfolio.resultado_hoy || 0);
   const tgtPct = Math.max(0, Math.min(100, (day / tgt) * 100));
 
@@ -158,7 +224,7 @@ export default function App() {
       {[...tape, ...tape].map(([k, v]: any, i: number) => <span className="tick" key={i}><span>{k}</span><b>{v}</b></span>)}
     </div></div>
 
-    {!online && <div className="offline">SIN CONEXIÓN CON EL FONDO · el backend está apagado o inalcanzable. Arráncalo para ver datos en vivo.</div>}
+    {!online && <div className="offline">{demoMode ? "MODO DEMO · simulación local en tu navegador (sin backend). Todo lo que ves es simulado." : "SIN CONEXIÓN CON EL FONDO · el backend está apagado o inalcanzable. Arráncalo para ver datos en vivo."}</div>}
 
     <div className="layout">
       <div className="panel">

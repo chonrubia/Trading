@@ -1,5 +1,151 @@
 [
  {
+  "id": "st-40",
+  "name": "Minera EMA AVAX 1h p14",
+  "pair": "AVAX",
+  "tf": "1h",
+  "style": "tendencia",
+  "kind": "ema",
+  "p1": 14,
+  "status": "incubacion",
+  "created_at": "2026-10-02T22:17:04.963Z",
+  "backtest": {
+   "trades": 39,
+   "total": 1445.7,
+   "win": 71.8,
+   "pf": 3.78,
+   "dd": 164.9,
+   "sharpe": 8.77
+  },
+  "robustness": {
+   "folds": [
+    true,
+    true,
+    true
+   ],
+   "oos": false,
+   "mc": 100,
+   "sens": true,
+   "score": 3,
+   "pass": true
+  },
+  "live": {
+   "equity": 123.5,
+   "pnl": 23.5,
+   "ticks": 21,
+   "peak": 123.5,
+   "dd": 0,
+   "pos": {
+    "side": -1,
+    "entry": 42.1041
+   }
+  }
+ },
+ {
+  "id": "st-39",
+  "name": "Minera EMA DOGE 1h p8",
+  "pair": "DOGE",
+  "tf": "1h",
+  "style": "tendencia",
+  "kind": "ema",
+  "p1": 8,
+  "status": "incubacion",
+  "created_at": "2026-10-02T22:16:52.950Z",
+  "backtest": {
+   "trades": 40,
+   "total": 1820.9,
+   "win": 65,
+   "pf": 6.68,
+   "dd": 133.1,
+   "sharpe": 11.25
+  },
+  "robustness": {
+   "folds": [
+    true,
+    true,
+    true
+   ],
+   "oos": true,
+   "mc": 100,
+   "sens": true,
+   "score": 4,
+   "pass": true
+  },
+  "live": {
+   "equity": 119.7,
+   "pnl": 19.7,
+   "ticks": 21,
+   "peak": 119.7,
+   "dd": 0,
+   "pos": {
+    "side": -1,
+    "entry": 0.1855
+   }
+  }
+ },
+ {
+  "id": "st-38",
+  "name": "Minera RSI DOGE 5m p9",
+  "pair": "DOGE",
+  "tf": "5m",
+  "style": "scalping",
+  "kind": "rsi",
+  "p1": 9,
+  "status": "descartada",
+  "created_at": "2026-10-02T22:16:40.941Z",
+  "backtest": {
+   "trades": 49,
+   "total": -1880.5,
+   "win": 10.2,
+   "pf": 0.07,
+   "dd": 1904.8,
+   "sharpe": -18.03
+  },
+  "discard": "backtest bajo umbral (trades>10, total>0, sharpe>0.2)"
+ },
+ {
+  "id": "st-37",
+  "name": "Minera EMA ADA 1h p11",
+  "pair": "ADA",
+  "tf": "1h",
+  "style": "tendencia",
+  "kind": "ema",
+  "p1": 11,
+  "status": "incubacion",
+  "created_at": "2026-10-02T22:16:28.927Z",
+  "backtest": {
+   "trades": 36,
+   "total": 2169,
+   "win": 88.9,
+   "pf": 12.83,
+   "dd": 66.4,
+   "sharpe": 16.44
+  },
+  "robustness": {
+   "folds": [
+    true,
+    true,
+    true
+   ],
+   "oos": true,
+   "mc": 100,
+   "sens": true,
+   "score": 4,
+   "pass": true
+  },
+  "live": {
+   "equity": 118,
+   "pnl": 18,
+   "ticks": 21,
+   "peak": 118,
+   "dd": 0,
+   "pos": {
+    "side": -1,
+    "entry": 0.6766
+   }
+  }
+ },
+ {
   "id": "st-36",
   "name": "Minera RSI BTC 5m p9",
   "pair": "BTC",
@@ -50,14 +196,14 @@
    "pass": true
   },
   "live": {
-   "equity": 100,
-   "pnl": 0,
-   "ticks": 6,
+   "equity": 99.6,
+   "pnl": -0.4,
+   "ticks": 27,
    "peak": 100,
-   "dd": 0,
+   "dd": 0.4,
    "pos": {
-    "side": 1,
-    "entry": 0.7546
+    "side": -1,
+    "entry": 0.7149
    }
   }
  },
@@ -92,14 +238,14 @@
    "pass": true
   },
   "live": {
-   "equity": 103.1,
-   "pnl": 3.1,
-   "ticks": 12,
+   "equity": 97.4,
+   "pnl": -2.6,
+   "ticks": 33,
    "peak": 103.1,
-   "dd": 0,
+   "dd": 5.53,
    "pos": {
-    "side": 1,
-    "entry": 0.195
+    "side": -1,
+    "entry": 0.1847
    }
   }
  },
@@ -134,14 +280,14 @@
    "pass": true
   },
   "live": {
-   "equity": 106.3,
-   "pnl": 6.3,
-   "ticks": 18,
+   "equity": 98.5,
+   "pnl": -1.5,
+   "ticks": 39,
    "peak": 106.3,
-   "dd": 0,
+   "dd": 7.34,
    "pos": {
-    "side": 1,
-    "entry": 0.7546
+    "side": -1,
+    "entry": 0.7206
    }
   }
  },
@@ -196,14 +342,14 @@
    "pass": true
   },
   "live": {
-   "equity": 110.7,
-   "pnl": 10.7,
-   "ticks": 21,
+   "equity": 107.4,
+   "pnl": 7.4,
+   "ticks": 42,
    "peak": 110.7,
-   "dd": 0,
+   "dd": 2.98,
    "pos": {
-    "side": 1,
-    "entry": 0.7554
+    "side": -1,
+    "entry": 0.7145
    }
   }
  },
@@ -278,14 +424,14 @@
    "pass": true
   },
   "live": {
-   "equity": 111.5,
-   "pnl": 11.5,
-   "ticks": 21,
+   "equity": 106.4,
+   "pnl": 6.4,
+   "ticks": 42,
    "peak": 111.5,
-   "dd": 0,
+   "dd": 4.57,
    "pos": {
-    "side": 1,
-    "entry": 0.1949
+    "side": -1,
+    "entry": 0.1847
    }
   }
  },
@@ -320,14 +466,14 @@
    "pass": true
   },
   "live": {
-   "equity": 112.5,
-   "pnl": 12.5,
-   "ticks": 21,
-   "peak": 112.5,
+   "equity": 117.1,
+   "pnl": 17.1,
+   "ticks": 42,
+   "peak": 117.1,
    "dd": 0,
    "pos": {
-    "side": 1,
-    "entry": 44.1694
+    "side": -1,
+    "entry": 41.8846
    }
   }
  },
@@ -362,14 +508,14 @@
    "pass": true
   },
   "live": {
-   "equity": 110.7,
-   "pnl": 10.7,
-   "ticks": 21,
-   "peak": 110.7,
+   "equity": 110.8,
+   "pnl": 10.8,
+   "ticks": 42,
+   "peak": 110.8,
    "dd": 0,
    "pos": {
-    "side": 1,
-    "entry": 0.7546
+    "side": -1,
+    "entry": 0.7145
    }
   }
  },
@@ -404,12 +550,15 @@
    "pass": true
   },
   "live": {
-   "equity": 110,
-   "pnl": 10,
-   "ticks": 27,
-   "peak": 110,
+   "equity": 137.9,
+   "pnl": 37.9,
+   "ticks": 48,
+   "peak": 137.9,
    "dd": 0,
-   "pos": null
+   "pos": {
+    "side": -1,
+    "entry": 20.7487
+   }
   }
  },
  {
@@ -463,14 +612,14 @@
    "pass": true
   },
   "live": {
-   "equity": 84.4,
-   "pnl": -15.6,
-   "ticks": 39,
+   "equity": 75.9,
+   "pnl": -24.1,
+   "ticks": 60,
    "peak": 109.7,
-   "dd": 23.06,
+   "dd": 30.81,
    "pos": {
-    "side": 1,
-    "entry": 0.195
+    "side": -1,
+    "entry": 0.1853
    }
   }
  },
@@ -545,14 +694,14 @@
    "pass": true
   },
   "live": {
-   "equity": 110.6,
-   "pnl": 10.6,
-   "ticks": 42,
+   "equity": 102.9,
+   "pnl": 2.9,
+   "ticks": 63,
    "peak": 110.6,
-   "dd": 0,
+   "dd": 6.96,
    "pos": {
-    "side": 1,
-    "entry": 4249.0612
+    "side": -1,
+    "entry": 4083.3357
    }
   }
  },
@@ -607,14 +756,14 @@
    "pass": true
   },
   "live": {
-   "equity": 96.4,
-   "pnl": -3.6,
-   "ticks": 42,
+   "equity": 87,
+   "pnl": -13,
+   "ticks": 63,
    "peak": 103.6,
-   "dd": 6.95,
+   "dd": 16.02,
    "pos": {
-    "side": 1,
-    "entry": 721.0398
+    "side": -1,
+    "entry": 694.2273
    }
   }
  },
@@ -646,7 +795,7 @@
   "style": "breakout",
   "kind": "donchian",
   "p1": 37,
-  "status": "incubacion",
+  "status": "activa",
   "created_at": "2026-10-02T16:21:23.990Z",
   "backtest": {
    "trades": 34,
@@ -669,16 +818,18 @@
    "pass": true
   },
   "live": {
-   "equity": 179.1,
-   "pnl": 79.1,
-   "ticks": 46,
+   "equity": 174.6,
+   "pnl": 74.6,
+   "ticks": 64,
    "peak": 181,
-   "dd": 1.05,
+   "dd": 3.54,
    "pos": {
-    "side": 1,
-    "entry": 83847.1503
+    "side": -1,
+    "entry": 79537.8037
    }
-  }
+  },
+  "agent_id": "a-183",
+  "activated_at": "2026-10-02T22:18:11.037Z"
  },
  {
   "id": "st-15",
@@ -792,14 +943,14 @@
    "pass": true
   },
   "live": {
-   "equity": 187.2,
-   "pnl": 87.2,
-   "ticks": 70,
+   "equity": 186.6,
+   "pnl": 86.6,
+   "ticks": 91,
    "peak": 206.2,
-   "dd": 9.21,
+   "dd": 9.51,
    "pos": {
-    "side": 1,
-    "entry": 4244.623
+    "side": -1,
+    "entry": 4071.982
    }
   }
  },

@@ -1,5 +1,23 @@
 [
  {
+  "id": "mem-56",
+  "ts": "2026-10-02T22:18:11.038Z",
+  "author": "Laboratorio",
+  "dept": "lab",
+  "pair": "BTC",
+  "text": "Minera DONCHIAN BTC 4h p37 supera incubación (paper 74.6€) y recibe 25€ de capital.",
+  "kind": "incubacion"
+ },
+ {
+  "id": "mem-55",
+  "ts": "2026-10-02T22:17:47.016Z",
+  "author": "Deriv · Vega",
+  "dept": "trading",
+  "pair": "ETH",
+  "text": "SHORT ETH TP +0.7% (1.01€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
   "id": "mem-54",
   "ts": "2026-10-02T20:18:33.069Z",
   "author": "Laboratorio",

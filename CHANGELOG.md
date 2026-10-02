@@ -1,7 +1,7 @@
 # Changelog — AI Trading Floor
 
 ## [Unreleased]
-- F0 completado: 22 tests de caracterización en verde (`backend/test/`, `npm test`).
+- F1 completado: `lib/` TS puro (costs, risk, desks, indicators, rng) con goldens idénticos a F0 (5/5 tests) + `tsc:0`. Sin `Math.random/Date/fs` salvo seams inyectadas.
 
 ## SDD base
 

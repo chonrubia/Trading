@@ -7,11 +7,11 @@
 - [x] T04 Caracterización `incubator` pura (ema/rsi/runTrades/metrics/qualify/liveSignal) — 6 tests verdes
 
 ## F1
-- [ ] T10 Estructura `lib/` TS + seams rng/clock/store
-- [ ] T11 Port costs + tests F0 en verde
-- [ ] T12 Port risk-pure + tests en verde
-- [ ] T13 Port desks-pure + tests en verde
-- [ ] T14 Port incubator-pura + tests en verde
+- [x] T10 Estructura `lib/` TS + seams rng/clock/store (`lib/rng.ts`, `tsconfig.lib.json`)
+- [x] T11 Port costs + tests F0 en verde
+- [x] T12 Port risk-pure + tests en verde
+- [x] T13 Port desks-pure + tests en verde
+- [x] T14 Port incubator-pura + tests en verde (robustness determinista con seed)
 
 ## F2
 - [ ] T20 Repositorio de estado particionado (fake KV en tests)

@@ -1,0 +1,28 @@
+{
+  "name": "open",
+  "version": "1.0.0",
+  "description": "> **Motor 100% en la nube (sin PC):** GitHub Actions ejecuta el fondo cada 2h > (`.github/workflows/engine.yml`, 60 ticks por racha, ~4 min facturados = ~1500/2000 > min mensuales, con margen). Publica estado + `live.json` en la rama `engine-state`. La web lo lee en vivo (solo lectura, se actualiza solo). > Hibernación probada: el mercado persiste (`market.json`) y cada racha retoma > donde quedó. Sin backend local ni snapshot: simulación local en el navegador. > Si abres la URL **en tu PC con el backend corriendo**, la web > detecta sola `http://localhost:8765` y muestra datos 100% en vivo sin configurar nada > (los navegadores permiten a páginas https llamar a localhost). Con `VITE_API_URL` > apuntando a un backend público, en vivo desde cualquier dispositivo.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chonrubia/Trading.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/chonrubia/Trading/issues"
+  },
+  "homepage": "https://github.com/chonrubia/Trading#readme",
+  "devDependencies": {
+    "@types/node": "^26.6.4"
+  }
+}

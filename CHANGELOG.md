@@ -1,7 +1,7 @@
 # Changelog — AI Trading Floor
 
 ## [Unreleased]
-- F2 completado: app Next.js `web/` con 30 rutas API (mismo shape), repo KV particionado (`MemoryKv` + `UpstashKv` REST con fallback `REDIS_URL`), locks anti-doble-ejecución, seed determinista 176 agentes. 14/14 tests lib + 22/22 backend en verde. Hallazgo: Next duplica módulos por ruta en memoria (solo afecta al fallback local, no a Upstash).
+- F3 completado: `step()` determinista (mercado con regímenes, scoring R, tiers, cooldown, comité, incubadora, mesas, escuela, memoria), `POST /api/tick` con lock + dedup, 5/5 tests engine. Mercado persiste entre rachas.
 
 ## SDD base
 

@@ -20,10 +20,10 @@
 - [x] T23 `GET /api/floor` agregado + contrato validado — 4 tests de contrato en verde
 
 ## F3
-- [ ] T30 `step()` con orden del loop + idempotencia por slot
-- [ ] T31 Determinismo: 2 corridas misma seed idénticas
-- [ ] T32 Comité, incubadora, mesas y escuela sobre el estado
-- [ ] T33 Seed 500€ frescos + primer latido verificado
+- [x] T30 `step()` con orden del loop + idempotencia por slot (`web/lib/engine.ts`, `POST /api/tick` con lock + dedup verificado en vivo)
+- [x] T31 Determinismo: 2 corridas misma seed idénticas (test)
+- [x] T32 Comité, incubadora, mesas y escuela sobre el estado (tests: comité 11 steps cierra con acta)
+- [x] T33 Seed 500€ frescos + primer tick verificado (tickN 1, equity 500, eventos chat+tick)
 
 ## F4
 - [ ] T40 UI contra `/api/*` por polling (reutilizar componentes)

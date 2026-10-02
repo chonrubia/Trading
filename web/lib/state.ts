@@ -10,7 +10,7 @@ const BASE_PRICES: Record<string, number> = {
 };
 
 export interface FundMeta {
-  tickN: number; opN: number; msgN: number; today: string;
+  tickN: number; opN: number; msgN: number; stN: number; today: string;
   dayStartEquity: number; equity: number; peakEquity: number; dayPnl: number; drawdown: number;
   kill: boolean; suspended: string[]; targetAnnounced: boolean;
 }
@@ -52,13 +52,16 @@ export async function ensureSeed(kv: KvStore, nowIso: string): Promise<boolean> 
   const { departments, agents, channels } = buildSeed();
   const today = nowIso.slice(0, 10);
   const meta: FundMeta = {
-    tickN: 0, opN: 1, msgN: 5, today,
+    tickN: 0, opN: 1, msgN: 5, stN: 1, today,
     dayStartEquity: FUND_BASE, equity: FUND_BASE, peakEquity: FUND_BASE, dayPnl: 0, drawdown: 0,
     kill: false, suspended: [], targetAnnounced: false,
   };
   await writeJson(kv, "fund:meta", meta);
+  const hist: Record<string, number[]> = {};
+  Object.keys(BASE_PRICES).forEach(k => (hist[k] = new Array(60).fill(BASE_PRICES[k])));
   await writeJson(kv, "fund:market", {
-    prices: { ...BASE_PRICES }, lastTick: { prices: { ...BASE_PRICES }, funding: 0.01, fear_greed: 50, risk_mode: "RISK-ON", ts: nowIso },
+    prices: { ...BASE_PRICES }, hist, regime: "trend", regimeLeft: 60, trendDir: 1,
+    lastTick: { prices: { ...BASE_PRICES }, funding: 0.01, fear_greed: 50, risk_mode: "RISK-ON", regime: "trend", trend: {}, ts: nowIso },
   });
   for (const a of agents) await kv.hset("fund:agents", a.id, JSON.stringify(a));
   await writeJson(kv, "fund:committee", { active: false, topic: "", started_at: null, ticks: 0, backup: {}, log: [] });

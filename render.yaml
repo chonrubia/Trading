@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: trading-floor-api
+    runtime: node
+    repo: https://github.com/chonrubia/Trading.git
+    branch: main
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    healthCheckPath: /api/health

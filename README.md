@@ -1,8 +1,10 @@
-# AI Trading Floor — ver demo pública en https://trading-three-hazel.vercel.app/
-> La web pública arranca con una **foto real del motor** (`frontend/public/snapshot.json`,
-> regenerada por GitHub Actions cada 6h con `backend/scripts/make-snapshot.js`) y sigue
-> simulando en vivo en el navegador. Sin backend conectado muestra "DATOS DEL MOTOR REAL +
-> SIMULACIÓN EN VIVO". Si abres la URL **en tu PC con el backend corriendo**, la web
+# AI Trading Floor — ver en vivo en https://trading-three-hazel.vercel.app/
+> **Motor 100% en la nube (sin PC):** GitHub Actions ejecuta el fondo cada 2h
+> (`.github/workflows/engine.yml`, 100 ticks por racha) y publica estado + `live.json`
+> en la rama `engine-state`. La web lo lee en vivo (solo lectura, se actualiza solo).
+> Hibernación probada: el mercado persiste (`market.json`) y cada racha retoma
+> donde quedó. Sin backend local ni snapshot: simulación local en el navegador.
+> Si abres la URL **en tu PC con el backend corriendo**, la web
 > detecta sola `http://localhost:8765` y muestra datos 100% en vivo sin configurar nada
 > (los navegadores permiten a páginas https llamar a localhost). Con `VITE_API_URL`
 > apuntando a un backend público, en vivo desde cualquier dispositivo.

@@ -35,7 +35,8 @@ let n = 0;
 const rnd = (a: number, b: number) => a + Math.random() * (b - a);
 const pick = (arr: any[]) => arr[Math.floor(Math.random() * arr.length)];
 
-export function initDemo() {
+export function initDemo(seed?: any) {
+  if (seed && seed.agents && seed.agents.length) return fromSeed(seed);
   const departments = DEPTS.map(([slug, name, description], i) => ({ id: "d-" + slug, slug, name, description, headcount: 0, x: 0.2 + (i % 5) * 0.15, y: 0.2 + Math.floor(i / 5) * 0.22 }));
   const agents: any[] = [];
   const per: any = { trading: 26, direccion: 1, riesgos: 2, macro: 2, analisis: 2, cartera: 1, derivados: 1, arbitraje: 1, quant: 1, lab: 1, escuela: 1, bienestar: 1, infra: 1 };
@@ -65,6 +66,29 @@ export function initDemo() {
     ],
     prices, funding: 0.01, fear_greed: 62, risk_mode: "RISK-ON",
     equity: 512.4, dayPnl: 12.4, msgN: 3, opN: 1,
+  };
+}
+
+// Semilla REAL del motor (vía snapshot.json generado por GitHub Actions).
+function fromSeed(seed: any) {
+  const departments = (seed.departments || []).map((d: any, i: number) => ({
+    ...d, x: 0.2 + (i % 5) * 0.15, y: 0.2 + Math.floor(i / 5) * 0.22,
+    headcount: seed.agents.filter((a: any) => a.department_id === d.id).length,
+  }));
+  const agents = seed.agents.map((a: any) => ({
+    studying: "Gestión de riesgo", trades_count: 0, win_rate: 50, profit_factor: 1,
+    drawdown: 0, mood: "enfocado", leverage: 2, timeframe: "1h", last_reason: "Semilla del motor real.",
+    ...a,
+  }));
+  const msgs = (seed.messages || []).map((m: any, i: number) => ({ id: m.id || ("seed-" + i), ...m }));
+  return {
+    agents, departments, msgs,
+    prices: { ...(seed.market?.prices || BASE) },
+    funding: seed.market?.funding ?? 0.01, fear_greed: seed.market?.fear_greed ?? 55,
+    risk_mode: seed.market?.risk_mode || "RISK-ON",
+    equity: seed.portfolio?.patrimonio ?? 500, dayPnl: seed.portfolio?.resultado_hoy ?? 0,
+    seedMeta: { generated_at: seed.generated_at, ranking: seed.ranking, setups: seed.setups, report: seed.report, memory: seed.memory, school: seed.school, meetings: seed.meetings, desks: seed.desks, labStats: seed.labStats },
+    msgN: 5000, opN: 1,
   };
 }
 

@@ -1,0 +1,24 @@
+name: snapshot-motor
+# El motor real opera en la nube y deja una foto en frontend/public/snapshot.json.
+# Vercel (sincronizado con GitHub) redespliega solo con cada foto: la web
+# pública arranca siempre con datos reales y sigue simulando en vivo.
+on:
+  schedule:
+    - cron: "0 */6 * * *" # 4 fotos al día
+  workflow_dispatch: {} # botón manual "Run workflow"
+jobs:
+  snap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: cd backend && npm install --no-audit --no-fund
+      - run: node backend/scripts/make-snapshot.js 150
+      - run: |
+          git config user.name "chonrubia-bot"
+          git config user.email "chonrubia-bot@users.noreply.github.com"
+          git add frontend/public/snapshot.json
+          git diff --cached --quiet || (git commit -m "snapshot motor $(date -u +%F-%H%M)" && git push)

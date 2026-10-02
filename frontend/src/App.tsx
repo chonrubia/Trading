@@ -38,6 +38,7 @@ export default function App() {
   const [setups, setSetups] = useState<any[]>([]);
   const [online, setOnline] = useState(true);
   const [demoMode, setDemoMode] = useState(false);
+  const [seedDate, setSeedDate] = useState<string | null>(null);
   const demoRef = useRef<any>(null);
   const chatRef = useRef<HTMLDivElement>(null);
 
@@ -66,22 +67,31 @@ export default function App() {
       setAgents(d.agents); setMarket(d.market); setPortfolio(d.portfolio); setRanking(d.ranking);
       if (d.newMsgs.length) setMsgs(m => [...m, ...d.newMsgs].slice(-120));
     };
-    const startDemo = () => {
+    const startDemo = async () => {
       if (stop || demoRef.current) return;
-      demoRef.current = initDemo();
+      let snap: any = null;
+      try {
+        const ctl2 = new AbortController(); const to2 = setTimeout(() => ctl2.abort(), 4000);
+        const r = await fetch("snapshot.json", { signal: ctl2.signal }); clearTimeout(to2);
+        if (r.ok) snap = await r.json();
+      } catch {}
+      demoRef.current = initDemo(snap);
       const d = demoRef.current;
+      const meta = d.seedMeta || {};
       setAgents(d.agents); setDepts(d.departments); setMsgs(d.msgs); setMarket({ prices: d.prices, funding: d.funding, fear_greed: d.fear_greed, risk_mode: d.risk_mode });
       setPortfolio({ patrimonio: d.equity, resultado_hoy: d.dayPnl, exposicion_bruta: 62, caida: 0.8, posiciones: 11, objetivo: 50, costes_pagados: 3.2 });
-      setRanking([]); setOnline(false); setDemoMode(true);
+      setRanking(meta.ranking || []); setOnline(false); setDemoMode(true);
       setRiskInfo({ limits: { max_day_loss: -15, max_drawdown: 10, max_exposure_gross: 150 }, dayPnl: d.dayPnl, drawdown: 0.8, exposure: 62, open: 11, blocked: 2, suspended: [], kill: false });
-      setDesks({ venues: [], funding: d.funding, arbOpen: [], derivadosOpen: [], hedge: null, signal: "-", pnl: { spot: d.dayPnl, arbitraje: 0, derivados: 0, cobertura: 0 } });
-      setReport({ verdict: "demo local", net: d.dayPnl, fees_paid: 3.2, costs_drag: "—", win_rate: "51%", profit_factor: 1.1, sharpe: 0.4, days: 0, green_days: "0/0", trades: { closed: 34, open: 11, blocked: 2, block_rate: "5%" }, desk_net: { spot: d.dayPnl }, block_reasons: {} });
+      setDesks({ venues: [], funding: d.funding, arbOpen: [], derivadosOpen: [], hedge: null, signal: "-", pnl: meta.desks?.pnl || { spot: d.dayPnl, arbitraje: 0, derivados: 0, cobertura: 0 } });
+      setReport(meta.report ? { ...meta.report, verdict: "motor real (" + (meta.generated_at || "?").slice(0, 10) + ") + demo en vivo" } : { verdict: "demo local", net: d.dayPnl, fees_paid: 3.2, costs_drag: "—", win_rate: "51%", profit_factor: 1.1, sharpe: 0.4, days: 0, green_days: "0/0", trades: { closed: 34, open: 11, blocked: 2, block_rate: "5%" }, desk_net: { spot: d.dayPnl }, block_reasons: {} });
       setOps([{ id: "demo-op-1", desk: "spot", status: "abierta", agent_name: d.agents[5].name, side: "LONG", pair: "BTC", pnl: 1.2, risk_note: "Demo local" }]);
-      setLabStats({ total: 6, incubacion: 3, lista: 1, activas: 2 }); setLab([]);
-      setSetups([{ strategy: "Tendencia BTC 1h", avg: 1.8, win: 58, trades: 12 }, { strategy: "Breakout SOL 15m", avg: 0.9, win: 52, trades: 9 }]);
-      setSchoolTop(d.agents.slice(0, 8).map((a: any, i: number) => ({ id: a.id, name: a.name, level: 2, xp: 120 - i * 9 })));
-      setMemList([{ id: "dm-mem", pair: "BTC", author: "Dirección CIO", text: "Demo local: la memoria compartida funciona igual que en el fondo real.", created_at: new Date().toISOString() }]);
-      setAuditList([{ ev: "demo.boot", ts: new Date().toISOString() }]); setMeetings([]);
+      setLabStats(meta.labStats || { total: 6, incubacion: 3, lista: 1, activas: 2 }); setLab([]);
+      setSetups(meta.setups || [{ strategy: "Tendencia BTC 1h", avg: 1.8, win: 58, trades: 12 }, { strategy: "Breakout SOL 15m", avg: 0.9, win: 52, trades: 9 }]);
+      setSchoolTop(meta.school || d.agents.slice(0, 8).map((a: any, i: number) => ({ id: a.id, name: a.name, level: 2, xp: 120 - i * 9 })));
+      if (!meta.memory) setMemList([{ id: "dm-mem", pair: "BTC", author: "Dirección CIO", text: "Demo local: la memoria compartida funciona igual que en el fondo real.", created_at: new Date().toISOString() }]);
+      else setMemList(meta.memory);
+      setAuditList([{ ev: meta.generated_at ? "seed motor " + meta.generated_at.slice(0, 16) : "demo.boot", ts: new Date().toISOString() }]); setMeetings(meta.meetings || []);
+      if (meta.generated_at) setSeedDate(meta.generated_at.slice(0, 16).replace("T", " "));
       iv = setInterval(demoTick, 2000);
     };
     (async () => {
@@ -224,7 +234,7 @@ export default function App() {
       {[...tape, ...tape].map(([k, v]: any, i: number) => <span className="tick" key={i}><span>{k}</span><b>{v}</b></span>)}
     </div></div>
 
-    {!online && <div className="offline">{demoMode ? "MODO DEMO · simulación local en tu navegador (sin backend). Todo lo que ves es simulado." : "SIN CONEXIÓN CON EL FONDO · el backend está apagado o inalcanzable. Arráncalo para ver datos en vivo."}</div>}
+    {!online && <div className="offline">{seedDate ? `DATOS DEL MOTOR REAL (${seedDate} UTC) + SIMULACIÓN EN VIVO · sin backend conectado` : "MODO DEMO · simulación local en tu navegador (sin backend). Todo lo que ves es simulado."}</div>}
 
     <div className="layout">
       <div className="panel">

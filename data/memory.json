@@ -1,0 +1,209 @@
+[
+ {
+  "id": "mem-23",
+  "ts": "2026-10-02T14:08:53.937Z",
+  "author": "Júlia López · T144",
+  "dept": "trading",
+  "pair": "XRP",
+  "text": "SHORT XRP TP +0.7% (0.96€) con Setup_8902 · Donchian XRP. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-22",
+  "ts": "2026-10-02T14:08:47.950Z",
+  "author": "Leire Puig · T150",
+  "dept": "trading",
+  "pair": "SOL",
+  "text": "LONG SOL SL -0.35% (-0.9€) con Setup_9373 · Breakout SOL. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-21",
+  "ts": "2026-10-02T14:08:47.946Z",
+  "author": "Leire Puig · T150",
+  "dept": "trading",
+  "pair": "SOL",
+  "text": "LONG SOL SL -0.35% (-1.44€) con Setup_9373 · Breakout SOL. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-20",
+  "ts": "2026-10-02T14:08:47.944Z",
+  "author": "Aitana Martí · T129",
+  "dept": "trading",
+  "pair": "SOL",
+  "text": "LONG SOL SL -0.35% (-1.17€) con Setup_9373 · Breakout SOL. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-19",
+  "ts": "2026-10-02T14:08:47.929Z",
+  "author": "Vera Soler · T137",
+  "dept": "trading",
+  "pair": "DOGE",
+  "text": "LONG DOGE SL -0.35% (-0.85€) con Setup_9007 · EMA DOGE. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-18",
+  "ts": "2026-10-02T14:08:35.926Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.12€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-17",
+  "ts": "2026-10-02T14:08:35.919Z",
+  "author": "Amara Ferrer · T124",
+  "dept": "trading",
+  "pair": "DOGE",
+  "text": "LONG DOGE TP +0.7% (1.2€) con Setup_9007 · EMA DOGE. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-16",
+  "ts": "2026-10-02T14:08:33.919Z",
+  "author": "Aitana Martí · T129",
+  "dept": "trading",
+  "pair": "SOL",
+  "text": "LONG SOL TP +0.7% (1.03€) con Setup_9373 · Breakout SOL. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-15",
+  "ts": "2026-10-02T14:08:29.914Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.28€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-14",
+  "ts": "2026-10-02T14:08:23.906Z",
+  "author": "Deriv · Vega",
+  "dept": "trading",
+  "pair": "ETH",
+  "text": "LONG ETH TP +0.7% (0.81€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-13",
+  "ts": "2026-10-02T14:08:21.904Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-12",
+  "ts": "2026-10-02T14:08:19.902Z",
+  "author": "Vera Soler · T137",
+  "dept": "trading",
+  "pair": "DOGE",
+  "text": "LONG DOGE TP +0.7% (0.87€) con Setup_9007 · EMA DOGE. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-11",
+  "ts": "2026-10-02T14:08:19.901Z",
+  "author": "Amara Ferrer · T124",
+  "dept": "trading",
+  "pair": "DOGE",
+  "text": "LONG DOGE TP +0.7% (1.11€) con Setup_9007 · EMA DOGE. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-10",
+  "ts": "2026-10-02T14:08:13.894Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.18€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-9",
+  "ts": "2026-10-02T14:08:13.893Z",
+  "author": "Oriol Duarte · T85",
+  "dept": "trading",
+  "pair": "XRP",
+  "text": "LONG XRP TP +0.7% (0.99€) con Setup_8902 · Donchian XRP. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-8",
+  "ts": "2026-10-02T14:08:05.882Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.11€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-7",
+  "ts": "2026-10-02T14:07:59.873Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.06€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-6",
+  "ts": "2026-10-02T14:07:57.874Z",
+  "author": "Leire Puig · T150",
+  "dept": "trading",
+  "pair": "SOL",
+  "text": "LONG SOL TP +0.7% (0.98€) con Setup_9373 · Breakout SOL. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-5",
+  "ts": "2026-10-02T14:07:51.862Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.12€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-4",
+  "ts": "2026-10-02T14:07:43.854Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.1€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-3",
+  "ts": "2026-10-02T14:07:31.846Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.08€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-2",
+  "ts": "2026-10-02T14:07:21.837Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-0.99€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-0",
+  "author": "Análisis · Onchain",
+  "dept": "analisis",
+  "pair": "BTC",
+  "text": "BTC sobre media de 50 y 200 días. Sesgo base alcista salvo pérdida de funding.",
+  "kind": "sesgo",
+  "ts": "2026-10-02T14:06:45.783Z"
+ }
+]

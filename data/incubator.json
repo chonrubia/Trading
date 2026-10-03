@@ -30,14 +30,14 @@
    "pass": true
   },
   "live": {
-   "equity": 148.7,
-   "pnl": 48.7,
-   "ticks": 42,
+   "equity": 103.6,
+   "pnl": 3.6,
+   "ticks": 63,
    "peak": 166.1,
-   "dd": 10.48,
+   "dd": 37.63,
    "pos": {
-    "side": 1,
-    "entry": 41.4966
+    "side": -1,
+    "entry": 40.7992
    }
   }
  },
@@ -72,14 +72,14 @@
    "pass": true
   },
   "live": {
-   "equity": 148.1,
-   "pnl": 48.1,
-   "ticks": 42,
+   "equity": 110.4,
+   "pnl": 10.4,
+   "ticks": 63,
    "peak": 156.4,
-   "dd": 5.31,
+   "dd": 29.41,
    "pos": {
     "side": 1,
-    "entry": 0.1833
+    "entry": 0.181
    }
   }
  },
@@ -134,14 +134,14 @@
    "pass": true
   },
   "live": {
-   "equity": 152.8,
-   "pnl": 52.8,
-   "ticks": 42,
+   "equity": 116.3,
+   "pnl": 16.3,
+   "ticks": 63,
    "peak": 156.5,
-   "dd": 2.36,
+   "dd": 25.69,
    "pos": {
-    "side": 1,
-    "entry": 0.67
+    "side": -1,
+    "entry": 0.6545
    }
   }
  },
@@ -196,14 +196,14 @@
    "pass": true
   },
   "live": {
-   "equity": 119.4,
-   "pnl": 19.4,
-   "ticks": 48,
+   "equity": 73,
+   "pnl": -27,
+   "ticks": 69,
    "peak": 132.1,
-   "dd": 9.61,
+   "dd": 44.74,
    "pos": {
-    "side": 1,
-    "entry": 0.7124
+    "side": -1,
+    "entry": 0.7009
    }
   }
  },
@@ -238,14 +238,14 @@
    "pass": true
   },
   "live": {
-   "equity": 106.2,
-   "pnl": 6.2,
-   "ticks": 54,
+   "equity": 57.4,
+   "pnl": -42.6,
+   "ticks": 75,
    "peak": 129.9,
-   "dd": 18.24,
+   "dd": 55.81,
    "pos": {
     "side": 1,
-    "entry": 0.1833
+    "entry": 0.1819
    }
   }
  },
@@ -280,14 +280,14 @@
    "pass": true
   },
   "live": {
-   "equity": 125.2,
-   "pnl": 25.2,
-   "ticks": 60,
+   "equity": 75.3,
+   "pnl": -24.7,
+   "ticks": 81,
    "peak": 138.7,
-   "dd": 9.73,
+   "dd": 45.71,
    "pos": {
     "side": 1,
-    "entry": 0.7114
+    "entry": 0.7036
    }
   }
  },
@@ -466,14 +466,14 @@
    "pass": true
   },
   "live": {
-   "equity": 126.6,
-   "pnl": 26.6,
-   "ticks": 63,
+   "equity": 80.8,
+   "pnl": -19.2,
+   "ticks": 84,
    "peak": 154.7,
-   "dd": 18.16,
+   "dd": 47.77,
    "pos": {
-    "side": 1,
-    "entry": 41.3807
+    "side": -1,
+    "entry": 40.9389
    }
   }
  },
@@ -508,14 +508,14 @@
    "pass": true
   },
   "live": {
-   "equity": 123.1,
-   "pnl": 23.1,
-   "ticks": 63,
+   "equity": 78.6,
+   "pnl": -21.4,
+   "ticks": 84,
    "peak": 142.8,
-   "dd": 13.8,
+   "dd": 44.96,
    "pos": {
-    "side": 1,
-    "entry": 0.7098
+    "side": -1,
+    "entry": 0.7025
    }
   }
  },

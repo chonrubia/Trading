@@ -1,8 +1,8 @@
 {
  "a-015": {
-  "riesgo": 446,
-  "psicologia": 198,
-  "tecnico": 256
+  "riesgo": 532,
+  "psicologia": 240,
+  "tecnico": 291
  },
  "a-021": {
   "riesgo": 60,
@@ -41,41 +41,45 @@
   "psicologia": 54
  },
  "a-028": {
-  "tecnico": 106,
-  "riesgo": 52
+  "tecnico": 122,
+  "riesgo": 70,
+  "psicologia": 6
  },
  "a-039": {
-  "tecnico": 113,
-  "riesgo": 56
+  "tecnico": 129,
+  "riesgo": 74,
+  "psicologia": 6
  },
  "a-026": {
   "tecnico": 24,
   "riesgo": 12
  },
  "a-002": {
-  "riesgo": 250,
-  "psicologia": 138,
-  "tecnico": 45
+  "riesgo": 268,
+  "psicologia": 144,
+  "tecnico": 63
  },
  "a-035": {
   "tecnico": 106,
-  "riesgo": 52
+  "riesgo": 62,
+  "psicologia": 6
  },
  "a-038": {
   "riesgo": 30,
   "psicologia": 18
  },
  "a-047": {
-  "tecnico": 88,
-  "riesgo": 44
+  "tecnico": 96,
+  "riesgo": 48
  },
  "a-022": {
   "tecnico": 106,
-  "riesgo": 52
+  "riesgo": 62,
+  "psicologia": 6
  },
  "a-030": {
-  "tecnico": 96,
-  "riesgo": 48
+  "tecnico": 112,
+  "riesgo": 56
  },
  "a-037": {
   "riesgo": 70,
@@ -94,8 +98,8 @@
   "psicologia": 6
  },
  "a-052": {
-  "tecnico": 104,
-  "riesgo": 52
+  "tecnico": 112,
+  "riesgo": 56
  },
  "a-044": {
   "tecnico": 8,
@@ -106,73 +110,79 @@
   "riesgo": 4
  },
  "a-056": {
-  "tecnico": 88,
-  "riesgo": 44
+  "tecnico": 104,
+  "riesgo": 52
  },
  "a-033": {
   "tecnico": 16,
   "riesgo": 8
  },
  "a-054": {
-  "tecnico": 104,
-  "riesgo": 52
+  "tecnico": 112,
+  "riesgo": 56
  },
  "a-064": {
-  "tecnico": 58,
-  "riesgo": 28
+  "tecnico": 66,
+  "riesgo": 42,
+  "psicologia": 6
  },
  "a-069": {
-  "tecnico": 80,
-  "riesgo": 50,
+  "tecnico": 88,
+  "riesgo": 54,
   "psicologia": 6
  },
  "a-059": {
-  "tecnico": 64,
-  "riesgo": 32
- },
- "a-097": {
-  "tecnico": 120,
-  "riesgo": 60
- },
- "a-070": {
-  "tecnico": 32,
-  "riesgo": 16
- },
- "a-066": {
-  "tecnico": 72,
-  "riesgo": 36
- },
- "a-046": {
-  "tecnico": 88,
-  "riesgo": 44
- },
- "a-074": {
-  "tecnico": 64,
-  "riesgo": 32
- },
- "a-076": {
-  "tecnico": 72,
-  "riesgo": 36
- },
- "a-050": {
   "tecnico": 80,
   "riesgo": 40
  },
+ "a-097": {
+  "tecnico": 128,
+  "riesgo": 64
+ },
+ "a-070": {
+  "tecnico": 40,
+  "riesgo": 40,
+  "psicologia": 12
+ },
+ "a-066": {
+  "tecnico": 88,
+  "riesgo": 54,
+  "psicologia": 6
+ },
+ "a-046": {
+  "tecnico": 104,
+  "riesgo": 52
+ },
+ "a-074": {
+  "tecnico": 88,
+  "riesgo": 44
+ },
+ "a-076": {
+  "tecnico": 96,
+  "riesgo": 48
+ },
+ "a-050": {
+  "tecnico": 88,
+  "riesgo": 64,
+  "psicologia": 12
+ },
  "a-082": {
-  "tecnico": 56,
-  "riesgo": 28
+  "tecnico": 80,
+  "riesgo": 40
  },
  "a-060": {
-  "tecnico": 56,
-  "riesgo": 28
+  "tecnico": 72,
+  "riesgo": 46,
+  "psicologia": 6
  },
  "a-065": {
-  "tecnico": 64,
-  "riesgo": 32
+  "tecnico": 72,
+  "riesgo": 56,
+  "psicologia": 12
  },
  "a-067": {
-  "tecnico": 40,
-  "riesgo": 20
+  "tecnico": 48,
+  "riesgo": 24
  },
  "a-048": {
   "tecnico": 8,
@@ -183,12 +193,12 @@
   "riesgo": 4
  },
  "a-091": {
-  "tecnico": 96,
-  "riesgo": 48
+  "tecnico": 120,
+  "riesgo": 60
  },
  "a-095": {
-  "tecnico": 114,
-  "riesgo": 56
+  "tecnico": 138,
+  "riesgo": 68
  },
  "a-096": {
   "tecnico": 8,
@@ -199,40 +209,41 @@
   "riesgo": 4
  },
  "a-094": {
-  "tecnico": 96,
-  "riesgo": 48
+  "tecnico": 120,
+  "riesgo": 60
  },
  "a-107": {
-  "tecnico": 57,
-  "riesgo": 58,
-  "psicologia": 18
+  "tecnico": 73,
+  "riesgo": 76,
+  "psicologia": 24
  },
  "a-116": {
   "tecnico": 88,
-  "riesgo": 64,
-  "psicologia": 12
+  "riesgo": 74,
+  "psicologia": 18
  },
  "a-156": {
   "tecnico": 96,
-  "riesgo": 78,
-  "psicologia": 18
+  "riesgo": 98,
+  "psicologia": 30
  },
  "a-080": {
-  "tecnico": 57,
-  "riesgo": 28
+  "tecnico": 81,
+  "riesgo": 40
  },
  "a-118": {
-  "tecnico": 64,
-  "riesgo": 42,
+  "tecnico": 80,
+  "riesgo": 50,
   "psicologia": 6
  },
  "a-130": {
   "tecnico": 88,
-  "riesgo": 44
+  "riesgo": 64,
+  "psicologia": 12
  },
  "a-084": {
-  "tecnico": 64,
-  "riesgo": 42,
+  "tecnico": 72,
+  "riesgo": 46,
   "psicologia": 6
  },
  "a-121": {
@@ -241,16 +252,18 @@
  },
  "a-139": {
   "tecnico": 112,
-  "riesgo": 56
+  "riesgo": 86,
+  "psicologia": 18
  },
  "a-147": {
   "tecnico": 107,
-  "riesgo": 62,
-  "psicologia": 6
+  "riesgo": 82,
+  "psicologia": 18
  },
  "a-154": {
   "tecnico": 112,
-  "riesgo": 56
+  "riesgo": 76,
+  "psicologia": 12
  },
  "a-085": {
   "tecnico": 56,
@@ -269,15 +282,18 @@
  },
  "a-112": {
   "tecnico": 114,
-  "riesgo": 56
+  "riesgo": 66,
+  "psicologia": 6
  },
  "a-125": {
   "tecnico": 120,
-  "riesgo": 60
+  "riesgo": 80,
+  "psicologia": 12
  },
  "a-124": {
   "tecnico": 120,
-  "riesgo": 60
+  "riesgo": 70,
+  "psicologia": 6
  },
  "a-133": {
   "tecnico": 82,
@@ -291,21 +307,23 @@
  },
  "a-155": {
   "tecnico": 106,
-  "riesgo": 52
+  "riesgo": 82,
+  "psicologia": 18
  },
  "a-111": {
   "tecnico": 74,
-  "riesgo": 56,
-  "psicologia": 12
+  "riesgo": 66,
+  "psicologia": 18
  },
  "a-128": {
   "tecnico": 105,
-  "riesgo": 52
+  "riesgo": 62,
+  "psicologia": 6
  },
  "a-168": {
   "tecnico": 99,
-  "riesgo": 68,
-  "psicologia": 12
+  "riesgo": 78,
+  "psicologia": 18
  },
  "a-123": {
   "tecnico": 106,
@@ -314,66 +332,66 @@
  },
  "a-167": {
   "tecnico": 104,
-  "riesgo": 72,
-  "psicologia": 12
+  "riesgo": 102,
+  "psicologia": 30
  },
  "a-174": {
   "tecnico": 96,
-  "riesgo": 78,
-  "psicologia": 18
+  "riesgo": 98,
+  "psicologia": 30
  },
  "a-171": {
-  "tecnico": 72,
-  "riesgo": 76,
+  "tecnico": 96,
+  "riesgo": 88,
   "psicologia": 24
  },
  "a-160": {
   "tecnico": 112,
-  "riesgo": 66,
-  "psicologia": 6
+  "riesgo": 96,
+  "psicologia": 24
  },
  "a-149": {
   "tecnico": 104,
-  "riesgo": 72,
-  "psicologia": 12
+  "riesgo": 92,
+  "psicologia": 24
  },
  "a-138": {
   "tecnico": 104,
-  "riesgo": 62,
-  "psicologia": 6
+  "riesgo": 82,
+  "psicologia": 18
  },
  "a-162": {
   "tecnico": 96,
-  "riesgo": 78,
-  "psicologia": 18
+  "riesgo": 88,
+  "psicologia": 24
  },
  "a-011": {
   "tecnico": 160
  },
  "a-179": {
-  "tecnico": 72,
-  "riesgo": 46,
+  "tecnico": 88,
+  "riesgo": 54,
   "psicologia": 6
  },
  "a-025": {
-  "riesgo": 90,
-  "psicologia": 54
+  "riesgo": 120,
+  "psicologia": 72
  },
  "a-031": {
-  "riesgo": 80,
-  "psicologia": 48
+  "riesgo": 110,
+  "psicologia": 66
  },
  "a-034": {
-  "riesgo": 30,
-  "psicologia": 18
+  "riesgo": 60,
+  "psicologia": 36
  },
  "a-036": {
-  "riesgo": 30,
-  "psicologia": 18
+  "riesgo": 60,
+  "psicologia": 36
  },
  "a-077": {
-  "tecnico": 56,
-  "riesgo": 28
+  "tecnico": 80,
+  "riesgo": 40
  },
  "a-073": {
   "riesgo": 10,
@@ -388,56 +406,56 @@
   "psicologia": 6
  },
  "a-181": {
-  "tecnico": 88,
-  "riesgo": 44
+  "tecnico": 112,
+  "riesgo": 56
  },
  "a-053": {
-  "riesgo": 30,
-  "psicologia": 18
+  "riesgo": 60,
+  "psicologia": 36
  },
  "a-055": {
-  "riesgo": 100,
-  "psicologia": 60
+  "riesgo": 120,
+  "psicologia": 72
  },
  "a-058": {
-  "riesgo": 30,
-  "psicologia": 18
+  "riesgo": 40,
+  "psicologia": 24
  },
  "a-061": {
-  "riesgo": 30,
-  "psicologia": 18
+  "riesgo": 40,
+  "psicologia": 24
  },
  "a-062": {
-  "riesgo": 90,
-  "psicologia": 54
+  "riesgo": 120,
+  "psicologia": 72
  },
  "a-071": {
-  "riesgo": 40,
-  "psicologia": 24
+  "riesgo": 70,
+  "psicologia": 42
  },
  "a-029": {
-  "riesgo": 50,
-  "psicologia": 30
+  "riesgo": 70,
+  "psicologia": 42
  },
  "a-072": {
-  "riesgo": 30,
-  "psicologia": 18
- },
- "a-083": {
-  "riesgo": 50,
-  "psicologia": 30
- },
- "a-088": {
   "riesgo": 40,
   "psicologia": 24
  },
+ "a-083": {
+  "riesgo": 80,
+  "psicologia": 48
+ },
+ "a-088": {
+  "riesgo": 60,
+  "psicologia": 36
+ },
  "a-098": {
-  "riesgo": 30,
-  "psicologia": 18
+  "riesgo": 50,
+  "psicologia": 30
  },
  "a-100": {
-  "riesgo": 30,
-  "psicologia": 18
+  "riesgo": 40,
+  "psicologia": 24
  },
  "a-109": {
   "riesgo": 20,
@@ -464,7 +482,7 @@
   "psicologia": 18
  },
  "a-184": {
-  "tecnico": 24,
-  "riesgo": 12
+  "tecnico": 48,
+  "riesgo": 24
  }
 }

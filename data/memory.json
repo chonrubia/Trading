@@ -1,5 +1,41 @@
 [
  {
+  "id": "mem-66",
+  "ts": "2026-10-03T02:19:30.031Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.16€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-65",
+  "ts": "2026-10-03T02:18:55.996Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC TP +0.7% (0.93€) con Setup_9301 · Scalp ADA. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-64",
+  "ts": "2026-10-03T02:18:39.973Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC TP +0.7% (0.89€) con Setup_9301 · Scalp ADA. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-63",
+  "ts": "2026-10-03T02:18:31.964Z",
+  "author": "Deriv · Vega",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC TP +0.7% (0.87€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
   "id": "mem-62",
   "ts": "2026-10-03T00:24:26.956Z",
   "author": "Laboratorio",

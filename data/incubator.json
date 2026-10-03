@@ -30,14 +30,14 @@
    "pass": true
   },
   "live": {
-   "equity": 103.6,
-   "pnl": 3.6,
-   "ticks": 63,
+   "equity": 89.7,
+   "pnl": -10.3,
+   "ticks": 84,
    "peak": 166.1,
-   "dd": 37.63,
+   "dd": 46,
    "pos": {
-    "side": -1,
-    "entry": 40.7992
+    "side": 1,
+    "entry": 42.9716
    }
   }
  },
@@ -49,7 +49,7 @@
   "style": "tendencia",
   "kind": "ema",
   "p1": 8,
-  "status": "incubacion",
+  "status": "lista",
   "created_at": "2026-10-02T22:16:52.950Z",
   "backtest": {
    "trades": 40,
@@ -72,14 +72,14 @@
    "pass": true
   },
   "live": {
-   "equity": 110.4,
-   "pnl": 10.4,
-   "ticks": 63,
+   "equity": 148.6,
+   "pnl": 48.6,
+   "ticks": 64,
    "peak": 156.4,
-   "dd": 29.41,
+   "dd": 4.99,
    "pos": {
     "side": 1,
-    "entry": 0.181
+    "entry": 0.188
    }
   }
  },
@@ -134,14 +134,14 @@
    "pass": true
   },
   "live": {
-   "equity": 116.3,
-   "pnl": 16.3,
-   "ticks": 63,
+   "equity": 90.6,
+   "pnl": -9.4,
+   "ticks": 84,
    "peak": 156.5,
-   "dd": 25.69,
+   "dd": 42.11,
    "pos": {
-    "side": -1,
-    "entry": 0.6545
+    "side": 1,
+    "entry": 0.704
    }
   }
  },
@@ -196,14 +196,14 @@
    "pass": true
   },
   "live": {
-   "equity": 73,
-   "pnl": -27,
-   "ticks": 69,
+   "equity": 53.9,
+   "pnl": -46.1,
+   "ticks": 90,
    "peak": 132.1,
-   "dd": 44.74,
+   "dd": 59.2,
    "pos": {
-    "side": -1,
-    "entry": 0.7009
+    "side": 1,
+    "entry": 0.7502
    }
   }
  },
@@ -238,14 +238,14 @@
    "pass": true
   },
   "live": {
-   "equity": 57.4,
-   "pnl": -42.6,
-   "ticks": 75,
+   "equity": 121.5,
+   "pnl": 21.5,
+   "ticks": 96,
    "peak": 129.9,
-   "dd": 55.81,
+   "dd": 6.47,
    "pos": {
     "side": 1,
-    "entry": 0.1819
+    "entry": 0.1942
    }
   }
  },
@@ -257,7 +257,7 @@
   "style": "swing",
   "kind": "ema",
   "p1": 14,
-  "status": "incubacion",
+  "status": "lista",
   "created_at": "2026-10-02T20:18:01.028Z",
   "backtest": {
    "trades": 41,
@@ -280,14 +280,14 @@
    "pass": true
   },
   "live": {
-   "equity": 75.3,
-   "pnl": -24.7,
-   "ticks": 81,
+   "equity": 134,
+   "pnl": 34,
+   "ticks": 96,
    "peak": 138.7,
-   "dd": 45.71,
+   "dd": 3.39,
    "pos": {
     "side": 1,
-    "entry": 0.7036
+    "entry": 0.7466
    }
   }
  },
@@ -443,7 +443,7 @@
   "style": "tendencia",
   "kind": "ema",
   "p1": 13,
-  "status": "incubacion",
+  "status": "descartada",
   "created_at": "2026-10-02T20:16:48.949Z",
   "backtest": {
    "trades": 40,
@@ -466,16 +466,17 @@
    "pass": true
   },
   "live": {
-   "equity": 80.8,
-   "pnl": -19.2,
-   "ticks": 84,
+   "equity": 65.2,
+   "pnl": -34.8,
+   "ticks": 100,
    "peak": 154.7,
-   "dd": 47.77,
+   "dd": 57.85,
    "pos": {
-    "side": -1,
-    "entry": 40.9389
+    "side": 1,
+    "entry": 42.7539
    }
-  }
+  },
+  "discard": "incubación paper -34.8€ en 100 ticks"
  },
  {
   "id": "st-26",
@@ -485,7 +486,7 @@
   "style": "tendencia",
   "kind": "ema",
   "p1": 13,
-  "status": "incubacion",
+  "status": "descartada",
   "created_at": "2026-10-02T18:23:29.228Z",
   "backtest": {
    "trades": 37,
@@ -508,16 +509,17 @@
    "pass": true
   },
   "live": {
-   "equity": 78.6,
-   "pnl": -21.4,
-   "ticks": 84,
+   "equity": 52.7,
+   "pnl": -47.3,
+   "ticks": 100,
    "peak": 142.8,
-   "dd": 44.96,
+   "dd": 63.1,
    "pos": {
-    "side": -1,
-    "entry": 0.7025
+    "side": 1,
+    "entry": 0.7431
    }
-  }
+  },
+  "discard": "incubación paper -47.3€ en 100 ticks"
  },
  {
   "id": "st-25",

@@ -1,5 +1,23 @@
 [
  {
+  "id": "mem-68",
+  "ts": "2026-10-03T04:19:30.278Z",
+  "author": "Deriv · Vega",
+  "dept": "trading",
+  "pair": "ETH",
+  "text": "LONG ETH TP +0.7% (1.07€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-67",
+  "ts": "2026-10-03T04:18:44.231Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.23€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
   "id": "mem-66",
   "ts": "2026-10-03T02:19:30.031Z",
   "author": "Riesgo · Sato",

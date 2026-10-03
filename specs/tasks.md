@@ -29,7 +29,7 @@
 - [x] T40 UI contra `/api/*` por polling (reutilizar componentes) — `FloorApp` + `IsoOffice` migrados, página 200 en producción local
 - [x] T41 Acciones remotas funcionando (H2) — chat, propose, kill, suspend, comité, memoria, incubadora verificados en vivo
 - [x] T42 Sin backend: error explícito, jamás demo silenciosa — sin KV en Vercel falla explícito (503/500 + banner offline)
-- [ ] T43 Checklist dashboard (pendiente del gestor): proyecto Vercel con Root `web/` + store KV conectado + `CRON_SECRET` en Vercel y secrets `VERCEL_APP_URL`/`CRON_SECRET` en GitHub para `engine-web.yml`
+- [x] T43 Checklist dashboard — hecho 2026-10-03 en vivo: Root `web/` + Framework Next.js + Build `npm run build` + store KV `trading-state` conectado + `CRON_SECRET` en Vercel Production + secrets `VERCEL_APP_URL`/`CRON_SECRET` en GitHub; deploy `Ready`, `engine-web` en verde
 
 ## F5
 - [ ] T50 Semana de latidos ≥95% puntuales + cuotas bajo techo

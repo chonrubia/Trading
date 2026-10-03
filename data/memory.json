@@ -1,5 +1,59 @@
 [
  {
+  "id": "mem-79",
+  "ts": "2026-10-03T08:19:54.072Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.23€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-78",
+  "ts": "2026-10-03T08:19:34.053Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC SL -0.35% (-1.27€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-77",
+  "ts": "2026-10-03T08:18:27.973Z",
+  "author": "Deriv · Vega",
+  "dept": "trading",
+  "pair": "ETH",
+  "text": "LONG ETH SL -0.35% (-0.85€) con Setup_9201 · RSI LINK. Lección: respetar stop y size.",
+  "kind": "leccion-perdida"
+ },
+ {
+  "id": "mem-76",
+  "ts": "2026-10-03T08:18:21.964Z",
+  "author": "Izan Chan · T29",
+  "dept": "trading",
+  "pair": "XRP",
+  "text": "SHORT XRP TP +0.7% (1€) con Setup_8902 · Donchian XRP. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-75",
+  "ts": "2026-10-03T08:18:21.962Z",
+  "author": "Iker Costa · T21",
+  "dept": "trading",
+  "pair": "XRP",
+  "text": "SHORT XRP TP +0.7% (1€) con Setup_8902 · Donchian XRP. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-74",
+  "ts": "2026-10-03T08:18:20.624Z",
+  "author": "Vera Soler · T17",
+  "dept": "trading",
+  "pair": "DOGE",
+  "text": "SHORT DOGE TP +0.7% (1.24€) con Setup_9007 · EMA DOGE. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
   "id": "mem-73",
   "ts": "2026-10-03T06:26:37.235Z",
   "author": "Deriv · Vega",

@@ -548,4 +548,45 @@ export async function saveEngine(kv: KvStore, s: EngineState): Promise<void> {
   for (const [k, v] of Object.entries(s.day.trades)) await repo.saveDay(kv, s.meta.today, `t:${k}`, v);
   for (const [k, v] of Object.entries(s.day.last)) await repo.saveDay(kv, s.meta.today, `l:${k}`, v);
   for (const [k, v] of Object.entries(s.day.lossTick)) await repo.saveDay(kv, s.meta.today, `c:${k}`, v);
+
+  // ---- aprendizaje: persistir solo lo nuevo (diff por id) ----
+  // Sin esto cada tick serverless recargaba las listas viejas y el fondo
+  // olvidaba cierres, memoria, XP, actas e historial (nunca llegaba a +50€/día).
+  const idSet = (xs: any[]) => new Set(xs.map(x => x.id).filter(Boolean));
+  const jsonKey = (x: any) => JSON.stringify(x);
+  const storedClosed = await repo.closedOps(kv, 10000);
+  const seenClosed = idSet(storedClosed);
+  for (const o of s.closed) if (o.id && !seenClosed.has(o.id)) { await repo.pushClosed(kv, o); seenClosed.add(o.id); }
+  const storedBlocked = await repo.blockedOps(kv, 10000);
+  const seenBlocked = idSet(storedBlocked);
+  for (const o of s.blocked) if (o.id && !seenBlocked.has(o.id)) { await repo.pushBlocked(kv, o); seenBlocked.add(o.id); }
+  const storedMsgs = await repo.allMsgs(kv);
+  const seenMsgs = idSet(storedMsgs);
+  for (const m of s.msgs) if (m.id && !seenMsgs.has(m.id)) { await repo.pushMsg(kv, m); seenMsgs.add(m.id); }
+  const storedMeetings = await repo.meetings(kv);
+  const seenMeetings = idSet(storedMeetings);
+  for (const m of [...s.meetings].reverse()) if (m.id && !seenMeetings.has(m.id)) { await repo.pushMeeting(kv, m); seenMeetings.add(m.id); }
+  const storedMemory = await repo.memory(kv, "", 10000);
+  const seenMemory = idSet(storedMemory);
+  for (const e of [...s.memory].reverse()) {
+    const id = e.id ?? jsonKey(e);
+    if (!seenMemory.has(id)) { await repo.pushMemory(kv, e); seenMemory.add(id); }
+  }
+  const storedLearnings = await repo.learnings(kv, 10000);
+  const seenLearnings = new Set(storedLearnings.map(jsonKey));
+  for (const l of [...s.learnings].reverse()) { const k = jsonKey(l); if (!seenLearnings.has(k)) { await repo.pushLearning(kv, l); seenLearnings.add(k); } }
+  const storedSnaps = await repo.snapshots(kv, 10000);
+  const seenSnaps = new Set(storedSnaps.map((x: any) => x.ts));
+  for (const x of s.snapshots) if (x.ts && !seenSnaps.has(x.ts)) { await repo.pushSnapshot(kv, x); seenSnaps.add(x.ts); }
+  const storedAudit = await repo.audit(kv, 10000);
+  const seenAudit = new Set(storedAudit.map(jsonKey));
+  for (const e of s.audit) { const k = jsonKey(e); if (!seenAudit.has(k)) { await repo.pushAudit(kv, e); seenAudit.add(k); } }
+  const storedXp = await repo.xp(kv);
+  for (const [agentId, v] of Object.entries(s.xp)) {
+    if (jsonKey(v) !== jsonKey((storedXp as any)[agentId])) await repo.saveXp(kv, agentId, v);
+  }
+  const storedDays = await repo.targetDays(kv);
+  for (const [day, v] of Object.entries(s.targetDays)) {
+    if (jsonKey(v) !== jsonKey((storedDays as any)[day])) await repo.saveTargetDay(kv, day, v);
+  }
 }

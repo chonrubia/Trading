@@ -97,6 +97,7 @@ export const repo = {
   pushBlocked: (kv: KvStore, o: any) => pushTrim(kv, "fund:ops:blocked", o, 80),
   messages: (kv: KvStore, channel: string, n = 50) => readList<any>(kv, "fund:msgs", 500).then(all => all.filter((m: any) => m.channel_id === channel).slice(-n)),
   pushMsg: (kv: KvStore, m: any) => pushTrim(kv, "fund:msgs", m, 500),
+  allMsgs: (kv: KvStore) => readList<any>(kv, "fund:msgs", 500),
   meetings: (kv: KvStore) => readList<any>(kv, "fund:meetings", 20),
   pushMeeting: (kv: KvStore, m: any) => pushTrim(kv, "fund:meetings", m, 20),
   memory: (kv: KvStore, q: string, n = 30) => readList<any>(kv, "fund:memory", 200).then(all => {
@@ -105,6 +106,7 @@ export const repo = {
   }),
   pushMemory: (kv: KvStore, e: any) => pushTrim(kv, "fund:memory", e, 200),
   xp: (kv: KvStore) => readHash<any>(kv, "fund:xp"),
+  saveXp: (kv: KvStore, agentId: string, v: any) => kv.hset("fund:xp", agentId, JSON.stringify(v)),
   awardXp: async (kv: KvStore, agentId: string, subject: string, amount: number) => {
     const all = await readHash<any>(kv, "fund:xp");
     const cur = all[agentId] || {};

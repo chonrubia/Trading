@@ -1,10 +1,13 @@
 name: engine-nube
+# LEGADO APAGADO 2026-10-03: solo manual. Motor canónico: web/ + engine-web.
+# (Cabecera original archivada en git: ver historial del fichero.)
 # El motor vive en la nube sin depender del PC:
 # cada 2h arranca con el estado de la rama engine-state, opera 60 ticks
 # y publica estado + live.json. ~4 min facturados/carrera -> ~1500 min/mes.
 on:
-  schedule:
-    - cron: "0 */2 * * *"
+  # APAGADO 2026-10-03 (motor canónico: web/ + engine-web cada 30min):
+  # schedule:
+  #   - cron: "0 */2 * * *"
   workflow_dispatch: {}
 permissions:
   contents: write

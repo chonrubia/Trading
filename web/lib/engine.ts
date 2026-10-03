@@ -536,12 +536,29 @@ export async function loadEngine(kv: KvStore): Promise<EngineState> {
 export async function saveEngine(kv: KvStore, s: EngineState): Promise<void> {
   await repo.saveMeta(kv, s.meta as any);
   await repo.saveMarket(kv, s.market);
-  for (const a of Object.values(s.agents)) await repo.saveAgent(kv, a as any);
+  // Dirty-check: 176 agentes × 48 ticks/día fundirían la cuota gratis.
+  // x/y se comparan a 3 decimales (convergen y dejan de escribirse);
+  // el resto de campos decide si el agente realmente cambió.
+  const r3 = (v: any) => (typeof v === "number" ? Math.round(v * 1000) / 1000 : v);
+  const stableAgent = (a: any) => ({ ...a, x: r3(a.x), y: r3(a.y) });
+  const storedAgents = await repo.agents(kv);
+  for (const a of Object.values(s.agents) as any[]) {
+    const cur = (storedAgents as any)[a.id];
+    if (!cur || JSON.stringify(stableAgent(cur)) !== JSON.stringify(stableAgent(a))) {
+      await repo.saveAgent(kv, a as any);
+    }
+  }
   await repo.saveCommittee(kv, s.committee);
   const prev = await repo.openOps(kv);
   for (const id of Object.keys(prev)) if (!s.openOps[id]) await repo.delOpenOp(kv, id);
   for (const o of Object.values(s.openOps)) await repo.saveOpenOp(kv, o);
-  for (const [id, st] of Object.entries(s.strategies)) await repo.saveStrategy(kv, { id, ...(st as any) });
+  const storedStrats = await repo.strategies(kv);
+  for (const [id, st] of Object.entries(s.strategies)) {
+    const full = { id, ...(st as any) };
+    if (!((storedStrats as any)[id]) || JSON.stringify((storedStrats as any)[id]) !== JSON.stringify(full)) {
+      await repo.saveStrategy(kv, full);
+    }
+  }
   await repo.saveBufs(kv, s.bufs);
   await repo.saveVenues(kv, s.venues);
   await repo.saveEps(kv, s.eps);

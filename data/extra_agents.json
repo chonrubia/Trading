@@ -74,14 +74,14 @@
   "level_risk": 2,
   "level_ta": 2,
   "studying": "Gestión de riesgo",
-  "pnl": 1.21,
+  "pnl": 1.71,
   "win_rate": 75.7,
   "profit_factor": 6.54,
   "drawdown": 0,
-  "trades_count": 7,
+  "trades_count": 10,
   "x": 0.45,
   "y": 0.55,
-  "last_reason": "LONG SOL cerrada en 206.4092 (SL -0.35%) PnL -0.09€ · Riesgos: OK"
+  "last_reason": "LONG SOL cerrada en 195.3877 (TP +0.7%) PnL 0.23€ · Riesgos: OK"
  },
  {
   "id": "a-180",
@@ -130,14 +130,14 @@
   "level_risk": 2,
   "level_ta": 2,
   "studying": "Gestión de riesgo",
-  "pnl": 1.28,
+  "pnl": 1.93,
   "win_rate": 93.9,
   "profit_factor": 21.9,
   "drawdown": 0,
-  "trades_count": 8,
+  "trades_count": 11,
   "x": 0.45,
   "y": 0.55,
-  "last_reason": "SHORT LINK cerrada en 21.1687 (TP +0.7%) PnL 0.13€ · Riesgos: OK"
+  "last_reason": "LONG LINK cerrada en 20.5728 (TP +0.7%) PnL 0.22€ · Riesgos: OK"
  },
  {
   "id": "a-182",
@@ -194,5 +194,33 @@
   "x": 0.45,
   "y": 0.55,
   "last_reason": "Incubada de Minera DONCHIAN BTC 4h p37: backtest 2223.7€ sharpe 21.27, robustez 4/4, paper 74.6€."
+ },
+ {
+  "id": "a-184",
+  "name": "Incubada DOGE tendencia #st-23",
+  "role": "Trader",
+  "department_id": "d-trading",
+  "avatar_seed": 3480,
+  "strategy": "Minera EMA DOGE 1h p8",
+  "pair": "DOGE",
+  "timeframe": "1h",
+  "style": "tendencia",
+  "risk_level": 2,
+  "leverage": 2,
+  "capital_assigned": 25,
+  "status": "analizando",
+  "mood": "enfocado",
+  "incubated": true,
+  "level_risk": 2,
+  "level_ta": 2,
+  "studying": "Gestión de riesgo",
+  "pnl": 0.58,
+  "win_rate": 65,
+  "profit_factor": 6.68,
+  "drawdown": 0,
+  "trades_count": 3,
+  "x": 0.45,
+  "y": 0.55,
+  "last_reason": "LONG DOGE cerrada en 0.1836 (TP +0.7%) PnL 0.23€ · Riesgos: OK"
  }
 ]

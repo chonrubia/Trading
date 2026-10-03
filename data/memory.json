@@ -1,5 +1,59 @@
 [
  {
+  "id": "mem-62",
+  "ts": "2026-10-03T00:24:26.956Z",
+  "author": "Laboratorio",
+  "dept": "lab",
+  "pair": "DOGE",
+  "text": "Minera EMA DOGE 1h p8 supera incubación (paper 11.6€) y recibe 25€ de capital.",
+  "kind": "incubacion"
+ },
+ {
+  "id": "mem-61",
+  "ts": "2026-10-03T00:24:14.955Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC TP +0.7% (0.97€) con Setup_9301 · Scalp ADA. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-60",
+  "ts": "2026-10-03T00:24:14.954Z",
+  "author": "Deriv · Vega",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC TP +0.7% (0.94€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-59",
+  "ts": "2026-10-03T00:23:50.922Z",
+  "author": "Deriv · Vega",
+  "dept": "trading",
+  "pair": "ETH",
+  "text": "SHORT ETH TP +0.7% (0.98€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-58",
+  "ts": "2026-10-03T00:23:38.917Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC TP +0.7% (0.96€) con Setup_9301 · Scalp ADA. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
+  "id": "mem-57",
+  "ts": "2026-10-03T00:23:26.901Z",
+  "author": "Riesgo · Sato",
+  "dept": "trading",
+  "pair": "BTC",
+  "text": "SHORT BTC TP +0.7% (0.96€) con Setup_9301 · Scalp ADA. Funciona: dejar correr con trailing.",
+  "kind": "leccion-ganada"
+ },
+ {
   "id": "mem-56",
   "ts": "2026-10-02T22:18:11.038Z",
   "author": "Laboratorio",

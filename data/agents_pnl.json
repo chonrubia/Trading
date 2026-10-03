@@ -8,8 +8,8 @@
  },
  {
   "id": "a-002",
-  "pnl": -26.23,
-  "trades_count": 24,
+  "pnl": -22.56,
+  "trades_count": 28,
   "level_risk": 5,
   "level_ta": 1
  },
@@ -99,8 +99,8 @@
  },
  {
   "id": "a-015",
-  "pnl": 7.09,
-  "trades_count": 51,
+  "pnl": 7.15,
+  "trades_count": 62,
   "level_risk": 2,
   "level_ta": 1
  },
@@ -127,50 +127,50 @@
  },
  {
   "id": "a-019",
-  "pnl": -1.02,
-  "trades_count": 7,
+  "pnl": -1.29,
+  "trades_count": 9,
   "level_risk": 1,
   "level_ta": 1
  },
  {
   "id": "a-020",
-  "pnl": -1.11,
-  "trades_count": 4,
+  "pnl": -1.49,
+  "trades_count": 5,
   "level_risk": 5,
   "level_ta": 2
  },
  {
   "id": "a-021",
-  "pnl": -0.91,
-  "trades_count": 5,
+  "pnl": -1.15,
+  "trades_count": 6,
   "level_risk": 5,
   "level_ta": 5
  },
  {
   "id": "a-022",
-  "pnl": 2.44,
-  "trades_count": 10,
+  "pnl": 3.41,
+  "trades_count": 13,
   "level_risk": 4,
   "level_ta": 5
  },
  {
   "id": "a-023",
-  "pnl": -1.57,
-  "trades_count": 8,
+  "pnl": -2.09,
+  "trades_count": 11,
   "level_risk": 3,
   "level_ta": 3
  },
  {
   "id": "a-024",
-  "pnl": -0.74,
-  "trades_count": 7,
+  "pnl": -0.99,
+  "trades_count": 10,
   "level_risk": 2,
   "level_ta": 5
  },
  {
   "id": "a-025",
-  "pnl": -0.99,
-  "trades_count": 6,
+  "pnl": -1.53,
+  "trades_count": 9,
   "level_risk": 4,
   "level_ta": 2
  },
@@ -183,15 +183,15 @@
  },
  {
   "id": "a-027",
-  "pnl": -1.47,
-  "trades_count": 7,
+  "pnl": -1.87,
+  "trades_count": 9,
   "level_risk": 3,
   "level_ta": 1
  },
  {
   "id": "a-028",
-  "pnl": 2.46,
-  "trades_count": 10,
+  "pnl": 3.55,
+  "trades_count": 13,
   "level_risk": 2,
   "level_ta": 1
  },
@@ -204,15 +204,15 @@
  },
  {
   "id": "a-030",
-  "pnl": 0.65,
-  "trades_count": 9,
+  "pnl": 0.95,
+  "trades_count": 12,
   "level_risk": 3,
   "level_ta": 4
  },
  {
   "id": "a-031",
-  "pnl": -1.01,
-  "trades_count": 7,
+  "pnl": -1.31,
+  "trades_count": 8,
   "level_risk": 1,
   "level_ta": 5
  },
@@ -239,8 +239,8 @@
  },
  {
   "id": "a-035",
-  "pnl": 3.45,
-  "trades_count": 10,
+  "pnl": 3.84,
+  "trades_count": 13,
   "level_risk": 5,
   "level_ta": 1
  },
@@ -253,8 +253,8 @@
  },
  {
   "id": "a-037",
-  "pnl": -1.05,
-  "trades_count": 5,
+  "pnl": -1.38,
+  "trades_count": 7,
   "level_risk": 5,
   "level_ta": 2
  },
@@ -267,8 +267,8 @@
  },
  {
   "id": "a-039",
-  "pnl": 3.24,
-  "trades_count": 11,
+  "pnl": 3.9,
+  "trades_count": 14,
   "level_risk": 5,
   "level_ta": 4
  },
@@ -288,15 +288,15 @@
  },
  {
   "id": "a-042",
-  "pnl": -0.85,
-  "trades_count": 5,
+  "pnl": -1.09,
+  "trades_count": 7,
   "level_risk": 5,
   "level_ta": 2
  },
  {
   "id": "a-043",
-  "pnl": -0.14,
-  "trades_count": 1,
+  "pnl": -0.27,
+  "trades_count": 2,
   "level_risk": 2,
   "level_ta": 3
  },
@@ -316,15 +316,15 @@
  },
  {
   "id": "a-046",
-  "pnl": 1.33,
-  "trades_count": 8,
+  "pnl": 1.71,
+  "trades_count": 11,
   "level_risk": 4,
   "level_ta": 3
  },
  {
   "id": "a-047",
-  "pnl": 1.71,
-  "trades_count": 8,
+  "pnl": 2.11,
+  "trades_count": 11,
   "level_risk": 3,
   "level_ta": 2
  },
@@ -344,8 +344,8 @@
  },
  {
   "id": "a-050",
-  "pnl": 0.48,
-  "trades_count": 7,
+  "pnl": 0.67,
+  "trades_count": 10,
   "level_risk": 2,
   "level_ta": 4
  },
@@ -358,8 +358,8 @@
  },
  {
   "id": "a-052",
-  "pnl": 1.77,
-  "trades_count": 10,
+  "pnl": 2.21,
+  "trades_count": 13,
   "level_risk": 1,
   "level_ta": 2
  },
@@ -372,22 +372,22 @@
  },
  {
   "id": "a-054",
-  "pnl": 1.48,
-  "trades_count": 10,
+  "pnl": 1.98,
+  "trades_count": 13,
   "level_risk": 4,
   "level_ta": 4
  },
  {
   "id": "a-055",
-  "pnl": -0.7,
-  "trades_count": 7,
+  "pnl": -1.02,
+  "trades_count": 10,
   "level_risk": 3,
   "level_ta": 2
  },
  {
   "id": "a-056",
-  "pnl": 1.34,
-  "trades_count": 8,
+  "pnl": 1.91,
+  "trades_count": 11,
   "level_risk": 3,
   "level_ta": 4
  },
@@ -407,8 +407,8 @@
  },
  {
   "id": "a-059",
-  "pnl": 1.34,
-  "trades_count": 7,
+  "pnl": 1.55,
+  "trades_count": 8,
   "level_risk": 2,
   "level_ta": 3
  },
@@ -428,8 +428,8 @@
  },
  {
   "id": "a-062",
-  "pnl": -1.04,
-  "trades_count": 6,
+  "pnl": -1.48,
+  "trades_count": 9,
   "level_risk": 4,
   "level_ta": 4
  },
@@ -442,29 +442,29 @@
  },
  {
   "id": "a-064",
-  "pnl": 1.26,
-  "trades_count": 4,
+  "pnl": 1.76,
+  "trades_count": 7,
   "level_risk": 4,
   "level_ta": 4
  },
  {
   "id": "a-065",
-  "pnl": 1.15,
-  "trades_count": 6,
+  "pnl": 1.45,
+  "trades_count": 8,
   "level_risk": 5,
   "level_ta": 5
  },
  {
   "id": "a-066",
-  "pnl": 1.12,
-  "trades_count": 7,
+  "pnl": 1.39,
+  "trades_count": 9,
   "level_risk": 1,
   "level_ta": 2
  },
  {
   "id": "a-067",
-  "pnl": 0.75,
-  "trades_count": 4,
+  "pnl": 0.89,
+  "trades_count": 5,
   "level_risk": 2,
   "level_ta": 2
  },
@@ -477,15 +477,15 @@
  },
  {
   "id": "a-069",
-  "pnl": 0.93,
-  "trades_count": 9,
+  "pnl": 1.22,
+  "trades_count": 11,
   "level_risk": 1,
   "level_ta": 4
  },
  {
   "id": "a-070",
-  "pnl": 0.54,
-  "trades_count": 3,
+  "pnl": 0.74,
+  "trades_count": 4,
   "level_risk": 2,
   "level_ta": 2
  },
@@ -498,8 +498,8 @@
  },
  {
   "id": "a-072",
-  "pnl": -0.38,
-  "trades_count": 2,
+  "pnl": -0.46,
+  "trades_count": 3,
   "level_risk": 4,
   "level_ta": 5
  },
@@ -512,8 +512,8 @@
  },
  {
   "id": "a-074",
-  "pnl": 0.89,
-  "trades_count": 5,
+  "pnl": 1.37,
+  "trades_count": 8,
   "level_risk": 2,
   "level_ta": 2
  },
@@ -526,15 +526,15 @@
  },
  {
   "id": "a-076",
-  "pnl": 1.12,
-  "trades_count": 6,
+  "pnl": 1.59,
+  "trades_count": 9,
   "level_risk": 4,
   "level_ta": 2
  },
  {
   "id": "a-077",
-  "pnl": 0.76,
-  "trades_count": 4,
+  "pnl": 1.25,
+  "trades_count": 7,
   "level_risk": 3,
   "level_ta": 2
  },
@@ -554,8 +554,8 @@
  },
  {
   "id": "a-080",
-  "pnl": 1.82,
-  "trades_count": 4,
+  "pnl": 2.17,
+  "trades_count": 7,
   "level_risk": 4,
   "level_ta": 3
  },
@@ -568,29 +568,29 @@
  },
  {
   "id": "a-082",
-  "pnl": 0.92,
-  "trades_count": 4,
+  "pnl": 1.45,
+  "trades_count": 7,
   "level_risk": 3,
   "level_ta": 5
  },
  {
   "id": "a-083",
-  "pnl": -0.26,
-  "trades_count": 3,
+  "pnl": -0.47,
+  "trades_count": 5,
   "level_risk": 4,
   "level_ta": 3
  },
  {
   "id": "a-084",
-  "pnl": 0.45,
-  "trades_count": 6,
+  "pnl": 0.65,
+  "trades_count": 9,
   "level_risk": 1,
   "level_ta": 1
  },
  {
   "id": "a-085",
-  "pnl": 0.86,
-  "trades_count": 5,
+  "pnl": 1.31,
+  "trades_count": 8,
   "level_risk": 5,
   "level_ta": 2
  },
@@ -610,8 +610,8 @@
  },
  {
   "id": "a-088",
-  "pnl": -0.49,
-  "trades_count": 2,
+  "pnl": -0.78,
+  "trades_count": 4,
   "level_risk": 3,
   "level_ta": 5
  },
@@ -631,8 +631,8 @@
  },
  {
   "id": "a-091",
-  "pnl": 1.73,
-  "trades_count": 9,
+  "pnl": 2.3,
+  "trades_count": 12,
   "level_risk": 4,
   "level_ta": 3
  },
@@ -652,15 +652,15 @@
  },
  {
   "id": "a-094",
-  "pnl": 0.58,
-  "trades_count": 9,
+  "pnl": 0.8,
+  "trades_count": 12,
   "level_risk": 4,
   "level_ta": 5
  },
  {
   "id": "a-095",
-  "pnl": 3.11,
-  "trades_count": 11,
+  "pnl": 3.8,
+  "trades_count": 14,
   "level_risk": 3,
   "level_ta": 4
  },
@@ -673,15 +673,15 @@
  },
  {
   "id": "a-097",
-  "pnl": 2.29,
-  "trades_count": 12,
+  "pnl": 2.86,
+  "trades_count": 15,
   "level_risk": 2,
   "level_ta": 5
  },
  {
   "id": "a-098",
-  "pnl": -0.23,
-  "trades_count": 2,
+  "pnl": -0.3,
+  "trades_count": 3,
   "level_risk": 2,
   "level_ta": 4
  },
@@ -694,8 +694,8 @@
  },
  {
   "id": "a-100",
-  "pnl": -0.27,
-  "trades_count": 2,
+  "pnl": -0.47,
+  "trades_count": 3,
   "level_risk": 1,
   "level_ta": 5
  },
@@ -708,15 +708,15 @@
  },
  {
   "id": "a-102",
-  "pnl": 0.44,
-  "trades_count": 7,
+  "pnl": 0.58,
+  "trades_count": 10,
   "level_risk": 2,
   "level_ta": 5
  },
  {
   "id": "a-103",
-  "pnl": 1.51,
-  "trades_count": 7,
+  "pnl": 2.03,
+  "trades_count": 10,
   "level_risk": 4,
   "level_ta": 2
  },
@@ -743,8 +743,8 @@
  },
  {
   "id": "a-107",
-  "pnl": 0.98,
-  "trades_count": 7,
+  "pnl": 1.41,
+  "trades_count": 10,
   "level_risk": 3,
   "level_ta": 5
  },
@@ -771,15 +771,15 @@
  },
  {
   "id": "a-111",
-  "pnl": 2.04,
-  "trades_count": 8,
+  "pnl": 2.57,
+  "trades_count": 11,
   "level_risk": 2,
   "level_ta": 3
  },
  {
   "id": "a-112",
-  "pnl": 2.86,
-  "trades_count": 11,
+  "pnl": 3.36,
+  "trades_count": 14,
   "level_risk": 2,
   "level_ta": 2
  },
@@ -806,22 +806,22 @@
  },
  {
   "id": "a-116",
-  "pnl": 1.68,
-  "trades_count": 10,
+  "pnl": 2.04,
+  "trades_count": 13,
   "level_risk": 1,
   "level_ta": 3
  },
  {
   "id": "a-117",
-  "pnl": 0,
-  "trades_count": 0,
+  "pnl": -0.14,
+  "trades_count": 1,
   "level_risk": 3,
   "level_ta": 1
  },
  {
   "id": "a-118",
-  "pnl": 1.07,
-  "trades_count": 6,
+  "pnl": 1.48,
+  "trades_count": 9,
   "level_risk": 1,
   "level_ta": 5
  },
@@ -841,8 +841,8 @@
  },
  {
   "id": "a-121",
-  "pnl": 2.41,
-  "trades_count": 9,
+  "pnl": 2.84,
+  "trades_count": 12,
   "level_risk": 2,
   "level_ta": 2
  },
@@ -855,22 +855,22 @@
  },
  {
   "id": "a-123",
-  "pnl": 2.29,
-  "trades_count": 11,
+  "pnl": 2.81,
+  "trades_count": 14,
   "level_risk": 5,
   "level_ta": 3
  },
  {
   "id": "a-124",
-  "pnl": 3.17,
-  "trades_count": 12,
+  "pnl": 3.7,
+  "trades_count": 15,
   "level_risk": 1,
   "level_ta": 3
  },
  {
   "id": "a-125",
-  "pnl": 2.74,
-  "trades_count": 12,
+  "pnl": 3.35,
+  "trades_count": 15,
   "level_risk": 1,
   "level_ta": 4
  },
@@ -890,8 +890,8 @@
  },
  {
   "id": "a-128",
-  "pnl": 2.4,
-  "trades_count": 10,
+  "pnl": 3.09,
+  "trades_count": 13,
   "level_risk": 1,
   "level_ta": 1
  },
@@ -904,8 +904,8 @@
  },
  {
   "id": "a-130",
-  "pnl": 0.62,
-  "trades_count": 8,
+  "pnl": 0.81,
+  "trades_count": 11,
   "level_risk": 4,
   "level_ta": 3
  },
@@ -918,15 +918,15 @@
  },
  {
   "id": "a-132",
-  "pnl": 0,
-  "trades_count": 0,
+  "pnl": -0.25,
+  "trades_count": 2,
   "level_risk": 4,
   "level_ta": 1
  },
  {
   "id": "a-133",
-  "pnl": 2.1,
-  "trades_count": 8,
+  "pnl": 2.65,
+  "trades_count": 11,
   "level_risk": 4,
   "level_ta": 3
  },
@@ -960,15 +960,15 @@
  },
  {
   "id": "a-138",
-  "pnl": 0.58,
-  "trades_count": 11,
+  "pnl": 0.77,
+  "trades_count": 14,
   "level_risk": 4,
   "level_ta": 4
  },
  {
   "id": "a-139",
-  "pnl": 2.29,
-  "trades_count": 11,
+  "pnl": 2.84,
+  "trades_count": 14,
   "level_risk": 2,
   "level_ta": 1
  },
@@ -988,8 +988,8 @@
  },
  {
   "id": "a-142",
-  "pnl": 4.8,
-  "trades_count": 10,
+  "pnl": 5.34,
+  "trades_count": 13,
   "level_risk": 4,
   "level_ta": 5
  },
@@ -1023,8 +1023,8 @@
  },
  {
   "id": "a-147",
-  "pnl": 3.61,
-  "trades_count": 11,
+  "pnl": 4.15,
+  "trades_count": 14,
   "level_risk": 3,
   "level_ta": 1
  },
@@ -1037,8 +1037,8 @@
  },
  {
   "id": "a-149",
-  "pnl": 0.94,
-  "trades_count": 12,
+  "pnl": 0.8,
+  "trades_count": 15,
   "level_risk": 2,
   "level_ta": 4
  },
@@ -1072,22 +1072,22 @@
  },
  {
   "id": "a-154",
-  "pnl": 2.83,
-  "trades_count": 11,
+  "pnl": 3.33,
+  "trades_count": 14,
   "level_risk": 5,
   "level_ta": 2
  },
  {
   "id": "a-155",
-  "pnl": 3.14,
-  "trades_count": 10,
+  "pnl": 3.63,
+  "trades_count": 13,
   "level_risk": 3,
   "level_ta": 5
  },
  {
   "id": "a-156",
-  "pnl": 3,
-  "trades_count": 12,
+  "pnl": 2.41,
+  "trades_count": 15,
   "level_risk": 1,
   "level_ta": 2
  },
@@ -1114,22 +1114,22 @@
  },
  {
   "id": "a-160",
-  "pnl": 1.08,
-  "trades_count": 12,
+  "pnl": 1.03,
+  "trades_count": 15,
   "level_risk": 2,
   "level_ta": 2
  },
  {
   "id": "a-161",
-  "pnl": 0,
-  "trades_count": 0,
+  "pnl": -0.46,
+  "trades_count": 3,
   "level_risk": 1,
   "level_ta": 5
  },
  {
   "id": "a-162",
-  "pnl": 2.35,
-  "trades_count": 12,
+  "pnl": 1.82,
+  "trades_count": 15,
   "level_risk": 3,
   "level_ta": 5
  },
@@ -1163,15 +1163,15 @@
  },
  {
   "id": "a-167",
-  "pnl": 3.26,
-  "trades_count": 12,
+  "pnl": 2.86,
+  "trades_count": 15,
   "level_risk": 1,
   "level_ta": 4
  },
  {
   "id": "a-168",
-  "pnl": 4.53,
-  "trades_count": 9,
+  "pnl": 4.7,
+  "trades_count": 14,
   "level_risk": 5,
   "level_ta": 5
  },
@@ -1191,8 +1191,8 @@
  },
  {
   "id": "a-171",
-  "pnl": 0.67,
-  "trades_count": 10,
+  "pnl": 0.25,
+  "trades_count": 13,
   "level_risk": 5,
   "level_ta": 4
  },
@@ -1212,8 +1212,8 @@
  },
  {
   "id": "a-174",
-  "pnl": 2.73,
-  "trades_count": 12,
+  "pnl": 2.09,
+  "trades_count": 15,
   "level_risk": 4,
   "level_ta": 3
  },
@@ -1247,8 +1247,8 @@
  },
  {
   "id": "a-179",
-  "pnl": 1.21,
-  "trades_count": 7,
+  "pnl": 1.71,
+  "trades_count": 10,
   "level_risk": 2,
   "level_ta": 2
  },
@@ -1261,8 +1261,8 @@
  },
  {
   "id": "a-181",
-  "pnl": 1.28,
-  "trades_count": 8,
+  "pnl": 1.93,
+  "trades_count": 11,
   "level_risk": 2,
   "level_ta": 2
  },
@@ -1277,6 +1277,13 @@
   "id": "a-183",
   "pnl": 0,
   "trades_count": 0,
+  "level_risk": 2,
+  "level_ta": 2
+ },
+ {
+  "id": "a-184",
+  "pnl": 0.58,
+  "trades_count": 3,
   "level_risk": 2,
   "level_ta": 2
  }

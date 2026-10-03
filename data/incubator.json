@@ -30,14 +30,14 @@
    "pass": true
   },
   "live": {
-   "equity": 123.5,
-   "pnl": 23.5,
-   "ticks": 21,
-   "peak": 123.5,
-   "dd": 0,
+   "equity": 148.7,
+   "pnl": 48.7,
+   "ticks": 42,
+   "peak": 166.1,
+   "dd": 10.48,
    "pos": {
-    "side": -1,
-    "entry": 42.1041
+    "side": 1,
+    "entry": 41.4966
    }
   }
  },
@@ -72,14 +72,14 @@
    "pass": true
   },
   "live": {
-   "equity": 119.7,
-   "pnl": 19.7,
-   "ticks": 21,
-   "peak": 119.7,
-   "dd": 0,
+   "equity": 148.1,
+   "pnl": 48.1,
+   "ticks": 42,
+   "peak": 156.4,
+   "dd": 5.31,
    "pos": {
-    "side": -1,
-    "entry": 0.1855
+    "side": 1,
+    "entry": 0.1833
    }
   }
  },
@@ -134,14 +134,14 @@
    "pass": true
   },
   "live": {
-   "equity": 118,
-   "pnl": 18,
-   "ticks": 21,
-   "peak": 118,
-   "dd": 0,
+   "equity": 152.8,
+   "pnl": 52.8,
+   "ticks": 42,
+   "peak": 156.5,
+   "dd": 2.36,
    "pos": {
-    "side": -1,
-    "entry": 0.6766
+    "side": 1,
+    "entry": 0.67
    }
   }
  },
@@ -196,14 +196,14 @@
    "pass": true
   },
   "live": {
-   "equity": 99.6,
-   "pnl": -0.4,
-   "ticks": 27,
-   "peak": 100,
-   "dd": 0.4,
+   "equity": 119.4,
+   "pnl": 19.4,
+   "ticks": 48,
+   "peak": 132.1,
+   "dd": 9.61,
    "pos": {
-    "side": -1,
-    "entry": 0.7149
+    "side": 1,
+    "entry": 0.7124
    }
   }
  },
@@ -238,14 +238,14 @@
    "pass": true
   },
   "live": {
-   "equity": 97.4,
-   "pnl": -2.6,
-   "ticks": 33,
-   "peak": 103.1,
-   "dd": 5.53,
+   "equity": 106.2,
+   "pnl": 6.2,
+   "ticks": 54,
+   "peak": 129.9,
+   "dd": 18.24,
    "pos": {
-    "side": -1,
-    "entry": 0.1847
+    "side": 1,
+    "entry": 0.1833
    }
   }
  },
@@ -280,14 +280,14 @@
    "pass": true
   },
   "live": {
-   "equity": 98.5,
-   "pnl": -1.5,
-   "ticks": 39,
-   "peak": 106.3,
-   "dd": 7.34,
+   "equity": 125.2,
+   "pnl": 25.2,
+   "ticks": 60,
+   "peak": 138.7,
+   "dd": 9.73,
    "pos": {
-    "side": -1,
-    "entry": 0.7206
+    "side": 1,
+    "entry": 0.7114
    }
   }
  },
@@ -319,7 +319,7 @@
   "style": "breakout",
   "kind": "donchian",
   "p1": 22,
-  "status": "incubacion",
+  "status": "lista",
   "created_at": "2026-10-02T20:17:37.003Z",
   "backtest": {
    "trades": 37,
@@ -342,14 +342,14 @@
    "pass": true
   },
   "live": {
-   "equity": 107.4,
-   "pnl": 7.4,
-   "ticks": 42,
-   "peak": 110.7,
-   "dd": 2.98,
+   "equity": 149.4,
+   "pnl": 49.4,
+   "ticks": 50,
+   "peak": 149.4,
+   "dd": 0,
    "pos": {
-    "side": -1,
-    "entry": 0.7145
+    "side": 1,
+    "entry": 0.7003
    }
   }
  },
@@ -401,7 +401,7 @@
   "style": "tendencia",
   "kind": "ema",
   "p1": 7,
-  "status": "incubacion",
+  "status": "lista",
   "created_at": "2026-10-02T20:17:00.962Z",
   "backtest": {
    "trades": 39,
@@ -424,14 +424,14 @@
    "pass": true
   },
   "live": {
-   "equity": 106.4,
-   "pnl": 6.4,
-   "ticks": 42,
-   "peak": 111.5,
-   "dd": 4.57,
+   "equity": 130.6,
+   "pnl": 30.6,
+   "ticks": 50,
+   "peak": 138.9,
+   "dd": 5.98,
    "pos": {
-    "side": -1,
-    "entry": 0.1847
+    "side": 1,
+    "entry": 0.1809
    }
   }
  },
@@ -466,14 +466,14 @@
    "pass": true
   },
   "live": {
-   "equity": 117.1,
-   "pnl": 17.1,
-   "ticks": 42,
-   "peak": 117.1,
-   "dd": 0,
+   "equity": 126.6,
+   "pnl": 26.6,
+   "ticks": 63,
+   "peak": 154.7,
+   "dd": 18.16,
    "pos": {
-    "side": -1,
-    "entry": 41.8846
+    "side": 1,
+    "entry": 41.3807
    }
   }
  },
@@ -508,14 +508,14 @@
    "pass": true
   },
   "live": {
-   "equity": 110.8,
-   "pnl": 10.8,
-   "ticks": 42,
-   "peak": 110.8,
-   "dd": 0,
+   "equity": 123.1,
+   "pnl": 23.1,
+   "ticks": 63,
+   "peak": 142.8,
+   "dd": 13.8,
    "pos": {
-    "side": -1,
-    "entry": 0.7145
+    "side": 1,
+    "entry": 0.7098
    }
   }
  },
@@ -527,7 +527,7 @@
   "style": "breakout",
   "kind": "donchian",
   "p1": 46,
-  "status": "incubacion",
+  "status": "lista",
   "created_at": "2026-10-02T18:23:17.216Z",
   "backtest": {
    "trades": 32,
@@ -550,15 +550,12 @@
    "pass": true
   },
   "live": {
-   "equity": 137.9,
-   "pnl": 37.9,
-   "ticks": 48,
-   "peak": 137.9,
+   "equity": 169.6,
+   "pnl": 69.6,
+   "ticks": 50,
+   "peak": 169.6,
    "dd": 0,
-   "pos": {
-    "side": -1,
-    "entry": 20.7487
-   }
+   "pos": null
   }
  },
  {
@@ -589,7 +586,7 @@
   "style": "tendencia",
   "kind": "ema",
   "p1": 8,
-  "status": "incubacion",
+  "status": "activa",
   "created_at": "2026-10-02T18:22:53.193Z",
   "backtest": {
    "trades": 40,
@@ -612,16 +609,18 @@
    "pass": true
   },
   "live": {
-   "equity": 75.9,
-   "pnl": -24.1,
-   "ticks": 60,
-   "peak": 109.7,
-   "dd": 30.81,
+   "equity": 111.6,
+   "pnl": 11.6,
+   "ticks": 61,
+   "peak": 111.6,
+   "dd": 0,
    "pos": {
     "side": -1,
-    "entry": 0.1853
+    "entry": 0.1786
    }
-  }
+  },
+  "agent_id": "a-184",
+  "activated_at": "2026-10-03T00:24:26.955Z"
  },
  {
   "id": "st-22",
@@ -671,7 +670,7 @@
   "style": "breakout",
   "kind": "donchian",
   "p1": 47,
-  "status": "incubacion",
+  "status": "lista",
   "created_at": "2026-10-02T18:22:17.151Z",
   "backtest": {
    "trades": 31,
@@ -694,15 +693,12 @@
    "pass": true
   },
   "live": {
-   "equity": 102.9,
-   "pnl": 2.9,
-   "ticks": 63,
-   "peak": 110.6,
-   "dd": 6.96,
-   "pos": {
-    "side": -1,
-    "entry": 4083.3357
-   }
+   "equity": 141.1,
+   "pnl": 41.1,
+   "ticks": 64,
+   "peak": 141.1,
+   "dd": 0,
+   "pos": null
   }
  },
  {
@@ -733,7 +729,7 @@
   "style": "swing",
   "kind": "ema",
   "p1": 12,
-  "status": "incubacion",
+  "status": "lista",
   "created_at": "2026-10-02T18:21:53.122Z",
   "backtest": {
    "trades": 43,
@@ -756,14 +752,14 @@
    "pass": true
   },
   "live": {
-   "equity": 87,
-   "pnl": -13,
-   "ticks": 63,
-   "peak": 103.6,
-   "dd": 16.02,
+   "equity": 125,
+   "pnl": 25,
+   "ticks": 64,
+   "peak": 125,
+   "dd": 0,
    "pos": {
     "side": -1,
-    "entry": 694.2273
+    "entry": 667.4865
    }
   }
  },
@@ -920,7 +916,7 @@
   "style": "tendencia",
   "kind": "ema",
   "p1": 12,
-  "status": "incubacion",
+  "status": "lista",
   "created_at": "2026-10-02T16:20:35.937Z",
   "backtest": {
    "trades": 38,
@@ -943,14 +939,14 @@
    "pass": true
   },
   "live": {
-   "equity": 186.6,
-   "pnl": 86.6,
-   "ticks": 91,
-   "peak": 206.2,
-   "dd": 9.51,
+   "equity": 222.1,
+   "pnl": 122.1,
+   "ticks": 92,
+   "peak": 222.1,
+   "dd": 0,
    "pos": {
     "side": -1,
-    "entry": 4071.982
+    "entry": 3925.4534
    }
   }
  },

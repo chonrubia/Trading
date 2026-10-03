@@ -1,10 +1,11 @@
 name: engine-web
 # Latido del motor serverless: 1 llamada = 1 tick (~1 min facturado).
-# 48 carreras/día x 1 min ≈ 1440/2000 min mensuales. Requiere secrets:
-# VERCEL_APP_URL (https://tu-app.vercel.app) y CRON_SECRET (el mismo que en Vercel).
+# 144 carreras/día x 1 min ≈ 4300 min/mes (repo público = Actions ilimitado).
+# Redis ~300k cmds/mes, Vercel ~4.3k inv/mes: dentro del gratis.
+# Requiere secrets: VERCEL_APP_URL y CRON_SECRET (el mismo que en Vercel).
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/10 * * * *"
   workflow_dispatch: {}
 concurrency:
   group: engine-web

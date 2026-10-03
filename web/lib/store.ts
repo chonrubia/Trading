@@ -75,14 +75,19 @@ export async function withLock<T>(kv: KvStore, key: string, ttlMs: number, fn: (
   }
 }
 
-// Resuelve endpoint REST + token desde KV_* o derivando de REDIS_URL.
+// Resuelve endpoint REST + token solo desde KV_* (Upstash REST real).
+// NOTA: derivar REST desde REDIS_URL está prohibido: el host REDIS
+// (db.redis.io) no sirve REST y provocaba ConnectTimeout en /api/tick.
 export function resolveKv(env: KvEnv): { url: string; token: string } | null {
   if (env.KV_REST_API_URL && env.KV_REST_API_TOKEN) {
     return { url: env.KV_REST_API_URL.replace(/\/$/, ""), token: env.KV_REST_API_TOKEN };
   }
-  const m = (env.REDIS_URL || "").match(/^rediss?:\/\/[^:]+:([^@]+)@([^:/]+)/);
-  if (m) return { url: `https://${m[2]}`, token: m[1] };
   return null;
+}
+
+// Resuelve conexión RESP real (Vercel Redis) desde REDIS_URL.
+export function resolveRedis(env: KvEnv): string | null {
+  return env.REDIS_URL || null;
 }
 
 export class UpstashKv implements KvStore {
@@ -116,4 +121,39 @@ export class UpstashKv implements KvStore {
   async rpush(k: string, ...vs: string[]) { if (vs.length) await this.cmd("RPUSH", k, ...vs); }
   async ltrim(k: string, s: number, e: number) { await this.cmd("LTRIM", k, s, e); }
   async llen(k: string) { return Number(await this.cmd("LLEN", k)); }
+}
+
+// Cliente RESP real para Vercel Redis (REDIS_URL rediss://...).
+// Reutiliza una conexión por instancia serverless.
+export class RedisKv implements KvStore {
+  private client: any = null;
+  private connecting: Promise<any> | null = null;
+  constructor(private url: string) {}
+  private async conn() {
+    if (this.client?.isOpen) return this.client;
+    if (!this.connecting) {
+      const { createClient } = await import("redis");
+      const c = createClient({ url: this.url });
+      this.connecting = c.connect().then(() => (this.client = c));
+    }
+    await this.connecting;
+    return this.client;
+  }
+  async get(k: string) {
+    const v = await (await this.conn()).get(k);
+    return v == null ? null : String(v);
+  }
+  async set(k: string, v: string) { await (await this.conn()).set(k, v); }
+  async setNx(k: string, v: string, ttlMs: number) {
+    const r = await (await this.conn()).set(k, v, { NX: true, PX: Math.max(1, Math.round(ttlMs)) });
+    return r === "OK";
+  }
+  async del(k: string) { await (await this.conn()).del(k); }
+  async hgetall(k: string) { return ((await (await this.conn()).hGetAll(k)) ?? {}) as Record<string, string>; }
+  async hset(k: string, f: string, v: string) { await (await this.conn()).hSet(k, f, v); }
+  async hdel(k: string, f: string) { await (await this.conn()).hDel(k, f); }
+  async lrange(k: string, s: number, e: number) { return (await (await this.conn()).lRange(k, s, e)) as string[]; }
+  async rpush(k: string, ...vs: string[]) { if (vs.length) await (await this.conn()).rPush(k, vs); }
+  async ltrim(k: string, s: number, e: number) { await (await this.conn()).lTrim(k, s, e); }
+  async llen(k: string) { return Number(await (await this.conn()).lLen(k)); }
 }

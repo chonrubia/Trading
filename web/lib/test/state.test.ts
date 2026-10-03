@@ -1,21 +1,21 @@
 // F2: repositorio KV (MemoryKv) + seed determinista.
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { MemoryKv, resolveKv } from "../store.js";
+import { MemoryKv, resolveKv, resolveRedis } from "../store.js";
 import { ensureSeed, repo } from "../state.js";
 import { buildSeed } from "../seed.js";
 import { seedRand } from "../rng.js";
 
-test("resolveKv: KV_* manda, REDIS_URL deriva REST", () => {
+test("resolveKv: solo KV_* REST real; REDIS_URL va por RESP (no derivar REST)", () => {
   assert.deepEqual(
     resolveKv({ KV_REST_API_URL: "https://x.upstash.io/", KV_REST_API_TOKEN: "t" }),
     { url: "https://x.upstash.io", token: "t" }
   );
-  assert.deepEqual(
-    resolveKv({ REDIS_URL: "rediss://default:SECRETO@abc-123.upstash.io:6379" }),
-    { url: "https://abc-123.upstash.io", token: "SECRETO" }
-  );
+  // Derivar https://host desde REDIS_URL provocaba ConnectTimeout en /api/tick.
+  assert.equal(resolveKv({ REDIS_URL: "rediss://default:SECRETO@abc-123.db.redis.io:6379" }), null);
   assert.equal(resolveKv({}), null);
+  assert.equal(resolveRedis({ REDIS_URL: "rediss://default:SECRETO@abc-123.db.redis.io:6379" }), "rediss://default:SECRETO@abc-123.db.redis.io:6379");
+  assert.equal(resolveRedis({}), null);
 });
 
 test("MemoryKv roundtrip: string, hash, lista con trim", async () => {

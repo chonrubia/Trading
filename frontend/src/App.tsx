@@ -153,7 +153,12 @@ export default function App() {
         setOnline(true);
         refresh();
         iv = setInterval(refresh, 8000);
-        ws = new WebSocket(wsEndpoint());
+        const ep = wsEndpoint();
+        // Sin WS en la nube (serverless): solo localhost/mismo origen lo tienen.
+        // Si lo intentáramos contra la URL remota, el fallo marcaría "offline"
+        // aunque el HTTP (polling 8s) funcione bien.
+        if (/^ws:\/\/(localhost|127\.0\.0\.1)(:|$)/.test(ep) || ep === `ws://${location.hostname}:8765/ws/floor`) {
+        ws = new WebSocket(ep);
     ws.onopen = () => setOnline(true);
     ws.onclose = () => setOnline(false);
     ws.onerror = () => setOnline(false);
@@ -176,6 +181,7 @@ export default function App() {
       if (d.type === "memory") setMemList(m => [d.entry, ...m].slice(0, 40));
       if (d.type === "incubator") refresh();
     };
+    } // fin WS solo local; en remoto manda el polling de 8s
     } catch { startDemo(); }
     })();
     return () => { stop = true; clearInterval(iv); clearInterval(iv2); clearInterval(iv3); try { ws && ws.close(); } catch {} };

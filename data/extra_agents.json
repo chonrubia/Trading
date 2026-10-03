@@ -130,14 +130,14 @@
   "level_risk": 2,
   "level_ta": 2,
   "studying": "Gestión de riesgo",
-  "pnl": 3.82,
+  "pnl": 3.68,
   "win_rate": 93.9,
   "profit_factor": 21.9,
   "drawdown": 0,
-  "trades_count": 22,
+  "trades_count": 23,
   "x": 0.45,
   "y": 0.55,
-  "last_reason": "LONG LINK cerrada en 23.1488 (TP +0.7%) PnL 0.18€ · Riesgos: OK"
+  "last_reason": "LONG LINK cerrada en 22.4346 (SL -0.35%) PnL -0.14€ · Riesgos: OK"
  },
  {
   "id": "a-182",
@@ -214,13 +214,13 @@
   "level_risk": 2,
   "level_ta": 2,
   "studying": "Gestión de riesgo",
-  "pnl": 1.93,
+  "pnl": 1.76,
   "win_rate": 65,
   "profit_factor": 6.68,
   "drawdown": 0,
-  "trades_count": 12,
+  "trades_count": 13,
   "x": 0.45,
   "y": 0.55,
-  "last_reason": "LONG DOGE cerrada en 0.2068 (TP +0.7%) PnL 0.18€ · Riesgos: OK"
+  "last_reason": "LONG DOGE cerrada en 0.1994 (SL -0.35%) PnL -0.17€ · Riesgos: OK"
  }
 ]

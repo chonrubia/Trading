@@ -1,1125 +1,5 @@
 [
  {
-  "id": "m-567",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-164",
-  "text": "Listo, otra vez al lío.",
-  "kind": "idea",
-  "created_at": "2026-10-03T06:26:17.203Z"
- },
- {
-  "id": "m-568",
-  "channel_id": "c-general",
-  "from_agent_id": "a-057",
-  "text": "Funding en AVAX 0.010% — sin prisa por forzar.",
-  "kind": "idea",
-  "created_at": "2026-10-03T06:26:17.203Z"
- },
- {
-  "id": "m-569",
-  "channel_id": "c-general",
-  "from_agent_id": "a-149",
-  "text": "Funding en XRP 0.010% — sin prisa por forzar. Memoria [ETH·Deriv · Vega]: LONG ETH TP +0.7% (0.97€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
-  "kind": "idea",
-  "created_at": "2026-10-03T06:26:19.206Z"
- },
- {
-  "id": "m-570",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-047",
-  "text": "RSI(XRP) sobrecomprado en 1h. Mejor esperar retroceso. Memoria [BTC·Riesgo · Sato]: SHORT BTC SL -0.35% (-1.19€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
-  "kind": "idea",
-  "created_at": "2026-10-03T06:26:19.206Z"
- },
- {
-  "id": "m-571",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Laia Serra · T142: Concentración en DOGE 30.7% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T06:26:21.207Z"
- },
- {
-  "id": "m-572",
-  "channel_id": "c-general",
-  "from_agent_id": "a-016",
-  "text": "Sin posición en ETH. Esperando que Setup_9104 dé señal. Memoria [ETH·Deriv · Vega]: LONG ETH TP +0.7% (0.83€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
-  "kind": "idea",
-  "created_at": "2026-10-03T06:26:21.208Z"
- },
- {
-  "id": "m-573",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Vera Soler · T137: Concentración en DOGE 31.2% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T06:26:23.210Z"
- },
- {
-  "id": "m-574",
-  "channel_id": "c-general",
-  "from_agent_id": "a-047",
-  "text": "Breakout en XRP con volumen. Vigilo confirmación. Memoria [BTC·Riesgo · Sato]: SHORT BTC SL -0.35% (-1.19€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
-  "kind": "idea",
-  "created_at": "2026-10-03T06:26:23.220Z"
- },
- {
-  "id": "m-575",
-  "channel_id": "c-general",
-  "from_agent_id": "a-087",
-  "text": "Funding en BTC 0.010% — sin prisa por forzar.",
-  "kind": "idea",
-  "created_at": "2026-10-03T06:26:25.215Z"
- },
- {
-  "id": "m-576",
-  "channel_id": "c-general",
-  "from_agent_id": "a-143",
-  "text": "Sin posición en LINK. Esperando que Setup_9201 dé señal. Memoria [ETH·Deriv · Vega]: LONG ETH TP +0.7% (1.07€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
-  "kind": "idea",
-  "created_at": "2026-10-03T06:26:27.216Z"
- },
- {
-  "id": "m-577",
-  "channel_id": "c-general",
-  "from_agent_id": "a-170",
-  "text": "Listo, otra vez al lío. Memoria [ETH·Deriv · Vega]: LONG ETH TP +0.7% (0.97€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
-  "kind": "idea",
-  "created_at": "2026-10-03T06:26:27.216Z"
- },
- {
-  "id": "m-578",
-  "channel_id": "c-general",
-  "from_agent_id": "a-079",
-  "text": "Breakout en AVAX con volumen. Vigilo confirmación.",
-  "kind": "idea",
-  "created_at": "2026-10-03T06:26:29.222Z"
- },
- {
-  "id": "m-579",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-174",
-  "text": "Nota de análisis DOGE: sesgo muy alcista. Sobre la media de 50 días.",
-  "kind": "idea",
-  "created_at": "2026-10-03T06:26:31.222Z"
- },
- {
-  "id": "m-580",
-  "channel_id": "c-general",
-  "from_agent_id": "a-083",
-  "text": "Nada que hacer en ETH por ahora. Mejor no forzar.",
-  "kind": "idea",
-  "created_at": "2026-10-03T06:26:33.233Z"
- },
- {
-  "id": "m-581",
-  "channel_id": "c-general",
-  "from_agent_id": "a-085",
-  "text": "Funding en XRP 0.010% — sin prisa por forzar. Memoria [ETH·Deriv · Vega]: LONG ETH TP +0.7% (1.07€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
-  "kind": "idea",
-  "created_at": "2026-10-03T06:26:35.229Z"
- },
- {
-  "id": "m-582",
-  "channel_id": "c-general",
-  "from_agent_id": "a-180",
-  "text": "Breakout en ADA con volumen. Vigilo confirmación. Memoria [BTC·Riesgo · Sato]: SHORT BTC SL -0.35% (-1.19€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
-  "kind": "idea",
-  "created_at": "2026-10-03T06:26:35.229Z"
- },
- {
-  "id": "m-583",
-  "channel_id": "c-direccion",
-  "from_agent_id": "a-001",
-  "text": "Listo, otra vez al lío.",
-  "kind": "idea",
-  "created_at": "2026-10-03T06:26:37.235Z"
- },
- {
-  "id": "m-584",
-  "channel_id": "c-general",
-  "from_agent_id": "a-104",
-  "text": "Café y vuelvo a la pantalla. Memoria [BTC·Deriv · Vega]: LONG BTC TP +0.7% (0.96€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
-  "kind": "idea",
-  "created_at": "2026-10-03T06:26:39.233Z"
- },
- {
-  "id": "m-585",
-  "channel_id": "c-general",
-  "from_agent_id": "a-088",
-  "text": "Funding en ETH 0.010% — sin prisa por forzar. Memoria [ETH·Deriv · Vega]: LONG ETH TP +0.7% (0.83€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
-  "kind": "idea",
-  "created_at": "2026-10-03T06:26:41.234Z"
- },
- {
-  "id": "m-586",
-  "channel_id": "c-general",
-  "from_agent_id": "a-043",
-  "text": "Café y vuelvo a la pantalla.",
-  "kind": "idea",
-  "created_at": "2026-10-03T06:26:41.234Z"
- },
- {
-  "id": "m-400",
-  "channel_id": "c-general",
-  "from_agent_id": "a-026",
-  "text": "Nada que hacer en BTC por ahora. Mejor no forzar.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:15.963Z"
- },
- {
-  "id": "m-401",
-  "channel_id": "c-general",
-  "from_agent_id": "a-001",
-  "text": "Dirección: objetivo diario batido (+140€). Pasamos a modo proteger-ganancias: sizes pequeños, solo lo mejor.",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:17.953Z"
- },
- {
-  "id": "m-402",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-133",
-  "text": "Café y vuelvo a la pantalla.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:17.962Z"
- },
- {
-  "id": "m-403",
-  "channel_id": "c-general",
-  "from_agent_id": "a-093",
-  "text": "Sin posición en BTC. Esperando que Setup_9376 dé señal.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:17.962Z"
- },
- {
-  "id": "m-404",
-  "channel_id": "c-general",
-  "from_agent_id": "a-103",
-  "text": "Sin posición en XRP. Esperando que Setup_8902 dé señal.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:20.625Z"
- },
- {
-  "id": "m-405",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-077",
-  "text": "Listo, otra vez al lío.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:20.625Z"
- },
- {
-  "id": "m-406",
-  "channel_id": "c-general",
-  "from_agent_id": "a-018",
-  "text": "Sin posición en XRP. Esperando que Setup_8902 dé señal.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:21.973Z"
- },
- {
-  "id": "m-407",
-  "channel_id": "c-general",
-  "from_agent_id": "a-036",
-  "text": "RSI(ETH) sobrecomprado en 1h. Mejor esperar retroceso.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:21.973Z"
- },
- {
-  "id": "m-408",
-  "channel_id": "c-general",
-  "from_agent_id": "a-100",
-  "text": "Sin posición en ETH. Esperando que Setup_9104 dé señal.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:23.962Z"
- },
- {
-  "id": "m-409",
-  "channel_id": "c-general",
-  "from_agent_id": "a-022",
-  "text": "Listo, otra vez al lío.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:23.962Z"
- },
- {
-  "id": "m-410",
-  "channel_id": "c-general",
-  "from_agent_id": "a-055",
-  "text": "Funding en ETH 0.010% — sin prisa por forzar.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:25.967Z"
- },
- {
-  "id": "m-411",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-184",
-  "text": "Funding en DOGE 0.010% — sin prisa por forzar.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:27.977Z"
- },
- {
-  "id": "m-412",
-  "channel_id": "c-general",
-  "from_agent_id": "a-085",
-  "text": "Breakout en XRP con volumen. Vigilo confirmación.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:29.975Z"
- },
- {
-  "id": "m-413",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-141",
-  "text": "Funding en BTC 0.010% — sin prisa por forzar.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:31.973Z"
- },
- {
-  "id": "m-414",
-  "channel_id": "c-general",
-  "from_agent_id": "a-126",
-  "text": "Café y vuelvo a la pantalla.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:33.980Z"
- },
- {
-  "id": "m-415",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-077",
-  "text": "Funding en SOL 0.010% — sin prisa por forzar. Memoria [ETH·Deriv · Vega]: SHORT ETH TP +0.7% (1.17€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:35.979Z"
- },
- {
-  "id": "m-416",
-  "channel_id": "c-general",
-  "from_agent_id": "a-037",
-  "text": "Breakout en LINK con volumen. Vigilo confirmación.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:37.985Z"
- },
- {
-  "id": "m-417",
-  "channel_id": "c-general",
-  "from_agent_id": "a-160",
-  "text": "Listo, otra vez al lío.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:37.985Z"
- },
- {
-  "id": "m-418",
-  "channel_id": "c-general",
-  "from_agent_id": "a-020",
-  "text": "Café y vuelvo a la pantalla.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:39.986Z"
- },
- {
-  "id": "m-419",
-  "channel_id": "c-general",
-  "from_agent_id": "a-006",
-  "text": "Sin posición en DOGE. Esperando que Setup_9007 dé señal.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:39.986Z"
- },
- {
-  "id": "m-420",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Iker Costa · T51: Concentración en DOGE 32.3% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:41.977Z"
- },
- {
-  "id": "m-421",
-  "channel_id": "c-general",
-  "from_agent_id": "a-135",
-  "text": "Café y vuelvo a la pantalla.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:41.981Z"
- },
- {
-  "id": "m-422",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-174",
-  "text": "Nada que hacer en DOGE por ahora. Mejor no forzar.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:41.981Z"
- },
- {
-  "id": "m-423",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Rubén Puig · T48: Concentración en DOGE 32.0% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:43.979Z"
- },
- {
-  "id": "m-424",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Iker Costa · T51: Concentración en DOGE 31.2% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:43.979Z"
- },
- {
-  "id": "m-425",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Cobertura activada: SHORT BTC 30% patrimonio (expo/DD altos).",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:43.983Z"
- },
- {
-  "id": "m-426",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-097",
-  "text": "Café y vuelvo a la pantalla.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:43.986Z"
- },
- {
-  "id": "m-427",
-  "channel_id": "c-general",
-  "from_agent_id": "a-017",
-  "text": "Funding en AVAX 0.010% — sin prisa por forzar.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:43.986Z"
- },
- {
-  "id": "m-428",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Rubén Puig · T48: Concentración en DOGE 31.8% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:45.979Z"
- },
- {
-  "id": "m-429",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Hugo Herrera · T49: Concentración en DOGE 31.6% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:45.979Z"
- },
- {
-  "id": "m-430",
-  "channel_id": "c-general",
-  "from_agent_id": "a-091",
-  "text": "Café y vuelvo a la pantalla. Memoria [XRP·Izan Chan · T29]: SHORT XRP TP +0.7% (1€) con Setup_8902 · Donchian XRP. Funciona: dejar correr con trailing",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:45.988Z"
- },
- {
-  "id": "m-431",
-  "channel_id": "c-general",
-  "from_agent_id": "a-118",
-  "text": "Breakout en DOGE con volumen. Vigilo confirmación.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:45.988Z"
- },
- {
-  "id": "m-432",
-  "channel_id": "c-general",
-  "from_agent_id": "a-076",
-  "text": "Breakout en SOL con volumen. Vigilo confirmación.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:47.988Z"
- },
- {
-  "id": "m-433",
-  "channel_id": "c-general",
-  "from_agent_id": "a-108",
-  "text": "Listo, otra vez al lío.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:47.988Z"
- },
- {
-  "id": "m-434",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-025",
-  "text": "Café y vuelvo a la pantalla.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:49.991Z"
- },
- {
-  "id": "m-435",
-  "channel_id": "c-general",
-  "from_agent_id": "a-059",
-  "text": "Nota de análisis XRP: sesgo muy alcista. Sobre la media de 50 días. Memoria [ETH·Deriv · Vega]: LONG ETH SL -0.35% (-0.85€) con Setup_9201 · RSI LINK. Lección: respetar stop y size.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:49.991Z"
- },
- {
-  "id": "m-436",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Laia Serra · T52: Exposición 152.3% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.988Z"
- },
- {
-  "id": "m-437",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Alba Navarro · T62: Exposición 151.7% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.988Z"
- },
- {
-  "id": "m-438",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Amara Ferrer · T64: Exposición 150.7% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.988Z"
- },
- {
-  "id": "m-439",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Claudia Ortega · T70: Exposición 152.1% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.988Z"
- },
- {
-  "id": "m-440",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Cándido Vila · T73: Exposición 152.1% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.988Z"
- },
- {
-  "id": "m-441",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Sara Serrano · T80: Exposición 151.7% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.988Z"
- },
- {
-  "id": "m-442",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Laia Serra · T82: Exposición 152.3% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.989Z"
- },
- {
-  "id": "m-443",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Izan Chan · T89: Exposición 152.1% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.989Z"
- },
- {
-  "id": "m-444",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Martina Vidal · T98: Exposición 151.3% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.989Z"
- },
- {
-  "id": "m-445",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Claudia Ortega · T100: Exposición 152.3% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.990Z"
- },
- {
-  "id": "m-446",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Cándido Vila · T103: Exposición 151.9% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.990Z"
- },
- {
-  "id": "m-447",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Álex Serrano · T104: Exposición 151.9% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.990Z"
- },
- {
-  "id": "m-448",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Laia Serra · T112: Exposición 152.3% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.990Z"
- },
- {
-  "id": "m-449",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Oriol Duarte · T115: Exposición 152.3% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.990Z"
- },
- {
-  "id": "m-450",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Amara Ferrer · T124: Exposición 150.7% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.990Z"
- },
- {
-  "id": "m-451",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Aitana Martí · T129: Exposición 151.6% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.991Z"
- },
- {
-  "id": "m-452",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Álex Serrano · T134: Exposición 151.5% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.991Z"
- },
- {
-  "id": "m-453",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Elena Torres · T135: Exposición 152.0% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.991Z"
- },
- {
-  "id": "m-454",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Mateo Miller · T136: Exposición 151.4% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.991Z"
- },
- {
-  "id": "m-455",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Carla Roca · T146: Exposición 152.2% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.991Z"
- },
- {
-  "id": "m-456",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Amara Ruiz · T157: Exposición 151.5% superaría 150%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:18:51.992Z"
- },
- {
-  "id": "m-457",
-  "channel_id": "c-general",
-  "from_agent_id": "a-031",
-  "text": "Nada que hacer en ETH por ahora. Mejor no forzar. Memoria [XRP·Izan Chan · T29]: SHORT XRP TP +0.7% (1€) con Setup_8902 · Donchian XRP. Funciona: dejar correr con trailing",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:51.993Z"
- },
- {
-  "id": "m-458",
-  "channel_id": "c-general",
-  "from_agent_id": "a-052",
-  "text": "Café y vuelvo a la pantalla. Memoria [ETH·Deriv · Vega]: LONG ETH SL -0.35% (-0.85€) con Setup_9201 · RSI LINK. Lección: respetar stop y size.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:51.993Z"
- },
- {
-  "id": "m-459",
-  "channel_id": "c-general",
-  "from_agent_id": "a-129",
-  "text": "Café y vuelvo a la pantalla.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:53.995Z"
- },
- {
-  "id": "m-460",
-  "channel_id": "c-general",
-  "from_agent_id": "a-145",
-  "text": "Listo, otra vez al lío. Memoria [ETH·Deriv · Vega]: LONG ETH SL -0.35% (-0.85€) con Setup_9201 · RSI LINK. Lección: respetar stop y size.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:55.996Z"
- },
- {
-  "id": "m-461",
-  "channel_id": "c-general",
-  "from_agent_id": "a-080",
-  "text": "Nota de análisis XRP: sesgo muy alcista. Sobre la media de 50 días. Memoria [ETH·Deriv · Vega]: LONG ETH SL -0.35% (-0.85€) con Setup_9201 · RSI LINK. Lección: respetar stop y size.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:55.996Z"
- },
- {
-  "id": "m-462",
-  "channel_id": "c-general",
-  "from_agent_id": "a-031",
-  "text": "Café y vuelvo a la pantalla. Memoria [XRP·Izan Chan · T29]: SHORT XRP TP +0.7% (1€) con Setup_8902 · Donchian XRP. Funciona: dejar correr con trailing",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:18:58.000Z"
- },
- {
-  "id": "m-463",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Vera Soler · T107: Concentración en SOL 32.4% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:00.000Z"
- },
- {
-  "id": "m-464",
-  "channel_id": "c-general",
-  "from_agent_id": "a-048",
-  "text": "Listo, otra vez al lío.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:00.004Z"
- },
- {
-  "id": "m-465",
-  "channel_id": "c-general",
-  "from_agent_id": "a-110",
-  "text": "Funding en LINK 0.010% — sin prisa por forzar. Memoria [ETH·Deriv · Vega]: SHORT ETH TP +0.7% (1.17€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:00.004Z"
- },
- {
-  "id": "m-466",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Amara Ferrer · T124: Concentración en DOGE 31.0% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:02.003Z"
- },
- {
-  "id": "m-467",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Vera Soler · T137: Concentración en DOGE 31.4% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:02.003Z"
- },
- {
-  "id": "m-468",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Laia Serra · T142: Concentración en DOGE 30.7% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:02.004Z"
- },
- {
-  "id": "m-469",
-  "channel_id": "c-general",
-  "from_agent_id": "a-084",
-  "text": "Nota de análisis XRP: sesgo muy alcista. Sobre la media de 50 días.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:02.005Z"
- },
- {
-  "id": "m-470",
-  "channel_id": "c-general",
-  "from_agent_id": "a-078",
-  "text": "Listo, otra vez al lío.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:02.005Z"
- },
- {
-  "id": "m-471",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Cándido Vila · T103: Concentración en SOL 32.1% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:04.004Z"
- },
- {
-  "id": "m-472",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Vera Soler · T137: Concentración en DOGE 31.1% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:04.005Z"
- },
- {
-  "id": "m-473",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Laia Serra · T142: Concentración en DOGE 30.8% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:04.005Z"
- },
- {
-  "id": "m-474",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Marcos López · T153: Concentración en SOL 31.2% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:04.006Z"
- },
- {
-  "id": "m-475",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-121",
-  "text": "Café y vuelvo a la pantalla.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:04.006Z"
- },
- {
-  "id": "m-476",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Amara Ferrer · T124: Concentración en DOGE 31.4% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:06.008Z"
- },
- {
-  "id": "m-477",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Vera Soler · T137: Concentración en DOGE 30.9% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:06.008Z"
- },
- {
-  "id": "m-478",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-062",
-  "text": "Breakout en ETH con volumen. Vigilo confirmación.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:06.009Z"
- },
- {
-  "id": "m-479",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Laia Serra · T112: Concentración en DOGE 31.6% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:08.010Z"
- },
- {
-  "id": "m-480",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Vera Soler · T137: Concentración en DOGE 31.5% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:08.011Z"
- },
- {
-  "id": "m-481",
-  "channel_id": "c-general",
-  "from_agent_id": "a-179",
-  "text": "Sin posición en SOL. Esperando que Minera dé señal. Memoria [XRP·Iker Costa · T21]: SHORT XRP TP +0.7% (1€) con Setup_8902 · Donchian XRP. Funciona: dejar correr con trailing",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:08.012Z"
- },
- {
-  "id": "m-482",
-  "channel_id": "c-general",
-  "from_agent_id": "a-102",
-  "text": "Funding en XRP 0.010% — sin prisa por forzar. Memoria [DOGE·Vera Soler · T17]: SHORT DOGE TP +0.7% (1.24€) con Setup_9007 · EMA DOGE. Funciona: dejar correr con trailing",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:08.012Z"
- },
- {
-  "id": "m-483",
-  "channel_id": "c-general",
-  "from_agent_id": "a-122",
-  "text": "Funding en ADA 0.010% — sin prisa por forzar.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:10.017Z"
- },
- {
-  "id": "m-484",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-059",
-  "text": "Funding en XRP 0.010% — sin prisa por forzar. Memoria [XRP·Iker Costa · T21]: SHORT XRP TP +0.7% (1€) con Setup_8902 · Donchian XRP. Funciona: dejar correr con trailing",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:12.018Z"
- },
- {
-  "id": "m-485",
-  "channel_id": "c-general",
-  "from_agent_id": "a-012",
-  "text": "Listo, otra vez al lío.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:14.030Z"
- },
- {
-  "id": "m-486",
-  "channel_id": "c-general",
-  "from_agent_id": "a-136",
-  "text": "Sin posición en LINK. Esperando que Setup_9201 dé señal.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:14.030Z"
- },
- {
-  "id": "m-487",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-038",
-  "text": "RSI(ADA) sobrecomprado en 1h. Mejor esperar retroceso.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:16.026Z"
- },
- {
-  "id": "m-488",
-  "channel_id": "c-general",
-  "from_agent_id": "a-044",
-  "text": "Sin posición en BTC. Esperando que Setup_9250 dé señal.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:16.026Z"
- },
- {
-  "id": "m-489",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Amara Ferrer · T124: Concentración en DOGE 30.2% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:18.022Z"
- },
- {
-  "id": "m-490",
-  "channel_id": "c-general",
-  "from_agent_id": "a-146",
-  "text": "Listo, otra vez al lío.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:18.037Z"
- },
- {
-  "id": "m-491",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Mateo Miller · T106: Concentración en SOL 30.2% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:20.022Z"
- },
- {
-  "id": "m-492",
-  "channel_id": "c-general",
-  "from_agent_id": "a-140",
-  "text": "RSI(AVAX) sobrecomprado en 1h. Mejor esperar retroceso.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:20.026Z"
- },
- {
-  "id": "m-493",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-170",
-  "text": "Nota de análisis LINK: sesgo muy alcista. Sobre la media de 50 días. Memoria [XRP·Iker Costa · T21]: SHORT XRP TP +0.7% (1€) con Setup_8902 · Donchian XRP. Funciona: dejar correr con trailing",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:20.026Z"
- },
- {
-  "id": "m-494",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Leire Puig · T150: Concentración en SOL 31.6% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:22.027Z"
- },
- {
-  "id": "m-495",
-  "channel_id": "c-general",
-  "from_agent_id": "a-140",
-  "text": "Sin posición en AVAX. Esperando que Setup_9292 dé señal.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:22.029Z"
- },
- {
-  "id": "m-496",
-  "channel_id": "c-general",
-  "from_agent_id": "a-106",
-  "text": "Sin posición en LINK. Esperando que Setup_9201 dé señal. Memoria [DOGE·Vera Soler · T17]: SHORT DOGE TP +0.7% (1.24€) con Setup_9007 · EMA DOGE. Funciona: dejar correr con trailing",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:22.029Z"
- },
- {
-  "id": "m-497",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Mateo Miller · T106: Concentración en SOL 32.7% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:24.028Z"
- },
- {
-  "id": "m-498",
-  "channel_id": "c-general",
-  "from_agent_id": "a-140",
-  "text": "Nota de análisis AVAX: sesgo muy alcista. Sobre la media de 50 días. Memoria [ETH·Deriv · Vega]: SHORT ETH TP +0.7% (1.17€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:24.035Z"
- },
- {
-  "id": "m-499",
-  "channel_id": "c-general",
-  "from_agent_id": "a-133",
-  "text": "Sin posición en DOGE. Esperando que Setup_9007 dé señal. Memoria [ETH·Deriv · Vega]: LONG ETH SL -0.35% (-0.85€) con Setup_9201 · RSI LINK. Lección: respetar stop y size.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:24.035Z"
- },
- {
-  "id": "m-500",
-  "channel_id": "c-general",
-  "from_agent_id": "a-077",
-  "text": "Sin posición en SOL. Esperando que Setup_9373 dé señal.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:26.032Z"
- },
- {
-  "id": "m-501",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Cobertura activada: SHORT BTC 30% patrimonio (expo/DD altos).",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:28.036Z"
- },
- {
-  "id": "m-502",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-093",
-  "text": "Sin posición en BTC. Esperando que Setup_9376 dé señal. Memoria [ETH·Deriv · Vega]: SHORT ETH TP +0.7% (1.17€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:28.036Z"
- },
- {
-  "id": "m-503",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-113",
-  "text": "Nota de análisis BTC: sesgo muy alcista. Sobre la media de 50 días.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:28.036Z"
- },
- {
-  "id": "m-504",
-  "channel_id": "c-general",
-  "from_agent_id": "a-027",
-  "text": "Café y vuelvo a la pantalla. Memoria [XRP·Iker Costa · T21]: SHORT XRP TP +0.7% (1€) con Setup_8902 · Donchian XRP. Funciona: dejar correr con trailing",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:30.035Z"
- },
- {
-  "id": "m-505",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-168",
-  "text": "Listo, otra vez al lío. Memoria [ETH·Deriv · Vega]: SHORT ETH TP +0.7% (1.17€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:30.035Z"
- },
- {
-  "id": "m-506",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Martina Vidal · T68: Concentración en LINK 31.0% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:32.035Z"
- },
- {
-  "id": "m-507",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Mara Rubio · T101: Concentración en LINK 30.0% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:32.036Z"
- },
- {
-  "id": "m-508",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Noa Singh · T121: Concentración en SOL 32.7% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:32.037Z"
- },
- {
-  "id": "m-509",
-  "channel_id": "c-general",
-  "from_agent_id": "a-110",
-  "text": "Nota de análisis LINK: sesgo muy alcista. Sobre la media de 50 días.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:32.049Z"
- },
- {
-  "id": "m-510",
-  "channel_id": "c-general",
-  "from_agent_id": "a-129",
-  "text": "RSI(BTC) sobrecomprado en 1h. Mejor esperar retroceso.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:32.049Z"
- },
- {
-  "id": "m-511",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Dani García · T27: Concentración en LINK 30.3% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:34.035Z"
- },
- {
-  "id": "m-512",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Júlia López · T84: Concentración en XRP 30.1% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:34.037Z"
- },
- {
-  "id": "m-513",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Leire Puig · T90: Concentración en LINK 31.1% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:34.037Z"
- },
- {
-  "id": "m-514",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Alba Navarro · T92: Concentración en LINK 31.3% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:34.037Z"
- },
- {
-  "id": "m-515",
-  "channel_id": "c-trading",
-  "from_agent_id": "a-141",
-  "text": "Café y vuelvo a la pantalla. Memoria [ETH·Deriv · Vega]: LONG ETH SL -0.35% (-0.85€) con Setup_9201 · RSI LINK. Lección: respetar stop y size.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:34.053Z"
- },
- {
-  "id": "m-516",
-  "channel_id": "c-general",
-  "from_agent_id": "a-090",
-  "text": "Breakout en LINK con volumen. Vigilo confirmación.",
-  "kind": "idea",
-  "created_at": "2026-10-03T08:19:36.053Z"
- },
- {
-  "id": "m-517",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Júlia López · T84: Concentración en XRP 33.0% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:38.041Z"
- },
- {
-  "id": "m-518",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Oriol Duarte · T85: Concentración en XRP 32.1% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:38.041Z"
- },
- {
-  "id": "m-519",
-  "channel_id": "c-general",
-  "from_agent_id": "a-002",
-  "text": "Riesgos bloquea a Rubén Puig · T138: Concentración en XRP 32.4% > 30%",
-  "kind": "alerta",
-  "created_at": "2026-10-03T08:19:38.042Z"
- },
- {
   "id": "m-520",
   "channel_id": "c-general",
   "from_agent_id": "a-130",
@@ -2398,5 +1278,1125 @@
   "text": "RSI(BTC) sobrecomprado en 1h. Mejor esperar retroceso. Memoria [BTC·Riesgo · Sato]: SHORT BTC TP +0.7% (1.05€) con Setup_9301 · Scalp ADA. Funciona: dejar correr con trailing",
   "kind": "idea",
   "created_at": "2026-10-03T10:17:19.298Z"
+ },
+ {
+  "id": "m-400",
+  "channel_id": "c-general",
+  "from_agent_id": "a-046",
+  "text": "Café y vuelvo a la pantalla.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:24.377Z"
+ },
+ {
+  "id": "m-401",
+  "channel_id": "c-general",
+  "from_agent_id": "a-001",
+  "text": "Dirección: objetivo diario batido (+157€). Pasamos a modo proteger-ganancias: sizes pequeños, solo lo mejor.",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:01:26.366Z"
+ },
+ {
+  "id": "m-402",
+  "channel_id": "c-general",
+  "from_agent_id": "a-006",
+  "text": "Sin posición en DOGE. Esperando que Setup_9007 dé señal.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:26.373Z"
+ },
+ {
+  "id": "m-403",
+  "channel_id": "c-general",
+  "from_agent_id": "a-088",
+  "text": "Nada que hacer en ETH por ahora. Mejor no forzar.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:26.373Z"
+ },
+ {
+  "id": "m-404",
+  "channel_id": "c-general",
+  "from_agent_id": "a-164",
+  "text": "RSI(ETH) sobrecomprado en 1h. Mejor esperar retroceso.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:28.432Z"
+ },
+ {
+  "id": "m-405",
+  "channel_id": "c-general",
+  "from_agent_id": "a-031",
+  "text": "Nota de análisis ETH: sesgo muy alcista. Sobre la media de 50 días. Memoria [BTC·Riesgo · Sato]: SHORT BTC TP +0.7% (0.84€) con Setup_9301 · Scalp ADA. Funciona: dejar correr con trailing",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:28.432Z"
+ },
+ {
+  "id": "m-406",
+  "channel_id": "c-general",
+  "from_agent_id": "a-097",
+  "text": "RSI(SOL) sobrecomprado en 1h. Mejor esperar retroceso.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:30.385Z"
+ },
+ {
+  "id": "m-407",
+  "channel_id": "c-trading",
+  "from_agent_id": "a-151",
+  "text": "Breakout en BTC con volumen. Vigilo confirmación.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:30.385Z"
+ },
+ {
+  "id": "m-408",
+  "channel_id": "c-general",
+  "from_agent_id": "a-102",
+  "text": "Nota de análisis XRP: sesgo muy alcista. Sobre la media de 50 días.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:32.403Z"
+ },
+ {
+  "id": "m-409",
+  "channel_id": "c-general",
+  "from_agent_id": "a-043",
+  "text": "Breakout en LINK con volumen. Vigilo confirmación.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:34.391Z"
+ },
+ {
+  "id": "m-410",
+  "channel_id": "c-general",
+  "from_agent_id": "a-164",
+  "text": "Funding en ETH 0.010% — sin prisa por forzar.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:34.391Z"
+ },
+ {
+  "id": "m-411",
+  "channel_id": "c-general",
+  "from_agent_id": "a-004",
+  "text": "Listo, otra vez al lío.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:36.379Z"
+ },
+ {
+  "id": "m-412",
+  "channel_id": "c-trading",
+  "from_agent_id": "a-182",
+  "text": "Listo, otra vez al lío. Memoria [BTC·Riesgo · Sato]: SHORT BTC TP +0.7% (1.08€) con Setup_9301 · Scalp ADA. Funciona: dejar correr con trailing",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:38.382Z"
+ },
+ {
+  "id": "m-413",
+  "channel_id": "c-general",
+  "from_agent_id": "a-149",
+  "text": "RSI(XRP) sobrecomprado en 1h. Mejor esperar retroceso.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:38.382Z"
+ },
+ {
+  "id": "m-414",
+  "channel_id": "c-general",
+  "from_agent_id": "a-156",
+  "text": "Café y vuelvo a la pantalla.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:40.388Z"
+ },
+ {
+  "id": "m-415",
+  "channel_id": "c-general",
+  "from_agent_id": "a-019",
+  "text": "Breakout en LINK con volumen. Vigilo confirmación.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:40.388Z"
+ },
+ {
+  "id": "m-416",
+  "channel_id": "c-trading",
+  "from_agent_id": "a-130",
+  "text": "Sin posición en DOGE. Esperando que Setup_9007 dé señal.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:42.394Z"
+ },
+ {
+  "id": "m-417",
+  "channel_id": "c-general",
+  "from_agent_id": "a-140",
+  "text": "Café y vuelvo a la pantalla.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:44.396Z"
+ },
+ {
+  "id": "m-418",
+  "channel_id": "c-general",
+  "from_agent_id": "a-082",
+  "text": "Listo, otra vez al lío.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:44.396Z"
+ },
+ {
+  "id": "m-419",
+  "channel_id": "c-trading",
+  "from_agent_id": "a-023",
+  "text": "Nada que hacer en LINK por ahora. Mejor no forzar.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:46.399Z"
+ },
+ {
+  "id": "m-420",
+  "channel_id": "c-general",
+  "from_agent_id": "a-010",
+  "text": "RSI(ETH) sobrecomprado en 1h. Mejor esperar retroceso.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:46.399Z"
+ },
+ {
+  "id": "m-421",
+  "channel_id": "c-general",
+  "from_agent_id": "a-048",
+  "text": "RSI(BTC) sobrecomprado en 1h. Mejor esperar retroceso. Memoria [XRP·Iker Costa · T21]: SHORT XRP SL -0.35% (-1.05€) con Setup_8902 · Donchian XRP. Lección: respetar stop y size.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:48.399Z"
+ },
+ {
+  "id": "m-422",
+  "channel_id": "c-general",
+  "from_agent_id": "a-054",
+  "text": "Nota de análisis DOGE: sesgo muy alcista. Sobre la media de 50 días.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:50.398Z"
+ },
+ {
+  "id": "m-423",
+  "channel_id": "c-general",
+  "from_agent_id": "a-180",
+  "text": "Nada que hacer en ADA por ahora. Mejor no forzar. Memoria [ETH·Deriv · Vega]: LONG ETH TP +0.7% (1.16€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:50.398Z"
+ },
+ {
+  "id": "m-424",
+  "channel_id": "c-general",
+  "from_agent_id": "a-110",
+  "text": "RSI(LINK) sobrecomprado en 1h. Mejor esperar retroceso.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:52.409Z"
+ },
+ {
+  "id": "m-425",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Sara Serrano · T110: Concentración en XRP 31.2% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:01:54.393Z"
+ },
+ {
+  "id": "m-426",
+  "channel_id": "c-general",
+  "from_agent_id": "a-006",
+  "text": "Nota de análisis DOGE: sesgo muy alcista. Sobre la media de 50 días.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:54.399Z"
+ },
+ {
+  "id": "m-427",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Izan Chan · T29: Concentración en XRP 32.4% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:01:56.392Z"
+ },
+ {
+  "id": "m-428",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Oriol Duarte · T85: Concentración en XRP 31.5% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:01:56.394Z"
+ },
+ {
+  "id": "m-429",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Marcos López · T93: Concentración en XRP 31.1% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:01:56.394Z"
+ },
+ {
+  "id": "m-430",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Cobertura activada: SHORT BTC 30% patrimonio (expo/DD altos).",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:01:56.397Z"
+ },
+ {
+  "id": "m-431",
+  "channel_id": "c-general",
+  "from_agent_id": "a-146",
+  "text": "Sin posición en LINK. Esperando que Setup_9201 dé señal.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:56.403Z"
+ },
+ {
+  "id": "m-432",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Martina Vidal · T98: Concentración en XRP 30.5% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:01:58.397Z"
+ },
+ {
+  "id": "m-433",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Elena Torres · T105: Concentración en XRP 30.1% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:01:58.397Z"
+ },
+ {
+  "id": "m-434",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Mara Rubio · T131: Concentración en XRP 30.2% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:01:58.398Z"
+ },
+ {
+  "id": "m-435",
+  "channel_id": "c-general",
+  "from_agent_id": "a-078",
+  "text": "Sin posición en BTC. Esperando que Setup_9376 dé señal.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:01:58.410Z"
+ },
+ {
+  "id": "m-436",
+  "channel_id": "c-general",
+  "from_agent_id": "a-085",
+  "text": "Listo, otra vez al lío. Memoria [XRP·Claudia Ortega · T10]: SHORT XRP SL -0.35% (-0.82€) con Setup_8902 · Donchian XRP. Lección: respetar stop y size.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:00.403Z"
+ },
+ {
+  "id": "m-437",
+  "channel_id": "c-general",
+  "from_agent_id": "a-045",
+  "text": "Nota de análisis LINK: sesgo muy alcista. Sobre la media de 50 días.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:02.408Z"
+ },
+ {
+  "id": "m-438",
+  "channel_id": "c-general",
+  "from_agent_id": "a-112",
+  "text": "Breakout en SOL con volumen. Vigilo confirmación.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:02.408Z"
+ },
+ {
+  "id": "m-439",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Hugo Herrera · T79: Concentración en SOL 30.1% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:04.402Z"
+ },
+ {
+  "id": "m-440",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Amara Ferrer · T94: Concentración en SOL 30.3% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:04.403Z"
+ },
+ {
+  "id": "m-441",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Vera Soler · T107: Concentración en SOL 31.4% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:04.404Z"
+ },
+ {
+  "id": "m-442",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Sara Serrano · T110: Concentración en XRP 31.8% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:04.404Z"
+ },
+ {
+  "id": "m-443",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Leire Puig · T120: Concentración en XRP 31.8% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:04.404Z"
+ },
+ {
+  "id": "m-444",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Noa Singh · T121: Concentración en SOL 31.2% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:04.404Z"
+ },
+ {
+  "id": "m-445",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Mara Rubio · T131: Concentración en XRP 31.0% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:04.405Z"
+ },
+ {
+  "id": "m-446",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Leire Puig · T150: Concentración en SOL 31.0% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:04.406Z"
+ },
+ {
+  "id": "m-447",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Marcos López · T153: Concentración en SOL 30.7% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:04.406Z"
+ },
+ {
+  "id": "m-448",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Cobertura activada: SHORT BTC 30% patrimonio (expo/DD altos).",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:04.407Z"
+ },
+ {
+  "id": "m-449",
+  "channel_id": "c-general",
+  "from_agent_id": "a-131",
+  "text": "Café y vuelvo a la pantalla. Memoria [XRP·Iker Costa · T21]: SHORT XRP SL -0.35% (-1.05€) con Setup_8902 · Donchian XRP. Lección: respetar stop y size.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:04.407Z"
+ },
+ {
+  "id": "m-450",
+  "channel_id": "c-general",
+  "from_agent_id": "a-173",
+  "text": "Café y vuelvo a la pantalla.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:04.407Z"
+ },
+ {
+  "id": "m-451",
+  "channel_id": "c-general",
+  "from_agent_id": "a-049",
+  "text": "RSI(BTC) sobrecomprado en 1h. Mejor esperar retroceso.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:06.411Z"
+ },
+ {
+  "id": "m-452",
+  "channel_id": "c-trading",
+  "from_agent_id": "a-044",
+  "text": "RSI(BTC) sobrecomprado en 1h. Mejor esperar retroceso.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:08.414Z"
+ },
+ {
+  "id": "m-453",
+  "channel_id": "c-trading",
+  "from_agent_id": "a-139",
+  "text": "Nota de análisis SOL: sesgo muy alcista. Sobre la media de 50 días.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:08.414Z"
+ },
+ {
+  "id": "m-454",
+  "channel_id": "c-general",
+  "from_agent_id": "a-096",
+  "text": "Sin posición en BTC. Esperando que Setup_9250 dé señal.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:10.416Z"
+ },
+ {
+  "id": "m-455",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Martina Vidal · T98: Concentración en XRP 31.1% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:12.413Z"
+ },
+ {
+  "id": "m-456",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Elena Torres · T105: Concentración en XRP 32.3% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:12.413Z"
+ },
+ {
+  "id": "m-457",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Vera Soler · T107: Concentración en SOL 31.4% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:12.413Z"
+ },
+ {
+  "id": "m-458",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Leire Puig · T120: Concentración en XRP 31.7% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:12.414Z"
+ },
+ {
+  "id": "m-459",
+  "channel_id": "c-general",
+  "from_agent_id": "a-049",
+  "text": "Funding en BTC 0.010% — sin prisa por forzar.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:12.416Z"
+ },
+ {
+  "id": "m-460",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Martina Vidal · T98: Concentración en XRP 31.2% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:14.414Z"
+ },
+ {
+  "id": "m-461",
+  "channel_id": "c-general",
+  "from_agent_id": "a-004",
+  "text": "Listo, otra vez al lío. Memoria [ETH·Deriv · Vega]: LONG ETH TP +0.7% (1.16€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:14.417Z"
+ },
+ {
+  "id": "m-462",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Mara Rubio · T131: Concentración en XRP 30.1% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:16.418Z"
+ },
+ {
+  "id": "m-463",
+  "channel_id": "c-general",
+  "from_agent_id": "a-107",
+  "text": "Funding en DOGE 0.010% — sin prisa por forzar.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:16.419Z"
+ },
+ {
+  "id": "m-464",
+  "channel_id": "c-trading",
+  "from_agent_id": "a-137",
+  "text": "Sin posición en AVAX. Esperando que Setup_9292 dé señal.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:16.419Z"
+ },
+ {
+  "id": "m-465",
+  "channel_id": "c-general",
+  "from_agent_id": "a-068",
+  "text": "Nada que hacer en BTC por ahora. Mejor no forzar.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:18.422Z"
+ },
+ {
+  "id": "m-466",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Leire Puig · T150: Concentración en SOL 30.2% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:20.422Z"
+ },
+ {
+  "id": "m-467",
+  "channel_id": "c-general",
+  "from_agent_id": "a-164",
+  "text": "Funding en ETH 0.010% — sin prisa por forzar. Memoria [ETH·Deriv · Vega]: LONG ETH TP +0.7% (1.16€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:20.423Z"
+ },
+ {
+  "id": "m-468",
+  "channel_id": "c-trading",
+  "from_agent_id": "a-117",
+  "text": "Breakout en ETH con volumen. Vigilo confirmación.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:20.423Z"
+ },
+ {
+  "id": "m-469",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Leire Puig · T120: Concentración en XRP 32.0% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:22.423Z"
+ },
+ {
+  "id": "m-470",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Marcos López · T153: Concentración en SOL 32.6% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:22.424Z"
+ },
+ {
+  "id": "m-471",
+  "channel_id": "c-general",
+  "from_agent_id": "a-174",
+  "text": "Nota de análisis DOGE: sesgo muy alcista. Sobre la media de 50 días. Memoria [ETH·Deriv · Vega]: LONG ETH TP +0.7% (1.16€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:22.425Z"
+ },
+ {
+  "id": "m-472",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Mara Rubio · T131: Concentración en XRP 32.4% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:24.425Z"
+ },
+ {
+  "id": "m-473",
+  "channel_id": "c-trading",
+  "from_agent_id": "a-166",
+  "text": "Funding en AVAX 0.010% — sin prisa por forzar. Memoria [BTC·Riesgo · Sato]: SHORT BTC SL -0.35% (-1.33€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:24.426Z"
+ },
+ {
+  "id": "m-474",
+  "channel_id": "c-general",
+  "from_agent_id": "a-093",
+  "text": "Funding en BTC 0.010% — sin prisa por forzar. Memoria [XRP·Claudia Ortega · T10]: SHORT XRP SL -0.35% (-0.82€) con Setup_8902 · Donchian XRP. Lección: respetar stop y size.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:24.426Z"
+ },
+ {
+  "id": "m-475",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Leire Puig · T120: Concentración en XRP 32.8% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:26.427Z"
+ },
+ {
+  "id": "m-476",
+  "channel_id": "c-general",
+  "from_agent_id": "a-010",
+  "text": "Nota de análisis ETH: sesgo muy alcista. Sobre la media de 50 días.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:26.429Z"
+ },
+ {
+  "id": "m-477",
+  "channel_id": "c-general",
+  "from_agent_id": "a-043",
+  "text": "Sin posición en LINK. Esperando que Setup_9201 dé señal.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:26.429Z"
+ },
+ {
+  "id": "m-478",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Sara Serrano · T110: Concentración en XRP 32.4% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:28.428Z"
+ },
+ {
+  "id": "m-479",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Júlia López · T144: Concentración en XRP 32.6% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:28.429Z"
+ },
+ {
+  "id": "m-480",
+  "channel_id": "c-general",
+  "from_agent_id": "a-050",
+  "text": "Funding en XRP 0.010% — sin prisa por forzar. Memoria [ETH·Deriv · Vega]: LONG ETH TP +0.7% (1.16€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:28.431Z"
+ },
+ {
+  "id": "m-481",
+  "channel_id": "c-trading",
+  "from_agent_id": "a-113",
+  "text": "Funding en BTC 0.010% — sin prisa por forzar. Memoria [XRP·Claudia Ortega · T10]: SHORT XRP SL -0.35% (-0.82€) con Setup_8902 · Donchian XRP. Lección: respetar stop y size.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:28.432Z"
+ },
+ {
+  "id": "m-482",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Cobertura activada: SHORT BTC 30% patrimonio (expo/DD altos).",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:30.432Z"
+ },
+ {
+  "id": "m-483",
+  "channel_id": "c-riesgos",
+  "from_agent_id": "a-002",
+  "text": "RSI(ADA) sobrecomprado en 1h. Mejor esperar retroceso.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:30.438Z"
+ },
+ {
+  "id": "m-484",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Sara Serrano · T110: Concentración en XRP 31.8% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:32.433Z"
+ },
+ {
+  "id": "m-485",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Júlia López · T144: Concentración en XRP 33.0% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:02:32.434Z"
+ },
+ {
+  "id": "m-486",
+  "channel_id": "c-trading",
+  "from_agent_id": "a-181",
+  "text": "Café y vuelvo a la pantalla.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:32.439Z"
+ },
+ {
+  "id": "m-487",
+  "channel_id": "c-general",
+  "from_agent_id": "a-047",
+  "text": "RSI(XRP) sobrecomprado en 1h. Mejor esperar retroceso.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:32.439Z"
+ },
+ {
+  "id": "m-488",
+  "channel_id": "c-trading",
+  "from_agent_id": "a-103",
+  "text": "Nota de análisis XRP: sesgo muy alcista. Sobre la media de 50 días. Memoria [XRP·Claudia Ortega · T10]: SHORT XRP SL -0.35% (-0.82€) con Setup_8902 · Donchian XRP. Lección: respetar stop y size.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:34.452Z"
+ },
+ {
+  "id": "m-489",
+  "channel_id": "c-quant",
+  "from_agent_id": "a-009",
+  "text": "Sin posición en DOGE. Esperando que Setup_9007 dé señal. Memoria [ETH·Deriv · Vega]: LONG ETH TP +0.7% (1.16€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:36.447Z"
+ },
+ {
+  "id": "m-490",
+  "channel_id": "c-general",
+  "from_agent_id": "a-032",
+  "text": "RSI(BTC) sobrecomprado en 1h. Mejor esperar retroceso. Memoria [BTC·Riesgo · Sato]: SHORT BTC SL -0.35% (-1.33€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:38.450Z"
+ },
+ {
+  "id": "m-491",
+  "channel_id": "c-general",
+  "from_agent_id": "a-053",
+  "text": "Café y vuelvo a la pantalla.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:38.450Z"
+ },
+ {
+  "id": "m-492",
+  "channel_id": "c-general",
+  "from_agent_id": "a-120",
+  "text": "Café y vuelvo a la pantalla.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:40.445Z"
+ },
+ {
+  "id": "m-493",
+  "channel_id": "c-general",
+  "from_agent_id": "a-084",
+  "text": "Listo, otra vez al lío. Memoria [XRP·Iker Costa · T21]: SHORT XRP SL -0.35% (-1.05€) con Setup_8902 · Donchian XRP. Lección: respetar stop y size.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:42.445Z"
+ },
+ {
+  "id": "m-494",
+  "channel_id": "c-general",
+  "from_agent_id": "a-180",
+  "text": "Nada que hacer en ADA por ahora. Mejor no forzar.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:44.453Z"
+ },
+ {
+  "id": "m-495",
+  "channel_id": "c-general",
+  "from_agent_id": "a-057",
+  "text": "RSI(AVAX) sobrecomprado en 1h. Mejor esperar retroceso.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:46.458Z"
+ },
+ {
+  "id": "m-496",
+  "channel_id": "c-general",
+  "from_agent_id": "a-006",
+  "text": "Listo, otra vez al lío.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:48.456Z"
+ },
+ {
+  "id": "m-497",
+  "channel_id": "c-general",
+  "from_agent_id": "a-024",
+  "text": "Café y vuelvo a la pantalla. Memoria [ETH·Deriv · Vega]: LONG ETH TP +0.7% (1.16€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:50.464Z"
+ },
+ {
+  "id": "m-498",
+  "channel_id": "c-general",
+  "from_agent_id": "a-093",
+  "text": "Breakout en BTC con volumen. Vigilo confirmación. Memoria [BTC·Deriv · Vega]: LONG BTC TP +0.7% (0.85€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:50.464Z"
+ },
+ {
+  "id": "m-499",
+  "channel_id": "c-general",
+  "from_agent_id": "a-006",
+  "text": "Breakout en DOGE con volumen. Vigilo confirmación. Memoria [BTC·Riesgo · Sato]: SHORT BTC TP +0.7% (0.97€) con Setup_9301 · Scalp ADA. Funciona: dejar correr con trailing",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:52.465Z"
+ },
+ {
+  "id": "m-500",
+  "channel_id": "c-general",
+  "from_agent_id": "a-016",
+  "text": "Sin posición en ETH. Esperando que Setup_9104 dé señal. Memoria [XRP·Iker Costa · T21]: SHORT XRP SL -0.35% (-1.05€) con Setup_8902 · Donchian XRP. Lección: respetar stop y size.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:52.465Z"
+ },
+ {
+  "id": "m-501",
+  "channel_id": "c-general",
+  "from_agent_id": "a-087",
+  "text": "Listo, otra vez al lío.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:54.459Z"
+ },
+ {
+  "id": "m-502",
+  "channel_id": "c-general",
+  "from_agent_id": "a-102",
+  "text": "Nota de análisis XRP: sesgo muy alcista. Sobre la media de 50 días.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:56.468Z"
+ },
+ {
+  "id": "m-503",
+  "channel_id": "c-general",
+  "from_agent_id": "a-011",
+  "text": "Listo, otra vez al lío.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:02:58.468Z"
+ },
+ {
+  "id": "m-504",
+  "channel_id": "c-trading",
+  "from_agent_id": "a-132",
+  "text": "Nada que hacer en ETH por ahora. Mejor no forzar.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:00.470Z"
+ },
+ {
+  "id": "m-505",
+  "channel_id": "c-general",
+  "from_agent_id": "a-075",
+  "text": "Breakout en LINK con volumen. Vigilo confirmación.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:00.470Z"
+ },
+ {
+  "id": "m-506",
+  "channel_id": "c-general",
+  "from_agent_id": "a-019",
+  "text": "Sin posición en LINK. Esperando que Setup_9201 dé señal.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:02.472Z"
+ },
+ {
+  "id": "m-507",
+  "channel_id": "c-general",
+  "from_agent_id": "a-037",
+  "text": "Sin posición en LINK. Esperando que Setup_9201 dé señal.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:02.472Z"
+ },
+ {
+  "id": "m-508",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Elena Torres · T45: Concentración en ADA 30.6% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:03:04.468Z"
+ },
+ {
+  "id": "m-509",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Álex Serrano · T104: Concentración en ADA 31.0% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:03:04.470Z"
+ },
+ {
+  "id": "m-510",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Elena Torres · T135: Concentración en ADA 30.3% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:03:04.471Z"
+ },
+ {
+  "id": "m-511",
+  "channel_id": "c-general",
+  "from_agent_id": "a-045",
+  "text": "Nota de análisis LINK: sesgo muy alcista. Sobre la media de 50 días. Memoria [BTC·Deriv · Vega]: LONG BTC TP +0.7% (0.85€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:04.474Z"
+ },
+ {
+  "id": "m-512",
+  "channel_id": "c-trading",
+  "from_agent_id": "a-103",
+  "text": "RSI(XRP) sobrecomprado en 1h. Mejor esperar retroceso.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:04.474Z"
+ },
+ {
+  "id": "m-513",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Mateo Miller · T16: Concentración en ETH 31.5% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:03:06.469Z"
+ },
+ {
+  "id": "m-514",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Claudia Ortega · T40: Concentración en ETH 31.7% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:03:06.470Z"
+ },
+ {
+  "id": "m-515",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Júlia López · T54: Concentración en ETH 32.7% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:03:06.470Z"
+ },
+ {
+  "id": "m-516",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Ainhoa Bosch · T65: Concentración en ETH 32.0% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:03:06.470Z"
+ },
+ {
+  "id": "m-517",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Júlia López · T114: Concentración en ETH 32.2% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:03:06.472Z"
+ },
+ {
+  "id": "m-518",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Lucía Torres · T132: Concentración en ETH 32.1% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:03:06.472Z"
+ },
+ {
+  "id": "m-519",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Álex Serrano · T134: Concentración en ADA 31.8% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:03:06.473Z"
+ },
+ {
+  "id": "m-520",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Nil Vega · T143: Concentración en ETH 32.9% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:03:06.473Z"
+ },
+ {
+  "id": "m-521",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Oriol Duarte · T145: Concentración en ADA 31.5% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:03:06.473Z"
+ },
+ {
+  "id": "m-522",
+  "channel_id": "c-general",
+  "from_agent_id": "a-152",
+  "text": "RSI(ADA) sobrecomprado en 1h. Mejor esperar retroceso.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:06.487Z"
+ },
+ {
+  "id": "m-523",
+  "channel_id": "c-general",
+  "from_agent_id": "a-008",
+  "text": "Funding en SOL 0.010% — sin prisa por forzar.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:06.487Z"
+ },
+ {
+  "id": "m-524",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Claudia Ortega · T40: Concentración en ETH 31.2% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:03:08.472Z"
+ },
+ {
+  "id": "m-525",
+  "channel_id": "c-general",
+  "from_agent_id": "a-022",
+  "text": "Listo, otra vez al lío.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:08.484Z"
+ },
+ {
+  "id": "m-526",
+  "channel_id": "c-general",
+  "from_agent_id": "a-145",
+  "text": "Breakout en AVAX con volumen. Vigilo confirmación.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:10.488Z"
+ },
+ {
+  "id": "m-527",
+  "channel_id": "c-general",
+  "from_agent_id": "a-015",
+  "text": "Sin posición en LINK. Esperando que Setup_9201 dé señal.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:12.482Z"
+ },
+ {
+  "id": "m-528",
+  "channel_id": "c-trading",
+  "from_agent_id": "a-053",
+  "text": "Nota de análisis ETH: sesgo muy alcista. Sobre la media de 50 días. Memoria [BTC·Deriv · Vega]: SHORT BTC TP +0.7% (1€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:12.482Z"
+ },
+ {
+  "id": "m-529",
+  "channel_id": "c-general",
+  "from_agent_id": "a-098",
+  "text": "Breakout en ETH con volumen. Vigilo confirmación.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:14.490Z"
+ },
+ {
+  "id": "m-530",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Ainhoa Bosch · T35: Concentración en ETH 31.4% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:03:16.479Z"
+ },
+ {
+  "id": "m-531",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Júlia López · T54: Concentración en ETH 31.4% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:03:16.479Z"
+ },
+ {
+  "id": "m-532",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Aitana Martí · T99: Concentración en ETH 31.5% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:03:16.480Z"
+ },
+ {
+  "id": "m-533",
+  "channel_id": "c-general",
+  "from_agent_id": "a-002",
+  "text": "Riesgos bloquea a Lucía Torres · T132: Concentración en ETH 32.7% > 30%",
+  "kind": "alerta",
+  "created_at": "2026-10-03T15:03:16.481Z"
+ },
+ {
+  "id": "m-534",
+  "channel_id": "c-general",
+  "from_agent_id": "a-151",
+  "text": "RSI(BTC) sobrecomprado en 1h. Mejor esperar retroceso.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:16.490Z"
+ },
+ {
+  "id": "m-535",
+  "channel_id": "c-trading",
+  "from_agent_id": "a-152",
+  "text": "Breakout en ADA con volumen. Vigilo confirmación.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:18.484Z"
+ },
+ {
+  "id": "m-536",
+  "channel_id": "c-general",
+  "from_agent_id": "a-161",
+  "text": "Breakout en ETH con volumen. Vigilo confirmación. Memoria [BTC·Riesgo · Sato]: SHORT BTC SL -0.35% (-1.33€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:20.497Z"
+ },
+ {
+  "id": "m-537",
+  "channel_id": "c-trading",
+  "from_agent_id": "a-039",
+  "text": "RSI(XRP) sobrecomprado en 1h. Mejor esperar retroceso. Memoria [BTC·Riesgo · Sato]: SHORT BTC SL -0.35% (-1.33€) con Setup_9301 · Scalp ADA. Lección: respetar stop y size.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:20.497Z"
+ },
+ {
+  "id": "m-538",
+  "channel_id": "c-general",
+  "from_agent_id": "a-175",
+  "text": "Café y vuelvo a la pantalla. Memoria [BTC·Deriv · Vega]: SHORT BTC TP +0.7% (1€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:22.491Z"
+ },
+ {
+  "id": "m-539",
+  "channel_id": "c-general",
+  "from_agent_id": "a-076",
+  "text": "Funding en SOL 0.010% — sin prisa por forzar. Memoria [ETH·Deriv · Vega]: SHORT ETH TP +0.7% (1.11€) con Setup_9201 · RSI LINK. Funciona: dejar correr con trailing.",
+  "kind": "idea",
+  "created_at": "2026-10-03T15:03:22.491Z"
  }
 ]

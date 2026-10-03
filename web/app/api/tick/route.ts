@@ -4,6 +4,10 @@ import { repo, ensureSeed } from "../../../lib/state.js";
 import { loadEngine, saveEngine, step } from "../../../lib/engine.js";
 import { seedRand, hashStr } from "../../../lib/rng.js";
 
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+export const revalidate = 0;
+
 // Un tick del motor. Solo cron (CRON_SECRET) o manual local.
 // Idempotente por slot: repetir el mismo slot no duplica nada.
 export async function POST(req: Request) {

@@ -3,6 +3,10 @@ import { repo, ensureSeed } from "../../../../lib/state.js";
 import { genHistory, metrics, robustness, runTrades, type Spec } from "../../../../lib/indicators.js";
 import { seedRand } from "../../../../lib/rng.js";
 
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+export const revalidate = 0;
+
 const PAIRS = ["BTC", "ETH", "SOL", "XRP", "BNB", "DOGE", "ADA", "AVAX", "LINK"];
 const TEMPLATES = [
   { style: "tendencia", tf: "1h", kind: "ema" },

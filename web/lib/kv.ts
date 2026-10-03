@@ -5,6 +5,12 @@ import { MemoryKv, UpstashKv, resolveKv, type KvStore } from "../lib/store.js";
 let mem: MemoryKv | null = null;
 
 export function getKv(): KvStore {
+  // En fase de build no hay red ni KV: memoria efímera para que el
+  // prerender no tumbe `next build` (las rutas son force-dynamic en runtime).
+  if (process.env.NEXT_PHASE === "phase-production-build") {
+    if (!mem) mem = new MemoryKv();
+    return mem;
+  }
   const found = resolveKv(process.env as Record<string, string>);
   if (found) return new UpstashKv(found.url, found.token);
   // Sin KV en producción: fallar explícito (jamás estado fragmentado silencioso).

@@ -1,6 +1,10 @@
 import { getKv, json } from "../../../lib/kv.js";
 import { resolveKv } from "../../../lib/store.js";
 
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+export const revalidate = 0;
+
 // Diagnóstico: ¿contra qué KV hablamos? NO expone secretos.
 export async function GET() {
   const found = resolveKv(process.env as Record<string, string>);

@@ -4,6 +4,10 @@ import { repo, ensureSeed } from "../../../../lib/state.js";
 import { checkOperation, fundExposure } from "../../../../lib/risk.js";
 import { costPerSide } from "../../../../lib/costs.js";
 
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+export const revalidate = 0;
+
 export async function POST(req: Request) {
   const kv = getKv();
   await ensureSeed(kv, new Date().toISOString());

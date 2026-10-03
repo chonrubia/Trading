@@ -3,6 +3,10 @@ import { repo, ensureSeed } from "../../../lib/state.js";
 import { deskPnl } from "../../../lib/desks.js";
 import { SPOT_TAKER, FUT_TAKER, SLIP } from "../../../lib/costs.js";
 
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+export const revalidate = 0;
+
 export async function GET() {
   const kv = getKv();
   await ensureSeed(kv, new Date().toISOString());

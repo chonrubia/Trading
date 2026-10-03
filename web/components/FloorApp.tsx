@@ -37,6 +37,9 @@ export default function App() {
   const [report, setReport] = useState<any>(null);
   const [setups, setSetups] = useState<any[]>([]);
   const [online, setOnline] = useState(true);
+  const [tickTs, setTickTs] = useState<string | null>(null);
+  const [tickN, setTickN] = useState<number | null>(null);
+  const [now, setNow] = useState(() => Date.now());
   const chatRef = useRef<HTMLDivElement>(null);
 
   const refresh = () => {
@@ -74,6 +77,8 @@ export default function App() {
         setPortfolio((p: any) => ({ ...p, patrimonio: d.equity, resultado_hoy: d.dayPnl, exposicion_bruta: d.exposure, caida: d.drawdown, costes_pagados: p.costes_pagados, objetivo: p.objetivo }));
         setMarket(d.tick); setCommittee(!!d.committee);
         setOps(d.openOps || []);
+        if (d.tick?.ts) setTickTs(d.tick.ts);
+        if (typeof d.tickN === "number") setTickN(d.tickN);
         if (d.msgs?.length) setMsgs(d.msgs);
         setAgents((prev: any[]) => {
           const m = new Map<string, any>((d.agents || []).map((x: any) => [x.id, x]));
@@ -85,7 +90,8 @@ export default function App() {
     };
     fl();
     const id2 = setInterval(fl, 8000);
-    return () => { stop = true; clearInterval(id); clearInterval(id2); };
+    const id3 = setInterval(() => setNow(Date.now()), 1000);
+    return () => { stop = true; clearInterval(id); clearInterval(id2); clearInterval(id3); };
   }, []);
 
   useEffect(() => { const el = chatRef.current; if (el) el.scrollTop = el.scrollHeight; }, [msgs]);
@@ -125,6 +131,13 @@ export default function App() {
   const modeTxt = riskInfo.kill ? "⛔ DETENIDO" : portfolio.freno_riesgos ? "RIESGOS · EN PAUSA HASTA MAÑANA" : committee ? "COMITÉ EN SALA" : "PAPEL · TIEMPO REAL";
   const tgt = Number(portfolio.objetivo || 50), day = Number(portfolio.resultado_hoy || 0);
   const tgtPct = Math.max(0, Math.min(100, (day / tgt) * 100));
+  // Latido del motor (cron cada 10min): edad del dato + cuenta atrás honesta.
+  const ageMs = tickTs ? now - Date.parse(tickTs) : null;
+  const nextBeat = Math.ceil(now / 600000) * 600000;
+  const cdMs = Math.max(0, nextBeat - now);
+  const cdTxt = `${String(Math.floor(cdMs / 60000)).padStart(2, "0")}:${String(Math.floor(cdMs % 60000 / 1000)).padStart(2, "0")}`;
+  const ageTxt = ageMs == null ? "—" : ageMs < 0 ? "—" : ageMs < 60000 ? "ahora mismo" : `hace ${Math.floor(ageMs / 60000)} min`;
+  const beatLate = ageMs != null && ageMs > 25 * 60000;
 
   return (<>
     <header className="topbar">
@@ -168,6 +181,7 @@ export default function App() {
     </div></div>
 
     {!online && <div className="offline">SIN CONEXIÓN CON EL FONDO · reintentando…</div>}
+    {online && <div className={"heartbeat" + (beatLate ? " late" : "")}>TICK {tickN ?? "—"} · datos de {ageTxt} · próximo latido en {cdTxt}{beatLate ? " · cron retrasado, revisa Actions" : ""}</div>}
 
     <div className="layout">
       <div className="panel">

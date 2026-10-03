@@ -21,7 +21,7 @@ export async function GET() {
     return { id: a.id, status: a.status, pnl: a.pnl, x: a.x, y: a.y };
   });
   return json({
-    tick: market?.lastTick || null,
+    tick: market?.lastTick || null, tickN: meta.tickN,
     equity: meta.equity, dayPnl: meta.dayPnl, drawdown: meta.drawdown,
     exposure: fundExposure(open as any, meta.equity),
     kill: meta.kill, committee: !!committee?.active,

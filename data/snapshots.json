@@ -103,5 +103,19 @@
   "dayPnl": 116.5,
   "drawdown": 0.12,
   "exposure": 4.03
+ },
+ {
+  "ts": "2026-10-03T06:25:41.163Z",
+  "equity": 630.79,
+  "dayPnl": 130.79,
+  "drawdown": 0,
+  "exposure": 78.15
+ },
+ {
+  "ts": "2026-10-03T06:26:41.235Z",
+  "equity": 639.76,
+  "dayPnl": 139.76,
+  "drawdown": 0.2,
+  "exposure": 3.88
  }
 ]

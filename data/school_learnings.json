@@ -1,2702 +1,2702 @@
 [
  {
   "agent_id": "a-015",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 270,
-  "level": 3,
-  "note": "SHORT BTC SL -0.35% PnL -0.43€",
-  "ts": "2026-10-03T04:20:26.341Z"
- },
- {
-  "agent_id": "a-015",
   "subject": "riesgo",
-  "xp": 10,
-  "total": 610,
+  "xp": 4,
+  "total": 680,
   "level": 7,
-  "note": "SHORT BTC SL -0.35% PnL -0.43€",
-  "ts": "2026-10-03T04:20:26.340Z"
- },
- {
-  "agent_id": "a-015",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 264,
-  "level": 3,
-  "note": "SHORT ETH SL -0.35% PnL -0.54€",
-  "ts": "2026-10-03T04:20:18.334Z"
- },
- {
-  "agent_id": "a-015",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 600,
-  "level": 7,
-  "note": "SHORT ETH SL -0.35% PnL -0.54€",
-  "ts": "2026-10-03T04:20:18.333Z"
- },
- {
-  "agent_id": "a-179",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 66,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.19€",
-  "ts": "2026-10-03T04:20:12.328Z"
- },
- {
-  "agent_id": "a-179",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 112,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.19€",
-  "ts": "2026-10-03T04:20:12.328Z"
- },
- {
-  "agent_id": "a-171",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 100,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.07€",
-  "ts": "2026-10-03T04:20:12.327Z"
- },
- {
-  "agent_id": "a-171",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 120,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.07€",
-  "ts": "2026-10-03T04:20:12.327Z"
- },
- {
-  "agent_id": "a-171",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 96,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.03€",
-  "ts": "2026-10-03T04:20:10.327Z"
- },
- {
-  "agent_id": "a-171",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 112,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.03€",
-  "ts": "2026-10-03T04:20:10.326Z"
- },
- {
-  "agent_id": "a-162",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 108,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.28€",
-  "ts": "2026-10-03T04:20:10.326Z"
- },
- {
-  "agent_id": "a-162",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 136,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.28€",
-  "ts": "2026-10-03T04:20:10.325Z"
- },
- {
-  "agent_id": "a-179",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 62,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.18€",
-  "ts": "2026-10-03T04:20:10.325Z"
- },
- {
-  "agent_id": "a-179",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 104,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.18€",
-  "ts": "2026-10-03T04:20:10.324Z"
- },
- {
-  "agent_id": "a-015",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 258,
-  "level": 3,
-  "note": "SHORT ETH SL -0.35% PnL -0.38€",
-  "ts": "2026-10-03T04:20:08.322Z"
- },
- {
-  "agent_id": "a-015",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 590,
-  "level": 6,
-  "note": "SHORT ETH SL -0.35% PnL -0.38€",
-  "ts": "2026-10-03T04:20:08.322Z"
- },
- {
-  "agent_id": "a-015",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 580,
-  "level": 6,
-  "note": "LONG BTC TP +0.7% PnL 0.52€",
-  "ts": "2026-10-03T04:20:06.320Z"
+  "note": "SHORT ETH TP +0.7% PnL 1.17€",
+  "ts": "2026-10-03T06:26:37.234Z"
  },
  {
   "agent_id": "a-015",
   "subject": "tecnico",
   "xp": 9,
-  "total": 352,
-  "level": 4,
-  "note": "LONG BTC TP +0.7% PnL 0.52€",
-  "ts": "2026-10-03T04:20:06.320Z"
+  "total": 442,
+  "level": 5,
+  "note": "SHORT ETH TP +0.7% PnL 1.17€",
+  "ts": "2026-10-03T06:26:37.234Z"
  },
  {
-  "agent_id": "a-019",
+  "agent_id": "a-167",
   "subject": "psicologia",
   "xp": 6,
-  "total": 72,
+  "total": 36,
   "level": 1,
-  "note": "SHORT LINK SL -0.35% PnL -0.15€",
-  "ts": "2026-10-03T04:20:02.316Z"
+  "note": "LONG DOGE SL -0.35% PnL -0.27€",
+  "ts": "2026-10-03T06:26:37.233Z"
  },
  {
-  "agent_id": "a-019",
+  "agent_id": "a-167",
   "subject": "riesgo",
   "xp": 10,
   "total": 120,
   "level": 2,
-  "note": "SHORT LINK SL -0.35% PnL -0.15€",
-  "ts": "2026-10-03T04:20:02.315Z"
+  "note": "LONG DOGE SL -0.35% PnL -0.27€",
+  "ts": "2026-10-03T06:26:37.233Z"
  },
  {
-  "agent_id": "a-043",
+  "agent_id": "a-160",
   "subject": "psicologia",
   "xp": 6,
-  "total": 18,
-  "level": 1,
-  "note": "SHORT LINK SL -0.35% PnL -0.17€",
-  "ts": "2026-10-03T04:19:58.323Z"
- },
- {
-  "agent_id": "a-043",
-  "subject": "riesgo",
-  "xp": 10,
   "total": 30,
   "level": 1,
-  "note": "SHORT LINK SL -0.35% PnL -0.17€",
-  "ts": "2026-10-03T04:19:58.323Z"
+  "note": "LONG DOGE SL -0.35% PnL -0.18€",
+  "ts": "2026-10-03T06:26:37.232Z"
  },
  {
-  "agent_id": "a-042",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 54,
-  "level": 1,
-  "note": "SHORT LINK SL -0.35% PnL -0.09€",
-  "ts": "2026-10-03T04:19:58.322Z"
- },
- {
-  "agent_id": "a-042",
+  "agent_id": "a-160",
   "subject": "riesgo",
   "xp": 10,
-  "total": 90,
-  "level": 1,
-  "note": "SHORT LINK SL -0.35% PnL -0.09€",
-  "ts": "2026-10-03T04:19:58.322Z"
- },
- {
-  "agent_id": "a-037",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 54,
-  "level": 1,
-  "note": "SHORT LINK SL -0.35% PnL -0.14€",
-  "ts": "2026-10-03T04:19:58.321Z"
- },
- {
-  "agent_id": "a-037",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 90,
-  "level": 1,
-  "note": "SHORT LINK SL -0.35% PnL -0.14€",
-  "ts": "2026-10-03T04:19:58.321Z"
- },
- {
-  "agent_id": "a-024",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 72,
-  "level": 1,
-  "note": "SHORT LINK SL -0.35% PnL -0.13€",
-  "ts": "2026-10-03T04:19:58.320Z"
- },
- {
-  "agent_id": "a-024",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 120,
-  "level": 2,
-  "note": "SHORT LINK SL -0.35% PnL -0.13€",
-  "ts": "2026-10-03T04:19:58.320Z"
- },
- {
-  "agent_id": "a-023",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 78,
-  "level": 1,
-  "note": "SHORT LINK SL -0.35% PnL -0.11€",
-  "ts": "2026-10-03T04:19:58.320Z"
- },
- {
-  "agent_id": "a-023",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 130,
-  "level": 2,
-  "note": "SHORT LINK SL -0.35% PnL -0.11€",
-  "ts": "2026-10-03T04:19:58.319Z"
- },
- {
-  "agent_id": "a-019",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 66,
-  "level": 1,
-  "note": "SHORT LINK SL -0.35% PnL -0.17€",
-  "ts": "2026-10-03T04:19:58.319Z"
- },
- {
-  "agent_id": "a-019",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 110,
-  "level": 2,
-  "note": "SHORT LINK SL -0.35% PnL -0.17€",
-  "ts": "2026-10-03T04:19:58.318Z"
- },
- {
-  "agent_id": "a-042",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 48,
-  "level": 1,
-  "note": "SHORT LINK SL -0.35% PnL -0.11€",
-  "ts": "2026-10-03T04:19:58.318Z"
- },
- {
-  "agent_id": "a-042",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 80,
-  "level": 1,
-  "note": "SHORT LINK SL -0.35% PnL -0.11€",
-  "ts": "2026-10-03T04:19:58.317Z"
- },
- {
-  "agent_id": "a-037",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 48,
-  "level": 1,
-  "note": "SHORT LINK SL -0.35% PnL -0.24€",
-  "ts": "2026-10-03T04:19:58.317Z"
- },
- {
-  "agent_id": "a-037",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 80,
-  "level": 1,
-  "note": "SHORT LINK SL -0.35% PnL -0.24€",
-  "ts": "2026-10-03T04:19:58.317Z"
- },
- {
-  "agent_id": "a-027",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 60,
-  "level": 1,
-  "note": "SHORT LINK SL -0.35% PnL -0.24€",
-  "ts": "2026-10-03T04:19:58.316Z"
- },
- {
-  "agent_id": "a-027",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 100,
-  "level": 2,
-  "note": "SHORT LINK SL -0.35% PnL -0.24€",
-  "ts": "2026-10-03T04:19:58.316Z"
- },
- {
-  "agent_id": "a-024",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 66,
-  "level": 1,
-  "note": "SHORT LINK SL -0.35% PnL -0.1€",
-  "ts": "2026-10-03T04:19:58.315Z"
- },
- {
-  "agent_id": "a-024",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 110,
-  "level": 2,
-  "note": "SHORT LINK SL -0.35% PnL -0.1€",
-  "ts": "2026-10-03T04:19:58.315Z"
- },
- {
-  "agent_id": "a-023",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 72,
-  "level": 1,
-  "note": "SHORT LINK SL -0.35% PnL -0.12€",
-  "ts": "2026-10-03T04:19:58.315Z"
- },
- {
-  "agent_id": "a-023",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 120,
-  "level": 2,
-  "note": "SHORT LINK SL -0.35% PnL -0.12€",
-  "ts": "2026-10-03T04:19:58.314Z"
- },
- {
-  "agent_id": "a-019",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 60,
-  "level": 1,
-  "note": "SHORT LINK SL -0.35% PnL -0.17€",
-  "ts": "2026-10-03T04:19:58.314Z"
- },
- {
-  "agent_id": "a-019",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 100,
-  "level": 2,
-  "note": "SHORT LINK SL -0.35% PnL -0.17€",
-  "ts": "2026-10-03T04:19:58.313Z"
- },
- {
-  "agent_id": "a-179",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 58,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.17€",
-  "ts": "2026-10-03T04:19:58.313Z"
- },
- {
-  "agent_id": "a-179",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 96,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.17€",
-  "ts": "2026-10-03T04:19:58.312Z"
- },
- {
-  "agent_id": "a-162",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 104,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.21€",
-  "ts": "2026-10-03T04:19:58.312Z"
- },
- {
-  "agent_id": "a-162",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 128,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.21€",
-  "ts": "2026-10-03T04:19:58.311Z"
- },
- {
-  "agent_id": "a-168",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 90,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.22€",
-  "ts": "2026-10-03T04:19:56.316Z"
- },
- {
-  "agent_id": "a-168",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 123,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.22€",
-  "ts": "2026-10-03T04:19:56.316Z"
- },
- {
-  "agent_id": "a-156",
-  "subject": "riesgo",
-  "xp": 4,
   "total": 114,
   "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.16€",
-  "ts": "2026-10-03T04:19:56.315Z"
+  "note": "LONG DOGE SL -0.35% PnL -0.18€",
+  "ts": "2026-10-03T06:26:37.232Z"
  },
  {
-  "agent_id": "a-156",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 128,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.16€",
-  "ts": "2026-10-03T04:19:56.315Z"
- },
- {
-  "agent_id": "a-149",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 108,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.05€",
-  "ts": "2026-10-03T04:19:56.314Z"
- },
- {
-  "agent_id": "a-149",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 136,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.05€",
-  "ts": "2026-10-03T04:19:56.314Z"
- },
- {
-  "agent_id": "a-168",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 86,
+  "agent_id": "a-155",
+  "subject": "psicologia",
+  "xp": 6,
+  "total": 30,
   "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.26€",
-  "ts": "2026-10-03T04:19:56.313Z"
+  "note": "LONG DOGE SL -0.35% PnL -0.14€",
+  "ts": "2026-10-03T06:26:37.231Z"
  },
  {
-  "agent_id": "a-168",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 115,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.26€",
-  "ts": "2026-10-03T04:19:56.313Z"
- },
- {
-  "agent_id": "a-147",
+  "agent_id": "a-155",
   "subject": "riesgo",
-  "xp": 4,
-  "total": 94,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.27€",
-  "ts": "2026-10-03T04:19:56.312Z"
- },
- {
-  "agent_id": "a-147",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 131,
+  "xp": 10,
+  "total": 106,
   "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.27€",
-  "ts": "2026-10-03T04:19:56.312Z"
+  "note": "LONG DOGE SL -0.35% PnL -0.14€",
+  "ts": "2026-10-03T06:26:37.230Z"
  },
  {
-  "agent_id": "a-125",
+  "agent_id": "a-155",
+  "subject": "psicologia",
+  "xp": 6,
+  "total": 24,
+  "level": 1,
+  "note": "LONG DOGE SL -0.35% PnL -0.17€",
+  "ts": "2026-10-03T06:26:35.229Z"
+ },
+ {
+  "agent_id": "a-155",
   "subject": "riesgo",
-  "xp": 4,
-  "total": 92,
+  "xp": 10,
+  "total": 96,
   "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.16€",
-  "ts": "2026-10-03T04:19:56.311Z"
- },
- {
-  "agent_id": "a-125",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 144,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.16€",
-  "ts": "2026-10-03T04:19:56.311Z"
+  "note": "LONG DOGE SL -0.35% PnL -0.17€",
+  "ts": "2026-10-03T06:26:35.228Z"
  },
  {
   "agent_id": "a-015",
   "subject": "riesgo",
   "xp": 4,
-  "total": 576,
-  "level": 6,
+  "total": 676,
+  "level": 7,
   "note": "LONG BTC TP +0.7% PnL 0.51€",
-  "ts": "2026-10-03T04:19:54.313Z"
+  "ts": "2026-10-03T06:26:33.233Z"
  },
  {
   "agent_id": "a-015",
   "subject": "tecnico",
   "xp": 9,
-  "total": 343,
-  "level": 4,
+  "total": 433,
+  "level": 5,
   "note": "LONG BTC TP +0.7% PnL 0.51€",
-  "ts": "2026-10-03T04:19:54.313Z"
+  "ts": "2026-10-03T06:26:33.232Z"
  },
  {
-  "agent_id": "a-162",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 100,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.23€",
-  "ts": "2026-10-03T04:19:54.312Z"
- },
- {
-  "agent_id": "a-162",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 120,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.23€",
-  "ts": "2026-10-03T04:19:54.312Z"
- },
- {
-  "agent_id": "a-156",
+  "agent_id": "a-167",
   "subject": "riesgo",
   "xp": 4,
   "total": 110,
   "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.19€",
-  "ts": "2026-10-03T04:19:54.311Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.18€",
+  "ts": "2026-10-03T06:26:33.231Z"
  },
  {
-  "agent_id": "a-156",
+  "agent_id": "a-167",
   "subject": "tecnico",
   "xp": 8,
   "total": 120,
   "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.19€",
-  "ts": "2026-10-03T04:19:54.311Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.18€",
+  "ts": "2026-10-03T06:26:33.231Z"
  },
  {
-  "agent_id": "a-149",
+  "agent_id": "a-154",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 88,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.28€",
+  "ts": "2026-10-03T06:26:33.230Z"
+ },
+ {
+  "agent_id": "a-154",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 136,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.28€",
+  "ts": "2026-10-03T06:26:33.230Z"
+ },
+ {
+  "agent_id": "a-174",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 110,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.26€",
+  "ts": "2026-10-03T06:26:33.229Z"
+ },
+ {
+  "agent_id": "a-174",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 120,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.26€",
+  "ts": "2026-10-03T06:26:33.228Z"
+ },
+ {
+  "agent_id": "a-160",
   "subject": "riesgo",
   "xp": 4,
   "total": 104,
   "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.05€",
-  "ts": "2026-10-03T04:19:54.310Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.1€",
+  "ts": "2026-10-03T06:26:33.228Z"
  },
  {
-  "agent_id": "a-149",
+  "agent_id": "a-160",
   "subject": "tecnico",
   "xp": 8,
   "total": 128,
   "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.05€",
-  "ts": "2026-10-03T04:19:54.310Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.1€",
+  "ts": "2026-10-03T06:26:33.227Z"
  },
  {
-  "agent_id": "a-138",
+  "agent_id": "a-154",
   "subject": "riesgo",
   "xp": 4,
-  "total": 94,
+  "total": 84,
   "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.06€",
-  "ts": "2026-10-03T04:19:54.310Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.14€",
+  "ts": "2026-10-03T06:26:33.227Z"
  },
  {
-  "agent_id": "a-138",
+  "agent_id": "a-154",
   "subject": "tecnico",
   "xp": 8,
   "total": 128,
   "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.06€",
-  "ts": "2026-10-03T04:19:54.309Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.14€",
+  "ts": "2026-10-03T06:26:33.226Z"
  },
  {
-  "agent_id": "a-124",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 82,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.17€",
-  "ts": "2026-10-03T04:19:54.309Z"
- },
- {
-  "agent_id": "a-124",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 144,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.17€",
-  "ts": "2026-10-03T04:19:54.308Z"
- },
- {
-  "agent_id": "a-156",
+  "agent_id": "a-174",
   "subject": "riesgo",
   "xp": 4,
   "total": 106,
   "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.12€",
-  "ts": "2026-10-03T04:19:52.313Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.19€",
+  "ts": "2026-10-03T06:26:29.222Z"
  },
  {
-  "agent_id": "a-156",
+  "agent_id": "a-174",
   "subject": "tecnico",
   "xp": 8,
   "total": 112,
   "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.12€",
-  "ts": "2026-10-03T04:19:52.313Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.19€",
+  "ts": "2026-10-03T06:26:29.221Z"
  },
  {
-  "agent_id": "a-149",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 100,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.05€",
-  "ts": "2026-10-03T04:19:52.312Z"
- },
- {
-  "agent_id": "a-149",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 120,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.05€",
-  "ts": "2026-10-03T04:19:52.312Z"
- },
- {
-  "agent_id": "a-138",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 90,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.08€",
-  "ts": "2026-10-03T04:19:52.312Z"
- },
- {
-  "agent_id": "a-138",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 120,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.08€",
-  "ts": "2026-10-03T04:19:52.311Z"
- },
- {
-  "agent_id": "a-128",
+  "agent_id": "a-142",
   "subject": "riesgo",
   "xp": 4,
   "total": 70,
   "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.14€",
-  "ts": "2026-10-03T04:19:52.310Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:26:29.220Z"
  },
  {
-  "agent_id": "a-128",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 121,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.14€",
-  "ts": "2026-10-03T04:19:52.306Z"
- },
- {
-  "agent_id": "a-015",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 572,
-  "level": 6,
-  "note": "LONG ETH TP +0.7% PnL 0.64€",
-  "ts": "2026-10-03T04:19:50.309Z"
- },
- {
-  "agent_id": "a-015",
-  "subject": "tecnico",
-  "xp": 9,
-  "total": 334,
-  "level": 4,
-  "note": "LONG ETH TP +0.7% PnL 0.64€",
-  "ts": "2026-10-03T04:19:50.308Z"
- },
- {
-  "agent_id": "a-147",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 90,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.11€",
-  "ts": "2026-10-03T04:19:50.308Z"
- },
- {
-  "agent_id": "a-147",
+  "agent_id": "a-142",
   "subject": "tecnico",
   "xp": 8,
   "total": 123,
   "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.11€",
-  "ts": "2026-10-03T04:19:50.308Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:26:29.220Z"
  },
  {
-  "agent_id": "a-139",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 98,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.21€",
-  "ts": "2026-10-03T04:19:50.307Z"
- },
- {
-  "agent_id": "a-139",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 136,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.21€",
-  "ts": "2026-10-03T04:19:50.307Z"
- },
- {
-  "agent_id": "a-124",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 78,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.13€",
-  "ts": "2026-10-03T04:19:50.306Z"
- },
- {
-  "agent_id": "a-124",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 136,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.13€",
-  "ts": "2026-10-03T04:19:50.306Z"
- },
- {
-  "agent_id": "a-125",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 88,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.19€",
-  "ts": "2026-10-03T04:19:50.305Z"
- },
- {
-  "agent_id": "a-125",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 136,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.19€",
-  "ts": "2026-10-03T04:19:50.305Z"
- },
- {
-  "agent_id": "a-124",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 74,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.19€",
-  "ts": "2026-10-03T04:19:50.305Z"
- },
- {
-  "agent_id": "a-124",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 128,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.19€",
-  "ts": "2026-10-03T04:19:50.304Z"
- },
- {
-  "agent_id": "a-121",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 60,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.14€",
-  "ts": "2026-10-03T04:19:50.304Z"
- },
- {
-  "agent_id": "a-121",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 121,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.14€",
-  "ts": "2026-10-03T04:19:50.303Z"
- },
- {
-  "agent_id": "a-121",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 56,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.14€",
-  "ts": "2026-10-03T04:19:48.302Z"
- },
- {
-  "agent_id": "a-121",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 113,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.14€",
-  "ts": "2026-10-03T04:19:48.302Z"
- },
- {
-  "agent_id": "a-097",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 76,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.13€",
-  "ts": "2026-10-03T04:19:48.301Z"
- },
- {
-  "agent_id": "a-097",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 152,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.13€",
-  "ts": "2026-10-03T04:19:48.301Z"
+  "agent_id": "a-015",
+  "subject": "psicologia",
+  "xp": 6,
+  "total": 288,
+  "level": 3,
+  "note": "SHORT BTC SL -0.35% PnL -0.6€",
+  "ts": "2026-10-03T06:26:25.214Z"
  },
  {
   "agent_id": "a-015",
   "subject": "riesgo",
-  "xp": 4,
-  "total": 568,
-  "level": 6,
-  "note": "LONG ETH TP +0.7% PnL 0.69€",
-  "ts": "2026-10-03T04:19:48.301Z"
+  "xp": 10,
+  "total": 672,
+  "level": 7,
+  "note": "SHORT BTC SL -0.35% PnL -0.6€",
+  "ts": "2026-10-03T06:26:25.214Z"
  },
  {
-  "agent_id": "a-015",
-  "subject": "tecnico",
-  "xp": 9,
-  "total": 325,
-  "level": 4,
-  "note": "LONG ETH TP +0.7% PnL 0.69€",
-  "ts": "2026-10-03T04:19:48.300Z"
- },
- {
-  "agent_id": "a-138",
+  "agent_id": "a-174",
   "subject": "riesgo",
   "xp": 4,
-  "total": 86,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.07€",
-  "ts": "2026-10-03T04:19:46.300Z"
- },
- {
-  "agent_id": "a-138",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 112,
+  "total": 102,
   "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.07€",
-  "ts": "2026-10-03T04:19:46.300Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.13€",
+  "ts": "2026-10-03T06:26:23.219Z"
  },
  {
-  "agent_id": "a-128",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 66,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.2€",
-  "ts": "2026-10-03T04:19:46.299Z"
- },
- {
-  "agent_id": "a-128",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 113,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.2€",
-  "ts": "2026-10-03T04:19:46.299Z"
- },
- {
-  "agent_id": "a-123",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 74,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.13€",
-  "ts": "2026-10-03T04:19:46.298Z"
- },
- {
-  "agent_id": "a-123",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 130,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.13€",
-  "ts": "2026-10-03T04:19:46.298Z"
- },
- {
-  "agent_id": "a-123",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 70,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.1€",
-  "ts": "2026-10-03T04:19:42.300Z"
- },
- {
-  "agent_id": "a-123",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 122,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.1€",
-  "ts": "2026-10-03T04:19:42.300Z"
- },
- {
-  "agent_id": "a-116",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 86,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.15€",
-  "ts": "2026-10-03T04:19:42.299Z"
- },
- {
-  "agent_id": "a-116",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 112,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.15€",
-  "ts": "2026-10-03T04:19:42.299Z"
- },
- {
-  "agent_id": "a-111",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 78,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.11€",
-  "ts": "2026-10-03T04:19:42.299Z"
- },
- {
-  "agent_id": "a-111",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 98,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.11€",
-  "ts": "2026-10-03T04:19:42.298Z"
- },
- {
-  "agent_id": "a-112",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 74,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.24€",
-  "ts": "2026-10-03T04:19:42.298Z"
- },
- {
-  "agent_id": "a-112",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 130,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.24€",
-  "ts": "2026-10-03T04:19:42.297Z"
- },
- {
-  "agent_id": "a-111",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 74,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.17€",
-  "ts": "2026-10-03T04:19:42.297Z"
- },
- {
-  "agent_id": "a-111",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 90,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.17€",
-  "ts": "2026-10-03T04:19:42.296Z"
- },
- {
-  "agent_id": "a-103",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 58,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.21€",
-  "ts": "2026-10-03T04:19:42.296Z"
- },
- {
-  "agent_id": "a-103",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 97,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.21€",
-  "ts": "2026-10-03T04:19:42.296Z"
- },
- {
-  "agent_id": "a-097",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 72,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.23€",
-  "ts": "2026-10-03T04:19:42.295Z"
- },
- {
-  "agent_id": "a-097",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 144,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.23€",
-  "ts": "2026-10-03T04:19:42.295Z"
- },
- {
-  "agent_id": "a-091",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 72,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.23€",
-  "ts": "2026-10-03T04:19:42.294Z"
- },
- {
-  "agent_id": "a-091",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 144,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.23€",
-  "ts": "2026-10-03T04:19:42.294Z"
- },
- {
-  "agent_id": "a-080",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 48,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.19€",
-  "ts": "2026-10-03T04:19:42.293Z"
- },
- {
-  "agent_id": "a-080",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 97,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.19€",
-  "ts": "2026-10-03T04:19:42.293Z"
- },
- {
-  "agent_id": "a-116",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 82,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.17€",
-  "ts": "2026-10-03T04:19:40.293Z"
- },
- {
-  "agent_id": "a-116",
+  "agent_id": "a-174",
   "subject": "tecnico",
   "xp": 8,
   "total": 104,
   "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.17€",
-  "ts": "2026-10-03T04:19:40.292Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.13€",
+  "ts": "2026-10-03T06:26:23.218Z"
  },
  {
-  "agent_id": "a-111",
+  "agent_id": "a-167",
   "subject": "riesgo",
   "xp": 4,
-  "total": 70,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.14€",
-  "ts": "2026-10-03T04:19:40.292Z"
+  "total": 106,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.13€",
+  "ts": "2026-10-03T06:26:23.218Z"
  },
  {
-  "agent_id": "a-111",
+  "agent_id": "a-167",
   "subject": "tecnico",
   "xp": 8,
-  "total": 82,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.14€",
-  "ts": "2026-10-03T04:19:40.291Z"
+  "total": 112,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.13€",
+  "ts": "2026-10-03T06:26:23.217Z"
  },
  {
-  "agent_id": "a-103",
+  "agent_id": "a-160",
   "subject": "riesgo",
   "xp": 4,
-  "total": 54,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.17€",
-  "ts": "2026-10-03T04:19:40.291Z"
+  "total": 100,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.04€",
+  "ts": "2026-10-03T06:26:23.216Z"
  },
  {
-  "agent_id": "a-103",
+  "agent_id": "a-160",
   "subject": "tecnico",
   "xp": 8,
-  "total": 89,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.17€",
-  "ts": "2026-10-03T04:19:40.290Z"
+  "total": 120,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.04€",
+  "ts": "2026-10-03T06:26:23.216Z"
  },
  {
-  "agent_id": "a-102",
+  "agent_id": "a-154",
   "subject": "riesgo",
   "xp": 4,
-  "total": 50,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.07€",
-  "ts": "2026-10-03T04:19:40.290Z"
- },
- {
-  "agent_id": "a-102",
-  "subject": "tecnico",
-  "xp": 8,
   "total": 80,
   "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.07€",
-  "ts": "2026-10-03T04:19:40.289Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.09€",
+  "ts": "2026-10-03T06:26:23.215Z"
  },
  {
-  "agent_id": "a-091",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 68,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.26€",
-  "ts": "2026-10-03T04:19:36.285Z"
- },
- {
-  "agent_id": "a-091",
+  "agent_id": "a-154",
   "subject": "tecnico",
   "xp": 8,
-  "total": 136,
+  "total": 120,
   "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.26€",
-  "ts": "2026-10-03T04:19:36.283Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.09€",
+  "ts": "2026-10-03T06:26:23.215Z"
  },
  {
-  "agent_id": "a-147",
+  "agent_id": "a-142",
   "subject": "riesgo",
   "xp": 4,
-  "total": 86,
+  "total": 66,
   "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.26€",
-  "ts": "2026-10-03T04:19:32.280Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.16€",
+  "ts": "2026-10-03T06:26:23.214Z"
  },
  {
-  "agent_id": "a-147",
+  "agent_id": "a-142",
   "subject": "tecnico",
   "xp": 8,
   "total": 115,
   "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.26€",
-  "ts": "2026-10-03T04:19:32.280Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.16€",
+  "ts": "2026-10-03T06:26:23.213Z"
  },
  {
-  "agent_id": "a-139",
+  "agent_id": "a-130",
   "subject": "riesgo",
   "xp": 4,
-  "total": 94,
+  "total": 76,
   "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.25€",
-  "ts": "2026-10-03T04:19:32.280Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.05€",
+  "ts": "2026-10-03T06:26:23.212Z"
  },
  {
-  "agent_id": "a-139",
+  "agent_id": "a-130",
   "subject": "tecnico",
   "xp": 8,
-  "total": 128,
+  "total": 112,
   "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.25€",
-  "ts": "2026-10-03T04:19:32.279Z"
- },
- {
-  "agent_id": "a-125",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 84,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.13€",
-  "ts": "2026-10-03T04:19:32.279Z"
- },
- {
-  "agent_id": "a-125",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 128,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.13€",
-  "ts": "2026-10-03T04:19:32.278Z"
- },
- {
-  "agent_id": "a-121",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 52,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.2€",
-  "ts": "2026-10-03T04:19:32.278Z"
- },
- {
-  "agent_id": "a-121",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 105,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.2€",
-  "ts": "2026-10-03T04:19:32.277Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.05€",
+  "ts": "2026-10-03T06:26:23.211Z"
  },
  {
   "agent_id": "a-015",
   "subject": "riesgo",
   "xp": 4,
-  "total": 564,
-  "level": 6,
-  "note": "LONG ETH TP +0.7% PnL 1.07€",
-  "ts": "2026-10-03T04:19:30.277Z"
+  "total": 662,
+  "level": 7,
+  "note": "LONG ETH TP +0.7% PnL 0.79€",
+  "ts": "2026-10-03T06:26:19.205Z"
  },
  {
   "agent_id": "a-015",
   "subject": "tecnico",
   "xp": 9,
-  "total": 316,
-  "level": 4,
-  "note": "LONG ETH TP +0.7% PnL 1.07€",
-  "ts": "2026-10-03T04:19:30.277Z"
+  "total": 424,
+  "level": 5,
+  "note": "LONG ETH TP +0.7% PnL 0.79€",
+  "ts": "2026-10-03T06:26:19.204Z"
  },
  {
-  "agent_id": "a-123",
+  "agent_id": "a-133",
   "subject": "riesgo",
   "xp": 4,
-  "total": 66,
+  "total": 62,
   "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.18€",
-  "ts": "2026-10-03T04:19:30.276Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:26:17.203Z"
  },
  {
-  "agent_id": "a-123",
+  "agent_id": "a-133",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 106,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:26:17.202Z"
+ },
+ {
+  "agent_id": "a-155",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 86,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.13€",
+  "ts": "2026-10-03T06:26:13.204Z"
+ },
+ {
+  "agent_id": "a-155",
   "subject": "tecnico",
   "xp": 8,
   "total": 114,
   "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.18€",
-  "ts": "2026-10-03T04:19:30.275Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.13€",
+  "ts": "2026-10-03T06:26:13.203Z"
  },
  {
-  "agent_id": "a-116",
+  "agent_id": "a-142",
   "subject": "riesgo",
   "xp": 4,
-  "total": 78,
+  "total": 62,
   "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.24€",
-  "ts": "2026-10-03T04:19:30.275Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:26:13.202Z"
  },
  {
-  "agent_id": "a-116",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 96,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.24€",
-  "ts": "2026-10-03T04:19:30.274Z"
- },
- {
-  "agent_id": "a-112",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 70,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.11€",
-  "ts": "2026-10-03T04:19:28.280Z"
- },
- {
-  "agent_id": "a-112",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 122,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.11€",
-  "ts": "2026-10-03T04:19:28.280Z"
- },
- {
-  "agent_id": "a-103",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 50,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.15€",
-  "ts": "2026-10-03T04:19:28.279Z"
- },
- {
-  "agent_id": "a-103",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 81,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.15€",
-  "ts": "2026-10-03T04:19:28.279Z"
- },
- {
-  "agent_id": "a-097",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 68,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.15€",
-  "ts": "2026-10-03T04:19:28.278Z"
- },
- {
-  "agent_id": "a-097",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 136,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.15€",
-  "ts": "2026-10-03T04:19:28.278Z"
- },
- {
-  "agent_id": "a-082",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 52,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.16€",
-  "ts": "2026-10-03T04:19:28.277Z"
- },
- {
-  "agent_id": "a-082",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 104,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.16€",
-  "ts": "2026-10-03T04:19:28.277Z"
- },
- {
-  "agent_id": "a-059",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 48,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.11€",
-  "ts": "2026-10-03T04:19:28.276Z"
- },
- {
-  "agent_id": "a-059",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 96,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.11€",
-  "ts": "2026-10-03T04:19:28.276Z"
- },
- {
-  "agent_id": "a-056",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 60,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.17€",
-  "ts": "2026-10-03T04:19:28.276Z"
- },
- {
-  "agent_id": "a-056",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 120,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.17€",
-  "ts": "2026-10-03T04:19:28.275Z"
- },
- {
-  "agent_id": "a-094",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 72,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.1€",
-  "ts": "2026-10-03T04:19:28.275Z"
- },
- {
-  "agent_id": "a-094",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 144,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.1€",
-  "ts": "2026-10-03T04:19:28.274Z"
- },
- {
-  "agent_id": "a-091",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 64,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.12€",
-  "ts": "2026-10-03T04:19:28.274Z"
- },
- {
-  "agent_id": "a-091",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 128,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.12€",
-  "ts": "2026-10-03T04:19:28.273Z"
- },
- {
-  "agent_id": "a-082",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 48,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.24€",
-  "ts": "2026-10-03T04:19:28.273Z"
- },
- {
-  "agent_id": "a-082",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 96,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.24€",
-  "ts": "2026-10-03T04:19:28.272Z"
- },
- {
-  "agent_id": "a-077",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 48,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.18€",
-  "ts": "2026-10-03T04:19:28.272Z"
- },
- {
-  "agent_id": "a-077",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 96,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.18€",
-  "ts": "2026-10-03T04:19:28.271Z"
- },
- {
-  "agent_id": "a-085",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 46,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.1€",
-  "ts": "2026-10-03T04:19:26.291Z"
- },
- {
-  "agent_id": "a-085",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 72,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.1€",
-  "ts": "2026-10-03T04:19:26.291Z"
- },
- {
-  "agent_id": "a-070",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 48,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.15€",
-  "ts": "2026-10-03T04:19:26.290Z"
- },
- {
-  "agent_id": "a-070",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 56,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.15€",
-  "ts": "2026-10-03T04:19:26.290Z"
- },
- {
-  "agent_id": "a-085",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 42,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.24€",
-  "ts": "2026-10-03T04:19:26.289Z"
- },
- {
-  "agent_id": "a-085",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 64,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.24€",
-  "ts": "2026-10-03T04:19:26.289Z"
- },
- {
-  "agent_id": "a-084",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 50,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.07€",
-  "ts": "2026-10-03T04:19:26.288Z"
- },
- {
-  "agent_id": "a-084",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 80,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.07€",
-  "ts": "2026-10-03T04:19:26.288Z"
- },
- {
-  "agent_id": "a-080",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 44,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.15€",
-  "ts": "2026-10-03T04:19:26.287Z"
- },
- {
-  "agent_id": "a-080",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 89,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.15€",
-  "ts": "2026-10-03T04:19:26.287Z"
- },
- {
-  "agent_id": "a-070",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 44,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.12€",
-  "ts": "2026-10-03T04:19:26.286Z"
- },
- {
-  "agent_id": "a-070",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 48,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.12€",
-  "ts": "2026-10-03T04:19:26.284Z"
- },
- {
-  "agent_id": "a-059",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 44,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.2€",
-  "ts": "2026-10-03T04:19:26.283Z"
- },
- {
-  "agent_id": "a-059",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 88,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.2€",
-  "ts": "2026-10-03T04:19:26.273Z"
- },
- {
-  "agent_id": "a-028",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 74,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.27€",
-  "ts": "2026-10-03T04:19:26.272Z"
- },
- {
-  "agent_id": "a-028",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 130,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.27€",
-  "ts": "2026-10-03T04:19:26.272Z"
- },
- {
-  "agent_id": "a-015",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 252,
-  "level": 3,
-  "note": "SHORT ETH SL -0.35% PnL -0.5€",
-  "ts": "2026-10-03T04:19:22.270Z"
- },
- {
-  "agent_id": "a-015",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 560,
-  "level": 6,
-  "note": "SHORT ETH SL -0.35% PnL -0.5€",
-  "ts": "2026-10-03T04:19:22.269Z"
- },
- {
-  "agent_id": "a-074",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 56,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.11€",
-  "ts": "2026-10-03T04:19:22.269Z"
- },
- {
-  "agent_id": "a-074",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 112,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.11€",
-  "ts": "2026-10-03T04:19:22.268Z"
- },
- {
-  "agent_id": "a-076",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 56,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.11€",
-  "ts": "2026-10-03T04:19:20.274Z"
- },
- {
-  "agent_id": "a-076",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 112,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.11€",
-  "ts": "2026-10-03T04:19:20.274Z"
- },
- {
-  "agent_id": "a-060",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 50,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.22€",
-  "ts": "2026-10-03T04:19:20.272Z"
- },
- {
-  "agent_id": "a-060",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 80,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.22€",
-  "ts": "2026-10-03T04:19:20.272Z"
- },
- {
-  "agent_id": "a-056",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 56,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.23€",
-  "ts": "2026-10-03T04:19:20.271Z"
- },
- {
-  "agent_id": "a-056",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 112,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.23€",
-  "ts": "2026-10-03T04:19:20.269Z"
- },
- {
-  "agent_id": "a-094",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 68,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.05€",
-  "ts": "2026-10-03T04:19:18.284Z"
- },
- {
-  "agent_id": "a-094",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 136,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.05€",
-  "ts": "2026-10-03T04:19:18.283Z"
- },
- {
-  "agent_id": "a-082",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 44,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.16€",
-  "ts": "2026-10-03T04:19:18.280Z"
- },
- {
-  "agent_id": "a-082",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 88,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.16€",
-  "ts": "2026-10-03T04:19:18.276Z"
- },
- {
-  "agent_id": "a-077",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 44,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.21€",
-  "ts": "2026-10-03T04:19:18.275Z"
- },
- {
-  "agent_id": "a-077",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 88,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.21€",
-  "ts": "2026-10-03T04:19:18.275Z"
- },
- {
-  "agent_id": "a-076",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 52,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.14€",
-  "ts": "2026-10-03T04:19:18.275Z"
- },
- {
-  "agent_id": "a-076",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 104,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.14€",
-  "ts": "2026-10-03T04:19:18.274Z"
- },
- {
-  "agent_id": "a-074",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 52,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.16€",
-  "ts": "2026-10-03T04:19:18.274Z"
- },
- {
-  "agent_id": "a-074",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 104,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.16€",
-  "ts": "2026-10-03T04:19:18.273Z"
- },
- {
-  "agent_id": "a-046",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 56,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.15€",
-  "ts": "2026-10-03T04:19:18.273Z"
- },
- {
-  "agent_id": "a-046",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 112,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.15€",
-  "ts": "2026-10-03T04:19:18.272Z"
- },
- {
-  "agent_id": "a-015",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 550,
-  "level": 6,
-  "note": "LONG BTC TP +0.7% PnL 0.48€",
-  "ts": "2026-10-03T04:19:18.272Z"
- },
- {
-  "agent_id": "a-015",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 307,
-  "level": 4,
-  "note": "LONG BTC TP +0.7% PnL 0.48€",
-  "ts": "2026-10-03T04:19:18.271Z"
- },
- {
-  "agent_id": "a-181",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 64,
-  "level": 1,
-  "note": "LONG LINK TP +0.7% PnL 0.14€",
-  "ts": "2026-10-03T04:19:18.268Z"
- },
- {
-  "agent_id": "a-181",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 128,
-  "level": 2,
-  "note": "LONG LINK TP +0.7% PnL 0.14€",
-  "ts": "2026-10-03T04:19:18.267Z"
- },
- {
-  "agent_id": "a-171",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 92,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.06€",
-  "ts": "2026-10-03T04:19:16.269Z"
- },
- {
-  "agent_id": "a-171",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 104,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.06€",
-  "ts": "2026-10-03T04:19:16.269Z"
- },
- {
-  "agent_id": "a-168",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 82,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.17€",
-  "ts": "2026-10-03T04:19:16.268Z"
- },
- {
-  "agent_id": "a-168",
+  "agent_id": "a-142",
   "subject": "tecnico",
   "xp": 8,
   "total": 107,
   "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.17€",
-  "ts": "2026-10-03T04:19:16.268Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:26:13.202Z"
  },
  {
-  "agent_id": "a-139",
+  "agent_id": "a-133",
   "subject": "riesgo",
   "xp": 4,
-  "total": 90,
+  "total": 58,
   "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.15€",
-  "ts": "2026-10-03T04:19:16.267Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.11€",
+  "ts": "2026-10-03T06:26:13.201Z"
  },
  {
-  "agent_id": "a-139",
+  "agent_id": "a-133",
   "subject": "tecnico",
   "xp": 8,
-  "total": 120,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.15€",
-  "ts": "2026-10-03T04:19:16.267Z"
+  "total": 98,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.11€",
+  "ts": "2026-10-03T06:26:13.201Z"
  },
  {
-  "agent_id": "a-094",
+  "agent_id": "a-130",
   "subject": "riesgo",
   "xp": 4,
+  "total": 72,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.04€",
+  "ts": "2026-10-03T06:26:13.200Z"
+ },
+ {
+  "agent_id": "a-130",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 104,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.04€",
+  "ts": "2026-10-03T06:26:13.200Z"
+ },
+ {
+  "agent_id": "a-118",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 62,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.17€",
+  "ts": "2026-10-03T06:26:13.199Z"
+ },
+ {
+  "agent_id": "a-118",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 104,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.17€",
+  "ts": "2026-10-03T06:26:13.198Z"
+ },
+ {
+  "agent_id": "a-067",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 36,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.12€",
+  "ts": "2026-10-03T06:26:13.198Z"
+ },
+ {
+  "agent_id": "a-067",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 72,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.12€",
+  "ts": "2026-10-03T06:26:13.197Z"
+ },
+ {
+  "agent_id": "a-107",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 88,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.12€",
+  "ts": "2026-10-03T06:26:13.197Z"
+ },
+ {
+  "agent_id": "a-107",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 97,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.12€",
+  "ts": "2026-10-03T06:26:13.196Z"
+ },
+ {
+  "agent_id": "a-067",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 32,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.13€",
+  "ts": "2026-10-03T06:26:11.195Z"
+ },
+ {
+  "agent_id": "a-067",
+  "subject": "tecnico",
+  "xp": 8,
   "total": 64,
   "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.07€",
-  "ts": "2026-10-03T04:19:16.267Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.13€",
+  "ts": "2026-10-03T06:26:11.194Z"
  },
  {
-  "agent_id": "a-094",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 128,
-  "level": 2,
-  "note": "LONG SOL TP +0.7% PnL 0.07€",
-  "ts": "2026-10-03T04:19:16.266Z"
- },
- {
-  "agent_id": "a-074",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 48,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.22€",
-  "ts": "2026-10-03T04:19:16.266Z"
- },
- {
-  "agent_id": "a-074",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 96,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.22€",
-  "ts": "2026-10-03T04:19:16.265Z"
- },
- {
-  "agent_id": "a-015",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 246,
-  "level": 3,
-  "note": "SHORT ETH SL -0.35% PnL -0.41€",
-  "ts": "2026-10-03T04:19:12.263Z"
- },
- {
-  "agent_id": "a-015",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 546,
-  "level": 6,
-  "note": "SHORT ETH SL -0.35% PnL -0.41€",
-  "ts": "2026-10-03T04:19:12.262Z"
- },
- {
-  "agent_id": "a-181",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 60,
-  "level": 1,
-  "note": "LONG LINK TP +0.7% PnL 0.2€",
-  "ts": "2026-10-03T04:19:12.262Z"
- },
- {
-  "agent_id": "a-181",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 120,
-  "level": 2,
-  "note": "LONG LINK TP +0.7% PnL 0.2€",
-  "ts": "2026-10-03T04:19:12.261Z"
- },
- {
-  "agent_id": "a-015",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 536,
-  "level": 6,
-  "note": "LONG BTC timeout PnL 0.04€",
-  "ts": "2026-10-03T04:19:08.258Z"
- },
- {
-  "agent_id": "a-015",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 299,
-  "level": 3,
-  "note": "LONG BTC timeout PnL 0.04€",
-  "ts": "2026-10-03T04:19:08.258Z"
- },
- {
-  "agent_id": "a-184",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 6,
-  "level": 1,
-  "note": "LONG DOGE SL -0.35% PnL -0.22€",
-  "ts": "2026-10-03T04:18:58.246Z"
- },
- {
-  "agent_id": "a-184",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 34,
-  "level": 1,
-  "note": "LONG DOGE SL -0.35% PnL -0.22€",
-  "ts": "2026-10-03T04:18:58.245Z"
- },
- {
-  "agent_id": "a-002",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 150,
-  "level": 2,
-  "note": "SHORT BTC SL -0.35% PnL -1.23€",
-  "ts": "2026-10-03T04:18:44.231Z"
- },
- {
-  "agent_id": "a-002",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 278,
-  "level": 3,
-  "note": "SHORT BTC SL -0.35% PnL -1.23€",
-  "ts": "2026-10-03T04:18:44.230Z"
- },
- {
-  "agent_id": "a-162",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 96,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.21€",
-  "ts": "2026-10-03T04:18:36.226Z"
- },
- {
-  "agent_id": "a-162",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 112,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.21€",
-  "ts": "2026-10-03T04:18:36.226Z"
- },
- {
-  "agent_id": "a-156",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 102,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.11€",
-  "ts": "2026-10-03T04:18:36.225Z"
- },
- {
-  "agent_id": "a-156",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 104,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.11€",
-  "ts": "2026-10-03T04:18:36.225Z"
- },
- {
-  "agent_id": "a-149",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 96,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.05€",
-  "ts": "2026-10-03T04:18:36.224Z"
- },
- {
-  "agent_id": "a-149",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 112,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.05€",
-  "ts": "2026-10-03T04:18:36.224Z"
- },
- {
-  "agent_id": "a-162",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 92,
-  "level": 1,
-  "note": "LONG XRP TP +0.7% PnL 0.18€",
-  "ts": "2026-10-03T04:18:30.221Z"
- },
- {
-  "agent_id": "a-162",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 104,
-  "level": 2,
-  "note": "LONG XRP TP +0.7% PnL 0.18€",
-  "ts": "2026-10-03T04:18:30.221Z"
- },
- {
-  "agent_id": "a-181",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 56,
-  "level": 1,
-  "note": "LONG LINK TP +0.7% PnL 0.21€",
-  "ts": "2026-10-03T02:19:54.060Z"
- },
- {
-  "agent_id": "a-181",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 112,
-  "level": 2,
-  "note": "LONG LINK TP +0.7% PnL 0.21€",
-  "ts": "2026-10-03T02:19:54.059Z"
- },
- {
-  "agent_id": "a-179",
+  "agent_id": "a-133",
   "subject": "riesgo",
   "xp": 4,
   "total": 54,
   "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.14€",
-  "ts": "2026-10-03T02:19:54.058Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.11€",
+  "ts": "2026-10-03T06:26:09.198Z"
  },
  {
-  "agent_id": "a-179",
+  "agent_id": "a-133",
   "subject": "tecnico",
   "xp": 8,
-  "total": 88,
+  "total": 90,
   "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.14€",
-  "ts": "2026-10-03T02:19:54.058Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.11€",
+  "ts": "2026-10-03T06:26:09.198Z"
  },
  {
-  "agent_id": "a-015",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 240,
-  "level": 3,
-  "note": "SHORT BTC SL -0.35% PnL -0.44€",
-  "ts": "2026-10-03T02:19:52.058Z"
- },
- {
-  "agent_id": "a-015",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 532,
-  "level": 6,
-  "note": "SHORT BTC SL -0.35% PnL -0.44€",
-  "ts": "2026-10-03T02:19:52.058Z"
- },
- {
-  "agent_id": "a-184",
+  "agent_id": "a-130",
   "subject": "riesgo",
   "xp": 4,
-  "total": 24,
+  "total": 68,
   "level": 1,
-  "note": "LONG DOGE TP +0.7% PnL 0.25€",
-  "ts": "2026-10-03T02:19:52.057Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.05€",
+  "ts": "2026-10-03T06:26:09.197Z"
  },
  {
-  "agent_id": "a-184",
+  "agent_id": "a-130",
   "subject": "tecnico",
   "xp": 8,
-  "total": 48,
+  "total": 96,
   "level": 1,
-  "note": "LONG DOGE TP +0.7% PnL 0.25€",
-  "ts": "2026-10-03T02:19:52.057Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.05€",
+  "ts": "2026-10-03T06:26:09.197Z"
  },
  {
-  "agent_id": "a-181",
+  "agent_id": "a-118",
   "subject": "riesgo",
   "xp": 4,
-  "total": 52,
+  "total": 58,
   "level": 1,
-  "note": "LONG LINK TP +0.7% PnL 0.21€",
-  "ts": "2026-10-03T02:19:52.056Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:26:09.196Z"
  },
  {
-  "agent_id": "a-181",
+  "agent_id": "a-118",
   "subject": "tecnico",
   "xp": 8,
-  "total": 104,
+  "total": 96,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:26:09.195Z"
+ },
+ {
+  "agent_id": "a-069",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 66,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.2€",
+  "ts": "2026-10-03T06:26:09.195Z"
+ },
+ {
+  "agent_id": "a-069",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 112,
   "level": 2,
-  "note": "LONG LINK TP +0.7% PnL 0.21€",
-  "ts": "2026-10-03T02:19:52.055Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.2€",
+  "ts": "2026-10-03T06:26:09.194Z"
+ },
+ {
+  "agent_id": "a-066",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 66,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:26:09.194Z"
+ },
+ {
+  "agent_id": "a-066",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 112,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:26:09.193Z"
+ },
+ {
+  "agent_id": "a-065",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 68,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:26:09.192Z"
+ },
+ {
+  "agent_id": "a-065",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 96,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:26:09.192Z"
  },
  {
   "agent_id": "a-015",
   "subject": "riesgo",
   "xp": 4,
-  "total": 522,
-  "level": 6,
-  "note": "LONG ETH TP +0.7% PnL 0.68€",
-  "ts": "2026-10-03T02:19:50.055Z"
+  "total": 658,
+  "level": 7,
+  "note": "LONG ETH TP +0.7% PnL 0.69€",
+  "ts": "2026-10-03T06:26:07.191Z"
  },
  {
   "agent_id": "a-015",
   "subject": "tecnico",
   "xp": 9,
-  "total": 291,
-  "level": 3,
-  "note": "LONG ETH TP +0.7% PnL 0.68€",
-  "ts": "2026-10-03T02:19:50.054Z"
+  "total": 415,
+  "level": 5,
+  "note": "LONG ETH TP +0.7% PnL 0.69€",
+  "ts": "2026-10-03T06:26:07.190Z"
  },
  {
-  "agent_id": "a-184",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 20,
-  "level": 1,
-  "note": "LONG DOGE TP +0.7% PnL 0.16€",
-  "ts": "2026-10-03T02:19:48.055Z"
- },
- {
-  "agent_id": "a-184",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 40,
-  "level": 1,
-  "note": "LONG DOGE TP +0.7% PnL 0.16€",
-  "ts": "2026-10-03T02:19:48.054Z"
- },
- {
-  "agent_id": "a-171",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 88,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.05€",
-  "ts": "2026-10-03T02:19:48.053Z"
- },
- {
-  "agent_id": "a-171",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 96,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.05€",
-  "ts": "2026-10-03T02:19:48.053Z"
- },
- {
-  "agent_id": "a-181",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 48,
-  "level": 1,
-  "note": "LONG LINK TP +0.7% PnL 0.1€",
-  "ts": "2026-10-03T02:19:48.052Z"
- },
- {
-  "agent_id": "a-181",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 96,
-  "level": 1,
-  "note": "LONG LINK TP +0.7% PnL 0.1€",
-  "ts": "2026-10-03T02:19:48.051Z"
- },
- {
-  "agent_id": "a-171",
+  "agent_id": "a-107",
   "subject": "riesgo",
   "xp": 4,
   "total": 84,
   "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.06€",
-  "ts": "2026-10-03T02:19:46.049Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.16€",
+  "ts": "2026-10-03T06:26:05.188Z"
  },
  {
-  "agent_id": "a-171",
+  "agent_id": "a-107",
   "subject": "tecnico",
   "xp": 8,
-  "total": 88,
+  "total": 89,
   "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.06€",
-  "ts": "2026-10-03T02:19:46.049Z"
- },
- {
-  "agent_id": "a-184",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 16,
-  "level": 1,
-  "note": "LONG DOGE TP +0.7% PnL 0.15€",
-  "ts": "2026-10-03T02:19:44.050Z"
- },
- {
-  "agent_id": "a-184",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 32,
-  "level": 1,
-  "note": "LONG DOGE TP +0.7% PnL 0.15€",
-  "ts": "2026-10-03T02:19:44.049Z"
- },
- {
-  "agent_id": "a-179",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 50,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.16€",
-  "ts": "2026-10-03T02:19:44.049Z"
- },
- {
-  "agent_id": "a-179",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 80,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.16€",
-  "ts": "2026-10-03T02:19:44.048Z"
- },
- {
-  "agent_id": "a-171",
-  "subject": "riesgo",
-  "xp": 4,
-  "total": 80,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.09€",
-  "ts": "2026-10-03T02:19:44.047Z"
- },
- {
-  "agent_id": "a-171",
-  "subject": "tecnico",
-  "xp": 8,
-  "total": 80,
-  "level": 1,
-  "note": "LONG SOL TP +0.7% PnL 0.09€",
-  "ts": "2026-10-03T02:19:44.046Z"
+  "note": "LONG DOGE TP +0.7% PnL 0.16€",
+  "ts": "2026-10-03T06:26:05.187Z"
  },
  {
   "agent_id": "a-015",
   "subject": "riesgo",
   "xp": 4,
-  "total": 518,
-  "level": 6,
-  "note": "LONG ETH TP +0.7% PnL 0.64€",
-  "ts": "2026-10-03T02:19:42.044Z"
+  "total": 654,
+  "level": 7,
+  "note": "LONG ETH TP +0.7% PnL 0.63€",
+  "ts": "2026-10-03T06:26:03.195Z"
  },
  {
   "agent_id": "a-015",
   "subject": "tecnico",
   "xp": 9,
-  "total": 282,
-  "level": 3,
-  "note": "LONG ETH TP +0.7% PnL 0.64€",
-  "ts": "2026-10-03T02:19:42.043Z"
+  "total": 406,
+  "level": 5,
+  "note": "LONG ETH TP +0.7% PnL 0.63€",
+  "ts": "2026-10-03T06:26:03.195Z"
  },
  {
-  "agent_id": "a-015",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 234,
-  "level": 3,
-  "note": "SHORT ETH SL -0.35% PnL -0.5€",
-  "ts": "2026-10-03T02:19:38.039Z"
- },
- {
-  "agent_id": "a-015",
+  "agent_id": "a-179",
   "subject": "riesgo",
-  "xp": 10,
-  "total": 514,
-  "level": 6,
-  "note": "SHORT ETH SL -0.35% PnL -0.5€",
-  "ts": "2026-10-03T02:19:38.039Z"
- },
- {
-  "agent_id": "a-174",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 30,
-  "level": 1,
-  "note": "SHORT DOGE SL -0.35% PnL -0.13€",
-  "ts": "2026-10-03T02:19:34.035Z"
- },
- {
-  "agent_id": "a-174",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 98,
-  "level": 1,
-  "note": "SHORT DOGE SL -0.35% PnL -0.13€",
-  "ts": "2026-10-03T02:19:34.034Z"
- },
- {
-  "agent_id": "a-167",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 30,
-  "level": 1,
-  "note": "SHORT DOGE SL -0.35% PnL -0.12€",
-  "ts": "2026-10-03T02:19:34.034Z"
- },
- {
-  "agent_id": "a-167",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 102,
-  "level": 2,
-  "note": "SHORT DOGE SL -0.35% PnL -0.12€",
-  "ts": "2026-10-03T02:19:34.033Z"
- },
- {
-  "agent_id": "a-167",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 24,
-  "level": 1,
-  "note": "SHORT DOGE SL -0.35% PnL -0.17€",
-  "ts": "2026-10-03T02:19:30.037Z"
- },
- {
-  "agent_id": "a-167",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 92,
-  "level": 1,
-  "note": "SHORT DOGE SL -0.35% PnL -0.17€",
-  "ts": "2026-10-03T02:19:30.037Z"
- },
- {
-  "agent_id": "a-174",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 24,
-  "level": 1,
-  "note": "SHORT DOGE SL -0.35% PnL -0.11€",
-  "ts": "2026-10-03T02:19:30.036Z"
- },
- {
-  "agent_id": "a-174",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 88,
-  "level": 1,
-  "note": "SHORT DOGE SL -0.35% PnL -0.11€",
-  "ts": "2026-10-03T02:19:30.035Z"
- },
- {
-  "agent_id": "a-167",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 18,
-  "level": 1,
-  "note": "SHORT DOGE SL -0.35% PnL -0.12€",
-  "ts": "2026-10-03T02:19:30.035Z"
- },
- {
-  "agent_id": "a-167",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 82,
-  "level": 1,
-  "note": "SHORT DOGE SL -0.35% PnL -0.12€",
-  "ts": "2026-10-03T02:19:30.034Z"
- },
- {
-  "agent_id": "a-160",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 24,
-  "level": 1,
-  "note": "SHORT DOGE SL -0.35% PnL -0.12€",
-  "ts": "2026-10-03T02:19:30.034Z"
- },
- {
-  "agent_id": "a-160",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 96,
-  "level": 1,
-  "note": "SHORT DOGE SL -0.35% PnL -0.12€",
-  "ts": "2026-10-03T02:19:30.033Z"
- },
- {
-  "agent_id": "a-155",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 18,
-  "level": 1,
-  "note": "SHORT DOGE SL -0.35% PnL -0.11€",
-  "ts": "2026-10-03T02:19:30.033Z"
- },
- {
-  "agent_id": "a-155",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 82,
-  "level": 1,
-  "note": "SHORT DOGE SL -0.35% PnL -0.11€",
-  "ts": "2026-10-03T02:19:30.032Z"
- },
- {
-  "agent_id": "a-002",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 144,
-  "level": 2,
-  "note": "SHORT BTC SL -0.35% PnL -1.16€",
-  "ts": "2026-10-03T02:19:30.031Z"
- },
- {
-  "agent_id": "a-002",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 268,
-  "level": 3,
-  "note": "SHORT BTC SL -0.35% PnL -1.16€",
-  "ts": "2026-10-03T02:19:30.030Z"
- },
- {
-  "agent_id": "a-154",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 12,
-  "level": 1,
-  "note": "SHORT DOGE SL -0.35% PnL -0.2€",
-  "ts": "2026-10-03T02:19:30.030Z"
- },
- {
-  "agent_id": "a-154",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 76,
-  "level": 1,
-  "note": "SHORT DOGE SL -0.35% PnL -0.2€",
-  "ts": "2026-10-03T02:19:30.029Z"
- },
- {
-  "agent_id": "a-130",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 12,
-  "level": 1,
-  "note": "SHORT DOGE SL -0.35% PnL -0.07€",
-  "ts": "2026-10-03T02:19:30.028Z"
- },
- {
-  "agent_id": "a-130",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 64,
-  "level": 1,
-  "note": "SHORT DOGE SL -0.35% PnL -0.07€",
-  "ts": "2026-10-03T02:19:30.028Z"
- },
- {
-  "agent_id": "a-015",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 228,
-  "level": 3,
-  "note": "SHORT ETH SL -0.35% PnL -0.33€",
-  "ts": "2026-10-03T02:19:28.025Z"
- },
- {
-  "agent_id": "a-015",
-  "subject": "riesgo",
-  "xp": 10,
-  "total": 504,
-  "level": 6,
-  "note": "SHORT ETH SL -0.35% PnL -0.33€",
-  "ts": "2026-10-03T02:19:28.025Z"
- },
- {
-  "agent_id": "a-168",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 18,
-  "level": 1,
-  "note": "SHORT SOL SL -0.35% PnL -0.12€",
-  "ts": "2026-10-03T02:19:26.032Z"
- },
- {
-  "agent_id": "a-168",
-  "subject": "riesgo",
-  "xp": 10,
+  "xp": 4,
   "total": 78,
   "level": 1,
-  "note": "SHORT SOL SL -0.35% PnL -0.12€",
-  "ts": "2026-10-03T02:19:26.031Z"
+  "note": "LONG SOL TP +0.7% PnL 0.24€",
+  "ts": "2026-10-03T06:26:03.194Z"
  },
  {
-  "agent_id": "a-147",
+  "agent_id": "a-179",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 136,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.24€",
+  "ts": "2026-10-03T06:26:03.194Z"
+ },
+ {
+  "agent_id": "a-171",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 108,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.1€",
+  "ts": "2026-10-03T06:26:03.193Z"
+ },
+ {
+  "agent_id": "a-171",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 136,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.1€",
+  "ts": "2026-10-03T06:26:03.192Z"
+ },
+ {
+  "agent_id": "a-118",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 54,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.12€",
+  "ts": "2026-10-03T06:26:03.192Z"
+ },
+ {
+  "agent_id": "a-118",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 88,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.12€",
+  "ts": "2026-10-03T06:26:03.191Z"
+ },
+ {
+  "agent_id": "a-107",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 80,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.11€",
+  "ts": "2026-10-03T06:26:03.191Z"
+ },
+ {
+  "agent_id": "a-107",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 81,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.11€",
+  "ts": "2026-10-03T06:26:03.190Z"
+ },
+ {
+  "agent_id": "a-069",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 62,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.24€",
+  "ts": "2026-10-03T06:26:03.190Z"
+ },
+ {
+  "agent_id": "a-069",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 104,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.24€",
+  "ts": "2026-10-03T06:26:03.189Z"
+ },
+ {
+  "agent_id": "a-067",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 28,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:26:03.188Z"
+ },
+ {
+  "agent_id": "a-067",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 56,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:26:03.188Z"
+ },
+ {
+  "agent_id": "a-066",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 62,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.22€",
+  "ts": "2026-10-03T06:26:03.187Z"
+ },
+ {
+  "agent_id": "a-066",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 104,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.22€",
+  "ts": "2026-10-03T06:26:03.187Z"
+ },
+ {
+  "agent_id": "a-022",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 74,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.14€",
+  "ts": "2026-10-03T06:26:03.186Z"
+ },
+ {
+  "agent_id": "a-022",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 130,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.14€",
+  "ts": "2026-10-03T06:26:03.186Z"
+ },
+ {
+  "agent_id": "a-015",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 650,
+  "level": 7,
+  "note": "LONG ETH TP +0.7% PnL 0.97€",
+  "ts": "2026-10-03T06:25:59.183Z"
+ },
+ {
+  "agent_id": "a-015",
+  "subject": "tecnico",
+  "xp": 9,
+  "total": 397,
+  "level": 4,
+  "note": "LONG ETH TP +0.7% PnL 0.97€",
+  "ts": "2026-10-03T06:25:59.182Z"
+ },
+ {
+  "agent_id": "a-065",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 64,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.18€",
+  "ts": "2026-10-03T06:25:57.190Z"
+ },
+ {
+  "agent_id": "a-065",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 88,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.18€",
+  "ts": "2026-10-03T06:25:57.189Z"
+ },
+ {
+  "agent_id": "a-064",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 54,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.22€",
+  "ts": "2026-10-03T06:25:57.188Z"
+ },
+ {
+  "agent_id": "a-064",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 90,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.22€",
+  "ts": "2026-10-03T06:25:57.188Z"
+ },
+ {
+  "agent_id": "a-054",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 68,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.14€",
+  "ts": "2026-10-03T06:25:57.187Z"
+ },
+ {
+  "agent_id": "a-054",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 136,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.14€",
+  "ts": "2026-10-03T06:25:57.186Z"
+ },
+ {
+  "agent_id": "a-052",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 68,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.15€",
+  "ts": "2026-10-03T06:25:57.185Z"
+ },
+ {
+  "agent_id": "a-052",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 136,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.15€",
+  "ts": "2026-10-03T06:25:57.184Z"
+ },
+ {
+  "agent_id": "a-035",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 74,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.22€",
+  "ts": "2026-10-03T06:25:57.184Z"
+ },
+ {
+  "agent_id": "a-035",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 130,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.22€",
+  "ts": "2026-10-03T06:25:57.183Z"
+ },
+ {
+  "agent_id": "a-022",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 70,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:25:57.182Z"
+ },
+ {
+  "agent_id": "a-022",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 122,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:25:57.181Z"
+ },
+ {
+  "agent_id": "a-162",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 120,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.2€",
+  "ts": "2026-10-03T06:25:53.185Z"
+ },
+ {
+  "agent_id": "a-162",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 160,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.2€",
+  "ts": "2026-10-03T06:25:53.182Z"
+ },
+ {
+  "agent_id": "a-162",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 116,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.25€",
+  "ts": "2026-10-03T06:25:53.182Z"
+ },
+ {
+  "agent_id": "a-162",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 152,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.25€",
+  "ts": "2026-10-03T06:25:53.181Z"
+ },
+ {
+  "agent_id": "a-149",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 120,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.06€",
+  "ts": "2026-10-03T06:25:53.181Z"
+ },
+ {
+  "agent_id": "a-149",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 160,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.06€",
+  "ts": "2026-10-03T06:25:53.180Z"
+ },
+ {
+  "agent_id": "a-162",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 112,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.25€",
+  "ts": "2026-10-03T06:25:53.179Z"
+ },
+ {
+  "agent_id": "a-162",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 144,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.25€",
+  "ts": "2026-10-03T06:25:53.179Z"
+ },
+ {
+  "agent_id": "a-156",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 126,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.27€",
+  "ts": "2026-10-03T06:25:53.178Z"
+ },
+ {
+  "agent_id": "a-156",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 152,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.27€",
+  "ts": "2026-10-03T06:25:53.178Z"
+ },
+ {
+  "agent_id": "a-149",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 116,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.04€",
+  "ts": "2026-10-03T06:25:53.177Z"
+ },
+ {
+  "agent_id": "a-149",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 152,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.04€",
+  "ts": "2026-10-03T06:25:53.176Z"
+ },
+ {
+  "agent_id": "a-179",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 74,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.19€",
+  "ts": "2026-10-03T06:25:49.187Z"
+ },
+ {
+  "agent_id": "a-179",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 128,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.19€",
+  "ts": "2026-10-03T06:25:49.187Z"
+ },
+ {
+  "agent_id": "a-171",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 104,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.05€",
+  "ts": "2026-10-03T06:25:49.185Z"
+ },
+ {
+  "agent_id": "a-171",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 128,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.05€",
+  "ts": "2026-10-03T06:25:49.184Z"
+ },
+ {
+  "agent_id": "a-168",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 102,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.24€",
+  "ts": "2026-10-03T06:25:49.183Z"
+ },
+ {
+  "agent_id": "a-168",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 147,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.24€",
+  "ts": "2026-10-03T06:25:49.182Z"
+ },
+ {
+  "agent_id": "a-124",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 94,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.16€",
+  "ts": "2026-10-03T06:25:49.180Z"
+ },
+ {
+  "agent_id": "a-124",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 168,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.16€",
+  "ts": "2026-10-03T06:25:49.180Z"
+ },
+ {
+  "agent_id": "a-139",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 106,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.24€",
+  "ts": "2026-10-03T06:25:49.178Z"
+ },
+ {
+  "agent_id": "a-139",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 152,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.24€",
+  "ts": "2026-10-03T06:25:49.177Z"
+ },
+ {
+  "agent_id": "a-125",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 104,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.24€",
+  "ts": "2026-10-03T06:25:49.175Z"
+ },
+ {
+  "agent_id": "a-125",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 168,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.24€",
+  "ts": "2026-10-03T06:25:49.174Z"
+ },
+ {
+  "agent_id": "a-124",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 90,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.18€",
+  "ts": "2026-10-03T06:25:49.173Z"
+ },
+ {
+  "agent_id": "a-124",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 160,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.18€",
+  "ts": "2026-10-03T06:25:49.171Z"
+ },
+ {
+  "agent_id": "a-002",
   "subject": "psicologia",
   "xp": 6,
-  "total": 18,
-  "level": 1,
-  "note": "SHORT SOL SL -0.35% PnL -0.17€",
-  "ts": "2026-10-03T02:19:26.031Z"
+  "total": 156,
+  "level": 2,
+  "note": "SHORT BTC SL -0.35% PnL -1.19€",
+  "ts": "2026-10-03T06:25:47.173Z"
+ },
+ {
+  "agent_id": "a-002",
+  "subject": "riesgo",
+  "xp": 10,
+  "total": 288,
+  "level": 3,
+  "note": "SHORT BTC SL -0.35% PnL -1.19€",
+  "ts": "2026-10-03T06:25:47.173Z"
+ },
+ {
+  "agent_id": "a-015",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 646,
+  "level": 7,
+  "note": "LONG BTC TP +0.7% PnL 0.54€",
+  "ts": "2026-10-03T06:25:47.172Z"
+ },
+ {
+  "agent_id": "a-015",
+  "subject": "tecnico",
+  "xp": 9,
+  "total": 388,
+  "level": 4,
+  "note": "LONG BTC TP +0.7% PnL 0.54€",
+  "ts": "2026-10-03T06:25:47.171Z"
  },
  {
   "agent_id": "a-147",
   "subject": "riesgo",
-  "xp": 10,
-  "total": 82,
-  "level": 1,
-  "note": "SHORT SOL SL -0.35% PnL -0.17€",
-  "ts": "2026-10-03T02:19:26.030Z"
+  "xp": 4,
+  "total": 106,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.27€",
+  "ts": "2026-10-03T06:25:47.171Z"
  },
  {
-  "agent_id": "a-139",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 18,
-  "level": 1,
-  "note": "SHORT SOL SL -0.35% PnL -0.18€",
-  "ts": "2026-10-03T02:19:26.030Z"
+  "agent_id": "a-147",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 155,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.27€",
+  "ts": "2026-10-03T06:25:47.170Z"
  },
  {
   "agent_id": "a-139",
   "subject": "riesgo",
-  "xp": 10,
+  "xp": 4,
+  "total": 102,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.24€",
+  "ts": "2026-10-03T06:25:47.170Z"
+ },
+ {
+  "agent_id": "a-139",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 144,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.24€",
+  "ts": "2026-10-03T06:25:47.169Z"
+ },
+ {
+  "agent_id": "a-125",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 100,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.19€",
+  "ts": "2026-10-03T06:25:47.168Z"
+ },
+ {
+  "agent_id": "a-125",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 160,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.19€",
+  "ts": "2026-10-03T06:25:47.168Z"
+ },
+ {
+  "agent_id": "a-124",
+  "subject": "riesgo",
+  "xp": 4,
   "total": 86,
   "level": 1,
-  "note": "SHORT SOL SL -0.35% PnL -0.18€",
-  "ts": "2026-10-03T02:19:26.029Z"
+  "note": "LONG SOL TP +0.7% PnL 0.17€",
+  "ts": "2026-10-03T06:25:47.167Z"
  },
  {
-  "agent_id": "a-147",
-  "subject": "psicologia",
-  "xp": 6,
-  "total": 12,
-  "level": 1,
-  "note": "SHORT SOL SL -0.35% PnL -0.12€",
-  "ts": "2026-10-03T02:19:26.029Z"
+  "agent_id": "a-124",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 152,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.17€",
+  "ts": "2026-10-03T06:25:47.166Z"
  },
  {
-  "agent_id": "a-147",
+  "agent_id": "a-069",
   "subject": "riesgo",
-  "xp": 10,
+  "xp": 4,
+  "total": 58,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.15€",
+  "ts": "2026-10-03T06:25:45.172Z"
+ },
+ {
+  "agent_id": "a-069",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 96,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.15€",
+  "ts": "2026-10-03T06:25:45.172Z"
+ },
+ {
+  "agent_id": "a-064",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 50,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.25€",
+  "ts": "2026-10-03T06:25:45.171Z"
+ },
+ {
+  "agent_id": "a-064",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 82,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.25€",
+  "ts": "2026-10-03T06:25:45.170Z"
+ },
+ {
+  "agent_id": "a-054",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 64,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.11€",
+  "ts": "2026-10-03T06:25:45.170Z"
+ },
+ {
+  "agent_id": "a-054",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 128,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.11€",
+  "ts": "2026-10-03T06:25:45.169Z"
+ },
+ {
+  "agent_id": "a-052",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 64,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.17€",
+  "ts": "2026-10-03T06:25:45.168Z"
+ },
+ {
+  "agent_id": "a-052",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 128,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.17€",
+  "ts": "2026-10-03T06:25:45.168Z"
+ },
+ {
+  "agent_id": "a-035",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 70,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.26€",
+  "ts": "2026-10-03T06:25:45.167Z"
+ },
+ {
+  "agent_id": "a-035",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 122,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.26€",
+  "ts": "2026-10-03T06:25:45.166Z"
+ },
+ {
+  "agent_id": "a-022",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 66,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.2€",
+  "ts": "2026-10-03T06:25:45.166Z"
+ },
+ {
+  "agent_id": "a-022",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 114,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.2€",
+  "ts": "2026-10-03T06:25:45.165Z"
+ },
+ {
+  "agent_id": "a-123",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 86,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.15€",
+  "ts": "2026-10-03T06:25:45.164Z"
+ },
+ {
+  "agent_id": "a-123",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 154,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.15€",
+  "ts": "2026-10-03T06:25:45.164Z"
+ },
+ {
+  "agent_id": "a-066",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 58,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.19€",
+  "ts": "2026-10-03T06:25:43.169Z"
+ },
+ {
+  "agent_id": "a-066",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 96,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.19€",
+  "ts": "2026-10-03T06:25:43.169Z"
+ },
+ {
+  "agent_id": "a-065",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 60,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:25:43.168Z"
+ },
+ {
+  "agent_id": "a-065",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 80,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:25:43.168Z"
+ },
+ {
+  "agent_id": "a-064",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 46,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:25:43.167Z"
+ },
+ {
+  "agent_id": "a-064",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 74,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:25:43.167Z"
+ },
+ {
+  "agent_id": "a-054",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 60,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.18€",
+  "ts": "2026-10-03T06:25:43.166Z"
+ },
+ {
+  "agent_id": "a-054",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 120,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.18€",
+  "ts": "2026-10-03T06:25:43.165Z"
+ },
+ {
+  "agent_id": "a-052",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 60,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.2€",
+  "ts": "2026-10-03T06:25:43.165Z"
+ },
+ {
+  "agent_id": "a-052",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 120,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.2€",
+  "ts": "2026-10-03T06:25:43.164Z"
+ },
+ {
+  "agent_id": "a-035",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 66,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.19€",
+  "ts": "2026-10-03T06:25:43.164Z"
+ },
+ {
+  "agent_id": "a-035",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 114,
+  "level": 2,
+  "note": "LONG DOGE TP +0.7% PnL 0.19€",
+  "ts": "2026-10-03T06:25:43.163Z"
+ },
+ {
+  "agent_id": "a-015",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 642,
+  "level": 7,
+  "note": "LONG ETH TP +0.7% PnL 0.83€",
+  "ts": "2026-10-03T06:25:39.170Z"
+ },
+ {
+  "agent_id": "a-015",
+  "subject": "tecnico",
+  "xp": 9,
+  "total": 379,
+  "level": 4,
+  "note": "LONG ETH TP +0.7% PnL 0.83€",
+  "ts": "2026-10-03T06:25:39.170Z"
+ },
+ {
+  "agent_id": "a-156",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 122,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.13€",
+  "ts": "2026-10-03T06:25:39.169Z"
+ },
+ {
+  "agent_id": "a-156",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 144,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.13€",
+  "ts": "2026-10-03T06:25:39.169Z"
+ },
+ {
+  "agent_id": "a-149",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 112,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.08€",
+  "ts": "2026-10-03T06:25:39.168Z"
+ },
+ {
+  "agent_id": "a-149",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 144,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.08€",
+  "ts": "2026-10-03T06:25:39.168Z"
+ },
+ {
+  "agent_id": "a-138",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 106,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.06€",
+  "ts": "2026-10-03T06:25:39.167Z"
+ },
+ {
+  "agent_id": "a-138",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 152,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.06€",
+  "ts": "2026-10-03T06:25:39.165Z"
+ },
+ {
+  "agent_id": "a-123",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 82,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.19€",
+  "ts": "2026-10-03T06:25:39.164Z"
+ },
+ {
+  "agent_id": "a-123",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 146,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.19€",
+  "ts": "2026-10-03T06:25:39.163Z"
+ },
+ {
+  "agent_id": "a-121",
+  "subject": "riesgo",
+  "xp": 4,
   "total": 72,
   "level": 1,
-  "note": "SHORT SOL SL -0.35% PnL -0.12€",
-  "ts": "2026-10-03T02:19:26.028Z"
+  "note": "LONG SOL TP +0.7% PnL 0.12€",
+  "ts": "2026-10-03T06:25:39.163Z"
  },
  {
-  "agent_id": "a-139",
+  "agent_id": "a-121",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 145,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.12€",
+  "ts": "2026-10-03T06:25:39.162Z"
+ },
+ {
+  "agent_id": "a-116",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 94,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.14€",
+  "ts": "2026-10-03T06:25:39.161Z"
+ },
+ {
+  "agent_id": "a-116",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 128,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.14€",
+  "ts": "2026-10-03T06:25:39.161Z"
+ },
+ {
+  "agent_id": "a-156",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 118,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.23€",
+  "ts": "2026-10-03T06:25:37.160Z"
+ },
+ {
+  "agent_id": "a-156",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 136,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.23€",
+  "ts": "2026-10-03T06:25:37.159Z"
+ },
+ {
+  "agent_id": "a-111",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 90,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.15€",
+  "ts": "2026-10-03T06:25:37.158Z"
+ },
+ {
+  "agent_id": "a-111",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 122,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.15€",
+  "ts": "2026-10-03T06:25:37.158Z"
+ },
+ {
+  "agent_id": "a-138",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 102,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.1€",
+  "ts": "2026-10-03T06:25:33.161Z"
+ },
+ {
+  "agent_id": "a-138",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 144,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.1€",
+  "ts": "2026-10-03T06:25:33.160Z"
+ },
+ {
+  "agent_id": "a-128",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 82,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.14€",
+  "ts": "2026-10-03T06:25:33.160Z"
+ },
+ {
+  "agent_id": "a-128",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 145,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.14€",
+  "ts": "2026-10-03T06:25:33.159Z"
+ },
+ {
+  "agent_id": "a-123",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 78,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.16€",
+  "ts": "2026-10-03T06:25:33.158Z"
+ },
+ {
+  "agent_id": "a-123",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 138,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.16€",
+  "ts": "2026-10-03T06:25:33.158Z"
+ },
+ {
+  "agent_id": "a-116",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 90,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:25:33.157Z"
+ },
+ {
+  "agent_id": "a-116",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 120,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:25:33.157Z"
+ },
+ {
+  "agent_id": "a-111",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 86,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.14€",
+  "ts": "2026-10-03T06:25:33.156Z"
+ },
+ {
+  "agent_id": "a-111",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 114,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.14€",
+  "ts": "2026-10-03T06:25:33.156Z"
+ },
+ {
+  "agent_id": "a-097",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 88,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.23€",
+  "ts": "2026-10-03T06:25:33.155Z"
+ },
+ {
+  "agent_id": "a-097",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 176,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.23€",
+  "ts": "2026-10-03T06:25:33.154Z"
+ },
+ {
+  "agent_id": "a-103",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 70,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.23€",
+  "ts": "2026-10-03T06:25:31.156Z"
+ },
+ {
+  "agent_id": "a-103",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 121,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.23€",
+  "ts": "2026-10-03T06:25:31.156Z"
+ },
+ {
+  "agent_id": "a-102",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 62,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.08€",
+  "ts": "2026-10-03T06:25:31.155Z"
+ },
+ {
+  "agent_id": "a-102",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 104,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.08€",
+  "ts": "2026-10-03T06:25:31.154Z"
+ },
+ {
+  "agent_id": "a-112",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 86,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.27€",
+  "ts": "2026-10-03T06:25:31.154Z"
+ },
+ {
+  "agent_id": "a-112",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 154,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.27€",
+  "ts": "2026-10-03T06:25:31.153Z"
+ },
+ {
+  "agent_id": "a-179",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 70,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.22€",
+  "ts": "2026-10-03T06:25:29.162Z"
+ },
+ {
+  "agent_id": "a-179",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 120,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.22€",
+  "ts": "2026-10-03T06:25:29.161Z"
+ },
+ {
+  "agent_id": "a-147",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 102,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.17€",
+  "ts": "2026-10-03T06:25:29.160Z"
+ },
+ {
+  "agent_id": "a-147",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 147,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.17€",
+  "ts": "2026-10-03T06:25:29.159Z"
+ },
+ {
+  "agent_id": "a-125",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 96,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.18€",
+  "ts": "2026-10-03T06:25:29.159Z"
+ },
+ {
+  "agent_id": "a-125",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 152,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.18€",
+  "ts": "2026-10-03T06:25:29.158Z"
+ },
+ {
+  "agent_id": "a-121",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 68,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:25:29.157Z"
+ },
+ {
+  "agent_id": "a-121",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 137,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:25:29.157Z"
+ },
+ {
+  "agent_id": "a-097",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 84,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.18€",
+  "ts": "2026-10-03T06:25:29.156Z"
+ },
+ {
+  "agent_id": "a-097",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 168,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.18€",
+  "ts": "2026-10-03T06:25:29.156Z"
+ },
+ {
+  "agent_id": "a-121",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 64,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.28€",
+  "ts": "2026-10-03T06:25:29.155Z"
+ },
+ {
+  "agent_id": "a-121",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 129,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.28€",
+  "ts": "2026-10-03T06:25:29.154Z"
+ },
+ {
+  "agent_id": "a-112",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 82,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.16€",
+  "ts": "2026-10-03T06:25:29.154Z"
+ },
+ {
+  "agent_id": "a-112",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 146,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.16€",
+  "ts": "2026-10-03T06:25:29.153Z"
+ },
+ {
+  "agent_id": "a-097",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 80,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:25:29.153Z"
+ },
+ {
+  "agent_id": "a-097",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 160,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:25:29.152Z"
+ },
+ {
+  "agent_id": "a-095",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 80,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.12€",
+  "ts": "2026-10-03T06:25:29.151Z"
+ },
+ {
+  "agent_id": "a-095",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 162,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.12€",
+  "ts": "2026-10-03T06:25:29.151Z"
+ },
+ {
+  "agent_id": "a-015",
   "subject": "psicologia",
   "xp": 6,
-  "total": 12,
-  "level": 1,
-  "note": "SHORT SOL SL -0.35% PnL -0.12€",
-  "ts": "2026-10-03T02:19:26.027Z"
+  "total": 282,
+  "level": 3,
+  "note": "SHORT ETH SL -0.35% PnL -0.29€",
+  "ts": "2026-10-03T06:25:27.152Z"
  },
  {
-  "agent_id": "a-139",
+  "agent_id": "a-015",
   "subject": "riesgo",
   "xp": 10,
+  "total": 638,
+  "level": 7,
+  "note": "SHORT ETH SL -0.35% PnL -0.29€",
+  "ts": "2026-10-03T06:25:27.152Z"
+ },
+ {
+  "agent_id": "a-095",
+  "subject": "riesgo",
+  "xp": 4,
   "total": 76,
   "level": 1,
-  "note": "SHORT SOL SL -0.35% PnL -0.12€",
-  "ts": "2026-10-03T02:19:26.027Z"
+  "note": "LONG SOL TP +0.7% PnL 0.1€",
+  "ts": "2026-10-03T06:25:27.151Z"
+ },
+ {
+  "agent_id": "a-095",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 154,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.1€",
+  "ts": "2026-10-03T06:25:27.150Z"
+ },
+ {
+  "agent_id": "a-094",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 80,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.04€",
+  "ts": "2026-10-03T06:25:27.150Z"
+ },
+ {
+  "agent_id": "a-094",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 160,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.04€",
+  "ts": "2026-10-03T06:25:27.149Z"
+ },
+ {
+  "agent_id": "a-102",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 58,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.05€",
+  "ts": "2026-10-03T06:25:25.155Z"
+ },
+ {
+  "agent_id": "a-102",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 96,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.05€",
+  "ts": "2026-10-03T06:25:25.155Z"
+ },
+ {
+  "agent_id": "a-085",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 58,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.12€",
+  "ts": "2026-10-03T06:25:25.154Z"
+ },
+ {
+  "agent_id": "a-085",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 96,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.12€",
+  "ts": "2026-10-03T06:25:25.153Z"
+ },
+ {
+  "agent_id": "a-015",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 628,
+  "level": 7,
+  "note": "LONG BTC TP +0.7% PnL 0.61€",
+  "ts": "2026-10-03T06:25:25.153Z"
+ },
+ {
+  "agent_id": "a-015",
+  "subject": "tecnico",
+  "xp": 9,
+  "total": 370,
+  "level": 4,
+  "note": "LONG BTC TP +0.7% PnL 0.61€",
+  "ts": "2026-10-03T06:25:25.152Z"
+ },
+ {
+  "agent_id": "a-103",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 66,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.14€",
+  "ts": "2026-10-03T06:25:25.152Z"
+ },
+ {
+  "agent_id": "a-103",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 113,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.14€",
+  "ts": "2026-10-03T06:25:25.151Z"
+ },
+ {
+  "agent_id": "a-085",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 54,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.22€",
+  "ts": "2026-10-03T06:25:25.150Z"
+ },
+ {
+  "agent_id": "a-085",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 88,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.22€",
+  "ts": "2026-10-03T06:25:25.150Z"
+ },
+ {
+  "agent_id": "a-084",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 62,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.08€",
+  "ts": "2026-10-03T06:25:25.149Z"
+ },
+ {
+  "agent_id": "a-084",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 104,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.08€",
+  "ts": "2026-10-03T06:25:25.148Z"
+ },
+ {
+  "agent_id": "a-080",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 56,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.14€",
+  "ts": "2026-10-03T06:25:25.148Z"
+ },
+ {
+  "agent_id": "a-080",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 113,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.14€",
+  "ts": "2026-10-03T06:25:25.147Z"
+ },
+ {
+  "agent_id": "a-103",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 62,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.22€",
+  "ts": "2026-10-03T06:25:21.152Z"
+ },
+ {
+  "agent_id": "a-103",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 105,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.22€",
+  "ts": "2026-10-03T06:25:21.152Z"
+ },
+ {
+  "agent_id": "a-102",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 54,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.04€",
+  "ts": "2026-10-03T06:25:21.151Z"
+ },
+ {
+  "agent_id": "a-102",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 88,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.04€",
+  "ts": "2026-10-03T06:25:21.150Z"
+ },
+ {
+  "agent_id": "a-085",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 50,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.09€",
+  "ts": "2026-10-03T06:25:21.150Z"
+ },
+ {
+  "agent_id": "a-085",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 80,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.09€",
+  "ts": "2026-10-03T06:25:21.149Z"
+ },
+ {
+  "agent_id": "a-084",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 58,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.07€",
+  "ts": "2026-10-03T06:25:21.149Z"
+ },
+ {
+  "agent_id": "a-084",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 96,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.07€",
+  "ts": "2026-10-03T06:25:21.148Z"
+ },
+ {
+  "agent_id": "a-080",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 52,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.17€",
+  "ts": "2026-10-03T06:25:21.148Z"
+ },
+ {
+  "agent_id": "a-080",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 105,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.17€",
+  "ts": "2026-10-03T06:25:21.147Z"
+ },
+ {
+  "agent_id": "a-060",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 58,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.13€",
+  "ts": "2026-10-03T06:25:21.146Z"
+ },
+ {
+  "agent_id": "a-060",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 96,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.13€",
+  "ts": "2026-10-03T06:25:21.146Z"
+ },
+ {
+  "agent_id": "a-128",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 78,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.15€",
+  "ts": "2026-10-03T06:25:21.145Z"
+ },
+ {
+  "agent_id": "a-128",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 137,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.15€",
+  "ts": "2026-10-03T06:25:21.144Z"
+ },
+ {
+  "agent_id": "a-084",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 54,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.03€",
+  "ts": "2026-10-03T06:25:21.143Z"
+ },
+ {
+  "agent_id": "a-084",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 88,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.03€",
+  "ts": "2026-10-03T06:25:21.143Z"
+ },
+ {
+  "agent_id": "a-184",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 42,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.2€",
+  "ts": "2026-10-03T06:25:17.144Z"
+ },
+ {
+  "agent_id": "a-184",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 64,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.2€",
+  "ts": "2026-10-03T06:25:17.143Z"
+ },
+ {
+  "agent_id": "a-168",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 98,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.12€",
+  "ts": "2026-10-03T06:25:17.143Z"
+ },
+ {
+  "agent_id": "a-168",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 139,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.12€",
+  "ts": "2026-10-03T06:25:17.142Z"
+ },
+ {
+  "agent_id": "a-147",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 98,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.12€",
+  "ts": "2026-10-03T06:25:17.142Z"
+ },
+ {
+  "agent_id": "a-147",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 139,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.12€",
+  "ts": "2026-10-03T06:25:17.141Z"
+ },
+ {
+  "agent_id": "a-112",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 78,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:25:17.140Z"
+ },
+ {
+  "agent_id": "a-112",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 138,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:25:17.140Z"
+ },
+ {
+  "agent_id": "a-095",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 72,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.22€",
+  "ts": "2026-10-03T06:25:17.139Z"
+ },
+ {
+  "agent_id": "a-095",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 146,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.22€",
+  "ts": "2026-10-03T06:25:17.139Z"
+ },
+ {
+  "agent_id": "a-094",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 76,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.08€",
+  "ts": "2026-10-03T06:25:17.138Z"
+ },
+ {
+  "agent_id": "a-094",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 152,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.08€",
+  "ts": "2026-10-03T06:25:17.137Z"
+ },
+ {
+  "agent_id": "a-181",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 76,
+  "level": 1,
+  "note": "LONG LINK TP +0.7% PnL 0.22€",
+  "ts": "2026-10-03T06:25:13.133Z"
+ },
+ {
+  "agent_id": "a-181",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 152,
+  "level": 2,
+  "note": "LONG LINK TP +0.7% PnL 0.22€",
+  "ts": "2026-10-03T06:25:13.132Z"
+ },
+ {
+  "agent_id": "a-184",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 38,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.24€",
+  "ts": "2026-10-03T06:25:13.132Z"
+ },
+ {
+  "agent_id": "a-184",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 56,
+  "level": 1,
+  "note": "LONG DOGE TP +0.7% PnL 0.24€",
+  "ts": "2026-10-03T06:25:13.131Z"
+ },
+ {
+  "agent_id": "a-181",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 72,
+  "level": 1,
+  "note": "LONG LINK TP +0.7% PnL 0.09€",
+  "ts": "2026-10-03T06:25:09.130Z"
+ },
+ {
+  "agent_id": "a-181",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 144,
+  "level": 2,
+  "note": "LONG LINK TP +0.7% PnL 0.09€",
+  "ts": "2026-10-03T06:25:09.130Z"
+ },
+ {
+  "agent_id": "a-138",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 98,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.11€",
+  "ts": "2026-10-03T06:25:07.135Z"
+ },
+ {
+  "agent_id": "a-138",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 136,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.11€",
+  "ts": "2026-10-03T06:25:07.134Z"
+ },
+ {
+  "agent_id": "a-128",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 74,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.15€",
+  "ts": "2026-10-03T06:25:07.133Z"
+ },
+ {
+  "agent_id": "a-128",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 129,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.15€",
+  "ts": "2026-10-03T06:25:07.133Z"
+ },
+ {
+  "agent_id": "a-111",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 82,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.13€",
+  "ts": "2026-10-03T06:25:07.132Z"
+ },
+ {
+  "agent_id": "a-111",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 106,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.13€",
+  "ts": "2026-10-03T06:25:07.132Z"
+ },
+ {
+  "agent_id": "a-056",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 68,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.15€",
+  "ts": "2026-10-03T06:25:07.131Z"
+ },
+ {
+  "agent_id": "a-056",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 136,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.15€",
+  "ts": "2026-10-03T06:25:07.131Z"
+ },
+ {
+  "agent_id": "a-050",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 76,
+  "level": 1,
+  "note": "LONG XRP TP +0.7% PnL 0.11€",
+  "ts": "2026-10-03T06:25:07.130Z"
+ },
+ {
+  "agent_id": "a-050",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 112,
+  "level": 2,
+  "note": "LONG XRP TP +0.7% PnL 0.11€",
+  "ts": "2026-10-03T06:25:07.129Z"
+ },
+ {
+  "agent_id": "a-181",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 68,
+  "level": 1,
+  "note": "LONG LINK TP +0.7% PnL 0.22€",
+  "ts": "2026-10-03T06:25:07.129Z"
+ },
+ {
+  "agent_id": "a-181",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 136,
+  "level": 2,
+  "note": "LONG LINK TP +0.7% PnL 0.22€",
+  "ts": "2026-10-03T06:25:07.128Z"
+ },
+ {
+  "agent_id": "a-015",
+  "subject": "psicologia",
+  "xp": 6,
+  "total": 276,
+  "level": 3,
+  "note": "SHORT BTC SL -0.35% PnL -0.4€",
+  "ts": "2026-10-03T06:25:05.125Z"
+ },
+ {
+  "agent_id": "a-015",
+  "subject": "riesgo",
+  "xp": 10,
+  "total": 624,
+  "level": 7,
+  "note": "SHORT BTC SL -0.35% PnL -0.4€",
+  "ts": "2026-10-03T06:25:05.124Z"
+ },
+ {
+  "agent_id": "a-091",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 76,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.14€",
+  "ts": "2026-10-03T06:25:01.125Z"
+ },
+ {
+  "agent_id": "a-091",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 152,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.14€",
+  "ts": "2026-10-03T06:25:01.125Z"
+ },
+ {
+  "agent_id": "a-077",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 52,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:25:01.124Z"
+ },
+ {
+  "agent_id": "a-077",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 104,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.21€",
+  "ts": "2026-10-03T06:25:01.123Z"
+ },
+ {
+  "agent_id": "a-076",
+  "subject": "riesgo",
+  "xp": 4,
+  "total": 64,
+  "level": 1,
+  "note": "LONG SOL TP +0.7% PnL 0.17€",
+  "ts": "2026-10-03T06:25:01.123Z"
+ },
+ {
+  "agent_id": "a-076",
+  "subject": "tecnico",
+  "xp": 8,
+  "total": 128,
+  "level": 2,
+  "note": "LONG SOL TP +0.7% PnL 0.17€",
+  "ts": "2026-10-03T06:25:01.122Z"
  }
 ]

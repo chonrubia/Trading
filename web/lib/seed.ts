@@ -64,8 +64,9 @@ export function buildSeed(rnd: Rng = seedRand(42)): { departments: Department[];
       capital_assigned: Math.round(200 + rnd() * 1800),
       status: STATUS[Math.floor(rnd() * STATUS.length)],
       mood: MOODS[Math.floor(rnd() * MOODS.length)],
-      level_risk: 1 + Math.floor(rnd() * 5),
-      level_ta: 1 + Math.floor(rnd() * 5),
+      // Escuela desde cero: el nivel se gana operando, no se sortea.
+      level_risk: 1,
+      level_ta: 1,
       studying: SUBJECTS[Math.floor(rnd() * SUBJECTS.length)],
       pnl: 0, win_rate: 50, profit_factor: 1, drawdown: 0, trades_count: 0,
       x: 0, y: 0,

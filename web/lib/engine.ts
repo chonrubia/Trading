@@ -7,7 +7,7 @@ import { checkOperation, fundExposure, FUND_LIMITS } from "./risk.js";
 import { costPerSide, settle } from "./costs.js";
 import { venues, scanArb, spreadOf, arbPnl, arbCostPct, hedgeSignal } from "./desks.js";
 import { genHistory, metrics, robustness, liveSignal, runTrades } from "./indicators.js";
-import { setupStats, agentStats, score, sizeFor, memoryBias, DAILY_TARGET, MAX_TRADES_AGENT_DAY, RELAXED } from "./target.js";
+import { setupStats, agentStats, score, sizeFor, memoryBias, DAILY_TARGET, MAX_TRADES_AGENT_DAY, MIN_SAMPLE, RELAXED } from "./target.js";
 import { xpForClose, award } from "./school.js";
 import type { KvStore } from "./store.js";
 import { repo } from "./state.js";
@@ -18,7 +18,7 @@ export interface EngineState {
   agents: Record<string, any>;
   order: string[];
   committee: { active: boolean; topic: string; started_at: string | null; ticks: number; backup: Record<string, { x: number; y: number }>; log: string[] };
-  day: { trades: Record<string, number>; last: Record<string, number>; lossTick: Record<string, number> };
+  day: { trades: Record<string, number>; last: Record<string, number>; lossTick: Record<string, number>; explore: Record<string, number> };
   openOps: Record<string, any>;
   closed: any[]; blocked: any[];
   msgs: any[]; meetings: any[]; memory: any[]; xp: Record<string, any>; learnings: any[];
@@ -186,7 +186,7 @@ export function step(s: EngineState, input: StepInput): { state: EngineState; ev
     s.targetDays[meta.today] = { pnl: yPnl, hit: yPnl >= DAILY_TARGET };
     s.audit.push({ ts: nowIso, ev: "target.day", day: meta.today, pnl: yPnl, hit: yPnl >= DAILY_TARGET });
     meta.today = dk; meta.dayStartEquity = meta.equity; meta.targetAnnounced = false;
-    s.day = { trades: {}, last: {}, lossTick: {} };
+    s.day = { trades: {}, last: {}, lossTick: {}, explore: {} };
   }
 
   // 2. mercado
@@ -320,7 +320,17 @@ function tradeBlock(s: EngineState, events: any[], lastTick: MarketTick, nowIso:
     const first = s.agents[s.order[0]];
     pushMsg(s, events, { id: msgId(), channel_id: "c-general", from_agent_id: first.id, text: `Dirección: objetivo diario batido (+${Math.round(s.meta.dayPnl)}€). Pasamos a modo proteger-ganancias: sizes pequeños, solo lo mejor.`, kind: "alerta", created_at: nowIso }, first.name);
   }
-  for (const id of s.order) {
+  // Escuela desde cero: sin trades ni PnL no hay nivel (el seed ya no regala).
+  for (const a of Object.values(s.agents) as any[]) {
+    if (!a.incubated && (a.trades_count || 0) === 0 && (a.pnl || 0) === 0 && (a.level_risk > 1 || a.level_ta > 1)) {
+      a.level_risk = 1; a.level_ta = 1;
+    }
+  }
+  // Orden barajado por slot (determinista con la rng del tick): sin sesgo
+  // a favor de los primeros ids ante el tope de 6 aperturas/tick.
+  const order = [...s.order];
+  for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); const t = order[i]; order[i] = order[j]; order[j] = t; }
+  for (const id of order) {
     const a = s.agents[id];
     if (a.role !== "Trader") continue;
     a.pnl = Math.round(a.pnl * 100) / 100;
@@ -330,7 +340,15 @@ function tradeBlock(s: EngineState, events: any[], lastTick: MarketTick, nowIso:
     const ag = agm[a.id];
     const memBias = memoryBias(s.memory.filter((e: any) => e.pair === a.pair).slice(-20).map((e: any) => ({ kind: e.kind })));
     const q = score(a, st, lastTick as any, s.day.last[a.id] ?? null, ag ? (ag.wins / ag.trades * 100) : 100, ag ? ag.trades : 0, memBias);
-    if (q < (relaxed ? RELAXED.quality : 0.55)) continue;
+    // Exploración garantizada en frío: setups sin muestra (n<15) operan a
+    // 8€/lev1 aunque no lleguen a la puerta, 2 al día por setup, con lev 1
+    // y pasando por Riesgos igual que el resto. Sin muestra no hay puerta.
+    let explore = false;
+    if (q < (relaxed ? RELAXED.quality : 0.55)) {
+      const n = st ? st.trades : 0;
+      if (!relaxed && n < MIN_SAMPLE && (s.day.explore[a.strategy] || 0) < 2) explore = true;
+      else continue;
+    }
     if (s.meta.tickN - (s.day.lossTick[a.id] ?? -9999) < 10) continue;
     if (openedThisTick >= 6) break;
     const mom = (lastTick.trend && (lastTick.trend as any)[a.pair]) || 0;
@@ -347,8 +365,8 @@ function tradeBlock(s: EngineState, events: any[], lastTick: MarketTick, nowIso:
     {
       const entry = (lastTick.prices as any)[a.pair] || 100;
       const tier = relaxed ? 14 : sizeFor(q, st ? st.trades : 0);
-      const notional = relaxed ? RELAXED.sizeMin + rnd() * (RELAXED.sizeMax - RELAXED.sizeMin) : tier;
-      const lev = relaxed ? Math.min(a.leverage, RELAXED.maxLev) : Math.min(a.leverage, 1 + (a.level_risk || 1), 5);
+      const notional = explore ? 8 : relaxed ? RELAXED.sizeMin + rnd() * (RELAXED.sizeMax - RELAXED.sizeMin) : tier;
+      const lev = explore ? 1 : relaxed ? Math.min(a.leverage, RELAXED.maxLev) : Math.min(a.leverage, 1 + (a.level_risk || 1), 5);
       const prop = { pair: a.pair, side, entry, size: Math.round(notional / entry * 10000) / 10000, leverage: lev };
       const v = checkOperation(
         { id: a.id, name: a.name, leverage: a.leverage, pnl: a.pnl }, prop,
@@ -359,8 +377,12 @@ function tradeBlock(s: EngineState, events: any[], lastTick: MarketTick, nowIso:
         size: v.size || prop.size, leverage: v.leverage || prop.leverage,
         status: v.approved ? "abierta" : "bloqueada", pnl: 0, life: 0,
         maxLife: 40 + Math.floor(rnd() * 40), risk_note: v.reason, quality: q, opened_at: nowIso,
+        ...(explore ? { explore: true } : {}),
       };
-      if (v.approved) { s.openOps[op.id] = op; s.day.trades[a.id] = (s.day.trades[a.id] || 0) + 1; openedThisTick++; }
+      if (v.approved) {
+        s.openOps[op.id] = op; s.day.trades[a.id] = (s.day.trades[a.id] || 0) + 1; openedThisTick++;
+        if (explore) s.day.explore[a.strategy] = (s.day.explore[a.strategy] || 0) + 1;
+      }
       else {
         s.blocked.push(op);
         if (s.blocked.length > 80) s.blocked.splice(0, s.blocked.length - 80);
@@ -397,7 +419,9 @@ function tradeBlock(s: EngineState, events: any[], lastTick: MarketTick, nowIso:
           s.learnings.unshift({ ...e });
           if (s.learnings.length > 300) s.learnings.length = 300;
         });
-        if (Math.abs(o.pnl) > 0.8) {
+        // Memoria: todo TP/SL enseña (el TP típico 0.08-0.25€ jamás llegaba al
+        // umbral viejo de 0.8€ y la memoria nunca aprendía). Timeouts solo si pesan.
+        if (o.close_reason !== "timeout" || Math.abs(o.pnl) > 0.2) {
           pushMem(s, {
             id: `mem-${nowIso}-${o.id}`, ts: nowIso, author: ag.name, dept: "trading", pair: o.pair,
             text: `${o.side} ${o.pair} ${o.close_reason} (${o.pnl}€) con ${ag.strategy}. ${o.close_reason.startsWith("SL") ? "Lección: respetar stop y size." : "Funciona: dejar correr con trailing."}`,
@@ -461,9 +485,18 @@ function desksBlock(s: EngineState, events: any[], lastTick: MarketTick, nowIso:
     }
   });
   const openDer = Object.values(s.openOps).filter((o: any) => o.status === "abierta" && o.desk === "derivados");
-  if (s.meta.tickN % 4 === 0 && openDer.length < 4 && !s.meta.kill) {
-    const pair = rnd() > 0.5 ? "BTC" : "ETH";
-    const side = rnd() > 0.5 ? "LONG" : "SHORT";
+  // Dirección por momentum del par (como el spot): fin de la moneda al aire.
+  const momB = Math.abs((lastTick.trend as any)?.BTC || 0), momE = Math.abs((lastTick.trend as any)?.ETH || 0);
+  const dPair = momE > momB ? "ETH" : "BTC";
+  const dMom = (lastTick.trend as any)?.[dPair] || 0;
+  const derTrend = derAgent.style === "tendencia" || derAgent.style === "breakout";
+  let dSide: string | null = null;
+  if (derTrend) {
+    if (Math.abs(dMom) >= 0.2) dSide = dMom > 0 ? "LONG" : "SHORT";
+  } else if (Math.abs(dMom) >= 0.5) dSide = dMom > 0 ? "SHORT" : "LONG";
+  if (dSide === "LONG" && lastTick.funding > 0.03 && rnd() > 0.3) dSide = null;
+  if (s.meta.tickN % 4 === 0 && openDer.length < 4 && !s.meta.kill && dSide) {
+    const pair = dPair, side = dSide;
     const propF = { pair, side, entry: (lastTick.prices as any)[pair], size: Math.round(25 / (lastTick.prices as any)[pair] * 10000) / 10000, leverage: 3 + Math.floor(rnd() * 3) };
     const v = checkOperation({ id: derAgent.id, name: derAgent.name, leverage: derAgent.leverage, pnl: derAgent.pnl }, propF, ctxOf());
     const op: any = {
@@ -524,7 +557,7 @@ export async function loadEngine(kv: KvStore): Promise<EngineState> {
   return {
     meta: meta as any, market: market as any, agents: agentsMap as any, order,
     committee: { active: false, topic: "", started_at: null, ticks: 0, backup: {}, log: [], ...(committee as any) },
-    day: { trades: unp("t:"), last: unp("l:"), lossTick: unp("c:") },
+    day: { trades: unp("t:"), last: unp("l:"), lossTick: unp("c:"), explore: unp("e:") },
     openOps: openMap as any, closed: closed as any[], blocked: blocked as any[],
     msgs: msgs as any[], meetings: meetings as any[], memory: memory as any[],
     xp: xp as any, learnings: learnings as any[], strategies: strategies as any,
@@ -565,6 +598,7 @@ export async function saveEngine(kv: KvStore, s: EngineState): Promise<void> {
   for (const [k, v] of Object.entries(s.day.trades)) await repo.saveDay(kv, s.meta.today, `t:${k}`, v);
   for (const [k, v] of Object.entries(s.day.last)) await repo.saveDay(kv, s.meta.today, `l:${k}`, v);
   for (const [k, v] of Object.entries(s.day.lossTick)) await repo.saveDay(kv, s.meta.today, `c:${k}`, v);
+  for (const [k, v] of Object.entries(s.day.explore)) await repo.saveDay(kv, s.meta.today, `e:${k}`, v);
 
   // ---- aprendizaje: persistir solo lo nuevo (diff por id) ----
   // Sin esto cada tick serverless recargaba las listas viejas y el fondo

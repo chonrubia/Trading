@@ -404,9 +404,14 @@ function tradeBlock(s: EngineState, events: any[], lastTick: MarketTick, nowIso:
     o.pnl = Math.round((chg * dir * o.size * o.entry * o.leverage - (o.fundingAcc || 0)) * 100) / 100;
     o.life++;
     const tp = chg * dir > 0.007, sl = chg * dir < -0.0035, timeout = o.life >= o.maxLife;
-    if (tp || sl || timeout) {
+    o.mfe = Math.max(o.mfe || 0, chg * dir);
+    // Trailing a breakeven+fees: si vio +0.40% bruto y retrocede a +0.32%
+    // (cubre ~0.30% de costes + colchón), se cierra en tablas en vez de
+    // regalarlo al SL o al timeout. Solo avanza a favor. Orden: TP→trail→SL→timeout.
+    const trail = !tp && o.mfe > 0.004 && chg * dir <= 0.0032 && chg * dir > -0.0035;
+    if (tp || trail || sl || timeout) {
       o.status = "cerrada"; o.exit = px; o.closed_at = nowIso;
-      o.close_reason = tp ? "TP +0.7%" : sl ? "SL -0.35%" : "timeout";
+      o.close_reason = tp ? "TP +0.7%" : trail ? "trail +0.3%" : sl ? "SL -0.35%" : "timeout";
       const stl = settle(o.pnl, o.size, o.entry, px, costPerSide(o.pair, o.desk));
       o.pnl = stl.net; o.fees = stl.costs;
       const ag = s.agents[o.agent_id];

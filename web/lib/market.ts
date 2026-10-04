@@ -65,7 +65,9 @@ export function tickMarket(s: MarketState, rnd: Rng, nowIso: string): { state: M
     state: { prices, hist, regime, regimeLeft, trendDir },
     tick: {
       ts: nowIso, prices: out,
-      funding: Math.round(rnd() * 0.05 * 10000) / 10000,
+      // Tasa de funding estilo Binance (por periodo de 8h, con signo: en real
+      // los longs pagan cuando es positiva y COBRAN cuando es negativa).
+      funding: Math.round((rnd() * 0.06 - 0.03) * 10000) / 10000,
       fear_greed: regime === "trend" ? Math.floor(45 + rnd() * 40) : Math.floor(20 + rnd() * 40),
       risk_mode: regime === "trend" ? "RISK-ON" : strong > 4 ? "RISK-ON" : "RISK-OFF",
       regime, trend,

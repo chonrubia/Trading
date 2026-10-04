@@ -361,7 +361,7 @@ function tradeBlock(s: EngineState, events: any[], lastTick: MarketTick, nowIso:
       if (Math.abs(mom) < 0.5) continue;
       side = mom > 0 ? "SHORT" : "LONG";
     }
-    if (side === "LONG" && lastTick.funding > 0.03 && rnd() > 0.3) continue;
+    if (side === "LONG" && lastTick.funding > 0.01 && rnd() > 0.3) continue;
     {
       const entry = (lastTick.prices as any)[a.pair] || 100;
       const tier = relaxed ? 14 : sizeFor(q, st ? st.trades : 0);
@@ -400,7 +400,7 @@ function tradeBlock(s: EngineState, events: any[], lastTick: MarketTick, nowIso:
     if (!px) return;
     const dir = o.side === "LONG" ? 1 : -1;
     const chg = (px - o.entry) / o.entry;
-    if (o.desk === "derivados") o.fundingAcc = Math.round(((o.fundingAcc || 0) + o.size * o.entry * lastTick.funding / 100 * (o.side === "LONG" ? 1 : -1)) * 100) / 100;
+    if (o.desk === "derivados") o.fundingAcc = Math.round(((o.fundingAcc || 0) + o.size * o.entry * lastTick.funding / 100 / 48 * (o.side === "LONG" ? 1 : -1)) * 100) / 100; // tasa 8h prorrateada al tick de 10min
     o.pnl = Math.round((chg * dir * o.size * o.entry * o.leverage - (o.fundingAcc || 0)) * 100) / 100;
     o.life++;
     const tp = chg * dir > 0.007, sl = chg * dir < -0.0035, timeout = o.life >= o.maxLife;
@@ -494,7 +494,7 @@ function desksBlock(s: EngineState, events: any[], lastTick: MarketTick, nowIso:
   if (derTrend) {
     if (Math.abs(dMom) >= 0.2) dSide = dMom > 0 ? "LONG" : "SHORT";
   } else if (Math.abs(dMom) >= 0.5) dSide = dMom > 0 ? "SHORT" : "LONG";
-  if (dSide === "LONG" && lastTick.funding > 0.03 && rnd() > 0.3) dSide = null;
+  if (dSide === "LONG" && lastTick.funding > 0.01 && rnd() > 0.3) dSide = null;
   if (s.meta.tickN % 4 === 0 && openDer.length < 4 && !s.meta.kill && dSide) {
     const pair = dPair, side = dSide;
     const propF = { pair, side, entry: (lastTick.prices as any)[pair], size: Math.round(25 / (lastTick.prices as any)[pair] * 10000) / 10000, leverage: 3 + Math.floor(rnd() * 3) };

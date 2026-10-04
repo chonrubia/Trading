@@ -74,7 +74,7 @@ export default function App() {
     const fl = async () => {
       try {
         const d = await apiFetch("/api/floor").then(r => r.json());
-        setPortfolio((p: any) => ({ ...p, patrimonio: d.equity, resultado_hoy: d.dayPnl, exposicion_bruta: d.exposure, caida: d.drawdown, costes_pagados: p.costes_pagados, objetivo: p.objetivo }));
+        setPortfolio((p: any) => ({ ...p, patrimonio: d.equity, resultado_hoy: d.dayPnl, exposicion_bruta: d.exposure, caida: d.drawdown, posiciones: d.counts ? d.counts.open : p.posiciones, costes_pagados: p.costes_pagados, objetivo: p.objetivo }));
         setMarket(d.tick); setCommittee(!!d.committee);
         setOps(d.openOps || []);
         if (d.tick?.ts) setTickTs(d.tick.ts);

@@ -1,0 +1,23 @@
+name: engine-watch
+# Perro guardián del latido: el schedule de GitHub a veces deja de disparar
+# engine-web durante horas. Este segundo cron (otro fichero + otra fase)
+# llama al mismo /api/tick idempotente por slot: si engine-web va bien,
+# esto solo añade ticks extra; si se para, el fondo sigue aprendiendo.
+on:
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch: {}
+concurrency:
+  group: engine-web
+  cancel-in-progress: false
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - run: |
+          test -n "${{ secrets.VERCEL_APP_URL }}" || { echo "falta secret VERCEL_APP_URL"; exit 1; }
+          test -n "${{ secrets.CRON_SECRET }}" || { echo "falta secret CRON_SECRET"; exit 1; }
+          code=$(curl -s -o /tmp/tick.json -w "%{http_code}" -X POST "${{ secrets.VERCEL_APP_URL }}/api/tick" -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" -H "Content-Type: application/json" -d '{}')
+          echo "tick -> $code"; cat /tmp/tick.json | head -c 400; echo
+          test "$code" = "200"

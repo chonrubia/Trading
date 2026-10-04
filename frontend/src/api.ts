@@ -5,6 +5,9 @@
 //    llamar a localhost: los navegadores lo eximen del bloqueo mixto https)
 // Si nada responde -> null y la app arranca en modo demo con snapshot.
 const ENV: string = ((import.meta as any).env?.VITE_API_URL || "").replace(/\/$/, "");
+// Bypass de la protección Vercel (solo tu PC): si defines VITE_VERCEL_BYPASS,
+// todas las llamadas llevan x-vercel-protection-bypass y la muralla deja pasar.
+const BYPASS: string = (import.meta as any).env?.VITE_VERCEL_BYPASS || "";
 let API_BASE: string = ENV;
 
 function probe(base: string, ms: number): Promise<string | null> {
@@ -30,6 +33,9 @@ export async function resolveApiBase(): Promise<string | null> {
   return null;
 }
 
-export const apiFetch = (p: string, init?: any) => fetch(API_BASE + p, init);
+export const apiFetch = (p: string, init?: any) => {
+  const headers = { ...(init?.headers || {}), ...(BYPASS ? { "x-vercel-protection-bypass": BYPASS } : {}) };
+  return fetch(API_BASE + p, { ...init, headers });
+};
 export const wsEndpoint = () =>
   API_BASE ? API_BASE.replace(/^http/, "ws") + "/ws/floor" : `ws://${location.hostname}:8765/ws/floor`;

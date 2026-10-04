@@ -18,6 +18,6 @@ jobs:
       - run: |
           test -n "${{ secrets.VERCEL_APP_URL }}" || { echo "falta secret VERCEL_APP_URL"; exit 1; }
           test -n "${{ secrets.CRON_SECRET }}" || { echo "falta secret CRON_SECRET"; exit 1; }
-          code=$(curl -s -o /tmp/tick.json -w "%{http_code}" -X POST "${{ secrets.VERCEL_APP_URL }}/api/tick" -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" -H "Content-Type: application/json" -d '{}')
+          code=$(curl -s -o /tmp/tick.json -w "%{http_code}" -X POST "${{ secrets.VERCEL_APP_URL }}/api/tick" -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" -H "x-vercel-protection-bypass: ${{ secrets.VERCEL_BYPASS }}" -H "Content-Type: application/json" -d '{}')
           echo "tick -> $code"; cat /tmp/tick.json | head -c 400; echo
           test "$code" = "200"

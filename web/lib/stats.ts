@@ -5,8 +5,11 @@ export function setupStats(closed: any[]) {
     const k = o.strategy || o.agent_name || "desconocido";
     m[k] = m[k] || { strategy: k, trades: 0, net: 0, wins: 0, rSum: 0 };
     m[k].trades++; m[k].net += o.pnl || 0; if (o.pnl > 0) m[k].wins++;
-    const notion = (o.size || 0) * (o.entry || 0);
-    m[k].rSum += (o.pnl || 0) / Math.max(0.01, notion * 0.0035 * (o.leverage || 1));
+    const notion = o.notional || (o.qty || o.size || 0) * (o.entry || 0);
+    const riskUnit = o.stop && o.entry && o.qty
+      ? Math.abs((o.entry - o.stop) * o.qty)
+      : notion * 0.0035;
+    m[k].rSum += (o.pnl || 0) / Math.max(0.01, riskUnit * (o.leverage || 1));
   });
   return Object.values(m).map((s: any) => ({
     strategy: s.strategy, trades: s.trades,

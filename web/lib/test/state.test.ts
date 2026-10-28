@@ -1,8 +1,8 @@
-// F2: repositorio KV (MemoryKv) + seed determinista.
+// F2: repositorio KV (MemoryKv) + seed determinista del fondo v2.
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { MemoryKv, resolveKv, resolveRedis } from "../store.js";
-import { ensureSeed, repo } from "../state.js";
+import { ensureSeed, repo, FUND_BASE, KEY_PREFIX } from "../state.js";
 import { buildSeed } from "../seed.js";
 import { seedRand } from "../rng.js";
 
@@ -35,30 +35,48 @@ test("MemoryKv roundtrip: string, hash, lista con trim", async () => {
   assert.equal(await kv.llen("l"), 0);
 });
 
-test("seed determinista: dos builds idénticos", () => {
+test("seed determinista: dos builds idénticos y spot 1x", () => {
   const a = buildSeed(seedRand(42));
   const b = buildSeed(seedRand(42));
   assert.equal(a.agents.length, 176);
   assert.equal(a.departments.length, 13);
   assert.deepEqual(a.agents.map(x => x.id), b.agents.map(x => x.id));
   assert.deepEqual(a.agents.map(x => x.strategy), b.agents.map(x => x.strategy));
+  assert.ok(a.agents.every(x => x.leverage === 1), "nadie se apalanca en spot");
+  const traders = a.agents.filter(x => x.role === "Trader");
+  assert.ok(traders.every(x => x.capital_assigned === 10), "10€ por trader");
+  assert.equal(new Set(a.agents.map(x => x.strategy)).size, 10, "las 10 estrategias se reparten");
   const c = buildSeed(seedRand(43));
-  assert.notDeepEqual(a.agents.map(x => x.strategy), c.agents.map(x => x.strategy));
+  assert.notDeepEqual(a.agents.map(x => x.avatar_seed), c.agents.map(x => x.avatar_seed));
 });
 
-test("ensureSeed crea fondo fresco 500€ una sola vez", async () => {
+test("ensureSeed crea fondo v2 de 60€ una sola vez", async () => {
   const kv = new MemoryKv();
   assert.equal(await ensureSeed(kv, "2026-10-03T00:00:00.000Z"), true);
   assert.equal(await ensureSeed(kv, "2026-10-03T00:00:00.000Z"), false);
+  assert.equal(FUND_BASE, 60);
+  assert.equal(KEY_PREFIX, "fund:v2:");
   const meta = await repo.meta(kv);
-  assert.equal(meta.equity, 500);
+  assert.equal(meta.equity, 60);
+  assert.equal(meta.dayStartEquity, 60);
+  assert.equal(meta.engine, "v2");
+  assert.equal(meta.mode, "paper-real");
+  assert.equal(meta.market_source, "binance");
+  assert.equal(meta.stale, true);
   assert.equal(meta.opN, 1);
+  const account = await repo.account(kv);
+  assert.equal(account.base, 60);
+  assert.equal(account.cash, 60);
+  assert.equal(account.realized, 60);
+  assert.ok(await kv.get("fund:v2:meta"));
+  assert.equal(await kv.get("fund:meta"), null, "el estado sintético antiguo no se toca");
   const agents = await repo.agents(kv);
   assert.equal(Object.keys(agents).length, 176);
   assert.equal(agents["a-001"].name, "Dirección CIO · Vega");
   const traders = Object.values(agents).filter((x: any) => x.role === "Trader");
   assert.equal(traders.length, 158);
   assert.ok(traders.every((x: any) => x.pnl === 0));
+  assert.ok(traders.every((x: any) => x.leverage === 1));
 });
 
 test("repo: mensajes por canal + memoria con búsqueda", async () => {

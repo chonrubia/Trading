@@ -13,3 +13,5 @@ backend/data/*.log
 # sistema
 .DS_Store
 Thumbs.db
+# logs de navegador
+.playwright-mcp/

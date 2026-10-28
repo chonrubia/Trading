@@ -12,19 +12,49 @@ import { POST as kill } from "../../app/api/risk/kill/route.js";
 import { POST as cstart } from "../../app/api/committee/start/route.js";
 import { POST as cend } from "../../app/api/committee/end/route.js";
 import { POST as chat } from "../../app/api/chat/route.js";
+import { getKv } from "../../lib/kv.js";
+import { repo } from "../../lib/state.js";
 
 const J = async (r: Response) => r.json() as Promise<any>;
 const post = (body: unknown) => new Request("http://x/", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
 
-test("contrato: health + floor con forma UI", async () => {
+/** Publica un snapshot realista en el KV global para las rutas que exigen datos. */
+async function publishMarket() {
+  const kv = getKv();
+  const meta = await repo.meta(kv);
+  const now = new Date().toISOString();
+  meta.stale = false;
+  meta.last_candle_ts = now;
+  meta.last_tick_at = now;
+  await repo.saveMeta(kv, meta);
+  const prices: Record<string, number> = {
+    BTC: 70000, ETH: 2100, SOL: 130, XRP: 1.18, BNB: 670, DOGE: 0.07,
+    ADA: 0.18, AVAX: 18, LINK: 10.4, NEAR: 2, TRX: 0.25, LTC: 52,
+  };
+  const lastTick = {
+    ts: now, prices, change24h: {}, funding: 0.01, fear_greed: 50,
+    risk_mode: "RISK-ON", regime: "trend", trend: {}, source: "binance",
+    stale: false, lastCandleTs: now,
+  };
+  await repo.saveMarket(kv, {
+    source: "binance", prices, change24h: {}, high24h: {}, low24h: {}, quoteVolume24h: {},
+    funding: 0.01, fear_greed: 50, risk_mode: "RISK-ON", regime: "trend", trend: {},
+    lastCandleTs: now, ageMs: 0, stale: false, ts: now, lastTick,
+  });
+}
+
+test("contrato: health + floor con forma UI (paper real, sin datos aún)", async () => {
   const h: any = await J(await health());
-  assert.equal(h.ok, true);
-  assert.equal(h.agents, 176);
+  assert.equal(h.engine, "v2");
+  assert.equal(h.mode, "paper-real");
+  assert.equal(h.market_source, "binance");
+  assert.equal(h.stale, true);
+  assert.equal(h.ok, false);
   const f: any = await J(await floor());
   for (const k of ["tick", "equity", "dayPnl", "drawdown", "exposure", "kill", "committee", "counts", "msgs", "openOps"]) {
     assert.ok(k in f, `floor sin ${k}`);
   }
-  assert.equal(f.equity, 500);
+  assert.equal(f.equity, 60);
 });
 
 test("contrato: portfolio + ranking", async () => {
@@ -32,16 +62,21 @@ test("contrato: portfolio + ranking", async () => {
   for (const k of ["patrimonio", "resultado_hoy", "caida", "exposicion_bruta", "posiciones", "costes_pagados", "objetivo", "kill"]) {
     assert.ok(k in p, `portfolio sin ${k}`);
   }
+  assert.equal(p.patrimonio, 60);
   const r: any = await J(await ranking());
   assert.equal(r.length, 50);
   assert.equal(r[0].rank, 1);
   for (const k of ["id", "name", "setup", "pair", "pnl"]) assert.ok(k in r[0], `ranking sin ${k}`);
 });
 
-test("contrato: propose aprueba, kill bloquea, committee abre/cierra, chat responde", async () => {
+test("contrato: propose aprueba con datos reales, kill bloquea, committee abre/cierra, chat responde", async () => {
+  await publishMarket();
   const op1: any = await J(await propose(post({ side: "LONG", pair: "BTC" })));
   assert.equal(op1.status, "abierta");
-  assert.ok(/^op-\d+$/.test(op1.id));
+  assert.ok(/^op-manual-\d+$/.test(op1.id));
+  assert.equal(op1.side, "LONG");
+  assert.equal(op1.desk, "spot");
+  assert.ok(op1.notional <= 10.01);
   const k1: any = await J(await kill(post({ active: true })));
   assert.equal(k1.kill, true);
   const op2: any = await J(await propose(post({ side: "LONG" })));

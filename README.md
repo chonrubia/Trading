@@ -1,17 +1,39 @@
 # AI Trading Floor — ver en vivo en https://trading-three-hazel.vercel.app/
-> **Motor 100% en la nube (sin PC):** GitHub Actions ejecuta el fondo cada 2h
-> (`.github/workflows/engine.yml`, 60 ticks por racha, ~4 min facturados = ~1500/2000
-> min mensuales, con margen). Publica estado + `live.json` en la rama `engine-state`. La web lo lee en vivo (solo lectura, se actualiza solo).
-> Hibernación probada: el mercado persiste (`market.json`) y cada racha retoma
-> donde quedó. Sin backend local ni snapshot: simulación local en el navegador.
-> Si abres la URL **en tu PC con el backend corriendo**, la web
-> detecta sola `http://localhost:8765` y muestra datos 100% en vivo sin configurar nada
-> (los navegadores permiten a páginas https llamar a localhost). Con `VITE_API_URL`
-> apuntando a un backend público, en vivo desde cualquier dispositivo.
+## Estado actual — SPEC-002: paper real con datos de Binance (2026-10-28)
 
-Replica del fondo de las capturas (`C:\Users\chonr\Desktop\trading`): fondo cripto con 156+ agentes IA en oficina virtual.
+> - **Fuente:** API pública de Binance (`data-api.binance.vision`), 12 pares spot EUR: BTC, ETH, SOL, XRP, BNB, DOGE, ADA, AVAX, LINK, NEAR, TRX, LTC.
+> - **Fondo paper v2:** 60 € aislados en `fund:v2:*`. El estado sintético anterior (`fund:*`) queda archivado y no se mezcla.
+> - **Solo spot 1x y LONG.** Sin cortos, futuros, margen ni apalancamiento. Máximo 3 posiciones, 10 €/orden, mínimo 5 € (min notional Binance), pérdida diaria -15 €, drawdown 30 %, exposición 60 %.
+> - **Contabilidad:** taker 0,10 % por lado + medio spread + slippage. `equity = cash + posiciones`; `realized = 60 + PnL cerrado`; `unrealized = equity - realized`.
+> - **Sin datos no hay tick:** si Binance falla o el ticker tiene más de 15 min, `POST /api/tick` responde 503 y el motor no avanza. No existe fallback sintético.
+> - **Validación:** `POST /api/backtest` descarga velas reales y calcula IS/OOS 70/30, 5 folds walk-forward y Monte Carlo. `GET /api/validation` exige 28 días, 20 días con trades, 3 estrategias validadas, DD < 20 %, peor día > -15 €, latido ≥ 95 % y datos frescos.
+> - **Dinero real:** el adaptador `BinanceSpotBroker` está implementado pero **no cableado al motor**. `POST /api/live/arm` (con `CRON_SECRET` y confirmación literal `ARM LIVE`) es una preflight: en esta versión no puede salir ninguna orden real.
+> - **Claves:** solo como variables de entorno de Vercel (`BINANCE_API_KEY`, `BINANCE_API_SECRET`), de solo trading y sin retirada. Nunca en el repo ni en el chat.
 
-> Entorno actual: Node 24 sin Python. Fase 1 implementada en **Node.js + Express + WS** con la misma arquitectura/mismo modelo de datos propuestos para FastAPI. Migración a FastAPI/Postgres/Redis en Fase 3 sin cambiar contratos API.
+### Arranque local
+
+```powershell
+cd web
+npm install
+npm run dev        # http://localhost:5174
+```
+
+Sin `KV_*`/`REDIS_URL`, el estado vive en memoria y se reinicia con el proceso. En Vercel usa Upstash Redis (`KV_REST_API_URL`/`KV_REST_API_TOKEN`) o `REDIS_URL`.
+
+### Endpoints clave
+
+- `POST /api/tick` — un tick idempotente por slot; 503 si Binance falla o el dato está stale.
+- `GET /api/health` — fuente, frescura, tick, equity y frenos.
+- `GET /api/market` — precios reales y antigüedad.
+- `GET /api/portfolio` / `GET /api/report` — cash, realizado, no realizado, costes y veredicto.
+- `POST /api/backtest` — validación OOS/walk-forward; `GET /api/validation` — puerta a live.
+- `GET /api/live/status`, `POST /api/live/arm|kill` — preflight de dinero real.
+
+### Estado de las 10 estrategias (2026-10-28)
+
+Backtest real ejecutado sobre 1.200–6.000 velas por estrategia: **0 de 10 pasan la puerta** (ninguna cumple a la vez OOS neto > 0, ≥30 trades OOS, PF OOS > 1.2, DD OOS < 20 % y ≥4/5 folds positivos). Se quedan en paper; no se promociona ninguna a dinero real.
+
+## Historial (fases anteriores, sintético y archivado)
 
 ## Fase 2 (anterior)
 - Oficina isométrica PixiJS `frontend/src/IsoOffice.tsx` con parcelas por depto + sala comité + avatares con anillo de estado y lerp de movimiento.

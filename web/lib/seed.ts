@@ -1,6 +1,8 @@
-// Seed determinista del fondo fresco (500€): 13 departamentos + 176 agentes.
-// Port de backend/src/seed.js con rng inyectado (misma estructura, pnl a cero).
+// Seed determinista del fondo fresco (60€): 13 departamentos + 176 agentes.
+// Modo real: spot 1x, sin apalancamiento; cada trader recibe una de las 10
+// estrategias auditables de strategies.ts.
 import { seedRand, type Rng } from "./rng.js";
+import { STRATEGIES } from "./strategies.js";
 
 export interface Department { id: string; slug: string; name: string; x: number; y: number; description: string }
 export interface Agent {
@@ -30,18 +32,6 @@ const DEPARTMENTS = [
 ];
 const FIRST = ["Noa", "Alba", "Marcos", "Amara", "Ainhoa", "Pablo", "Martina", "Aitana", "Claudia", "Mara", "Lucía", "Elena", "Mateo", "Vera", "Rubén", "Hugo", "Sara", "Iker", "Laia", "Nil", "Júlia", "Oriol", "Carla", "Dani", "Nora", "Izan", "Leire", "Arnau", "Jordi", "Marta"];
 const LAST = ["Singh", "Serrano", "García", "Ortega", "Vega", "Molina", "Herrera", "Navarro", "Torres", "Cano", "Rubio", "López", "Ruiz", "Miller", "Chan", "Duarte", "Vidal", "Costa", "Ferrer", "Soler", "Puig", "Vila", "Roca", "Martí", "Serra", "Bosch"];
-const STRATEGIES = [
-  { name: "Setup_9376 · Tendencia BTC", pair: "BTC", tf: "1h", style: "tendencia" },
-  { name: "Setup_9373 · Breakout SOL", pair: "SOL", tf: "15m", style: "breakout" },
-  { name: "Setup_9381 · MeanRev ETH", pair: "ETH", tf: "1h", style: "mean reversion" },
-  { name: "Setup_9301 · Scalp ADA", pair: "ADA", tf: "5m", style: "scalping" },
-  { name: "Setup_9292 · Swing AVAX", pair: "AVAX", tf: "4h", style: "swing" },
-  { name: "Setup_9250 · SMA 7-25 LONG", pair: "BTC", tf: "1D", style: "tendencia" },
-  { name: "Setup_9201 · RSI LINK", pair: "LINK", tf: "1h", style: "mean reversion" },
-  { name: "Setup_9104 · Funding ARB", pair: "ETH", tf: "15m", style: "arbitraje" },
-  { name: "Setup_9007 · EMA DOGE", pair: "DOGE", tf: "1h", style: "tendencia" },
-  { name: "Setup_8902 · Donchian XRP", pair: "XRP", tf: "4h", style: "breakout" },
-];
 const STATUS = ["analizando", "hablando", "operando", "estudiando", "descansando"];
 const MOODS = ["enfocado", "neutral", "confiado", "cauto", "en racha"];
 const SUBJECTS = ["Gestión de riesgo", "Análisis técnico", "Macro", "Derivados", "Psicología"];
@@ -53,15 +43,16 @@ export function buildSeed(rnd: Rng = seedRand(42)): { departments: Department[];
   let n = 0;
   const mk = (dept: string, name: string, role: string, extra: Partial<Agent> = {}) => {
     n++;
-    const s = STRATEGIES[Math.floor(rnd() * STRATEGIES.length)];
+    const s = STRATEGIES[(n - 1) % STRATEGIES.length];
     agents.push({
       id: `a-${String(n).padStart(3, "0")}`,
       name, role, department_id: dept,
       avatar_seed: Math.floor(rnd() * 9999),
       strategy: s.name, pair: s.pair, timeframe: s.tf, style: s.style,
       risk_level: 1 + Math.floor(rnd() * 5),
-      leverage: 1 + Math.floor(rnd() * 5),
-      capital_assigned: Math.round(200 + rnd() * 1800),
+      // Spot 1x: nunca se apalanca, ni en paper ni en real.
+      leverage: 1,
+      capital_assigned: role === "Trader" ? 10 : 0,
       status: STATUS[Math.floor(rnd() * STATUS.length)],
       mood: MOODS[Math.floor(rnd() * MOODS.length)],
       // Escuela desde cero: el nivel se gana operando, no se sortea.
@@ -70,7 +61,7 @@ export function buildSeed(rnd: Rng = seedRand(42)): { departments: Department[];
       studying: SUBJECTS[Math.floor(rnd() * SUBJECTS.length)],
       pnl: 0, win_rate: 50, profit_factor: 1, drawdown: 0, trades_count: 0,
       x: 0, y: 0,
-      last_reason: "Esperando señal. Sin posición.",
+      last_reason: "Esperando señal real. Sin posición.",
       ...extra,
     });
   };

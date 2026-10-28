@@ -28,12 +28,15 @@ test("risk goldens F0 (ctx inyectado, sin singletons)", () => {
   const ctx = (o = {}) => ({ equity: 500, killSwitch: false, suspended: [] as string[], openOps: [] as R.OpenOp[], ...o });
   let v = R.checkOperation(AG, { pair: "BTC", entry: 67000, size: 0.0001, leverage: 1 }, ctx({ killSwitch: true }));
   assert.equal(v.approved, false);
+  // Sin apalancamiento: 6x se rechaza, no se recorta silenciosamente.
   v = R.checkOperation(AG, { pair: "ETH", entry: 3500, size: 0.004, leverage: 6 }, ctx());
-  assert.equal(v.approved, true); assert.equal(v.leverage, 5);
+  assert.equal(v.approved, false);
+  assert.match(v.reason, /apalancamiento/);
   v = R.checkOperation(AG, { pair: "ETH", entry: 3500, size: 0.03, leverage: 1 }, ctx({ openOps: [{ status: "abierta", size: 0.01, entry: 67000 }] }));
   assert.equal(v.approved, false);
   v = R.checkOperation({ ...AG, pnl: -200 }, { pair: "BTC", entry: 67000, size: 0.002, leverage: 1 }, ctx());
-  assert.equal(v.approved, true); assert.equal(v.size, 0.0001);
+  assert.equal(v.approved, false);
+  assert.match(v.reason, /pérdida máxima/);
   assert.equal(R.fundExposure([{ status: "abierta", size: 1, entry: 100 }], 500), 20);
 });
 

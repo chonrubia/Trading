@@ -13,7 +13,7 @@ const STATUS_ES: any = { hablando: "hablando", analizando: "analizando", operand
 const KIND_ES: any = { idea: "idea", analisis: "análisis", alerta: "alerta", humano: "tú", respuesta: "resp.", mentoring: "mentor", social: "sala" };
 
 export default function App() {
-  const [tab, setTab] = useState<"Sala" | "Ranking" | "Deptos" | "Ops" | "Riesgo" | "Learn" | "Lab" | "Mesas">("Sala");
+  const [tab, setTab] = useState<"Sala" | "Ranking" | "Deptos" | "Ops" | "Riesgo" | "Learn" | "Lab" | "Mesas" | "Validación">("Sala");
   const [agents, setAgents] = useState<Agent[]>([]);
   const [depts, setDepts] = useState<Dept[]>([]);
   const [msgs, setMsgs] = useState<Msg[]>([]);
@@ -23,7 +23,7 @@ export default function App() {
   const [meetings, setMeetings] = useState<any[]>([]);
   const [committee, setCommittee] = useState(false);
   const [market, setMarket] = useState<any>({ prices: {} });
-  const [portfolio, setPortfolio] = useState<any>({ patrimonio: 500, resultado_hoy: 0, exposicion_bruta: 0, caida: 0, posiciones: 0 });
+  const [portfolio, setPortfolio] = useState<any>({ patrimonio: 60, resultado_hoy: 0, exposicion_bruta: 0, caida: 0, posiciones: 0, realizado: 60, no_realizado: 0 });
   const [sel, setSel] = useState<Agent | null>(null);
   const [text, setText] = useState("");
   const [memList, setMemList] = useState<any[]>([]);
@@ -35,6 +35,9 @@ export default function App() {
   const [labStats, setLabStats] = useState<any>({});
   const [desks, setDesks] = useState<any>({ venues: [], pnl: {} });
   const [report, setReport] = useState<any>(null);
+  const [validation, setValidation] = useState<any>(null);
+  const [btRunning, setBtRunning] = useState(false);
+  const [btResult, setBtResult] = useState<any>(null);
   const [setups, setSetups] = useState<any[]>([]);
   const [online, setOnline] = useState(true);
   const [tickTs, setTickTs] = useState<string | null>(null);
@@ -55,6 +58,8 @@ export default function App() {
     apiFetch("/api/incubator/stats").then(r => r.json()).then(setLabStats).catch(() => {});
     apiFetch("/api/desks").then(r => r.json()).then(setDesks).catch(() => {});
     apiFetch("/api/report").then(r => r.json()).then(setReport).catch(() => {});
+    apiFetch("/api/validation").then(r => r.json()).then(setValidation).catch(() => {});
+    apiFetch("/api/portfolio").then(r => r.json()).then(p => setPortfolio((x: any) => ({ ...x, ...p }))).catch(() => {});
     apiFetch("/api/setups").then(r => r.json()).then(setSetups).catch(() => {});
   };
 
@@ -74,7 +79,7 @@ export default function App() {
     const fl = async () => {
       try {
         const d = await apiFetch("/api/floor").then(r => r.json());
-        setPortfolio((p: any) => ({ ...p, patrimonio: d.equity, resultado_hoy: d.dayPnl, exposicion_bruta: d.exposure, caida: d.drawdown, posiciones: d.counts ? d.counts.open : p.posiciones, costes_pagados: p.costes_pagados, objetivo: p.objetivo }));
+        setPortfolio((p: any) => ({ ...p, patrimonio: d.equity, resultado_hoy: d.dayPnl, exposicion_bruta: d.exposure, caida: d.drawdown, posiciones: d.counts ? d.counts.open : p.posiciones, costes_pagados: d.fees, realizado: d.realized, no_realizado: d.unrealized, base: d.base, objetivo: p.objetivo }));
         setMarket(d.tick); setCommittee(!!d.committee);
         setOps(d.openOps || []);
         if (d.tick?.ts) setTickTs(d.tick.ts);
@@ -115,8 +120,8 @@ export default function App() {
   };
   const propose = async () => {
     if (!sel) return;
-    const side = Math.random() > 0.5 ? "LONG" : "SHORT";
-    const op = await apiFetch("/api/operations/propose", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ agent_id: sel.id, side, size: 0.01 }) }).then(r => r.json());
+    // Spot 1x: una propuesta humana solo puede ser LONG. Un SHORT solo cierra.
+    const op = await apiFetch("/api/operations/propose", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ agent_id: sel.id, side: "LONG", notional: 10 }) }).then(r => r.json());
     setOps(o => [op, ...o].slice(0, 60)); pick(sel.id);
   };
   const suspend = async () => {
@@ -127,9 +132,14 @@ export default function App() {
 
   const prices = market?.prices || {};
   const tape = Object.entries(prices).slice(0, 12);
-  const mode = riskInfo.kill ? "kill" : (committee || portfolio.freno_riesgos) ? "comite" : "paper";
-  const modeTxt = riskInfo.kill ? "⛔ DETENIDO" : portfolio.freno_riesgos ? "RIESGOS · EN PAUSA HASTA MAÑANA" : committee ? "COMITÉ EN SALA" : "PAPEL · TIEMPO REAL";
-  const tgt = Number(portfolio.objetivo || 50), day = Number(portfolio.resultado_hoy || 0);
+  const stale = market?.stale === true || (market?.source && market.source !== "binance");
+  const mode = riskInfo.kill || stale ? "kill" : (riskInfo.dayHalt || committee || portfolio.freno_riesgos) ? "comite" : "paper";
+  const modeTxt = riskInfo.kill ? "⛔ KILL SWITCH"
+    : stale ? "SIN DATOS REALES"
+      : riskInfo.dayHalt ? "FRENO DIARIO · -15€"
+        : committee ? "COMITÉ EN SALA"
+          : "PAPEL REAL · BINANCE SPOT 1x";
+  const tgt = Number(portfolio.objetivo || 1.2), day = Number(portfolio.resultado_hoy || 0);
   const tgtPct = Math.max(0, Math.min(100, (day / tgt) * 100));
   // Latido del motor (cron cada 10min): edad del dato + cuenta atrás honesta.
   const ageMs = tickTs ? now - Date.parse(tickTs) : null;
@@ -138,6 +148,8 @@ export default function App() {
   const cdTxt = `${String(Math.floor(cdMs / 60000)).padStart(2, "0")}:${String(Math.floor(cdMs % 60000 / 1000)).padStart(2, "0")}`;
   const ageTxt = ageMs == null ? "—" : ageMs < 0 ? "—" : ageMs < 60000 ? "ahora mismo" : `hace ${Math.floor(ageMs / 60000)} min`;
   const beatLate = ageMs != null && ageMs > 25 * 60000;
+  const candleMs = market?.lastCandleTs ? now - Date.parse(market.lastCandleTs) : null;
+  const candleTxt = candleMs == null || isNaN(candleMs) ? "sin vela" : candleMs < 60000 ? "ahora" : `hace ${Math.floor(candleMs / 60000)} min`;
 
   return (<>
     <header className="topbar">
@@ -168,9 +180,17 @@ export default function App() {
       </div>
     </header>
 
+    <div className={"realbanner" + (stale ? " bad" : " ok")}>
+      <b>{stale ? "SIN DATOS REALES · MOTOR PARADO" : "BINANCE · DATOS REALES"}</b>
+      <span>spot 1x · sin cortos · sin apalancamiento</span>
+      <span>vela {candleTxt}</span>
+      <span>fuente {market?.source || "—"} · tick {tickN ?? "—"}</span>
+      <span className="mono">base {eur(portfolio.base || 60)} · realizado {eur(portfolio.realizado)} · no realizado {eur(portfolio.no_realizado)}</span>
+    </div>
+
     <div className="tabbar">
       <div className="tabs">
-        {(["Sala", "Ranking", "Deptos", "Ops", "Riesgo", "Learn", "Lab", "Mesas"] as const).map(t => <button key={t} className={"btn" + (tab === t ? " on" : "")} onClick={() => setTab(t)}>{t === "Deptos" ? "Departamentos" : t === "Ops" ? "Operaciones" : t}</button>)}
+        {(["Sala", "Ranking", "Deptos", "Ops", "Riesgo", "Learn", "Lab", "Mesas", "Validación"] as const).map(t => <button key={t} className={"btn" + (tab === t ? " on" : "")} onClick={() => setTab(t)}>{t === "Deptos" ? "Departamentos" : t === "Ops" ? "Operaciones" : t}</button>)}
       </div>
       <div className="spacer" />
       <span style={{ fontSize: 11, color: "var(--faint)", fontFamily: "var(--mono)" }}>FUND {market.funding}% · FG {market.fear_greed} · {market.risk_mode}</span>
@@ -276,39 +296,71 @@ export default function App() {
           <h3 className="section">Setups · expectancy neta (aprenden de aquí)</h3>
           {setups.slice(0, 8).map(s => <div key={s.strategy} className="row"><span>{s.strategy}</span><span className={pcl(s.avgR)}>{s.avgR}R · {s.win}% · n={s.trades}</span></div>)}
         </div></>}
-        {tab === "Mesas" && <><div className="phead"><h3>MESAS · ARB / DERIVADOS / COBERTURA</h3></div><div className="pbody">
-          <div className="statgrid">
-            <div className="cell"><label>SPOT</label><b className={pcl(desks.pnl?.spot)}>{eur(desks.pnl?.spot)}</b></div>
-            <div className="cell"><label>ARBITRAJE</label><b className={pcl(desks.pnl?.arbitraje)}>{eur(desks.pnl?.arbitraje)}</b></div>
-            <div className="cell"><label>DERIVADOS</label><b className={pcl(desks.pnl?.derivados)}>{eur(desks.pnl?.derivados)}</b></div>
-            <div className="cell"><label>COBERTURA</label><b className={pcl(desks.pnl?.cobertura)}>{eur(desks.pnl?.cobertura)}</b></div>
-          </div>
-          <div className="row"><span>Funding</span><span>{desks.funding}%</span></div>
-          <div className="row"><span>Cobertura</span><span>{desks.hedge ? `SHORT BTC ${eur(desks.hedge.pnl)}` : `inactiva (${desks.signal || "-"})`}</span></div>
-          <div className="row"><span>Arb abiertos / Deriv abiertos</span><span>{(desks.arbOpen || []).length} / {(desks.derivadosOpen || []).length}</span></div>
-          {(desks.arbOpen || []).map((o: any) => <div key={o.id} className="row"><span>ARB {o.pair} spr {o.spreadOpen}%</span><span className={pcl(o.pnl)}>{eur(o.pnl)}</span></div>)}
-          <h3 className="section">Spreads A↔B</h3>
-          {(desks.venues || []).slice(0, 9).map((v: any) => <div key={v.pair}><div className="row"><span>{v.pair} · A {v.a} / B {v.b}</span><span>{v.spread}%</span></div><div className="bar"><i style={{ width: `${Math.min(100, Number(v.spread) * 120)}%` }} /></div></div>)}
+        {tab === "Mesas" && <><div className="phead"><h3>MESAS · SOLO SPOT REAL</h3></div><div className="pbody">
+          <div className="verdict warn">Arbitraje, derivados y cobertura sintéticos están desactivados en modo real. No hay cortos, futuros ni apalancamiento.</div>
+          <div className="row"><span>Mercado</span><span>Binance spot 1x</span></div>
+          <div className="row"><span>Funding BTC (informativo)</span><span>{desks.funding ?? market.funding ?? 0}%</span></div>
+          <div className="row"><span>Posiciones abiertas</span><span>{portfolio.posiciones ?? 0} / 3</span></div>
+          <div className="row"><span>Máximo por orden</span><span>10€ · mínimo 5€ (min notional Binance)</span></div>
+          <div className="row"><span>Motivo</span><span>{desks.reason || "Sin mesas sintéticas en modo real."}</span></div>
         </div></>}
-        {tab === "Riesgo" && (<><div className="phead"><h3>RIESGOS · LÍMITES DEL FONDO</h3></div><div className="pbody">
-          <div className="row"><span>Pérdida día máx</span><span>Sin límite (ahora <b className={pcl(riskInfo.dayPnl)}>{eur(riskInfo.dayPnl)}</b>)</span></div>
-          <div className="row"><span>Drawdown máx</span><span>{riskInfo.limits?.max_drawdown}% (ahora {riskInfo.drawdown}%)</span></div>
-          <div className="row"><span>Exposición máx</span><span>{riskInfo.limits?.max_exposure_gross}% (ahora {riskInfo.exposure}%)</span></div>
+        {tab === "Riesgo" && (<><div className="phead"><h3>RIESGOS · LÍMITES DEL FONDO REAL</h3></div><div className="pbody">
+          <div className="row"><span>Modo</span><span>spot 1x · solo LONG · sin cortos</span></div>
+          <div className="row"><span>Pérdida día máx</span><span><b>15€</b> (ahora <b className={pcl(riskInfo.dayPnl)}>{eur(riskInfo.dayPnl)}</b>)</span></div>
+          <div className="row"><span>Drawdown máx</span><span>30% (ahora {riskInfo.drawdown}%)</span></div>
+          <div className="row"><span>Exposición máx</span><span>60% (ahora {riskInfo.exposure}%)</span></div>
+          <div className="row"><span>Posiciones máx / orden máx</span><span>3 / 10€</span></div>
           <div className="row"><span>Abiertas / Bloqueadas</span><span>{riskInfo.open} / {riskInfo.blocked}</span></div>
           <div className="row"><span>Suspendidos</span><span>{(riskInfo.suspended || []).length}</span></div>
-          <div className="row"><span>Costes pagados</span><span>{eur(portfolio.costes_pagados)} (taker+spread real)</span></div>
-          {report && <div className={`verdict ${report.verdict?.startsWith("consistente") ? "ok" : report.verdict?.startsWith("muestra") ? "warn" : "bad"}`}>Informe paper · {report.verdict}</div>}
+          {riskInfo.dayHalt && <div className="verdict bad">FRENO DIARIO ACTIVO · {riskInfo.halt_reason}</div>}
+          <div className="row"><span>Efectivo / realizado / no realizado</span><span>{eur(riskInfo.cash)} / <b className={pcl(portfolio.realizado)}>{eur(portfolio.realizado)}</b> / <b className={pcl(portfolio.no_realizado)}>{eur(portfolio.no_realizado)}</b></span></div>
+          <div className="row"><span>Costes pagados</span><span>{eur(portfolio.costes_pagados)} (taker+spread+slippage)</span></div>
+          {report && <div className={`verdict ${report.verdict?.startsWith("consistente") ? "ok" : report.verdict?.startsWith("muestra") ? "warn" : "bad"}`}>Informe paper real · {report.verdict}</div>}
           {report && (<>
-            <div className="row"><span>Neto / Fees</span><span><b className={pcl(report.net)}>{eur(report.net)}</b> / {eur(report.fees_paid)} ({report.costs_drag})</span></div>
+            <div className="row"><span>Hoy / acumulado</span><span><b className={pcl(report.today)}>{eur(report.today)}</b> / <b className={pcl(report.total)}>{eur(report.total)}</b></span></div>
+            <div className="row"><span>Realizado / no realizado</span><span><b className={pcl(report.realized - report.base)}>{eur(report.realized - report.base)}</b> / <b className={pcl(report.unrealized)}>{eur(report.unrealized)}</b></span></div>
+            <div className="row"><span>Neto / Fees</span><span><b className={pcl(report.net)}>{eur(report.net)}</b> / {eur(report.fees_paid)}</span></div>
             <div className="row"><span>Trades cerrados/abiertos/bloq</span><span>{report.trades.closed}/{report.trades.open}/{report.trades.blocked} ({report.trades.block_rate})</span></div>
-            <div className="row"><span>WR / PF / Sharpe</span><span>{report.win_rate} / {report.profit_factor} / {report.sharpe}</span></div>
-            <div className="row"><span>Días verdes</span><span>{report.green_days} ({report.days} días)</span></div>
-            <div className="row"><span>Neto por desk</span><span>{Object.entries(report.desk_net || {}).map(([k, v]) => `${k}:${v}€`).join(" ") || "-"}</span></div>
-            {Object.entries(report.block_reasons || {}).slice(0, 4).map(([k, v]: any) => <div key={k} className="row"><span>Bloq: {k.slice(0, 40)}</span><span>×{v}</span></div>)}
+            <div className="row"><span>WR / PF (acumulado)</span><span>{report.win_rate} / {report.profit_factor}</span></div>
+            <div className="row"><span>Peor día / días verdes</span><span>{eur(report.worst_day)} / {report.green_days} ({report.days} días)</span></div>
+            <div className="row"><span>Estrategias validadas</span><span>{report.validated_strategies}</span></div>
+            <div className="row" style={{ opacity: .7 }}><span>Ventana 250 (diagnóstico)</span><span>{report.window_250?.closed} trades · {report.window_250?.win_rate}% WR · PF {report.window_250?.profit_factor}</span></div>
+            {Object.entries(report.block_reasons || {}).slice(0, 4).map(([k, v]: any) => <div key={k} className="row"><span>Bloq: {k.slice(0, 46)}</span><span>×{v}</span></div>)}
           </>)}
           <h3 className="section">Comités ({meetings.length})</h3>
           {meetings.map(m => <div key={m.id} className="chatmsg"><div className="chatbody"><div className="chatmeta"><b>{m.topic}</b><time>{hhmm(m.ended_at)}</time></div><div className="chattext">Top: {(m.top3 || []).map((t: any) => t.name).join(", ")}<br />{(m.decisions || []).join(" · ")}</div></div></div>)}
         </div></>)}
+        {tab === "Validación" && <><div className="phead"><h3>VALIDACIÓN · FORWARD REAL</h3></div><div className="pbody">
+          <div className={`verdict ${validation?.ready_for_live ? "ok" : "warn"}`}>
+            {validation?.ready_for_live ? "LISTO PARA ARMAR LIVE (sigue siendo una decisión humana)" : `NO LISTO PARA DINERO REAL · faltan: ${(validation?.failed || []).join(", ") || "datos"}`}
+          </div>
+          <div className="statgrid">
+            <div className="cell"><label>DÍAS FORWARD</label><b>{validation?.days_forward ?? 0} / 28</b></div>
+            <div className="cell"><label>DÍAS CON TRADES</label><b>{validation?.days_with_trades ?? 0} / 20</b></div>
+            <div className="cell"><label>ESTRATEGIAS OK</label><b>{validation?.validated_strategies?.length ?? 0} / 3</b></div>
+            <div className="cell"><label>LATIDO</label><b>{validation?.heartbeat_pct ?? 0}%</b></div>
+          </div>
+          <div className="row"><span>Equity / base</span><span>{eur(validation?.equity)} / {eur(validation?.base)}</span></div>
+          <div className="row"><span>Neto / DD / peor día</span><span>{eur(validation?.net)} / {validation?.max_drawdown ?? 0}% / {eur(validation?.worst_day)}</span></div>
+          <h3 className="section">Criterios</h3>
+          {Object.entries(validation?.criteria || {}).map(([k, c]: any) => <div key={k} className="row"><span>{c.ok ? "✅" : "⛔"} {k}</span><span>{String(c.value)}</span></div>)}
+          <div className="btnrow">
+            <button className="btn primary" disabled={btRunning} onClick={async () => {
+              setBtRunning(true);
+              try {
+                const out = await apiFetch("/api/backtest", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ all: true }) }).then(r => r.json());
+                setBtResult(out);
+                setValidation(await apiFetch("/api/validation").then(r => r.json()));
+              } finally { setBtRunning(false); }
+            }}>{btRunning ? "Descargando velas reales y validando…" : "Ejecutar backtest real (10 estrategias)"}</button>
+          </div>
+          {btResult?.error && <div className="verdict bad">{btResult.error}</div>}
+          {(btResult?.results || []).map((r: any) => <div key={r.name} className="row"><span>{r.ready ? "✅" : "⛔"} {r.name} · {r.tf}</span><span>{r.error ? r.error : `n=${r.trades} OOS n=${r.oos_trades} net=${eur(r.oos_net)} PF=${r.oos_pf} DD=${r.oos_dd}% WF=${r.wf_positive}/${r.wf_total}`}</span></div>)}
+          <h3 className="section">Estrategias ya validadas</h3>
+          {(validation?.validated_strategies || []).length === 0 && <div className="quote">Aún ninguna. Ejecuta el backtest real: sin OOS y walk-forward positivos no se promociona nada.</div>}
+          {(validation?.validated_strategies || []).map((s: any) => <div key={s.name} className="row"><span>{s.name}</span><span>OOS n={s.oos_trades} · net={eur(s.oos_net)} · PF={s.oos_pf} · WF={s.wf}</span></div>)}
+          <div className="quote" style={{ marginTop: 10 }}>El dinero real no se activa desde esta pantalla. Requiere LIVE_TRADING_ENABLED=true, claves de solo trading, POST /api/live/arm con CRON_SECRET y confirmación literal. La ventana de armado dura 15 minutos. En esta versión el adaptador live NO está cableado al motor: ninguna orden real puede salir todavía.</div>
+        </div></>}
       </div>
     </div>
   </>);
